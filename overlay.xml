@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="stable" status="unofficial">
+    <name>argent-server</name>
+    <description>Argent Linux</description>
+    <homepage>https://github.com/BlackNoxis/argent-server</homepage>
+    <owner type="project">
+      <email>stefan.cristian t rogentos.ro</email>
+      <name>Benedikt Böhm</name>
+    </owner>
+    <source type="git">git://github.com/BlackNoxis/argent-server.git</source>
+    <feed>https://github.com/BlackNoxis/argent-server/commits/master.atom</feed>
+  </repo>
+</repositories>
