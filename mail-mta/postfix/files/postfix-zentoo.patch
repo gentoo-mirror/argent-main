@@ -1,0 +1,73 @@
+From d12f823231015d8f9ca2c3b7fc69c83d672af5e9 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Benedikt=20B=C3=B6hm?= <bb@xnull.de>
+Date: Mon, 8 Apr 2013 13:42:50 +0200
+Subject: [PATCH] be silent
+
+---
+ src/smtpd/smtpd.c      | 3 +++
+ src/smtpd/smtpd_peer.c | 1 +
+ src/tls/tls_misc.c     | 8 --------
+ 3 files changed, 4 insertions(+), 8 deletions(-)
+
+diff --git a/src/smtpd/smtpd.c b/src/smtpd/smtpd.c
+index 8cf1691..632d154 100644
+--- a/src/smtpd/smtpd.c
++++ b/src/smtpd/smtpd.c
+@@ -4867,6 +4867,7 @@ static void smtpd_proto(SMTPD_STATE *state)
+ 		     state->namaddr);
+ 	} else if (strcmp(state->where, SMTPD_AFTER_DOT)
+ 		   || strcmp(state->reason, REASON_LOST_CONNECTION)) {
++        if (msg_verbose)
+ 	    msg_info("%s after %s from %s",
+ 		     state->reason, state->where, state->namaddr);
+ 	}
+@@ -4927,6 +4928,7 @@ static void smtpd_service(VSTREAM *stream, char *service, char **argv)
+      * machines.
+      */
+     smtpd_state_init(&state, stream, service);
++    if (msg_verbose)
+     msg_info("connect from %s", state.namaddr);
+ 
+     /*
+@@ -4965,6 +4967,7 @@ static void smtpd_service(VSTREAM *stream, char *service, char **argv)
+      * After the client has gone away, clean up whatever we have set up at
+      * connection time.
+      */
++    if (msg_verbose)
+     msg_info("disconnect from %s", state.namaddr);
+     smtpd_state_reset(&state);
+     debug_peer_restore();
+diff --git a/src/smtpd/smtpd_peer.c b/src/smtpd/smtpd_peer.c
+index 20e55d0..c2e6b19 100644
+--- a/src/smtpd/smtpd_peer.c
++++ b/src/smtpd/smtpd_peer.c
+@@ -343,6 +343,7 @@ static void smtpd_peer_sockaddr_to_hostname(SMTPD_STATE *state)
+ 	aierr = hostname_to_sockaddr_pf(state->name, state->addr_family,
+ 					(char *) 0, 0, &res0);
+ 	if (aierr) {
++        if (msg_verbose)
+ 	    msg_warn("hostname %s does not resolve to address %s: %s",
+ 		     state->name, state->addr, MAI_STRERROR(aierr));
+ 	    REJECT_PEER_NAME(state, (TEMP_AI_ERROR(aierr) ?
+diff --git a/src/tls/tls_misc.c b/src/tls/tls_misc.c
+index d09bb32..32623b9 100644
+--- a/src/tls/tls_misc.c
++++ b/src/tls/tls_misc.c
+@@ -853,14 +853,6 @@ void    tls_check_version(void)
+ 
+     tls_version_split(OPENSSL_VERSION_NUMBER, &hdr_info);
+     tls_version_split(SSLeay(), &lib_info);
+-
+-    if (lib_info.major != hdr_info.major
+-	|| lib_info.minor != hdr_info.minor
+-	|| lib_info.micro != hdr_info.micro)
+-	msg_warn("run-time library vs. compile-time header version mismatch: "
+-	     "OpenSSL %d.%d.%d may not be compatible with OpenSSL %d.%d.%d",
+-		 lib_info.major, lib_info.minor, lib_info.micro,
+-		 hdr_info.major, hdr_info.minor, hdr_info.micro);
+ }
+ 
+ /* tls_bug_bits - SSL bug compatibility bits for this OpenSSL version */
+-- 
+1.8.1.5
+
