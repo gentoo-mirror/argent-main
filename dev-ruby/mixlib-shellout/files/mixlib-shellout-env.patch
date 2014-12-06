@@ -1,0 +1,26 @@
+From 5a4cc1122f551f3aa186369fa79cd1ea2573816a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Benedikt=20B=C3=B6hm?= <bb@xnull.de>
+Date: Wed, 12 Jun 2013 09:26:06 +0200
+Subject: [PATCH] set proper HOME and USER env variables
+
+---
+ lib/mixlib/shellout/unix.rb | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/lib/mixlib/shellout/unix.rb b/lib/mixlib/shellout/unix.rb
+index aa62272..e99049b 100644
+--- a/lib/mixlib/shellout/unix.rb
++++ b/lib/mixlib/shellout/unix.rb
+@@ -91,6 +91,9 @@ module Mixlib
+         if user
+           Process.euid = uid
+           Process.uid = uid
++          pwent = Etc.getpwnam(user)
++          ENV["HOME"] = pwent.dir
++          ENV["USER"] = ENV["USERNAME"] = user
+         end
+       end
+ 
+-- 
+1.8.1.5
+

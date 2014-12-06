@@ -1,0 +1,11 @@
+[Unit]
+Description=Aerospike Database Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/asd
+Restart=always
+SyslogIdentifier=%p
+
+[Install]
+WantedBy=multi-user.target
