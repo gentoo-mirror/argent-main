@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
-inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator systemd
+inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
 
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
@@ -12,7 +12,7 @@ VDA_PV="2.10.0"
 VDA_P="${PN}-vda-v13-${VDA_PV}"
 RC_VER="2.7"
 
-DESCRIPTION="A fast and secure drop-in replacement for sendmail."
+DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
 SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 	vda? ( http://vda.sourceforge.net/VDA/${VDA_P}.patch ) "
@@ -20,7 +20,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind lmdb memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
@@ -28,9 +28,10 @@ DEPEND=">=dev-libs/libpcre-3.4
 	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
 	ldap? ( net-nds/openldap )
 	ldap-bind? ( net-nds/openldap[sasl] )
+	lmdb? ( >=dev-db/lmdb-0.9.11 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( virtual/postgresql )
 	sasl? (  >=dev-libs/cyrus-sasl-2 )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
@@ -39,7 +40,6 @@ RDEPEND="${DEPEND}
 	dovecot-sasl? ( net-mail/dovecot )
 	memcached? ( net-misc/memcached )
 	net-mail/mailbase
-	selinux? ( sec-policy/selinux-postfix )
 	!mail-mta/courier
 	!mail-mta/esmtp
 	!mail-mta/exim
@@ -52,7 +52,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/opensmtpd
 	!<mail-mta/ssmtp-2.64-r2
 	!>=mail-mta/ssmtp-2.64-r2[mta]
-	!net-mail/fastforward"
+	!net-mail/fastforward
+	selinux? ( sec-policy/selinux-postfix )"
 
 REQUIRED_USE="ldap-bind? ( ldap sasl )"
 
@@ -66,8 +67,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/postfix-argent.patch
-
+	epatch "${FILESDIR}/${PN}-2.11.1-db6.patch"
 	if use vda; then
 		epatch "${DISTDIR}"/${VDA_P}.patch
 	fi
@@ -77,6 +77,8 @@ src_prepare() {
 
 	# change default paths to better comply with portage standard paths
 	sed -i -e "s:/usr/local/:/usr/:g" conf/master.cf || die "sed failed"
+
+	epatch_user
 }
 
 src_configure() {
@@ -110,6 +112,11 @@ src_configure() {
 		mylibs="${mylibs} -lssl -lcrypto"
 	fi
 
+	if use lmdb; then
+		mycc="${mycc} -DHAS_LMDB"
+		mylibs="${mylibs} -llmdb"
+	fi
+
 	# broken. and "in other words, not supported" by upstream.
 	# Use inet_protocols setting in main.cf
 	#if ! use ipv6; then
@@ -131,15 +138,14 @@ src_configure() {
 	fi
 
 	if ! use nis; then
-		sed -i -e "s|#define HAS_NIS|//#define HAS_NIS|g" \
-			src/util/sys_defs.h || die "sed failed"
+		mycc="${mycc} -DNO_NIS"
 	fi
 
 	if ! use berkdb; then
 		mycc="${mycc} -DNO_DB"
 		if use cdb; then
 			# change default hash format from Berkeley DB to cdb
-			sed -i -e "s/hash/cdb/" src/util/sys_defs.h || die
+			mycc="${mycc} -DDEF_DB_TYPE=\\\"cdb\\\""
 		fi
 	fi
 
@@ -205,9 +211,11 @@ src_install () {
 	# Provide another link for legacy FSH
 	dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
 
-	# Install qshape tool
+	# Install qshape tool and posttls-finger
 	dobin auxiliary/qshape/qshape.pl
 	doman man/man1/qshape.1
+	dobin bin/posttls-finger
+	doman man/man1/posttls-finger.1
 
 	# Performance tuning tools and their manuals
 	dosbin bin/smtp-{source,sink} bin/qmqp-{source,sink}
