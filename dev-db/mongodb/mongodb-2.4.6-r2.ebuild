@@ -73,6 +73,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.4.5-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
+	epatch "${FILESDIR}/${PN}-2.4-fix-v8-pythonpath.patch"
 
 	# bug #462606
 	sed -i -e "s@\$INSTALL_DIR/lib@\$INSTALL_DIR/$(get_libdir)@g" src/SConscript.client || die
