@@ -7,7 +7,7 @@ EAPI="0"
 
 inherit eutils libtool multilib
 
-DESCRIPTION="A library for multiprecision complex arithmetic with exact rounding."
+DESCRIPTION="A library for multiprecision complex arithmetic with exact rounding"
 HOMEPAGE="http://mpc.multiprecision.org/"
 SRC_URI="http://www.multiprecision.org/mpc/download/${P}.tar.gz"
 

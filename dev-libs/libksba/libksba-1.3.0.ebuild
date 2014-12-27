@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-# so we won't need to autreconf yet another g10 package
+# so we won't need to autoreconf yet another g10 package
 AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils
 

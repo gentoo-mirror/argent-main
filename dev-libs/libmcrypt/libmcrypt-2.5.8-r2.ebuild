@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI="3"
 
 inherit autotools eutils
 
-DESCRIPTION="libmcrypt is a library that provides uniform interface to access several encryption algorithms."
+DESCRIPTION="libmcrypt is a library that provides uniform interface to access several encryption algorithms"
 HOMEPAGE="http://mcrypt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mcrypt/${P}.tar.gz"
 

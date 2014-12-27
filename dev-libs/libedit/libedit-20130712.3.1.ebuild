@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="static-libs"
 
-DEPEND=">=sys-libs/ncurses-5.7-r5[static-libs?,${MULTILIB_USEDEP}]
+DEPEND=">=sys-libs/ncurses-5.9-r3[static-libs?,${MULTILIB_USEDEP}]
 	!<=sys-freebsd/freebsd-lib-6.2_rc1"
 
 RDEPEND=${DEPEND}
