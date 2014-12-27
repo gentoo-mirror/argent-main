@@ -23,12 +23,13 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="selinux tcpd"
 
-RDEPEND="net-libs/libtirpc
-	selinux? ( sec-policy/selinux-rpcbind )
+CDEPEND="net-libs/libtirpc
 	tcpd? ( sys-apps/tcp-wrappers )"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	virtual/pkgconfig"
-
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-rpcbind )
+"
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		eautoreconf
