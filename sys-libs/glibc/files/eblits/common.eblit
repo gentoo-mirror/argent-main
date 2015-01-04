@@ -6,9 +6,6 @@ alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
 }
 
-: ${ED:=${D}}
-: ${EROOT:=${ROOT}}
-
 # We need to be able to set alternative headers for
 # compiling for non-native platform
 # Will also become useful for testing kernel-headers without screwing up
