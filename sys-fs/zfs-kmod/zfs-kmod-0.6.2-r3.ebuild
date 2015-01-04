@@ -18,9 +18,9 @@ else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
+		http://dev.gentoo.org/~ryao/dist/zfs-kmod-${MY_PV}-p2.tar.xz
 		https://github.com/zfsonlinux/spl/archive/spl-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/spl-${MY_PV}-p4.tar.xz
-		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p4.tar.xz"
+		http://dev.gentoo.org/~ryao/dist/spl-${MY_PV}-p1.tar.xz"
 	S="${WORKDIR}"
 	ZFS_S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	SPL_S="${WORKDIR}/spl-spl-${MY_PV}"
@@ -47,12 +47,12 @@ RDEPEND="${DEPEND}
 pkg_setup() {
 	linux-info_pkg_setup
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
-		!GRKERNSEC_HIDESYM
 		BLK_DEV_LOOP
 		EFI_PARTITION
+		!GRKERNSEC_HIDESYM
 		IOSCHED_NOOP
-		KALLSYMS
 		MODULES
+		KALLSYMS
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
@@ -65,7 +65,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 14 || die "Linux 3.14 is the latest supported version."; }
+		{ kernel_is le 3 12 || die "Linux 3.12 is the latest supported version."; }
 
 	check_extra_config
 }

@@ -18,9 +18,7 @@ else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		https://github.com/zfsonlinux/spl/archive/spl-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/spl-${MY_PV}-p4.tar.xz
-		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p4.tar.xz"
+		https://github.com/zfsonlinux/spl/archive/spl-${MY_PV}.tar.gz"
 	S="${WORKDIR}"
 	ZFS_S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	SPL_S="${WORKDIR}/spl-spl-${MY_PV}"
@@ -65,7 +63,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 14 || die "Linux 3.14 is the latest supported version."; }
+		{ kernel_is le 3 15 || die "Linux 3.15 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -76,22 +74,6 @@ src_prepare() {
 
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" "${SPL_S}"/scripts/check.sh || die
-
-	if [ ${PV} != "9999" ]
-	then
-		# Apply patch set
-		pushd "${SPL_S}"
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/spl-${MY_PV}-patches"
-		popd
-
-		pushd "${ZFS_S}"
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/zfs-kmod-${MY_PV}-patches"
-		popd
-	fi
 
 	# splat is unnecessary unless we are debugging
 	use debug || sed -e 's/^subdir-m += splat$//' -i "${SPL_S}/module/Makefile.in"
