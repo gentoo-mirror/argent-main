@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <herd>no-herd</herd>
   <maintainer>
-    <email>floppym@gentoo.org</email>
-    <name>Mike Gilbert</name>
-  </maintainer>
-  <maintainer>
-    <email>slyfox@gentoo.org</email>
-    <name>Sergei Trofimovich</name>
+    <email>mitch.harder@sabayonlinux.org</email>
   </maintainer>
   <use>
     <flag name='debug-utils'>Build additional utils for debugging</flag>
