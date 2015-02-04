@@ -1,26 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.4.0.ebuild,v 1.1 2014/12/19 00:13:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.2.9.ebuild,v 1.10 2014/09/19 10:40:07 ago Exp $
 
 EAPI="5"
 
 RESTRICT="test"
 
-PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
+PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3}} )
 WANT_AUTOMAKE="none"
-
-RESTRICT="test"
 
 inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 systemd user versionator
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-MY_PV=${PV/_/}
 SLOT="$(get_version_component_range 1-2)"
-S="${WORKDIR}/postgresql-${MY_PV}"
-SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_PV}.tar.bz2
-		 http://dev.gentoo.org/~patrick/postgresql-patches-${SLOT}-r1.tbz2
-		 http://dev.gentoo.org/~floppym/dist/postgresql-initscript-2.7.tbz2"
+S="${WORKDIR}/postgresql-${PV}"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}.tbz2
+		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.6.tbz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
@@ -43,22 +40,19 @@ wanted_languages() {
 	echo -n ${enable_langs}
 }
 
-CDEPEND="
+RDEPEND="
 ~dev-db/postgresql-base-${PV}[kerberos?,pam?,pg_legacytimestamp=,python=,nls=]
 perl? ( >=dev-lang/perl-5.8 )
 python? ( ${PYTHON_DEPS} )
+selinux? ( sec-policy/selinux-postgresql )
 tcl? ( >=dev-lang/tcl-8 )
 uuid? ( dev-libs/ossp-uuid )
 xml? ( dev-libs/libxml2 dev-libs/libxslt )
 "
 
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 sys-devel/flex
 xml? ( virtual/pkgconfig )
-"
-
-RDEPEND="${CDEPEND}
-selinux? ( sec-policy/selinux-postgresql )
 "
 
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
@@ -73,8 +67,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/bool.patch" \
-		"${WORKDIR}/server.patch" \
-		"${WORKDIR}/run-dir.patch"
+		"${WORKDIR}/server.patch"
 
 	eprefixify src/include/pg_config_manual.h
 
@@ -90,15 +83,18 @@ src_prepare() {
 	fi
 
 	if use test ; then
+		epatch "${WORKDIR}/regress.patch"
 		sed -e "s|@SOCKETDIR@|${T}|g" -i src/test/regress/pg_regress{,_main}.c \
 			|| die 'Failed regress sed'
 	else
 		echo "all install:" > "${S}/src/test/regress/GNUmakefile"
 	fi
 
-	sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
-		-i "${WORKDIR}"/postgresql{.{init,confd,service},-check-db-dir} ||
-		die "SLOT/LIBDIR sed failed"
+	for x in .init .confd .service -check-db-dir
+	do
+		sed -e "s|@SLOT@|${SLOT}|g" -i "${WORKDIR}"/postgresql${x}
+		[[ $? -ne 0 ]] && eerror "Failed sed on $x" && die 'Failed slot sed'
+	done
 
 	eautoconf
 }
@@ -139,9 +135,6 @@ src_install() {
 		PATH="${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT}/bin:${PATH}" \
 			emake install -C $bd DESTDIR="${D}" || die "emake install in $bd failed"
 	done
-
-	# Avoid file collision with -base.
-	rm "${ED}/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)/libpgcommon.a"
 
 	dodir /etc/eselect/postgresql/slots/${SLOT}
 	echo "postgres_ebuilds=\"\${postgres_ebuilds} ${PF}\"" > \
