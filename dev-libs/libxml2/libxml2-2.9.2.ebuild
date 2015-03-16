@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -128,7 +128,7 @@ multilib_src_configure() {
 	libxml2_configure --without-python # build python bindings separately
 
 	if multilib_is_native_abi && use python; then
-		python_parallel_foreach_impl libxml2_py_configure
+		python_foreach_impl libxml2_py_configure
 	fi
 }
 
