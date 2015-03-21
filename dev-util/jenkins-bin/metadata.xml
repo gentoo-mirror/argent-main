@@ -2,7 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>hollow@gentoo.org</email>
-		<name>Benedikt Böhm</name>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
+	</maintainer>
+	<maintainer>
+		<email>chainsaw@gentoo.org</email>
+		<name>Tony Vroon</name>
 	</maintainer>
 </pkgmetadata>
