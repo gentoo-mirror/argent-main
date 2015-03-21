@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ DESCRIPTION="Interactively examine a C program"
 HOMEPAGE="http://cscope.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
 
-LICENSE="BSD GPL-2"
+LICENSE="BSD GPL-2+"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="emacs"
@@ -30,10 +30,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CURSES_LIBS=$("$(tc-getPKG_CONFIG)" --libs ncurses)
+	emake CURSES_LIBS="$("$(tc-getPKG_CONFIG)" --libs ncurses)"
 	if use emacs; then
 		cd "${S}"/contrib/xcscope || die
-		elisp-compile *.el || die
+		elisp-compile *.el
 	fi
 }
 
@@ -42,8 +42,8 @@ src_install() {
 
 	if use emacs; then
 		cd "${S}"/contrib/xcscope || die
-		elisp-install ${PN} *.el *.elc || die
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+		elisp-install ${PN} *.el *.elc
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 		dobin cscope-indexer
 	fi
 
