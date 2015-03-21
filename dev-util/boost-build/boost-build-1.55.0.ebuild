@@ -1,9 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
+
+RESTRICT="test"
 
 inherit eutils flag-o-matic multilib python toolchain-funcs versionator
 
@@ -45,7 +47,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.49.0-darwin-gentoo-toolchain.patch" \
 		"${FILESDIR}/${PN}-1.52.0-darwin-no-python-framework.patch" \
 		"${FILESDIR}/${PN}-1.54.0-fix-test.patch" \
-		"${FILESDIR}/${PN}-1.54.0-support_dots_in_python-buildid.patch"
+		"${FILESDIR}/${PN}-1.54.0-support_dots_in_python-buildid.patch" \
+		"${FILESDIR}/${PN}-1.55.0-ppc-aix.patch"
 
 	# Remove stripping option
 	# Fix python components build on multilib systems, bug #496446
