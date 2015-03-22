@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI=4
 
 inherit eutils autotools
 
-DESCRIPTION="Compiles finite state machines from regular languages into executable code."
+DESCRIPTION="Compiles finite state machines from regular languages into executable code"
 HOMEPAGE="http://www.complang.org/ragel/"
 SRC_URI="http://www.complang.org/ragel/${P}.tar.gz"
 
