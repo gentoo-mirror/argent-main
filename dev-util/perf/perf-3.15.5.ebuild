@@ -45,7 +45,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RDEPEND="audit? ( sys-process/audit )
 	demangle? ( sys-devel/binutils )
 	gtk? ( x11-libs/gtk+:2 )
-	perl? ( || ( >=dev-lang/perl-5.10 sys-devel/libperl ) )
+	perl? ( dev-lang/perl )
 	slang? ( dev-libs/newt )
 	unwind? ( sys-libs/libunwind )
 	dev-libs/elfutils"
