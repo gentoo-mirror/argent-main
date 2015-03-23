@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="+client ipv6 kernel_linux ldap selinux +server ssl vim-syntax"
 
-DEPEND="selinux? ( sec-policy/selinux-dhcp )
+DEPEND="
 	client? (
 		kernel_linux? (
 			ipv6? ( sys-apps/iproute2 )
@@ -33,6 +33,7 @@ DEPEND="selinux? ( sec-policy/selinux-dhcp )
 		ssl? ( dev-libs/openssl )
 	)"
 RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-dhcp )
 	vim-syntax? ( app-vim/dhcpd-syntax )"
 
 S="${WORKDIR}/${MY_P}"
