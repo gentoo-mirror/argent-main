@@ -17,7 +17,6 @@ IUSE="test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.390.0
 	test? (
 		>=dev-perl/Test-Pod-1.140.0
 		>=dev-perl/Test-Pod-Coverage-1.40.0
