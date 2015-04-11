@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.17 2013/03/16 19:20:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.10 2012/11/01 23:57:50 robbat2 Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -17,7 +17,7 @@
 # the src_unpack, src_prepare, src_configure, src_compile, scr_install,
 # pkg_preinst, pkg_postinst, pkg_config and pkg_postrm phase hooks.
 
-inherit autotools flag-o-matic multilib prefix
+inherit autotools flag-o-matic multilib
 
 #
 # HELPER FUNCTIONS:
@@ -51,14 +51,14 @@ mysql-autotools_disable_test() {
 	# ${S}/mysql-tests/suite/ndb_team/t/disabled.def
 	# ${S}/mysql-tests/suite/binlog/t/disabled.def
 	# ${S}/mysql-tests/suite/innodb/t/disabled.def
-	if [[ -n ${testsuite} ]]; then
+	if [ -n "${testsuite}" ]; then
 		for mysql_disable_file in \
 			${S}/mysql-test/suite/${testsuite}/disabled.def  \
 			${S}/mysql-test/suite/${testsuite}/t/disabled.def  \
 			FAILED ; do
-			[[ -f ${mysql_disable_file} ]] && break
+			[ -f "${mysql_disable_file}" ] && break
 		done
-		if [[ ${mysql_disabled_file} != "FAILED" ]]; then
+		if [ "${mysql_disabled_file}" != "FAILED" ]; then
 			echo "${testname} : ${reason}" >> "${mysql_disable_file}"
 		else
 			ewarn "Could not find testsuite disabled.def location for ${rawtestname}"
@@ -99,8 +99,16 @@ mysql-autotools_configure_minimal() {
 
 	# MariaDB requires this flag in order to link to GPLv3 readline v6 or greater
 	# A note is added to the configure output
-	if [[ ${PN} == "mariadb" ]]  && mysql_version_is_at_least "5.1.61" ; then
+	if [[ "${PN}" == "mariadb" ]]  && mysql_version_is_at_least "5.1.61" ; then
 		myconf="${myconf} --disable-distribution"
+	fi
+
+	# Google MySQL requires extra configure flags
+	if [[ "${PN}" == "google-mysql" ]]; then
+		# use system google-perftools
+		myconf="${myconf} --with-perftools-dir=/usr --enable-perftools-tcmalloc"
+		# use system lzo
+		myconf="${myconf} --with-lzo2-dir=/usr"
 	fi
 }
 
@@ -134,7 +142,7 @@ mysql-autotools_configure_common() {
 		fi
 	fi
 
-	if [[ ( -n ${MYSQL_DEFAULT_CHARSET} ) && ( -n ${MYSQL_DEFAULT_COLLATION} ) ]]; then
+	if [ -n "${MYSQL_DEFAULT_CHARSET}" -a -n "${MYSQL_DEFAULT_COLLATION}" ]; then
 		ewarn "You are using a custom charset of ${MYSQL_DEFAULT_CHARSET}"
 		ewarn "and a collation of ${MYSQL_DEFAULT_COLLATION}."
 		ewarn "You MUST file bugs without these variables set."
@@ -220,7 +228,7 @@ mysql-autotools_configure_51() {
 		# Not supporting as examples: example,daemon_example,ftexample
 		plugins_sta="${plugins_sta} partition"
 
-		if [[ ${PN} != "mariadb" ]] ; then
+		if [[ "${PN}" != "mariadb" ]] ; then
 			elog "Before using the Federated storage engine, please be sure to read"
 			elog "http://dev.mysql.com/doc/refman/5.1/en/federated-limitations.html"
 			plugins_dyn="${plugins_dyn} federated"
@@ -237,10 +245,10 @@ mysql-autotools_configure_51() {
 	# - innobase, innodb_plugin
 	# Build falcon if available for 6.x series.
 	for i in innobase falcon ; do
-		[[ -e ${S}/storage/${i} ]] && plugins_sta="${plugins_sta} ${i}"
+		[ -e "${S}"/storage/${i} ] && plugins_sta="${plugins_sta} ${i}"
 	done
 	for i in innodb_plugin ; do
-		[[ -e ${S}/storage/${i} ]] && plugins_dyn="${plugins_dyn} ${i}"
+		[ -e "${S}"/storage/${i} ] && plugins_dyn="${plugins_dyn} ${i}"
 	done
 
 	# like configuration=max-no-ndb
@@ -252,12 +260,12 @@ mysql-autotools_configure_51() {
 		plugins_dis="${plugins_dis} ndbcluster"
 	fi
 
-	if [[ ${PN} == "mariadb" ]] ; then
+	if [[ "${PN}" == "mariadb" ]] ; then
 		# In MariaDB, InnoDB is packaged in the xtradb directory, so it's not
 		# caught above.
 		# This is not optional, without it several upstream testcases fail.
 		# Also strongly recommended by upstream.
-		if [[ ${PV} < "5.2.0" ]] ; then
+		if [[ "${PV}" < "5.2.0" ]] ; then
 			myconf="${myconf} --with-maria-tmp-tables"
 			plugins_sta="${plugins_sta} maria"
 		else
@@ -265,11 +273,11 @@ mysql-autotools_configure_51() {
 			plugins_sta="${plugins_sta} aria"
 		fi
 
-		[[ ( -e ${S}/storage/innobase ) || ( -e ${S}/storage/xtradb ) ]] ||
+		[ -e "${S}"/storage/innobase ] || [ -e "${S}"/storage/xtradb ] ||
 			die "The ${P} package doesn't provide innobase nor xtradb"
 
 		for i in innobase xtradb ; do
-			[[ -e ${S}/storage/${i} ]] && plugins_sta="${plugins_sta} ${i}"
+			[ -e "${S}"/storage/${i} ] && plugins_sta="${plugins_sta} ${i}"
 		done
 
 		myconf="${myconf} $(use_with libevent)"
@@ -289,18 +297,9 @@ mysql-autotools_configure_51() {
 				|| plugins_dis="${plugins_dis} ${i}"
 			done
 		fi
-
-		#Authentication plugins
-		if mysql_version_is_at_least "5.2.11" ; then
-			for i in pam ; do
-				use ${i} \
-				&& plugins_dyn="${plugins_dyn} auth_${i}" \
-				|| plugins_dis="${plugins_dis} auth_${i}"
-			done
-		fi
 	fi
 
-	if pbxt_available && [[ ${PBXT_NEWSTYLE} == "1" ]]; then
+	if pbxt_available && [[ "${PBXT_NEWSTYLE}" == "1" ]]; then
 		use pbxt \
 		&& plugins_sta="${plugins_sta} pbxt" \
 		|| plugins_dis="${plugins_dis} pbxt"
@@ -311,14 +310,15 @@ mysql-autotools_configure_51() {
 	plugins_dyn=""
 
 	# Google MySQL, bundle what upstream supports
-	if [[ ${PN} == "google-mysql" ]]; then
+	if [[ "${PN}" == "google-mysql" ]]; then
 		for x in innobase innodb_plugin innodb ; do
 			plugins_sta="${plugins_sta//$x}"
 			plugins_dyn="${plugins_dyn//$x}"
 		done
 		plugins_sta="${plugins_sta} innodb_plugin googlestats"
+		# use system perftools
 		myconf="${myconf} --with-perftools-dir=/usr --enable-perftools-tcmalloc"
-		# use system lzo for google-mysql
+		# use system lzo
 		myconf="${myconf} --with-lzo2-dir=/usr"
 	fi
 
@@ -377,29 +377,23 @@ mysql-autotools_src_prepare() {
 
 	cd "${S}"
 
-	if [[ ${MY_EXTRAS_VER} != none ]]; then
-
-		# Apply the patches for this MySQL version
-		EPATCH_SUFFIX="patch"
-		mkdir -p "${EPATCH_SOURCE}" || die "Unable to create epatch directory"
-		# Clean out old items
-		rm -f "${EPATCH_SOURCE}"/*
-		# Now link in right patches
-		mysql_mv_patches
-		# And apply
-		epatch
-	fi
+	# Apply the patches for this MySQL version
+	EPATCH_SUFFIX="patch"
+	mkdir -p "${EPATCH_SOURCE}" || die "Unable to create epatch directory"
+	# Clean out old items
+	rm -f "${EPATCH_SOURCE}"/*
+	# Now link in right patches
+	mysql_mv_patches
+	# And apply
+	epatch
 
 	# last -fPIC fixup, per bug #305873
 	i="${S}"/storage/innodb_plugin/plug.in
-	[[ -f ${i} ]] && sed -i -e '/CFLAGS/s,-prefer-non-pic,,g' "${i}"
+	[ -f "${i}" ] && sed -i -e '/CFLAGS/s,-prefer-non-pic,,g' "${i}"
 
-	# Additional checks, remove bundled zlib (Cluster needs this, for static
-	# memory management in zlib, leave available for Cluster)
-	if [[ "${PN}" != "mysql-cluster" ]] ; then
-		rm -f "${S}/zlib/"*.[ch]
-		sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
-	fi
+	# Additional checks, remove bundled zlib
+	rm -f "${S}/zlib/"*.[ch]
+	sed -i -e "s/zlib\/Makefile dnl/dnl zlib\/Makefile/" "${S}/configure.in"
 	rm -f "scripts/mysqlbug"
 
 	# Make charsets install in the right place
@@ -423,21 +417,19 @@ mysql-autotools_src_prepare() {
 		i="innobase"
 		o="${WORKDIR}/storage-${i}.mysql-upstream"
 		# Have we been here already?
-		[[ -d ${o} ]] && rm -f "${i}"
+		[ -d "${o}" ] && rm -f "${i}"
 		# Or maybe we haven't
-		[[ ( -d ${i} ) && ! ( -d ${o} ) ]] && mv "${i}" "${o}"
+		[ -d "${i}" -a ! -d "${o}" ] && mv "${i}" "${o}"
 		cp -ral "${WORKDIR}/${XTRADB_P}" "${i}"
 		popd >/dev/null
 	fi
 
-	if pbxt_patch_available && [[ ${PBXT_NEWSTYLE} == "1" ]] && use pbxt ; then
+	if pbxt_patch_available && [[ "${PBXT_NEWSTYLE}" == "1" ]] && use pbxt ; then
 		einfo "Adding storage engine: PBXT"
 		pushd "${S}"/storage >/dev/null
 		i='pbxt'
-		[[ -d ${i} ]] && rm -rf "${i}"
+		[ -d "${i}" ] && rm -rf "${i}"
 		cp -ral "${WORKDIR}/${PBXT_P}" "${i}"
-		f="${WORKDIR}/mysql-extras/pbxt/fix-low-priority.patch"
-		[[ -f $f ]] && epatch "$f"
 		popd >/dev/null
 	fi
 
@@ -462,8 +454,6 @@ mysql-autotools_src_prepare() {
 # @DESCRIPTION:
 # Configure mysql to build the code for Gentoo respecting the use flags.
 mysql-autotools_src_configure() {
-	# bug 401733
-	export QA_CONFIGURE_OPTIONS=".*"
 
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
@@ -482,7 +472,7 @@ mysql-autotools_src_configure() {
 	filter-flags "-O" "-O[01]"
 
 	# glib-2.3.2_pre fix, bug #16496
-	append-cppflags "-DHAVE_ERRNO_AS_DEFINE=1"
+	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
 
 	# As discovered by bug #246652, doing a double-level of SSP causes NDB to
 	# fail badly during cluster startup.
@@ -496,7 +486,7 @@ mysql-autotools_src_configure() {
 	# implicitly. Upstream might be interested in this, exclude
 	# -fno-implicit-templates for google-mysql for now.
 	mysql_version_is_at_least "5.0" \
-	&& [[ ${PN} != "google-mysql" ]] \
+	&& [[ "${PN}" != "google-mysql" ]] \
 	&& CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
 	export CXXFLAGS
 
@@ -532,7 +522,7 @@ mysql-autotools_src_configure() {
 	| xargs -0 -n100 sed -i \
 	-e 's|^pkglibdir *= *$(libdir)/mysql|pkglibdir = $(libdir)|;s|^pkgincludedir *= *$(includedir)/mysql|pkgincludedir = $(includedir)|'
 
-	if [[ $EAPI == 2 ]] && [[ ${PBXT_NEWSTYLE} != "1" ]]; then
+	if [[ $EAPI == 2 ]] && [[ "${PBXT_NEWSTYLE}" != "1" ]]; then
 		pbxt_patch_available && use pbxt && pbxt_src_configure
 	fi
 }
@@ -544,7 +534,7 @@ mysql-autotools_src_compile() {
 
 	emake || die "emake failed"
 
-	if [[ ${PBXT_NEWSTYLE} != "1" ]]; then
+	if [[ "${PBXT_NEWSTYLE}" != "1" ]]; then
 		pbxt_patch_available && use pbxt && pbxt_src_compile
 	fi
 }
@@ -563,7 +553,7 @@ mysql-autotools_src_install() {
 		testroot="${MY_SHAREDSTATEDIR}" \
 		|| die "emake install failed"
 
-	if [[ ${PBXT_NEWSTYLE} != "1" ]]; then
+	if [[ "${PBXT_NEWSTYLE}" != "1" ]]; then
 		pbxt_patch_available && use pbxt && pbxt_src_install
 	fi
 
@@ -617,7 +607,6 @@ mysql-autotools_src_install() {
 			-e "/character-set/s|utf8|latin1|g" \
 			"${TMPDIR}/my.cnf.ok"
 	fi
-	eprefixify "${TMPDIR}/my.cnf.ok"
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
 
 	# Minimal builds don't have the MySQL server
@@ -625,8 +614,9 @@ mysql-autotools_src_install() {
 		einfo "Creating initial directories"
 		# Empty directories ...
 		diropts "-m0750"
-		keepdir "${MY_DATADIR#${EPREFIX}}"
-		if [[ ${PREVIOUS_DATADIR} != "yes" ]] ; then
+		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
+			dodir "${MY_DATADIR#${EPREFIX}}"
+			keepdir "${MY_DATADIR#${EPREFIX}}"
 			chown -R mysql:mysql "${D}/${MY_DATADIR}"
 		fi
 
@@ -641,7 +631,7 @@ mysql-autotools_src_install() {
 	# Docs
 	einfo "Installing docs"
 	for i in README ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE ; do
-		[[ -f $i ]] && dodoc "$i"
+		[[ -f "$i" ]] && dodoc "$i"
 	done
 	doinfo "${S}"/Docs/mysql.info
 
@@ -654,23 +644,15 @@ mysql-autotools_src_install() {
 			"${S}"/support-files/magic \
 			"${S}"/support-files/ndb-config-2-node.ini
 		do
-			[[ -f $script ]] && dodoc "${script}"
+			[[ -f "$script" ]] && dodoc "${script}"
 		done
 
 		docinto "scripts"
 		for script in "${S}"/scripts/mysql* ; do
-			[[ ( -f $script ) && ( ${script%.sh} == ${script} ) ]] && dodoc "${script}"
+			[[ -f "$script" ]] && [[ "${script%.sh}" == "${script}" ]] && dodoc "${script}"
 		done
 
 	fi
 
 	mysql_lib_symlinks "${ED}"
-
-	#Remove mytop if perl is not selected
-	[[ ${PN} == "mariadb" ]] && ! use perl \
-	&& mysql_version_is_at_least "5.3" \
-	&& rm -f "${ED}/usr/bin/mytop"
-
-	#Bug 455462 remove unnecessary libtool files
-	prune_libtool_files --modules
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: python.eclass
@@ -7,6 +7,9 @@
 # @BLURB: Eclass for Python packages
 # @DESCRIPTION:
 # The python eclass contains miscellaneous, useful functions for Python packages.
+#
+# This eclass is DEPRECATED. Please use python-r1, python-single-r1
+# or python-any-r1 instead.
 
 if [[ ${_PYTHON_UTILS_R1} ]]; then
 	die 'python.eclass can not be used with python-r1 suite eclasses.'

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1 eutils versionator
 
@@ -21,9 +21,9 @@ KEYWORDS="amd64"
 IUSE="doc latex test"
 
 # Split the jinja dep to allow different slots to satisfy it
-RDEPEND=">=dev-python/docutils-0.7[${PYTHON_USEDEP}]
-	>=dev-python/jinja-2.3[$(python_gen_usedep python{2_5,3_1,3_2})]
-	>=dev-python/jinja-2.3[$(python_gen_usedep python{2_6,2_7,3_3} 'pypy*')]
+RDEPEND="
+	>=dev-python/docutils-0.7[${PYTHON_USEDEP}]
+	>=dev-python/jinja-2.3[${PYTHON_USEDEP}]
 	>=dev-python/pygments-1.2[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	latex? (
@@ -35,11 +35,6 @@ DEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-python3.patch
-	"${FILESDIR}"/${P}-docutils-manpage.patch
-)
-
 python_compile() {
 	distutils-r1_python_compile
 
@@ -47,23 +42,23 @@ python_compile() {
 	# Note that the tests usually do it for us. However, I don't want
 	# to trust USE=test really running all the tests, especially
 	# with FEATURES=test-fail-continue.
-	cd "${BUILD_DIR}"/lib || die
-	"${PYTHON}" -m sphinx.pycode.__init__ \
-		|| die "Grammar generation failed."
+	pushd "${BUILD_DIR}"/lib > /dev/null || die
+	"${PYTHON}" -m sphinx.pycode.__init__ || die "Grammar generation failed."
+	popd > /dev/null || die
 }
 
 python_compile_all() {
-	use doc && emake -C doc SPHINXBUILD="${PYTHON} -m sphinx.__init__" html
+	use doc && emake -C doc SPHINXBUILD='"${PYTHON}" "${S}/sphinx-build.py"' html
 }
 
 python_test() {
 	cp -r -l tests "${BUILD_DIR}"/ || die
 
-	if [[ ${EPYTHON} == python3* ]]; then
+	if $(python_is_python3); then
 		2to3 -w --no-diffs "${BUILD_DIR}"/tests || die
 	fi
 
-	nosetests -w "${BUILD_DIR}"/tests \
+	nosetests -w "${BUILD_DIR}"/tests -v \
 		|| die "Tests fail with ${EPYTHON}"
 }
 

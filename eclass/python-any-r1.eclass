@@ -238,9 +238,7 @@ _python_EPYTHON_supported() {
 	esac
 
 	if has "${i}" "${PYTHON_COMPAT[@]}"; then
-		local PYTHON_PKG_DEP
-		python_export "${i}" PYTHON_PKG_DEP
-		if ROOT=/ has_version "${PYTHON_PKG_DEP}"; then
+		if python_is_installed "${i}"; then
 			if declare -f python_check_deps >/dev/null; then
 				local PYTHON_USEDEP="python_targets_${i}(-),python_single_target_${i}(+)"
 				python_check_deps
