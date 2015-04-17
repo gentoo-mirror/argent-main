@@ -15,7 +15,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=app-admin/eselect-1.2.4
+RDEPEND=">=app-eselect-eselect-1.2.4
 	>=app-shells/bash-4"
 
 src_install() {

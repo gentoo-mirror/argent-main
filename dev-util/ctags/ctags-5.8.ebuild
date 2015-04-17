@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="ada"
 
-DEPEND="app-admin/eselect-ctags"
+DEPEND="app-eselect-eselect-ctags"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-5.6-ebuilds.patch"

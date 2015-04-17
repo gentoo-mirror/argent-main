@@ -15,4 +15,4 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-RDEPEND="app-admin/eselect"
+RDEPEND="app-eselect-eselect"

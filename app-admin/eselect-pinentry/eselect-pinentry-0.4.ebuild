@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-RDEPEND=">=app-admin/eselect-lib-bin-symlink-0.1.1"
+RDEPEND=">=app-eselect-eselect-lib-bin-symlink-0.1.1"
 
 S=${FILESDIR}
 

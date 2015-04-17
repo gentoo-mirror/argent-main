@@ -22,7 +22,7 @@ REQUIRED_USE="
 
 # cairo[-qt4] is needed because of bug 454066
 RDEPEND="
-	app-admin/eselect-qtgraphicssystem
+	app-eselect-eselect-qtgraphicssystem
 	~dev-qt/qtcore-${PV}[aqua=,debug=,glib=,qt3support=]
 	~dev-qt/qtscript-${PV}[aqua=,debug=]
 	media-libs/fontconfig

@@ -12,7 +12,7 @@ KEYWORDS="amd64"
 LICENSE="SGI-B-2.0"
 IUSE=""
 
-RDEPEND=">=app-admin/eselect-opengl-1.2.6"
+RDEPEND=">=app-eselect-eselect-opengl-1.2.6"
 DEPEND=""
 
 src_install() {

@@ -13,7 +13,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64"
 
-RDEPEND=">=app-admin/eselect-1.2.3"
+RDEPEND=">=app-eselect-eselect-1.2.3"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -41,7 +41,7 @@ wanted_languages() {
 }
 
 RDEPEND="
->=app-admin/eselect-postgresql-1.2.0
+>=app-eselect-eselect-postgresql-1.2.0
 sys-apps/less
 virtual/libintl
 kerberos? ( virtual/krb5 )

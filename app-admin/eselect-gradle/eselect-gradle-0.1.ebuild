@@ -14,7 +14,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="app-admin/eselect"
+RDEPEND="app-eselect-eselect"
 
 S="${WORKDIR}"
 
