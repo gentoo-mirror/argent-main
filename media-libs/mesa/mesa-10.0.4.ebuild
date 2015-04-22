@@ -90,9 +90,9 @@ RDEPEND="
 	!<x11-base/xorg-server-1.7
 	!<=x11-proto/xf86driproto-2.0.3
 	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
-	classic? ( app-eselect-eselect-mesa )
-	gallium? ( app-eselect-eselect-mesa )
-	>=app-eselect-eselect-opengl-1.2.7
+	classic? ( app-eselect/eselect-mesa )
+	gallium? ( app-eselect/eselect-mesa )
+	>=app-eselect/eselect-opengl-1.2.7
 	dev-libs/expat[${MULTILIB_USEDEP}]
 	gbm? ( virtual/udev[${MULTILIB_USEDEP}] )
 	>=x11-libs/libX11-1.3.99.901[${MULTILIB_USEDEP}]
@@ -119,7 +119,7 @@ RDEPEND="
 		llvm-shared-libs? ( >=sys-devel/llvm-2.9[${MULTILIB_USEDEP}] )
 	)
 	opencl? (
-				app-eselect-eselect-opencl
+				app-eselect/eselect-opencl
 				dev-libs/libclc
 			)
 	vdpau? ( >=x11-libs/libvdpau-0.4.1[${MULTILIB_USEDEP}] )

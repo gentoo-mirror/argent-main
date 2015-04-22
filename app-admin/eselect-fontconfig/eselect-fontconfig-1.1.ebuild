@@ -12,7 +12,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=app-eselect-eselect-1.2.3
+RDEPEND=">=app-eselect/eselect-1.2.3
 		 >=media-libs/fontconfig-2.4"
 
 S=${WORKDIR}

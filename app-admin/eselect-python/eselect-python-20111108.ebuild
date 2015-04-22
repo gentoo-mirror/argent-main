@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=app-eselect-eselect-1.2.3"
+RDEPEND=">=app-eselect/eselect-1.2.3"
 # Avoid autotool deps for released versions for circ dep issues.
 if [[ ${PV} == "99999999" ]] ; then
 	DEPEND="sys-devel/autoconf"

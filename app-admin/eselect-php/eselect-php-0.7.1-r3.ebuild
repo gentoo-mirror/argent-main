@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="fpm apache2"
 
-DEPEND=">=app-eselect-eselect-1.2.4
+DEPEND=">=app-eselect/eselect-1.2.4
 		!<dev-lang/php-5.3.23-r1:5.3
 		!<dev-lang/php-5.4.13-r1:5.4
 		!<dev-lang/php-5.5.0_beta1-r2:5.5

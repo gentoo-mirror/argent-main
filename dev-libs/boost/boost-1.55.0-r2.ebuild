@@ -27,7 +27,7 @@ RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-cpplibs[-abi_x86_32(-)] )
 	python? ( ${PYTHON_DEPS} )
 	app-arch/bzip2[${MULTILIB_USEDEP}]
 	sys-libs/zlib[${MULTILIB_USEDEP}]
-	!app-eselect-eselect-boost"
+	!app-eselect/eselect-boost"
 DEPEND="${RDEPEND}
 	=dev-util/boost-build-${MAJOR_V}*"
 REQUIRED_USE="

@@ -16,7 +16,7 @@ KEYWORDS="amd64"
 IUSE="gtk ncurses qt4 caps static"
 
 RDEPEND="
-	app-eselect-eselect-pinentry
+	app-eselect/eselect-pinentry
 	caps? ( sys-libs/libcap )
 	gtk? ( x11-libs/gtk+:2 )
 	ncurses? ( sys-libs/ncurses )

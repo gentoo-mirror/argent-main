@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-RDEPEND="app-eselect-eselect"
+RDEPEND="app-eselect/eselect"
 
 src_install() {
 	keepdir /etc/eselect/postgresql

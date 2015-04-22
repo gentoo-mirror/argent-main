@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-RDEPEND=">=app-eselect-eselect-1.0.6"
+RDEPEND=">=app-eselect/eselect-1.0.6"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-prefix.patch"

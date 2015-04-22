@@ -24,7 +24,7 @@ RDEPEND="sys-apps/sed
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	doc? ( dev-python/docutils )"
-RDEPEND="!app-eselect-eselect-news
+RDEPEND="!app-eselect/eselect-news
 	${RDEPEND}
 	sys-apps/file
 	sys-libs/ncurses"

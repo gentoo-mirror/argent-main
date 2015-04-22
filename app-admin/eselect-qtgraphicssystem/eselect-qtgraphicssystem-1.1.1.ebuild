@@ -14,7 +14,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=app-eselect-eselect-1.2.4"
+RDEPEND=">=app-eselect/eselect-1.2.4"
 
 src_install() {
 	insinto /usr/share/eselect/modules

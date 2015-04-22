@@ -28,7 +28,7 @@ LICENSE="vim"
 IUSE="X acl cscope debug gpm lua luajit minimal nls perl python racket ruby selinux tcl vim-pager"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND=">=app-eselect-eselect-vi-1.1
+RDEPEND=">=app-eselect/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( virtual/libintl )
 	acl? ( kernel_linux? ( sys-apps/acl ) )
@@ -50,7 +50,7 @@ RDEPEND=">=app-eselect-eselect-vi-1.1
 	tcl? ( dev-lang/tcl )
 	X? ( x11-libs/libXt )"
 DEPEND="${RDEPEND}
-	>=app-eselect-eselect-vi-1.1
+	>=app-eselect/eselect-vi-1.1
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"

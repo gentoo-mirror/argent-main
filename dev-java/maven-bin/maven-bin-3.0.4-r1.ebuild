@@ -19,7 +19,7 @@ SLOT="3.0"
 KEYWORDS="amd64"
 IUSE=""
 
-DEPEND="|| ( app-eselect-eselect-java app-eselect-eselect-maven )"
+DEPEND="|| ( app-eselect/eselect-java app-eselect/eselect-maven )"
 RDEPEND=">=virtual/jdk-1.5
 	${DEPEND}"
 

@@ -15,7 +15,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( app-eselect-eselect-bashcomp <app-eselect-eselect-1.3.7 )
+RDEPEND="|| ( app-eselect/eselect-bashcomp <app-eselect/eselect-1.3.7 )
 	|| ( >=app-shells/bash-3.2 app-shells/zsh )
 	sys-apps/miscfiles"
 PDEPEND="app-shells/gentoo-bashcomp"
