@@ -12,7 +12,8 @@ DOC_PV="${SRC_PV}"
 
 DESCRIPTION="A SQL Database Engine in a C Library"
 HOMEPAGE="http://sqlite.org/"
-SRC_URI="doc? ( http://sqlite.org/2013/${PN}-doc-${DOC_PV}.zip )
+SRC_URI="doc? ( http://sqlite.org/2013/${PN}-doc-${DOC_PV}.zip
+	http://ftp.osuosl.org/pub/blfs/conglomeration/${PN}/${PN}-doc-${DOC_PV}.zip )
 	tcl? ( http://sqlite.org/2013/${PN}-src-${SRC_PV}.zip )
 	!tcl? (
 		test? ( http://sqlite.org/2013/${PN}-src-${SRC_PV}.zip )
