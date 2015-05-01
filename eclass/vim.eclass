@@ -65,14 +65,14 @@ EXPORT_FUNCTIONS pkg_setup src_prepare src_compile src_configure \
 	src_install src_test pkg_postinst pkg_postrm
 
 DEPEND="${DEPEND}
-	>=app-admin/eselect-vi-1.1
+	>=app-eselect/eselect-vi-1.1
 	sys-apps/gawk
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( virtual/libintl )"
 RDEPEND="${RDEPEND}
-	>=app-admin/eselect-vi-1.1
+	>=app-eselect/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( virtual/libintl )"
 

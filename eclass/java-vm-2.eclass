@@ -15,7 +15,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm pkg_postrm
 
 RDEPEND="
 	=dev-java/java-config-2*
-	|| ( app-admin/eselect-java <dev-java/java-config-2.2 )"
+	|| ( app-eselect/eselect-java <dev-java/java-config-2.2 )"
 DEPEND="${RDEPEND}"
 has "${EAPI}" 0 1 && DEPEND="${DEPEND} >=sys-apps/portage-2.1"
 
