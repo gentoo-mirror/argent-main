@@ -35,8 +35,8 @@ EXPORT_FUNCTIONS pkg_postinst
 IUSE="bash-completion"
 
 # Allow eclass to be inherited by eselect without a circular dependency
-if [[ ${CATEGORY}/${PN} != app-admin/eselect ]]; then
-	RDEPEND="bash-completion? ( app-admin/eselect )"
+if [[ ${CATEGORY}/${PN} != app-eselect/eselect ]]; then
+	RDEPEND="bash-completion? ( app-eselect/eselect )"
 fi
 PDEPEND="bash-completion? ( app-shells/bash-completion )"
 
