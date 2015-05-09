@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.17-r1.ebuild,v 1.9 2015/03/21 14:07:25 jlec Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="nls tcpd ldap rpc"
 
 RDEPEND="ldap? ( >=net-nds/openldap-2.3.35 )
@@ -54,7 +54,7 @@ src_install() {
 	insopts -m0644
 	doins warnquota.conf quotatab
 
-	rm -rf doc/CVS
+	ecvs_clean
 	dodoc doc/*
 	dodoc README.*
 	dodoc Changelog
