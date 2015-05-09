@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.2-r5.ebuild,v 1.5 2015/04/08 18:27:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.3-r2.ebuild,v 1.2 2015/04/08 18:27:24 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -16,10 +16,9 @@ if [ ${PV} == "9999" ] ; then
 	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
 else
 	inherit eutils versionator
-	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/${PN}-kmod-${MY_PV}-p4.tar.xz"
-	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
+	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${P}.tar.gz
+		http://dev.gentoo.org/~ryao/dist/${P}-patches-r1.tar.xz"
+	S="${WORKDIR}/${PN}-${P}"
 	KEYWORDS="~amd64"
 fi
 
@@ -30,11 +29,10 @@ HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="BSD-2 CDDL bash-completion? ( MIT )"
 SLOT="0"
-IUSE="bash-completion custom-cflags debug kernel-builtin +rootfs selinux test-suite static-libs"
+IUSE="bash-completion custom-cflags debug kernel-builtin +rootfs test-suite static-libs"
 RESTRICT="test"
 
 COMMON_DEPEND="
-	selinux? ( sys-libs/libselinux )
 	sys-apps/util-linux[static-libs?]
 	sys-libs/zlib[static-libs(+)?]
 	virtual/awk
@@ -74,10 +72,10 @@ src_prepare() {
 		# Apply patch set
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/${PN}-kmod-${MY_PV}-patches"
+		epatch "${WORKDIR}/${P}-patches"
 	fi
 
-	# Update paths
+# Update paths
 	sed -e "s|/sbin/lsmod|/bin/lsmod|" \
 		-e "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" \
 		-e "s|/sbin/parted|/usr/sbin/parted|" \
@@ -92,12 +90,12 @@ src_configure() {
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=user
+		--with-dracutdir="/usr/$(get_libdir)/dracut"
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
 		--with-udevdir="$(get_udevdir)"
 		--with-blkid
 		$(use_enable debug)
-		$(use_with selinux)
 	)
 	autotools-utils_src_configure
 
@@ -114,8 +112,7 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
-	gen_usr_ldscript -a uutil nvpair zpool zfs
-	rm -rf "${ED}usr/lib/dracut"
+	gen_usr_ldscript -a uutil nvpair zpool zfs zfs_core
 	use test-suite || rm -rf "${ED}usr/share/zfs"
 
 	use bash-completion && newbashcomp "${FILESDIR}/bash-completion-r1" zfs
