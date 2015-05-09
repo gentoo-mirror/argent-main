@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.4.ebuild,v 1.9 2014/08/10 20:20:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.5.ebuild,v 1.6 2014/12/28 10:12:06 ago Exp $
 
 EAPI="4"
 
