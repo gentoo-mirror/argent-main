@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.2-r3.ebuild,v 1.3 2014/04/10 03:13:36 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r5.ebuild,v 1.3 2013/04/17 13:27:54 ryao Exp $
 
 EAPI="4"
 
@@ -17,8 +17,7 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p2.tar.xz"
+	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz"
 	S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
@@ -60,22 +59,38 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 12 || die "Linux 3.12 is the latest supported version."; }
+		{ kernel_is le 3 9 || die "Linux 3.9 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
-	# Remove GPLv2-licensed ZPIOS unless we are debugging
-	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
-
 	if [ ${PV} != "9999" ]
 	then
-		# Apply patch set
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/${PN}-${MY_PV}-patches"
+		# Cast constant for 32-bit compatibility
+		epatch "${FILESDIR}/${P}-cast-const-for-32bit-compatibility.patch"
+
+		# Handle missing name length check in Linux VFS
+		epatch "${FILESDIR}/${P}-vfs-name-length-compatibility.patch"
+
+		# Fix NULL pointer exception on hardened kernels, bug #457176
+		epatch "${FILESDIR}/${P}-improved-hardened-support.patch"
+
+		# Fix barrier regression on Linux 2.6.37 and later
+		epatch "${FILESDIR}/${P}-flush-properly.patch"
+
+		# Improve accuracy of autotools checks
+		epatch "${FILESDIR}/${P}-improved-autotools-checks.patch"
+
+		# Linux 3.9 Support
+		epatch "${FILESDIR}/${P}-linux-3.9-compat.patch"
+
+		# Do not second guess Linux's memory management
+		epatch "${FILESDIR}/${P}-zfs_arc_memory_throttle_disable.patch"
 	fi
+
+	# Remove GPLv2-licensed ZPIOS unless we are debugging
+	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 
 	autotools-utils_src_prepare
 }
@@ -99,20 +114,13 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
+
+	# Provide /usr/src/zfs symlink for lustre
+	dosym "$(basename $(echo "${ED}/usr/src/zfs-"*))/${KV_FULL}" /usr/src/zfs
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-
-	# Remove old modules
-	if [ -d "${EROOT}lib/modules/${KV_FULL}/addon/zfs" ]
-	then
-		ewarn "${PN} now installs modules in ${EROOT}lib/modules/${KV_FULL}/extra/zfs"
-		ewarn "Old modules were detected in ${EROOT}lib/modules/${KV_FULL}/addon/zfs"
-		ewarn "Automatically removing old modules to avoid problems."
-		rm -r "${EROOT}lib/modules/${KV_FULL}/addon/zfs" || die "Cannot remove modules"
-		rmdir --ignore-fail-on-non-empty "${EROOT}lib/modules/${KV_FULL}/addon"
-	fi
 
 	if use x86 || use arm
 	then
@@ -120,7 +128,7 @@ pkg_postinst() {
 		ewarn "at least 256M and decreasing zfs_arc_max to some value less than that."
 	fi
 
-	ewarn "This version of ZFSOnLinux includes support for features flags."
+	ewarn "This version of ZFSOnLinux introduces support for features flags."
 	ewarn "If you upgrade your pools to make use of feature flags, you will lose"
 	ewarn "the ability to import them using older versions of ZFSOnLinux."
 	ewarn "Any new pools will be created with feature flag support and will"

@@ -1,158 +1,127 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3.ebuild,v 1.6 2014/12/01 05:30:02 ryao Exp $
 
-EAPI="5"
+EAPI="4"
 
 AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit bash-completion-r1 flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
+inherit flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
 	MY_PV=9999
-	EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git git://github.com/zfsonlinux/spl.git"
+	EGIT_REPO_URI="https://github.com/zfsonlinux/zfs.git"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		https://github.com/zfsonlinux/spl/archive/spl-${MY_PV}.tar.gz"
-	S="${WORKDIR}"
-	ZFS_S="${WORKDIR}/zfs-zfs-${MY_PV}"
-	SPL_S="${WORKDIR}/spl-spl-${MY_PV}"
+	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz"
+	S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
 
-DESCRIPTION="Solaris Porting Layer and Linux ZFS kernel modules"
+DESCRIPTION="Linux ZFS kernel module for sys-fs/zfs"
 HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="CDDL debug? ( GPL-2+ )"
 SLOT="0"
-IUSE="custom-cflags debug debug-log +rootfs"
-RESTRICT="test"
+IUSE="custom-cflags debug +rootfs"
+RESTRICT="debug? ( strip ) test"
 
-DEPEND="dev-lang/perl
+DEPEND="
+	=sys-kernel/spl-${PV}*
+	dev-lang/perl
 	virtual/awk
 "
 
 RDEPEND="${DEPEND}
 	!sys-fs/zfs-fuse
-	!sys-kernel/spl
 "
 
 pkg_setup() {
 	linux-info_pkg_setup
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
-		!GRKERNSEC_HIDESYM
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		IOSCHED_NOOP
-		KALLSYMS
 		MODULES
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
+		!PAX_RANDKSTACK
+		!PAX_USERCOPY_SLABS
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
 
+	use debug && CONFIG_CHECK="${CONFIG_CHECK}
+		FRAME_POINTER
+		DEBUG_INFO
+		!DEBUG_INFO_REDUCED
+	"
+
 	use rootfs && \
-		CONFIG_CHECK="${CONFIG_CHECK} BLK_DEV_INITRD
-			DEVTMPFS"
+		CONFIG_CHECK="${CONFIG_CHECK}
+			BLK_DEV_INITRD
+			DEVTMPFS
+	"
 
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 15 || die "Linux 3.15 is the latest supported version."; }
+		{ kernel_is le 3 16 || die "Linux 3.16 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
-	use debug || sed -e 's/^subdir-m += zpios$//' -i "${ZFS_S}/module/Makefile.in"
+	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 
-	# Workaround for hard coded path
-	sed -i "s|/sbin/lsmod|/bin/lsmod|" "${SPL_S}"/scripts/check.sh || die
+	# Set module revision number
+	[ ${PV} != "9999" ] && \
+		{ sed -i "s/\(Release:\)\(.*\)1/\1\2${PR}-gentoo/" "${S}/META" || die "Could not set Gentoo release"; }
 
-	# splat is unnecessary unless we are debugging
-	use debug || sed -e 's/^subdir-m += splat$//' -i "${SPL_S}/module/Makefile.in"
-
-	local d
-	for d in "${ZFS_S}" "${SPL_S}"; do
-		pushd "${d}"
-		S="${d}" BUILD_DIR="${d}" autotools-utils_src_prepare
-		unset AUTOTOOLS_BUILD_DIR
-		popd
-	done
+	autotools-utils_src_prepare
 }
 
 src_configure() {
+	local SPL_PATH="$(basename $(echo "${EROOT}usr/src/spl-"*))"
 	use custom-cflags || strip-flags
 	filter-ldflags -Wl,*
 
 	set_arch_to_kernel
-
-	einfo "Configuring SPL..."
-	local myeconfargs=(
-		--bindir="${EPREFIX}/bin"
-		--sbindir="${EPREFIX}/sbin"
-		--with-config=all
-		--with-linux="${KV_DIR}"
-		--with-linux-obj="${KV_OUT_DIR}"
-		$(use_enable debug)
-		$(use_enable debug-log)
-	)
-	pushd "${SPL_S}"
-	BUILD_DIR="${SPL_S}" ECONF_SOURCE="${SPL_S}" autotools-utils_src_configure
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-
-	einfo "Configuring ZFS..."
-	local myeconfargs=(
+	local myeconfargs=(${myeconfargs}
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=kernel
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-spl="${SPL_S}"
+		--with-spl="${EROOT}usr/src/${SPL_PATH}"
+		--with-spl-obj="${EROOT}usr/src/${SPL_PATH}/${KV_FULL}"
 		$(use_enable debug)
 	)
-	pushd "${ZFS_S}"
-	BUILD_DIR="${ZFS_S}" ECONF_SOURCE="${ZFS_S}" autotools-utils_src_configure
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-}
 
-src_compile() {
-	einfo "Compiling SPL..."
-	pushd "${SPL_S}"
-	BUILD_DIR="${SPL_S}" ECONF_SOURCE="${SPL_S}" autotools-utils_src_compile
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-
-	einfo "Compiling ZFS..."
-	pushd "${ZFS_S}"
-	BUILD_DIR="${ZFS_S}" ECONF_SOURCE="${ZFS_S}" autotools-utils_src_compile
-	unset AUTOTOOLS_BUILD_DIR
-	popd
+	autotools-utils_src_configure
 }
 
 src_install() {
-	pushd "${SPL_S}"
-	BUILD_DIR="${SPL_S}" ECONF_SOURCE="${SPL_S}" autotools-utils_src_install
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-
-	pushd "${ZFS_S}"
-	BUILD_DIR="${ZFS_S}" ECONF_SOURCE="${ZFS_S}" autotools-utils_src_install
-	unset AUTOTOOLS_BUILD_DIR
-	dodoc "${ZFS_S}"/AUTHORS "${ZFS_S}"/COPYRIGHT "${ZFS_S}"/DISCLAIMER "${ZFS_S}"/README.markdown
-	popd
+	autotools-utils_src_install INSTALL_MOD_PATH="${INSTALL_MOD_PATH:-$EROOT}"
+	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
+
+	# Remove old modules
+	if [ -d "${EROOT}lib/modules/${KV_FULL}/addon/zfs" ]
+	then
+		ewarn "${PN} now installs modules in ${EROOT}lib/modules/${KV_FULL}/extra/zfs"
+		ewarn "Old modules were detected in ${EROOT}lib/modules/${KV_FULL}/addon/zfs"
+		ewarn "Automatically removing old modules to avoid problems."
+		rm -r "${EROOT}lib/modules/${KV_FULL}/addon/zfs" || die "Cannot remove modules"
+		rmdir --ignore-fail-on-non-empty "${EROOT}lib/modules/${KV_FULL}/addon"
+	fi
 
 	if use x86 || use arm
 	then

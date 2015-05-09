@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.2-r3.ebuild,v 1.3 2014/04/10 03:13:36 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc13-r4.ebuild,v 1.4 2013/04/17 13:27:54 ryao Exp $
 
 EAPI="4"
 
@@ -12,13 +12,11 @@ inherit bash-completion-r1 flag-o-matic linux-info linux-mod toolchain-funcs aut
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
-	MY_PV=9999
 	EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p2.tar.xz"
+	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz"
 	S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
@@ -33,8 +31,8 @@ RESTRICT="test"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
-	dev-lang/perl
 	virtual/awk
+	dev-lang/perl
 "
 
 RDEPEND="${DEPEND}
@@ -60,22 +58,35 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 12 || die "Linux 3.12 is the latest supported version."; }
+		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
-	# Remove GPLv2-licensed ZPIOS unless we are debugging
-	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
-
 	if [ ${PV} != "9999" ]
 	then
-		# Apply patch set
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/${PN}-${MY_PV}-patches"
+		# Fix regression where snapshots are not visible
+		epatch "${FILESDIR}/${P}-fix-invisible-snapshots.patch"
+
+		# Fix deadlock involving concurrent `zfs destroy` and `zfs list` commands
+		epatch "${FILESDIR}/${P}-fix-recursive-reader.patch"
+
+		# Fix USE=debug build failure involving GCC 4.7
+		epatch "${FILESDIR}/${P}-gcc-4.7-compat.patch"
+
+		# Cast constant for 32-bit compatibility
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-cast-const-for-32bit-compatibility.patch"
+
+		# Handle missing name length check in Linux VFS
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-vfs-name-length-compatibility.patch"
+
+		# Fix barrier regression on Linux 2.6.37 and later
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-flush-properly.patch"
 	fi
+
+	# Remove GPLv2-licensed ZPIOS unless we are debugging
+	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 
 	autotools-utils_src_prepare
 }
@@ -92,27 +103,17 @@ src_configure() {
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
 		$(use_enable debug)
+	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 	)
 	autotools-utils_src_configure
 }
 
 src_install() {
 	autotools-utils_src_install
-	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-
-	# Remove old modules
-	if [ -d "${EROOT}lib/modules/${KV_FULL}/addon/zfs" ]
-	then
-		ewarn "${PN} now installs modules in ${EROOT}lib/modules/${KV_FULL}/extra/zfs"
-		ewarn "Old modules were detected in ${EROOT}lib/modules/${KV_FULL}/addon/zfs"
-		ewarn "Automatically removing old modules to avoid problems."
-		rm -r "${EROOT}lib/modules/${KV_FULL}/addon/zfs" || die "Cannot remove modules"
-		rmdir --ignore-fail-on-non-empty "${EROOT}lib/modules/${KV_FULL}/addon"
-	fi
 
 	if use x86 || use arm
 	then
@@ -120,10 +121,4 @@ pkg_postinst() {
 		ewarn "at least 256M and decreasing zfs_arc_max to some value less than that."
 	fi
 
-	ewarn "This version of ZFSOnLinux includes support for features flags."
-	ewarn "If you upgrade your pools to make use of feature flags, you will lose"
-	ewarn "the ability to import them using older versions of ZFSOnLinux."
-	ewarn "Any new pools will be created with feature flag support and will"
-	ewarn "not be compatible with older versions of ZFSOnLinux. To create a new"
-	ewarn "pool that is backward compatible, use zpool create -o version=28 ..."
 }

@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.2-r5.ebuild,v 1.1 2014/04/11 04:43:29 ryao Exp $
 
-EAPI="5"
+EAPI="4"
 
 AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
@@ -13,45 +13,40 @@ inherit bash-completion-r1 flag-o-matic linux-info linux-mod toolchain-funcs aut
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
 	MY_PV=9999
-	EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git git://github.com/zfsonlinux/spl.git"
+	EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		https://github.com/zfsonlinux/spl/archive/spl-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/spl-${MY_PV}-p4.tar.xz
 		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p4.tar.xz"
-	S="${WORKDIR}"
-	ZFS_S="${WORKDIR}/zfs-zfs-${MY_PV}"
-	SPL_S="${WORKDIR}/spl-spl-${MY_PV}"
+	S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
 
-DESCRIPTION="Solaris Porting Layer and Linux ZFS kernel modules"
+DESCRIPTION="Linux ZFS kernel module for sys-fs/zfs"
 HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="CDDL debug? ( GPL-2+ )"
 SLOT="0"
-IUSE="custom-cflags debug debug-log +rootfs"
+IUSE="custom-cflags debug +rootfs"
 RESTRICT="test"
 
-DEPEND="dev-lang/perl
+DEPEND="
+	=sys-kernel/spl-${PV}*
+	dev-lang/perl
 	virtual/awk
 "
 
 RDEPEND="${DEPEND}
 	!sys-fs/zfs-fuse
-	!sys-kernel/spl
 "
 
 pkg_setup() {
 	linux-info_pkg_setup
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
-		!GRKERNSEC_HIDESYM
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		IOSCHED_NOOP
-		KALLSYMS
 		MODULES
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
 		ZLIB_DEFLATE
@@ -72,37 +67,17 @@ pkg_setup() {
 
 src_prepare() {
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
-	use debug || sed -e 's/^subdir-m += zpios$//' -i "${ZFS_S}/module/Makefile.in"
-
-	# Workaround for hard coded path
-	sed -i "s|/sbin/lsmod|/bin/lsmod|" "${SPL_S}"/scripts/check.sh || die
+	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 
 	if [ ${PV} != "9999" ]
 	then
 		# Apply patch set
-		pushd "${SPL_S}"
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/spl-${MY_PV}-patches"
-		popd
-
-		pushd "${ZFS_S}"
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/zfs-kmod-${MY_PV}-patches"
-		popd
+		epatch "${WORKDIR}/${PN}-${MY_PV}-patches"
 	fi
 
-	# splat is unnecessary unless we are debugging
-	use debug || sed -e 's/^subdir-m += splat$//' -i "${SPL_S}/module/Makefile.in"
-
-	local d
-	for d in "${ZFS_S}" "${SPL_S}"; do
-		pushd "${d}"
-		S="${d}" BUILD_DIR="${d}" autotools-utils_src_prepare
-		unset AUTOTOOLS_BUILD_DIR
-		popd
-	done
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -110,67 +85,34 @@ src_configure() {
 	filter-ldflags -Wl,*
 
 	set_arch_to_kernel
-
-	einfo "Configuring SPL..."
-	local myeconfargs=(
-		--bindir="${EPREFIX}/bin"
-		--sbindir="${EPREFIX}/sbin"
-		--with-config=all
-		--with-linux="${KV_DIR}"
-		--with-linux-obj="${KV_OUT_DIR}"
-		$(use_enable debug)
-		$(use_enable debug-log)
-	)
-	pushd "${SPL_S}"
-	BUILD_DIR="${SPL_S}" ECONF_SOURCE="${SPL_S}" autotools-utils_src_configure
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-
-	einfo "Configuring ZFS..."
 	local myeconfargs=(
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=kernel
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-spl="${SPL_S}"
 		$(use_enable debug)
 	)
-	pushd "${ZFS_S}"
-	BUILD_DIR="${ZFS_S}" ECONF_SOURCE="${ZFS_S}" autotools-utils_src_configure
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-}
-
-src_compile() {
-	einfo "Compiling SPL..."
-	pushd "${SPL_S}"
-	BUILD_DIR="${SPL_S}" ECONF_SOURCE="${SPL_S}" autotools-utils_src_compile
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-
-	einfo "Compiling ZFS..."
-	pushd "${ZFS_S}"
-	BUILD_DIR="${ZFS_S}" ECONF_SOURCE="${ZFS_S}" autotools-utils_src_compile
-	unset AUTOTOOLS_BUILD_DIR
-	popd
+	autotools-utils_src_configure
 }
 
 src_install() {
-	pushd "${SPL_S}"
-	BUILD_DIR="${SPL_S}" ECONF_SOURCE="${SPL_S}" autotools-utils_src_install
-	unset AUTOTOOLS_BUILD_DIR
-	popd
-
-	pushd "${ZFS_S}"
-	BUILD_DIR="${ZFS_S}" ECONF_SOURCE="${ZFS_S}" autotools-utils_src_install
-	unset AUTOTOOLS_BUILD_DIR
-	dodoc "${ZFS_S}"/AUTHORS "${ZFS_S}"/COPYRIGHT "${ZFS_S}"/DISCLAIMER "${ZFS_S}"/README.markdown
-	popd
+	autotools-utils_src_install
+	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
+
+	# Remove old modules
+	if [ -d "${EROOT}lib/modules/${KV_FULL}/addon/zfs" ]
+	then
+		ewarn "${PN} now installs modules in ${EROOT}lib/modules/${KV_FULL}/extra/zfs"
+		ewarn "Old modules were detected in ${EROOT}lib/modules/${KV_FULL}/addon/zfs"
+		ewarn "Automatically removing old modules to avoid problems."
+		rm -r "${EROOT}lib/modules/${KV_FULL}/addon/zfs" || die "Cannot remove modules"
+		rmdir --ignore-fail-on-non-empty "${EROOT}lib/modules/${KV_FULL}/addon"
+	fi
 
 	if use x86 || use arm
 	then

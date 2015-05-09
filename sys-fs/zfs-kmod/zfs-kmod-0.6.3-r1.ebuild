@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.2-r3.ebuild,v 1.3 2014/04/10 03:13:36 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3-r1.ebuild,v 1.1 2014/12/01 07:02:33 ryao Exp $
 
 EAPI="4"
 
@@ -8,18 +8,16 @@ AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit bash-completion-r1 flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
+inherit flag-o-matic linux-info linux-mod toolchain-funcs autotools-utils
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
-	MY_PV=9999
-	EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
+	EGIT_REPO_URI="https://github.com/zfsonlinux/zfs.git"
 else
 	inherit eutils versionator
-	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
-		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p2.tar.xz"
-	S="${WORKDIR}/zfs-zfs-${MY_PV}"
+	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${PV}.tar.gz
+		http://dev.gentoo.org/~ryao/dist/zfs-${PV}-patches-${PR}.tar.xz"
+	S="${WORKDIR}/zfs-zfs-${PV}"
 	KEYWORDS="~amd64"
 fi
 
@@ -29,7 +27,7 @@ HOMEPAGE="http://zfsonlinux.org/"
 LICENSE="CDDL debug? ( GPL-2+ )"
 SLOT="0"
 IUSE="custom-cflags debug +rootfs"
-RESTRICT="test"
+RESTRICT="debug? ( strip ) test"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
@@ -49,55 +47,73 @@ pkg_setup() {
 		IOSCHED_NOOP
 		MODULES
 		!PAX_KERNEXEC_PLUGIN_METHOD_OR
+		!PAX_RANDKSTACK
+		!PAX_USERCOPY_SLABS
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
 
+	use debug && CONFIG_CHECK="${CONFIG_CHECK}
+		FRAME_POINTER
+		DEBUG_INFO
+		!DEBUG_INFO_REDUCED
+	"
+
 	use rootfs && \
-		CONFIG_CHECK="${CONFIG_CHECK} BLK_DEV_INITRD
-			DEVTMPFS"
+		CONFIG_CHECK="${CONFIG_CHECK}
+			BLK_DEV_INITRD
+			DEVTMPFS
+	"
 
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 12 || die "Linux 3.12 is the latest supported version."; }
+		{ kernel_is le 3 17 || die "Linux 3.17 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
-	# Remove GPLv2-licensed ZPIOS unless we are debugging
-	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
-
 	if [ ${PV} != "9999" ]
 	then
 		# Apply patch set
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
-		epatch "${WORKDIR}/${PN}-${MY_PV}-patches"
+		epatch "${WORKDIR}/zfs-${PV}-patches"
 	fi
+
+	# Remove GPLv2-licensed ZPIOS unless we are debugging
+	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
+
+	# Set module revision number
+	[ ${PV} != "9999" ] && \
+		{ sed -i "s/\(Release:\)\(.*\)1/\1\2${PR}-gentoo/" "${S}/META" || die "Could not set Gentoo release"; }
 
 	autotools-utils_src_prepare
 }
 
 src_configure() {
+	local SPL_PATH="$(basename $(echo "${EROOT}usr/src/spl-"*))"
 	use custom-cflags || strip-flags
 	filter-ldflags -Wl,*
 
 	set_arch_to_kernel
-	local myeconfargs=(
+	local myeconfargs=(${myeconfargs}
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=kernel
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
+		--with-spl="${EROOT}usr/src/${SPL_PATH}"
+		--with-spl-obj="${EROOT}usr/src/${SPL_PATH}/${KV_FULL}"
 		$(use_enable debug)
 	)
+
 	autotools-utils_src_configure
 }
 
 src_install() {
-	autotools-utils_src_install
+	autotools-utils_src_install INSTALL_MOD_PATH="${INSTALL_MOD_PATH:-$EROOT}"
 	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 }
 
