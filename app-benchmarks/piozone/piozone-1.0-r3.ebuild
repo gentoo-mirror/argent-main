@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="A hard-disk benchmarking tool."
+DESCRIPTION="A hard-disk benchmarking tool"
 HOMEPAGE="http://www.lysator.liu.se/~pen/piozone/"
 SRC_URI="ftp://ftp.lysator.liu.se/pub/unix/piozone/${P}.tar.gz"
 
