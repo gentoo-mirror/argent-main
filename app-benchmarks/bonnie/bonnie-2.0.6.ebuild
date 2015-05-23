@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit eutils
 
-DESCRIPTION="Performance Test of Filesystem I/O using standard C library calls."
+DESCRIPTION="Performance Test of Filesystem I/O using standard C library calls"
 HOMEPAGE="http://www.textuality.com/bonnie/"
 SRC_URI="http://www.textuality.com/bonnie/bonnie.tar.gz"
 

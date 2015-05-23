@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit eutils
 
-DESCRIPTION="Hard drive bottleneck testing benchmark suite."
+DESCRIPTION="Hard drive bottleneck testing benchmark suite"
 HOMEPAGE="http://www.coker.com.au/bonnie++/"
 SRC_URI="http://www.coker.com.au/bonnie++/experimental/${P}.tgz"
 
