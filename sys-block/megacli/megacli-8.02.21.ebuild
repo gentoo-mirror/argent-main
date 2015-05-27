@@ -20,7 +20,7 @@ DEPEND="app-arch/unzip
 
 S="${WORKDIR}"
 
-# Argent does not care about fetch restrictions. we need to make sure our
+# Zentoo does not care about fetch restrictions. we need to make sure our
 # clients can always install megacli without interactive EULA dialogs.
 #RESTRICT="mirror fetch"
 
