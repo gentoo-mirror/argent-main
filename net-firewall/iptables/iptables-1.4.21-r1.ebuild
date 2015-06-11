@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
 # Force users doing their own patches to install their own tools
 AUTOTOOLS_AUTO_DEPEND=no
 
-inherit eutils multilib toolchain-funcs autotools
+inherit eutils multilib systemd toolchain-funcs autotools
 
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.netfilter.org/projects/iptables/"
@@ -78,6 +78,11 @@ src_install() {
 		keepdir /var/lib/ip6tables
 		newinitd "${FILESDIR}"/iptables-1.4.13-r1.init ip6tables
 		newconfd "${FILESDIR}"/ip6tables-1.4.13.confd ip6tables
+	fi
+
+	systemd_dounit "${FILESDIR}"/systemd/iptables{,-{re,}store}.service
+	if use ipv6 ; then
+		systemd_dounit "${FILESDIR}"/systemd/ip6tables{,-{re,}store}.service
 	fi
 
 	# Move important libs to /lib
