@@ -26,7 +26,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="app-arch/xz-utils"
-RDEPEND=">=app-eselect/eselect-1.2.4
+RDEPEND=">=app-admin/eselect-1.2.4
 		 !<media-libs/mesa-8.0.3-r1
 		 !<x11-proto/glproto-1.4.15-r1"
 

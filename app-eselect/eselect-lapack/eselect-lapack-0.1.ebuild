@@ -14,7 +14,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 # Need skel.bash lib
-RDEPEND=">=app-eselect/eselect-1.0.5"
+RDEPEND=">=app-admin/eselect-1.0.5"
 DEPEND="${RDEPEND}"
 
 src_install() {
