@@ -37,7 +37,7 @@ texlive-common_handle_config_files() {
 	[ -d "${ED}${TEXMF_PATH}" ] || return
 	cd "${ED}${TEXMF_PATH}"
 	for f in $(find . -name '*.cnf' -type f -o -name '*.cfg' -type f | sed -e "s:\./::g") ; do
-		if [ "${f#*config}" != "${f}" -o "${f#doc}" != "${f}" ] ; then
+		if [ "${f#*config}" != "${f}" -o "${f#doc}" != "${f}"  -o "${f#source}"	!= "${f}" -o "${f#tex}" != "${f}" ] ; then
 			continue
 		fi
 		dodir /etc/texmf/$(dirname ${f}).d

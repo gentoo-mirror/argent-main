@@ -14,8 +14,8 @@
 # shown at first package installation and a file for later reviewing will be
 # installed under /usr/share/doc/${PF}
 
-if [[ ${___ECLASS_ONCE_README_GENTOO} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_README_GENTOO="recur -_+^+_- spank"
+if [[ -z ${_README_GENTOO_ECLASS} ]]; then
+_README_GENTOO_ECLASS=1
 
 inherit eutils
 
@@ -47,6 +47,11 @@ EXPORT_FUNCTIONS src_install pkg_postinst
 # @DESCRIPTION:
 # If non-empty this variable forces elog messages to be printed.
 
+# @ECLASS-VARIABLE: README_GENTOO_SUFFIX
+# @DESCRIPTION:
+# If you want to specify a suffix for README.gentoo file please export it.
+: ${README_GENTOO_SUFFIX:=""}
+
 # @FUNCTION: readme.gentoo_create_doc
 # @DESCRIPTION:
 # Create doc file with ${DOC_CONTENTS} variable (preferred) and, if not set,
@@ -67,9 +72,9 @@ readme.gentoo_create_doc() {
 		fi
 		eshopts_pop
 	elif [[ -f "${FILESDIR}/README.gentoo-${SLOT%/*}" ]]; then
-		cp "${FILESDIR}/README.gentoo-${SLOT%/*}" "${T}"/README.gentoo
-	elif [[ -f "${FILESDIR}/README.gentoo" ]]; then
-		cp "${FILESDIR}/README.gentoo" "${T}"/README.gentoo
+		cp "${FILESDIR}/README.gentoo-${SLOT%/*}" "${T}"/README.gentoo || die
+	elif [[ -f "${FILESDIR}/README.gentoo${README_GENTOO_SUFFIX}" ]]; then
+		cp "${FILESDIR}/README.gentoo${README_GENTOO_SUFFIX}" "${T}"/README.gentoo || die
 	else
 		die "You are not specifying README.gentoo contents!"
 	fi

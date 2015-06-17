@@ -87,10 +87,10 @@ gnuconfig_do_update() {
 # returns the directory where they can be found.
 gnuconfig_findnewest() {
 	local locations=(
-		/usr/share/misc/config.sub
-		/usr/share/gnuconfig/config.sub
-		/usr/share/automake*/config.sub
-		/usr/share/libtool/config.sub
+		"${EPREFIX}"/usr/share/misc/config.sub
+		"${EPREFIX}"/usr/share/gnuconfig/config.sub
+		"${EPREFIX}"/usr/share/automake*/config.sub
+		"${EPREFIX}"/usr/share/libtool/config.sub
 	)
 	grep -s '^timestamp' "${locations[@]}" | \
 		sort -r -n -t\' -k2 | \

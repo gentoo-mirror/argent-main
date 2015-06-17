@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: vala.eclass
@@ -25,13 +25,13 @@ esac
 
 # @ECLASS-VARIABLE: VALA_MIN_API_VERSION
 # @DESCRIPTION:
-# Minimum vala API version (e.g. 0.16).
-VALA_MIN_API_VERSION=${VALA_MIN_API_VERSION:-0.10}
+# Minimum vala API version (e.g. 0.20).
+VALA_MIN_API_VERSION=${VALA_MIN_API_VERSION:-0.20}
 
 # @ECLASS-VARIABLE: VALA_MAX_API_VERSION
 # @DESCRIPTION:
-# Maximum vala API version (e.g. 0.20).
-VALA_MAX_API_VERSION=${VALA_MAX_API_VERSION:-0.22}
+# Maximum vala API version (e.g. 0.26).
+VALA_MAX_API_VERSION=${VALA_MAX_API_VERSION:-0.26}
 
 # @ECLASS-VARIABLE: VALA_USE_DEPEND
 # @DEFAULT_UNSET
@@ -43,7 +43,19 @@ VALA_MAX_API_VERSION=${VALA_MAX_API_VERSION:-0.22}
 # Outputs a list of vala API versions from VALA_MAX_API_VERSION down to
 # VALA_MIN_API_VERSION.
 vala_api_versions() {
-	eval "echo 0.{${VALA_MAX_API_VERSION#0.}..${VALA_MIN_API_VERSION#0.}..2}"
+	[[ ${VALA_MIN_API_VERSION} =~ ^0\.[[:digit:]]+$ ]] || die "Invalid syntax of VALA_MIN_API_VERSION"
+	[[ ${VALA_MAX_API_VERSION} =~ ^0\.[[:digit:]]+$ ]] || die "Invalid syntax of VALA_MAX_API_VERSION"
+
+	local minimal_supported_minor_version minor_version
+
+	# Dependency atoms are not generated for Vala versions older than 0.${minimal_supported_minor_version}.
+	minimal_supported_minor_version="20"
+
+	for ((minor_version = ${VALA_MAX_API_VERSION#*.}; minor_version >= ${VALA_MIN_API_VERSION#*.}; minor_version = minor_version - 2)); do
+		if ((minor_version >= minimal_supported_minor_version)); then
+			echo "0.${minor_version}"
+		fi
+	done
 }
 
 # @FUNCTION: vala_depend
@@ -52,7 +64,7 @@ vala_api_versions() {
 # VALA_MIN_API_VERSION
 vala_depend() {
 	local u v versions=$(vala_api_versions)
-	[[ ${VALA_USE_DEPEND} ]] && u="[${VALA_USE_DEPEND}]"
+	[[ ${VALA_USE_DEPEND} ]] && u="[${VALA_USE_DEPEND}(+)]"
 
 	echo -n "|| ("
 	for v in ${versions}; do
@@ -67,7 +79,7 @@ vala_depend() {
 # VALA_MAX_API_VERSION, VALA_MIN_API_VERSION, and VALA_USE_DEPEND.
 vala_best_api_version() {
 	local u v
-	[[ ${VALA_USE_DEPEND} ]] && u="[${VALA_USE_DEPEND}]"
+	[[ ${VALA_USE_DEPEND} ]] && u="[${VALA_USE_DEPEND}(+)]"
 	for v in $(vala_api_versions); do
 		has_version "dev-lang/vala:${v}${u}" && echo "${v}" && return
 	done

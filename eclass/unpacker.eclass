@@ -14,8 +14,8 @@
 #  - merge rpm unpacking
 #  - support partial unpacks?
 
-if [[ ${___ECLASS_ONCE_UNPACKER} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_UNPACKER="recur -_+^+_- spank"
+if [[ -z ${_UNPACKER_ECLASS} ]]; then
+_UNPACKER_ECLASS=1
 
 # @ECLASS-VARIABLE: UNPACKER_BZ2
 # @DEFAULT_UNSET
@@ -28,7 +28,7 @@ ___ECLASS_ONCE_UNPACKER="recur -_+^+_- spank"
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Utility to use to decompress lzip files.  Will dynamically pick between
-# `pdlzip` and `lzip`.  Make sure your choice accepts the "-dc" options.
+# `plzip`, `pdlzip` and `lzip`.  Make sure your choice accepts the "-dc" options.
 # Note: this is meant for users to set, not ebuilds.
 
 # for internal use only (unpack_pdv and unpack_makeself)
@@ -351,7 +351,7 @@ _unpacker() {
 	*.lzma|*.xz|*.txz)
 		comp="xz -dc" ;;
 	*.lz)
-		: ${UNPACKER_LZIP:=$(type -P pdlzip || type -P lzip)}
+		: ${UNPACKER_LZIP:=$(type -P plzip || type -P pdlzip || type -P lzip)}
 		comp="${UNPACKER_LZIP} -dc" ;;
 	*)	comp="" ;;
 	esac
@@ -448,7 +448,7 @@ unpacker_src_uri_depends() {
 		*.zip)
 			d="app-arch/unzip" ;;
 		*.lz)
-			d="|| ( app-arch/pdlzip app-arch/lzip )" ;;
+			d="|| ( app-arch/plzip app-arch/pdlzip app-arch/lzip )" ;;
 		esac
 		deps+=" ${d}"
 	done

@@ -24,9 +24,9 @@ all-flag-vars() {
 setup-allowed-flags() {
 	ALLOWED_FLAGS="-pipe"
 	ALLOWED_FLAGS+=" -O -O1 -O2 -Os -Og -mcpu -march -mtune"
-	ALLOWED_FLAGS+=" -fstack-protector*"
+	ALLOWED_FLAGS+=" -fstack-protector* -fsanitize=*"
 	ALLOWED_FLAGS+=" -fbounds-checking -fno-strict-overflow"
-	ALLOWED_FLAGS+=" -fno-PIE -fno-pie -fno-unit-at-a-time"
+	ALLOWED_FLAGS+=" -fno-PIE -fno-pie -nopie -fno-unit-at-a-time"
 	ALLOWED_FLAGS+=" -g -g[0-9] -ggdb -ggdb[0-9] -gdwarf-* gstabs -gstabs+"
 	ALLOWED_FLAGS+=" -fno-ident -fpermissive -frecord-gcc-switches"
 	ALLOWED_FLAGS+=" -fdiagnostics*"
