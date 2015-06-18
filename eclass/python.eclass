@@ -259,7 +259,7 @@ _python_parse_PYTHON_DEPEND() {
 }
 
 if _python_implementation; then
-	DEPEND=">=app-eselect/eselect-python-20091230"
+	DEPEND=">=app-admin/eselect-python-20091230"
 	RDEPEND="${DEPEND}"
 	PDEPEND="app-admin/python-updater"
 fi

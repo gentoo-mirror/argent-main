@@ -7,6 +7,8 @@
 	</maintainer>
 	<use>
 		<flag name="rootfs">Install zfs-shutdown script to support exporting a pool containing rootfs</flag>
-		<flag name="debug-log">Enable additional diagnostics</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">zfsonlinux/zfs</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -213,7 +213,7 @@ texlive-module_synonyms_to_language_lua_line() {
 
 # @FUNCTION: texlive-module_make_language_lua_lines
 # @DESCRIPTION:
-# Only valid for TeXLive 2010.
+# Only valid for TeXLive 2010 and later.
 # Creates a language.${PN}.dat.lua entry to put in
 # /etc/texmf/language.dat.lua.d.
 # It parses the AddHyphen directive of tlpobj files to create it.

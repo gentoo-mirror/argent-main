@@ -171,7 +171,7 @@ java-ant_bsfix() {
 	local find_args=""
 	[[ "${JAVA_PKG_BSFIX_ALL}" == "yes" ]] || find_args="-maxdepth 1"
 
-	find_args="${find_args} -type f -name ${JAVA_PKG_BSFIX_NAME// / -o -name } "
+	find_args="${find_args} -type f ( -name ${JAVA_PKG_BSFIX_NAME// / -o -name } )"
 
 	# This voodoo is done for paths with spaces
 	local bsfix_these

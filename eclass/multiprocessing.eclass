@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: multiprocessing.eclass
@@ -32,8 +32,8 @@
 # multijob_finish
 # @CODE
 
-if [[ ${___ECLASS_ONCE_MULTIPROCESSING} != "recur -_+^+_- spank" ]] ; then
-___ECLASS_ONCE_MULTIPROCESSING="recur -_+^+_- spank"
+if [[ -z ${_MULTIPROCESSING_ECLASS} ]]; then
+_MULTIPROCESSING_ECLASS=1
 
 # @FUNCTION: bashpid
 # @DESCRIPTION:

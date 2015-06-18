@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: qmake-utils.eclass
@@ -10,10 +10,29 @@
 # @DESCRIPTION:
 # Utility eclass providing wrapper functions for Qt4 and Qt5 qmake.
 
-if [[ ${___ECLASS_ONCE_QMAKE_UTILS} != "recur -_+^+_- spank" ]]; then
-___ECLASS_ONCE_QMAKE_UTILS="recur -_+^+_- spank"
+if [[ -z ${_QMAKE_UTILS_ECLASS} ]]; then
+_QMAKE_UTILS_ECLASS=1
 
 inherit eutils multilib toolchain-funcs
+
+# @FUNCTION: qt4_get_bindir
+# @DESCRIPTION:
+# Echoes the directory where Qt4 binaries are installed.
+qt4_get_bindir() {
+	local qtbindir=${EPREFIX}/usr/$(get_libdir)/qt4/bin
+	if [[ -d ${qtbindir} ]]; then
+		echo ${qtbindir}
+	else
+		echo ${EPREFIX}/usr/bin
+	fi
+}
+
+# @FUNCTION: qt5_get_bindir
+# @DESCRIPTION:
+# Echoes the directory where Qt5 binaries are installed.
+qt5_get_bindir() {
+	echo ${EPREFIX}/usr/$(get_libdir)/qt5/bin
+}
 
 # @FUNCTION: qmake-utils_find_pro_file
 # @RETURN: zero or one qmake .pro file names
@@ -157,10 +176,8 @@ eqmake4() {
 
 	[[ -n ${EQMAKE4_EXCLUDE} ]] && eshopts_pop
 
-	"${EPREFIX}"/usr/bin/qmake \
+	"$(qt4_get_bindir)"/qmake \
 		-makefile \
-		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
-		QMAKE="${EPREFIX}"/usr/bin/qmake \
 		QMAKE_AR="$(tc-getAR) cqs" \
 		QMAKE_CC="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \
@@ -210,13 +227,15 @@ eqmake5() {
 
 	ebegin "Running qmake"
 
-	"${EPREFIX}"/usr/$(get_libdir)/qt5/bin/qmake \
+	"$(qt5_get_bindir)"/qmake \
 		-makefile \
 		QMAKE_AR="$(tc-getAR) cqs" \
 		QMAKE_CC="$(tc-getCC)" \
+		QMAKE_LINK_C="$(tc-getCC)" \
+		QMAKE_LINK_C_SHLIB="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \
 		QMAKE_LINK="$(tc-getCXX)" \
-		QMAKE_LINK_C="$(tc-getCC)" \
+		QMAKE_LINK_SHLIB="$(tc-getCXX)" \
 		QMAKE_OBJCOPY="$(tc-getOBJCOPY)" \
 		QMAKE_RANLIB= \
 		QMAKE_STRIP= \

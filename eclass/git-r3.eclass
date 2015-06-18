@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: git-r3.eclass
@@ -113,7 +113,8 @@ fi
 # @DESCRIPTION:
 # URIs to the repository, e.g. git://foo, https://foo. If multiple URIs
 # are provided, the eclass will consider them as fallback URIs to try
-# if the first URI does not work.
+# if the first URI does not work. For supported URI syntaxes, read up
+# the manpage for git-clone(1).
 #
 # It can be overriden via env using ${PN}_LIVE_REPO variable.
 #
@@ -128,6 +129,17 @@ fi
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # If non-empty, this variable prevents any online operations.
+
+# @ECLASS-VARIABLE: EVCS_UMASK
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Set this variable to a custom umask. This is intended to be set by
+# users. By setting this to something like 002, it can make life easier
+# for people who do development as non-root (but are in the portage
+# group), and then switch over to building with FEATURES=userpriv.
+# Or vice-versa. Shouldn't be a security issue here as anyone who has
+# portage group write access already can screw the system over in more
+# creative ways.
 
 # @ECLASS-VARIABLE: EGIT_BRANCH
 # @DEFAULT_UNSET
@@ -301,14 +313,22 @@ _git-r3_set_gitdir() {
 	if [[ ! -d ${EGIT3_STORE_DIR} ]]; then
 		(
 			addwrite /
-			mkdir -m0755 -p "${EGIT3_STORE_DIR}" || die
+			mkdir -p "${EGIT3_STORE_DIR}" || die
 		) || die "Unable to create ${EGIT3_STORE_DIR}"
 	fi
 
 	addwrite "${EGIT3_STORE_DIR}"
 	if [[ ! -d ${GIT_DIR} ]]; then
+		local saved_umask
+		if [[ ${EVCS_UMASK} ]]; then
+			saved_umask=$(umask)
+			umask "${EVCS_UMASK}" || die "Bad options to umask: ${EVCS_UMASK}"
+		fi
 		mkdir "${GIT_DIR}" || die
 		git init --bare || die
+		if [[ ${saved_umask} ]]; then
+			umask "${saved_umask}" || die
+		fi
 	fi
 }
 
@@ -350,6 +370,49 @@ _git-r3_set_submodules() {
 		)
 	done < <(echo "${data}" | git config -f /dev/fd/0 -l || die)
 }
+
+# @FUNCTION: _git-r3_set_subrepos
+# @USAGE: <submodule-uri> <parent-repo-uri>...
+# @INTERNAL
+# @DESCRIPTION:
+# Create 'subrepos' array containing absolute (canonical) submodule URIs
+# for the given <submodule-uri>. If the URI is relative, URIs will be
+# constructed using all <parent-repo-uri>s. Otherwise, this single URI
+# will be placed in the array.
+_git-r3_set_subrepos() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local suburl=${1}
+	subrepos=( "${@:2}" )
+
+	if [[ ${suburl} == ./* || ${suburl} == ../* ]]; then
+		# drop all possible trailing slashes for consistency
+		subrepos=( "${subrepos[@]%%/}" )
+
+		while true; do
+			if [[ ${suburl} == ./* ]]; then
+				suburl=${suburl:2}
+			elif [[ ${suburl} == ../* ]]; then
+				suburl=${suburl:3}
+
+				# XXX: correctness checking
+
+				# drop the last path component
+				subrepos=( "${subrepos[@]%/*}" )
+				# and then the trailing slashes, again
+				subrepos=( "${subrepos[@]%%/}" )
+			else
+				break
+			fi
+		done
+
+		# append the preprocessed path to the preprocessed URIs
+		subrepos=( "${subrepos[@]/%//${suburl}}")
+	else
+		subrepos=( "${suburl}" )
+	fi
+}
+
 
 # @FUNCTION: _git-r3_is_local_repo
 # @USAGE: <repo-uri>
@@ -462,12 +525,25 @@ git-r3_fetch() {
 	fi
 
 	# try to fetch from the remote
-	local r success
+	local r success saved_umask
+	if [[ ${EVCS_UMASK} ]]; then
+		saved_umask=$(umask)
+		umask "${EVCS_UMASK}" || die "Bad options to umask: ${EVCS_UMASK}"
+	fi
 	for r in "${repos[@]}"; do
 		einfo "Fetching ${r} ..."
 
 		local fetch_command=( git fetch "${r}" )
 		local clone_type=${EGIT_CLONE_TYPE}
+
+		if [[ ${r} == https://* ]] && ! ROOT=/ has_version 'dev-vcs/git[curl]'; then
+			eerror "git-r3: fetching from https:// requested. In order to support https,"
+			eerror "dev-vcs/git needs to be built with USE=curl. Example solution:"
+			eerror
+			eerror "	echo dev-vcs/git curl >> /etc/portage/package.use"
+			eerror "	emerge -1v dev-vcs/git"
+			die "dev-vcs/git built with USE=curl required."
+		fi
 
 		if [[ ${r} == https://code.google.com/* ]]; then
 			# Google Code has special magic on top of git that:
@@ -614,6 +690,9 @@ git-r3_fetch() {
 			break
 		fi
 	done
+	if [[ ${saved_umask} ]]; then
+		umask "${saved_umask}" || die
+	fi
 	[[ ${success} ]] || die "Unable to fetch from any of EGIT_REPO_URI"
 
 	# submodules can reference commits in any branch
@@ -635,11 +714,9 @@ git-r3_fetch() {
 			if [[ ! ${commit} ]]; then
 				die "Unable to get commit id for submodule ${subname}"
 			fi
-			if [[ ${url} == ./* || ${url} == ../* ]]; then
-				local subrepos=( "${repos[@]/%//${url}}" )
-			else
-				local subrepos=( "${url}" )
-			fi
+
+			local subrepos
+			_git-r3_set_subrepos "${url}" "${repos[@]}"
 
 			git-r3_fetch "${subrepos[*]}" "${commit}" "${local_id}/${subname}"
 
@@ -771,12 +848,10 @@ git-r3_checkout() {
 			local subname=${submodules[0]}
 			local url=${submodules[1]}
 			local path=${submodules[2]}
+			local subrepos
+			_git-r3_set_subrepos "${url}" "${repos[@]}"
 
-			if [[ ${url} == ./* || ${url} == ../* ]]; then
-				url=${repos[0]%%/}/${url}
-			fi
-
-			git-r3_checkout "${url}" "${out_dir}/${path}" \
+			git-r3_checkout "${subrepos[*]}" "${out_dir}/${path}" \
 				"${local_id}/${subname}"
 
 			submodules=( "${submodules[@]:3}" ) # shift

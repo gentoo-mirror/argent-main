@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: fixheadtails.eclass
@@ -10,7 +10,7 @@
 
 DEPEND=">=sys-apps/sed-4"
 
-__do_sed_fix() {
+_do_sed_fix() {
 	einfo " - fixed $1"
 	sed -i \
 		-e 's/head \+-\([0-9]\)/head -n \1/g' \
@@ -27,7 +27,7 @@ ht_fix_file() {
 	local i
 	einfo "Replacing obsolete head/tail with POSIX compliant ones"
 	for i in "$@" ; do
-		__do_sed_fix "$i"
+		_do_sed_fix "$i"
 	done
 }
 

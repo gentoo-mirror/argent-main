@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: eutils.eclass
@@ -230,7 +230,7 @@ evar_pop() {
 # A common example is to disable shell globbing so that special meaning/care
 # may be used with variables/arguments to custom functions.  That would be:
 # @CODE
-#		eshopts_push -s noglob
+#		eshopts_push -o noglob
 #		for x in ${foo} ; do
 #			if ...some check... ; then
 #				eshopts_pop
@@ -902,10 +902,11 @@ make_desktop_entry() {
 				;;
 		esac
 	fi
-	if [ "${SLOT}" == "0" ] ; then
+	local slot=${SLOT%/*}
+	if [[ ${slot} == "0" ]] ; then
 		local desktop_name="${PN}"
 	else
-		local desktop_name="${PN}-${SLOT}"
+		local desktop_name="${PN}-${slot}"
 	fi
 	local desktop="${T}/$(echo ${exec} | sed 's:[[:space:]/:]:_:g')-${desktop_name}.desktop"
 	#local desktop=${T}/${exec%% *:-${desktop_name}}.desktop
@@ -1080,7 +1081,7 @@ _iconins() {
 				size=${2}
 			fi
 			case ${size} in
-			16|22|24|32|36|48|64|72|96|128|192|256)
+			16|22|24|32|36|48|64|72|96|128|192|256|512)
 				size=${size}x${size};;
 			scalable)
 				;;
@@ -1437,7 +1438,7 @@ make_wrapper() {
 	fi
 	# We don't want to quote ${bin} so that people can pass complex
 	# things as ${bin} ... "./someprog --args"
-	printf 'exec %s "$@"\n' "${bin/#\//${EPREFIX}\/}"
+	printf 'exec %s "$@"\n' "${bin/#\//${EPREFIX}/}"
 	) > "${tmpwrapper}"
 	chmod go+rx "${tmpwrapper}"
 
@@ -1576,7 +1577,7 @@ prune_libtool_files() {
 		fi
 
 		[[ ${f} != ${archivefile} ]] || die 'regex sanity check failed'
-		local reason pkgconfig_scanned
+		local reason= pkgconfig_scanned=
 		local snotlink=$(sed -n -e 's:^shouldnotlink=::p' "${f}")
 
 		if [[ ${snotlink} == yes ]]; then
