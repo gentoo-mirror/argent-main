@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 AUTOTOOLS_AUTORECONF=true
 
@@ -20,7 +20,9 @@ KEYWORDS="amd64"
 IUSE="kernel_FreeBSD kernel_linux oom openvz unicode vserver"
 
 RDEPEND="sys-libs/ncurses[unicode?]"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
+	virtual/pkgconfig"
 
 DOCS=( ChangeLog README )
 
@@ -28,6 +30,8 @@ CONFIG_CHECK="~TASKSTATS ~TASK_XACCT ~TASK_IO_ACCOUNTING ~CGROUPS"
 
 # config.h problems
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+PATCHES=("${FILESDIR}/${P}-tinfo.patch")
 
 pkg_setup() {
 	if use kernel_FreeBSD && ! [[ -f ${ROOT}/compat/linux/proc/stat && -f ${ROOT}/compat/linux/proc/meminfo ]]; then
