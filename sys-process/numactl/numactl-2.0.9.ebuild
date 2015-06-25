@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -21,6 +21,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.8-static_libs.patch
 	epatch "${FILESDIR}"/${PN}-2.0.8-cpuid-pic.patch #456238
 	epatch "${FILESDIR}"/${PN}-2.0.9-testsuite_fix.patch
+	epatch "${FILESDIR}"/${P}-testsuite_path.patch
 	rm numastat || die #466108
 }
 

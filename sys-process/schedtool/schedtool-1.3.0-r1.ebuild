@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI=4
 
 inherit toolchain-funcs
 
-DESCRIPTION="A tool to query or alter a process' scheduling policy."
+DESCRIPTION="A tool to query or alter a process' scheduling policy"
 HOMEPAGE="http://freequaos.host.sk/schedtool"
 SRC_URI="http://freequaos.host.sk/${PN}/${P}.tar.bz2"
 
