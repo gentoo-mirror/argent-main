@@ -14,14 +14,4 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| (
-	app-admin/metalog
-	app-admin/rsyslog
-	app-admin/socklog
-	app-admin/sysklogd
-	app-admin/syslog-ng
-	app-admin/syslogread
-	sys-freebsd/freebsd-usbin
-	sys-apps/busybox[syslog]
-	>=sys-apps/systemd-38
-)"
+RDEPEND="sys-apps/systemd"

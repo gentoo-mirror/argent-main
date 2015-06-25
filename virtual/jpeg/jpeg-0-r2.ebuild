@@ -16,7 +16,7 @@ KEYWORDS="amd64"
 IUSE="static-libs"
 
 RDEPEND="|| (
-		>=media-libs/libjpeg-turbo-1.3.0-r2:0[static-libs?,${MULTILIB_USEDEP}]
+		>=media-libs/libjpeg-turbo-1.3.0-r3:0[static-libs?,${MULTILIB_USEDEP}]
 		>=media-libs/jpeg-8d-r1:0[static-libs?,${MULTILIB_USEDEP}]
 		)"
 DEPEND=""
