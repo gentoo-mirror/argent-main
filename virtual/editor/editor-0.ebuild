@@ -1,17 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Virtual for editor"
-HOMEPAGE=""
-SRC_URI=""
-
-LICENSE=""
 SLOT="0"
 KEYWORDS="amd64"
-IUSE=""
 
 # Add a package to RDEPEND only if the editor:
 # - can edit ordinary text files,
@@ -27,5 +22,5 @@ RDEPEND="|| (
 # Packages outside app-editors providing an editor:
 #	app-misc/mc: mcedit (#62643)
 #	dev-lisp/cmucl: hemlock
-#	mail-client/pine: pico
+#	mail-client/alpine: pico
 #	sys-apps/busybox: vi

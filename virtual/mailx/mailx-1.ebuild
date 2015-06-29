@@ -16,4 +16,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| (	net-mail/mailutils
 				mail-client/mailx
-				mail-client/nail )"
+				mail-client/nail
+				sys-freebsd/freebsd-ubin )"
