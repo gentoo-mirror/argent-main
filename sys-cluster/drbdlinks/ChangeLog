@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/drbdlinks
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 May 2009; Wolfram Schlich <wschlich@gentoo.org> -drbdlinks-1.11.ebuild,
+  +drbdlinks-1.15.ebuild:
+  version bump, removed old version
+
+  08 Sep 2008; Wolfram Schlich <wschlich@gentoo.org> +drbdlinks-1.12.ebuild:
+  version bump
+

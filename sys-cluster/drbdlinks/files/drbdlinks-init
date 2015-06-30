@@ -1,0 +1,41 @@
+#!/sbin/runscript
+# Copyright 1999-2007 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header:$
+
+#
+# TODO:
+# - make this script LSB compliant for heartbeats LSB resource agent
+#
+
+depend() {
+	need localmount
+	use drbd
+}
+
+checkconfig() {
+	if [ ! -e /etc/drbdlinks.conf ] ; then
+		eerror "You need to create /etc/drbdlinks.conf first."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Creating drbd symlinks"
+	/usr/sbin/drbdlinks start
+	eend $? "Failed to create drbd links"
+}
+
+stop() {
+	checkconfig || return 1
+	ebegin "Cleaning up drbd symlinks"
+	/usr/sbin/drbdlinks stop
+	eend $? "Failed to clean up drbd links"
+}
+
+status() {
+	ebegin "Checking for drbd symlinks"
+	/usr/sbin/drbdlinks status
+	eend $?
+}
