@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="+cxx jbig jpeg lzma static-libs test zlib"
 
-RDEPEND="jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
-	jbig? ( media-libs/jbigkit:=[${MULTILIB_USEDEP}] )
-	lzma? ( app-arch/xz-utils:=[${MULTILIB_USEDEP}] )
-	zlib? ( sys-libs/zlib:=[${MULTILIB_USEDEP}] )
+RDEPEND="jpeg? ( >=virtual/jpeg-0-r2:0=[${MULTILIB_USEDEP}] )
+	jbig? ( >=media-libs/jbigkit-2.1:=[${MULTILIB_USEDEP}] )
+	lzma? ( >=app-arch/xz-utils-5.0.5-r1:=[${MULTILIB_USEDEP}] )
+	zlib? ( >=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
