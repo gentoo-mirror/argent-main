@@ -1,7 +1,7 @@
 Argent Linux Servers oriented ebuilds
 =====================================
 
-Argent Linux Servers oriented ebuilds
+Argent Linux Servers oriented main ebuilds
 To add the Gentoo-based overlay:
 
-layman -f -a argent-server -o https://raw.github.com/Rogentos/argent-server/master/overlay.xml
+layman -f -a argent -o https://gitlab.com/argent/argent-main/raw/master/overlay.xml
