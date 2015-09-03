@@ -2,14 +2,14 @@
 <!DOCTYPE repositories SYSTEM "repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="stable" status="unofficial">
-    <name>argent-server</name>
+    <name>argent-main</name>
     <description>Argent Linux</description>
-    <homepage>https://github.com/Rogentos/argent-server</homepage>
+    <homepage>https://gitlab.com/argent/argent-main</homepage>
     <owner type="project">
       <email>stefan.cristian t rogentos.ro</email>
       <name>Brindusa Stefan Cristian</name>
     </owner>
-    <source type="git">git://github.com/Rogentos/argent-server.git</source>
-    <feed>https://github.com/Rogentos/argent-server/commits/master.atom</feed>
+    <source type="git">git://gitlab.com/argent/argent-main.git</source>
+    <feed>https://gitlab.com/argent/argent-main/commits/master.atom</feed>
   </repo>
 </repositories>
