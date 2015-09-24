@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -101,13 +101,15 @@ do_filter_flags() {
 	# Bug #442784
 	filter-flags '-W*'
 
+	filter-flags -frecord-gcc-switches
+
 	# ...sure, why not?
 	strip-unsupported-flags
 
 	strip-flags
 }
 
-PATCH_VER="1.8"
+PATCH_VER="1.9"
 
 DESCRIPTION="Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++"
 HOMEPAGE="http://gcc.gnu.org/libstdc++/"
