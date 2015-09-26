@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-open-nofollow.patch #413441
 	epatch "${FILESDIR}"/${P}-check-empty-paths-at.patch #346929
 	epatch "${FILESDIR}"/${P}-no-pch.patch #425524
+	epatch "${FILESDIR}"/${P}-gcc-5.patch
 	epatch_user
 }
 

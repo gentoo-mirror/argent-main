@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="+lzma nls selinux"
 
-DEPEND="nls? ( sys-devel/gettext )
-		selinux? ( sec-policy/selinux-makewhatis )"
+DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="|| ( >=sys-apps/groff-1.19.2-r1 app-doc/heirloom-doctools )
 	!sys-apps/man-db
 	!<app-arch/lzma-4.63

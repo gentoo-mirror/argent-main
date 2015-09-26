@@ -3,7 +3,7 @@
 # $Header: $
 
 DESCRIPTION="LSB version query program"
-HOMEPAGE="http://www.linuxbase.org/"
+HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/lsb"
 SRC_URI="mirror://sourceforge/lsb/${P}.tar.gz"
 
 LICENSE="GPL-2"
