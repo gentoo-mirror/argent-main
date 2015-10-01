@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="A compact getty program for virtual consoles only."
+DESCRIPTION="A compact getty program for virtual consoles only"
 HOMEPAGE="http://sourceforge.net/projects/mingetty"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
