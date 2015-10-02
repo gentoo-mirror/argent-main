@@ -5,7 +5,7 @@
 EAPI=5
 
 MODULE_AUTHOR=SMUELLER
-MODULE_VERSION=2.145
+MODULE_VERSION=2.154
 inherit perl-module
 
 DESCRIPTION="Stringified perl data structures, suitable for both printing and eval"
