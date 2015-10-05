@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
-inherit autotools eutils fixheadtails
+inherit autotools eutils
 
 DESCRIPTION="Toolkit for Internationalized Domain Names (IDN)"
 HOMEPAGE="http://www.nic.ad.jp/ja/idn/idnkit/download/"
@@ -20,15 +20,15 @@ DEPEND="virtual/libiconv"
 S=${WORKDIR}/${P}-src
 
 src_prepare() {
-	ht_fix_all
 	# Bug 263135, old broken libtool bundled
 	rm -f aclocal.m4 || die "rm failed"
 	epatch "${FILESDIR}/${P}-autotools.patch"
+	mv configure.{in,ac} || die
 	eautoreconf
 }
 
 src_configure() {
-	myconf=""
+	local myconf=""
 	if has_version dev-libs/libiconv; then
 		myconf="--with-iconv"
 	fi
@@ -37,8 +37,6 @@ src_configure() {
 
 src_install() {
 	default
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/lib*.la
-	fi
+	use static-libs || find "${ED}" -name 'lib*.la' -delete
 	dodoc ChangeLog DISTFILES NEWS README README.ja
 }
