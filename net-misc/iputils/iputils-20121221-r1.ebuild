@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -29,7 +29,10 @@ IUSE="caps doc gnutls idn ipv6 SECURITY_HAZARD ssl static"
 LIB_DEPEND="caps? ( sys-libs/libcap[static-libs(+)] )
 	idn? ( net-dns/libidn[static-libs(+)] )
 	ipv6? ( ssl? (
-		gnutls? ( net-libs/gnutls[static-libs(+)] )
+		gnutls? (
+			net-libs/gnutls[openssl(+)]
+			net-libs/gnutls[static-libs(+)]
+		)
 		!gnutls? ( dev-libs/openssl:0[static-libs(+)] )
 	) )"
 RDEPEND="!net-misc/rarpd

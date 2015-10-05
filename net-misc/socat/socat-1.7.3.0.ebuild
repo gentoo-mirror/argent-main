@@ -18,7 +18,7 @@ IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
+	readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 "
 RDEPEND="${DEPEND}"
@@ -28,6 +28,10 @@ RESTRICT="test"
 DOCS=(
 	BUGREPORTS CHANGES DEVELOPMENT EXAMPLES FAQ FILES PORTING README SECURITY
 )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-filan-build.patch
+}
 
 src_configure() {
 	filter-flags '-Wno-error*' #293324

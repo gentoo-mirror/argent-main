@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/bridge/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE=""
+IUSE="selinux"
 
 DEPEND="virtual/os-headers"
-RDEPEND=""
+RDEPEND="selinux? ( sec-policy/selinux-brctl )"
 
 CONFIG_CHECK="~BRIDGE"
 WARNING_BRIDGE="CONFIG_BRIDGE is required to get bridge devices in the kernel"

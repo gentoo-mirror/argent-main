@@ -15,11 +15,6 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE="acl iconv ipv6 static xattr"
 
-if [[ ${PV} = *pre* ]] ; then
-	SRC_URI="http://rsync.samba.org/ftp/rsync/src-previews/${P/_/}.tar.gz"
-	KEYWORDS="amd64"
-fi
-
 LIB_DEPEND="acl? ( virtual/acl[static-libs(+)] )
 	xattr? ( kernel_linux? ( sys-apps/attr[static-libs(+)] ) )
 	>=dev-libs/popt-1.5[static-libs(+)]"
