@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,17 +15,22 @@ KEYWORDS="amd64"
 IUSE="ipv6 nls bluetooth"
 
 # need to block netcat as we provide the "nc" file now too
-DEPEND="bluetooth? ( net-wireless/bluez )
-	!net-analyzer/netcat"
-RDEPEND="${DEPEND}"
+DEPEND="
+	bluetooth? ( net-wireless/bluez )
+"
+RDEPEND="
+	${DEPEND}
+	!net-analyzer/netcat
+"
 
 S=${WORKDIR}/nc6-${PV}
 
 DOCS=( AUTHORS BUGS README NEWS TODO CREDITS ChangeLog )
 
 src_prepare() {
-	epatch "${FILESDIR}"/netcat6-1.0-unix-sockets.patch
-	epatch "${FILESDIR}"/${P}-automake-1.14.patch
+	epatch \
+		"${FILESDIR}"/${P}-unix-sockets.patch \
+		"${FILESDIR}"/${P}-automake-1.14.patch
 	AM_OPTS="--force-missing" eautoreconf
 }
 

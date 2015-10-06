@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,10 +20,6 @@ DEPEND="!!net-analyzer/splunk:0"
 RDEPEND="!net-analyzer/splunkforwarder"
 
 S="${WORKDIR}"/${PN}
-
-pkg_setup() {
-	kernel_is ge 2 6 0 || die "Linux 2.6+ required"
-}
 
 src_install() {
 	dodir /opt

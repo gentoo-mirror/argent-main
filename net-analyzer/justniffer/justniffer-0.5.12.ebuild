@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-DEPEND=">=dev-libs/boost-1.54.0"
+DEPEND=">=dev-libs/boost-1.54.0 net-libs/libpcap"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

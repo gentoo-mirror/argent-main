@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,7 +19,7 @@ IUSE="tcl"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="net-libs/libpcap
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl:0 )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
