@@ -140,6 +140,11 @@ pkg_setup() {
 	apache-2_pkg_setup
 }
 
+src_prepare() {
+	use alpn && epatch "${FILESDIR}"/${PN}-2.4.12-alpn.patch #471512
+	apache-2_src_prepare
+}
+
 src_configure() {
 	# Brain dead check.
 	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
