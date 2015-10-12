@@ -17,7 +17,9 @@ RESTRICT="test"
 
 RDEPEND="=dev-libs/apr-1*
 	=dev-libs/apr-util-1*
+	dev-libs/expat
 	dev-libs/libpcre
+	kernel_linux? ( sys-apps/util-linux )
 	ssl? ( dev-libs/openssl )
 	!<www-servers/apache-2.2.4"
 
