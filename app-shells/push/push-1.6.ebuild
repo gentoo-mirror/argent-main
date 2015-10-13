@@ -5,7 +5,7 @@
 EAPI="4"
 inherit vcs-snapshot
 
-DESCRIPTION="A POSIX shell function to treat a variable like an array, quoting args."
+DESCRIPTION="A POSIX shell function to treat a variable like an array, quoting args"
 HOMEPAGE="https://github.com/vaeth/push/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
