@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 PYTHON_REQ_USE="xml(+)"
 
 inherit eutils distutils-r1 prefix
@@ -33,7 +33,6 @@ RDEPEND="
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
 	)
-	virtual/python-argparse[${PYTHON_USEDEP}]
 	sys-apps/portage[${PYTHON_USEDEP}]
 	"
 

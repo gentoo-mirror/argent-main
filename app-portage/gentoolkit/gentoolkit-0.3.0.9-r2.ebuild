@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=(python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0)
+PYTHON_COMPAT=(python{2_7,3_3,3_4} pypy)
 PYTHON_REQ_USE="xml(+)"
 
 inherit distutils-r1
@@ -36,7 +36,7 @@ PATCHES=(
 )
 
 python_prepare_all() {
-	python_export_best
+	python_setup
 	echo VERSION="${PVR}" "${PYTHON}" setup.py set_version
 	VERSION="${PVR}" "${PYTHON}" setup.py set_version
 	mv ./bin/revdep-rebuild{,.py} || die
