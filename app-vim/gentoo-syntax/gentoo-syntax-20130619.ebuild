@@ -7,7 +7,7 @@ EAPI=5
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: Gentoo and portage related syntax highlighting, filetype, and indent settings"
-HOMEPAGE="http://www.gentoo.org/"
+HOMEPAGE="https://github.com/gentoo/gentoo-syntax"
 
 LICENSE="vim"
 KEYWORDS="amd64"
