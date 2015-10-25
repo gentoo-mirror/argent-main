@@ -7,7 +7,7 @@ inherit flag-o-matic eutils
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
 HOMEPAGE="http://httpd.apache.org/"
-SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2"
+SRC_URI="https://archive.apache.org/dist/httpd/httpd-${PV}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
