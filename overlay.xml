@@ -9,7 +9,7 @@
       <email>stefan.cristian t rogentos.ro</email>
       <name>Brindusa Stefan Cristian</name>
     </owner>
-    <source type="git">git://gitlab.com/argent/argent-main.git</source>
+    <source type="git">https://gitlab.com/argent/argent-main.git</source>
     <feed>https://gitlab.com/argent/argent-main/commits/master.atom</feed>
   </repo>
 </repositories>
