@@ -701,7 +701,7 @@
 
   15 Jan 2009; Raúl Porcel <armin76@gentoo.org> openldap-2.3.43.ebuild,
   openldap-2.3.43-r1.ebuild, openldap-2.4.11-r1.ebuild:
-  Fix ebuilds with EAPI=2, bug #255021
+  Fix ebuilds with EAPI=5, bug #255021
 
   13 Jan 2009; Raúl Porcel <armin76@gentoo.org> openldap-2.3.43.ebuild,
   openldap-2.3.43-r1.ebuild, openldap-2.4.11-r1.ebuild:

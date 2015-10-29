@@ -113,7 +113,7 @@
 
   02 Sep 2011; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0.ebuild,
   rpcbind-9999.ebuild:
-  Migrate to EAPI=2 for fun.
+  Migrate to EAPI=5 for fun.
 
   24 Apr 2011; Raúl Porcel <armin76@gentoo.org> rpcbind-0.2.0.ebuild:
   sparc stable wrt #358509

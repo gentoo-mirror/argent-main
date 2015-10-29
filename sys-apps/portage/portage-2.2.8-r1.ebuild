@@ -4,7 +4,7 @@
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
-EAPI=2
+EAPI=5
 PYTHON_COMPAT=(
 	pypy2_0
 	python3_2 python3_3 python3_4

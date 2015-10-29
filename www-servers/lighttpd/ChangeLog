@@ -575,7 +575,7 @@
   +files/1.4.22-r1/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
   +lighttpd-1.4.22-r1.ebuild:
   version bump - bug #260174 - spawn-fcgi now lives in 
-  www-servers/spawn-fcgi - EAPI=2
+  www-servers/spawn-fcgi - EAPI=5
 
   12 May 2009; Thilo Bangert <bangert@gentoo.org> files/conf/lighttpd.conf:
   make user screwup less likely - bug #259007

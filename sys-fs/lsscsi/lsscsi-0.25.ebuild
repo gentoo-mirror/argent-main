@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/lsscsi-0.25.ebuild,v 1.8 2012/02/13 10:00:33 xarthisius Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="SCSI sysfs query tool"
 HOMEPAGE="http://sg.danny.cz/scsi/lsscsi.html"

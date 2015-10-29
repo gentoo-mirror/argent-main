@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Utility to fix your .la files"
 HOMEPAGE="http://www.gentoo.org/"
