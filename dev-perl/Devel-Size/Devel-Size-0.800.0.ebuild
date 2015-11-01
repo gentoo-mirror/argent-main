@@ -4,23 +4,22 @@
 
 EAPI=5
 
-MODULE_AUTHOR=SHLOMIF
-MODULE_VERSION=0.17021
+MODULE_AUTHOR=NWCLARK
+MODULE_VERSION=0.80
 inherit perl-module
 
-DESCRIPTION="Error/exception handling in an OO-ish way"
+DESCRIPTION="Perl extension for finding the memory usage of Perl variables"
 
-LICENSE+=" MIT"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="test"
 
-RDEPEND=""
+RDEPEND="
+	virtual/perl-XSLoader
+"
 DEPEND="${RDEPEND}
-	test? (
-		>=dev-perl/Test-Pod-1.140.0
-		>=dev-perl/Test-Pod-Coverage-1.40.0
-	)
+	virtual/perl-ExtUtils-MakeMaker
+	test? ( virtual/perl-Test-Simple )
 "
 
 SRC_TEST="do"
