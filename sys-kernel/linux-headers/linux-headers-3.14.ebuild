@@ -1,19 +1,19 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="4"
 
 ETYPE="headers"
-H_SUPPORTEDARCH="alpha amd64 arc arm arm64 avr32 bfin cris frv hexagon hppa ia64 m32r m68k metag microblaze mips mn10300 nios2 openrisc ppc ppc64 s390 score sh sparc tile x86 xtensa"
+H_SUPPORTEDARCH="alpha amd64 arc arm arm64 avr32 bfin cris frv hexagon hppa ia64 m32r m68k metag microblaze mips mn10300 openrisc ppc ppc64 s390 score sh sparc tile x86 xtensa"
 inherit kernel-2
 detect_version
 
-PATCH_VER="2"
-SRC_URI="mirror://gentoo/gentoo-headers-base-${PV}.tar.xz
-	${PATCH_VER:+mirror://gentoo/gentoo-headers-${PV}-${PATCH_VER}.tar.xz}"
+PATCH_VER="1"
+SRC_URI="https://dev.gentoo.org/~vapier/dist/gentoo-headers-base-${PV}.tar.xz
+	${PATCH_VER:+https://dev.gentoo.org/~vapier/dist/gentoo-headers-${PV}-${PATCH_VER}.tar.xz}"
 
-KEYWORDS="~amd64"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 
 DEPEND="app-arch/xz-utils
 	dev-lang/perl"
@@ -41,11 +41,6 @@ src_install() {
 }
 
 src_test() {
-	# Make sure no uapi/ include paths are used by accident.
-	egrep -r \
-		-e '# *include.*["<]uapi/' \
-		"${D}" && die "#include uapi/xxx detected"
-
 	einfo "Possible unescaped attribute/type usage"
 	egrep -r \
 		-e '(^|[[:space:](])(asm|volatile|inline)[[:space:](]' \
