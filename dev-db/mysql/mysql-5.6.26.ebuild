@@ -173,12 +173,12 @@ pkg_postinst() {
 		ewarn "Run the following: chown root:mysql ${ROOT}/var/run/mysql"
 	fi
 
-	if [ ! -f "${ROOT}"/var/run/${PN}/${PN}.err ] && [ -d "${ROOT}"/var/run/${PN}/ ]; then
-		touch ${ROOT}/var/run/${PN}/${PN}.err || die "Could not create file ${PN}.err"
-		chown root:mysql /var/run/${PN}/${PN}.err || die "Could not assign permissions"
+	if [ ! -f "${ROOT}"/var/run/${PN}d/${PN}d.err ] && [ -d "${ROOT}"/var/run/${PN}/ ]; then
+		touch ${ROOT}/var/run/${PN}d/${PN}d.err || die "Could not create file ${PN}.err"
+		chown root:mysql /var/run/${PN}d/${PN}d.err || die "Could not assign permissions"
 	else
 		ewarn "File ${PN}.err already exists."
 		ewarn "Please consider the right permissions"
-		chown root:mysql /var/run/${PN}/${PN}.err || die "Could not assign permissions"
+		chown root:mysql /var/run/${PN}d/${PN}d.err || die "Could not assign permissions"
 	fi
 }
