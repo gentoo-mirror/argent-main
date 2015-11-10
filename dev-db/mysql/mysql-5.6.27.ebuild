@@ -164,3 +164,23 @@ multilib_src_test() {
 		einfo "Skipping server tests due to minimal build."
 	fi
 }
+
+pkg_postinst() {
+    if [ ! -d "${ROOT}"/var/run/${PN}d/ ]; then
+        mkdir -p /var/run/${PN}d || die "Could not create mysql var run directory"
+        chown root:mysql ${ROOT}/var/run/${PN}d/ || die "Could not chown the directory"
+    else
+        ewarn "Directory is already created, but it needs permission"
+        ewarn "Run the following: chown root:mysql ${ROOT}/var/run/mysql"
+    fi
+
+    if [ ! -f "${ROOT}"/var/run/${PN}d/${PN}d.err ] && [ -d "${ROOT}"/var/run/${PN}d/ ]; then
+        touch ${ROOT}/var/run/${PN}d/${PN}d.err || die "Could not create file ${PN}d.err"
+        chown root:mysql /var/run/${PN}d/${PN}d.err || die "Could not assign permissions"
+    else
+        ewarn "File ${PN}.err already exists."
+        ewarn "Please consider the right permissions"
+        chown root:mysql /var/run/${PN}d/${PN}d.err || die "Could not assign permissions"
+    fi
+}
+

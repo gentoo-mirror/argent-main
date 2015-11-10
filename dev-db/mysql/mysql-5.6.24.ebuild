@@ -155,6 +155,7 @@ multilib_src_test() {
 pkg_postinst() {
 	if [ ! -d "${ROOT}"/var/run/${PN}d/ ]; then
 		mkdir -p /var/run/${PN}d || die "Could not create mysql var run directory"
+		chown root:mysql ${ROOT}/var/run/${PN}d/ || die "Could not chown the directory"
 	else
 		ewarn "Directory is already created, but it needs permission"
 		ewarn "Run the following: chown root:mysql ${ROOT}/var/run/mysql"
