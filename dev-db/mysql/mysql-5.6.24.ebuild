@@ -157,16 +157,16 @@ pkg_postinst() {
 		mkdir -p /var/run/mysql || die "Could not create mysql var run directory"
 	else
 		ewarn "Directory is already created, but it needs permission"
-		ewarn "Run the following: chmod root:mysql ${ROOT}/var/run/mysql"
+		ewarn "Run the following: chown root:mysql ${ROOT}/var/run/mysql"
 	fi
 
 	if [ ! -f "${ROOT}"/var/run/${PN}/${PN}.err ] && [ -d "${ROOT}"/var/run/${PN}/ ]; then
 		touch ${ROOT}/var/run/${PN}/${PN}.err || die "Could not create file ${PN}.err"
-		chmod root:mysql /var/run/${PN}/${PN}.err || die "Could not assign permissions"
+		chown root:mysql /var/run/${PN}/${PN}.err || die "Could not assign permissions"
 	else
 		ewarn "File ${PN}.err already exists."
 		ewarn "Please consider the right permissions"
-		chmod root:mysql /var/run/${PN}/${PN}.err || die "Could not assign permissions"
+		chown root:mysql /var/run/${PN}/${PN}.err || die "Could not assign permissions"
 	fi
 }
 
