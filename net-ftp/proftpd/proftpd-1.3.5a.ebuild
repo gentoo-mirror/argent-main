@@ -237,6 +237,12 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "we must create folder called /var/run/proftpd/"
-	ewarn "in order for the daemon to start"
-	mkdir -p ${ROOT}/var/run/proftpd/
+	ewarn "in order for the daemon to start\n"
+	if [ ! -d ${ROOT}/var/run/proftpd/ ]; then
+		mkdir -p ${ROOT}/var/run/proftpd/ || die "Could not create directory"
+	else
+		ewarn "Directory already exists."
+		ewarn "Ensure it has the right permissions:"
+		ewarn "chmod root:root ${ROOT}/var/run/proftpd/"
+	fi
 }
