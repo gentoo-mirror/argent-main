@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -21,16 +21,11 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable static-libs static)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS CREDITS ChangeLog NEWS PORTS README
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
+	DOCS="AUTHORS CREDITS ChangeLog NEWS PORTS README" \
+		default
+	prune_libtool_files
 }
