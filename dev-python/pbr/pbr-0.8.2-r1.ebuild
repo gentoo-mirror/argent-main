@@ -54,7 +54,7 @@ python_prepare_all() {
 }
 
 python_test() {
-	# Note; removed tests pass once package is emerged, 
+	# Note; removed tests pass once package is emerged,
 	# it's the suite's design that breaks form, not the tests' intended purpose
 	testr init
 	testr run || die "Testsuite failed under ${EPYTHON}"

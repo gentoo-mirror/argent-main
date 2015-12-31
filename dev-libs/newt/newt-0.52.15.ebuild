@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit python-r1 eutils multilib autotools toolchain-funcs
 
@@ -24,7 +24,7 @@ RDEPEND="${PYTHON_DEPS}
 	=sys-libs/slang-2*
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
-	tcl? ( >=dev-lang/tcl-8.5 )
+	tcl? ( >=dev-lang/tcl-8.5:0 )
 	"
 DEPEND="${RDEPEND}"
 
