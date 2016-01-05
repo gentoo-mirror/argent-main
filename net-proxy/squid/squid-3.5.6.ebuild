@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrotate test \
 	ecap esi ssl-crtd \
 	mysql postgres sqlite \
-	qos tproxy \
+	qos tproxy udev \
 	+htcp +wccp +wccpv2 \
 	pf-transparent ipf-transparent kqueue \
 	elibc_uclibc kernel_linux"
@@ -223,8 +223,14 @@ src_install() {
 	dohtml RELEASENOTES.html
 
 	newpamd "${FILESDIR}/squid.pam" squid
-	newconfd "${FILESDIR}/squid.confd-r1" squid
-	newinitd "${FILESDIR}/squid.initd-r4" squid
+	
+	# by default we use systemd, so service file goes here
+	systemd_dounit "${FILESDIR}"/squid.service
+
+	if use udev; then
+		newinitd "${FILESDIR}/squid.initd-r4" squid
+		newconfd "${FILESDIR}/squid.confd-r1" squid
+	fi
 	if use logrotate; then
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/squid.logrotate" squid
