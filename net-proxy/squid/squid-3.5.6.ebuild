@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit autotools eutils linux-info pam toolchain-funcs user versionator
+inherit autotools eutils linux-info pam systemd toolchain-funcs user versionator
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
