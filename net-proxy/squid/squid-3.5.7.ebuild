@@ -223,8 +223,12 @@ src_install() {
 	dohtml RELEASENOTES.html
 
 	newpamd "${FILESDIR}/squid.pam" squid
-	newconfd "${FILESDIR}/squid.confd-r1" squid
-	newinitd "${FILESDIR}/squid.initd-r4" squid
+	systemd_dounit "${FILESDIR}"/squid.service
+
+	if use udev; then
+		newinitd "${FILESDIR}/squid.initd-r4" squid
+		newconfd "${FILESDIR}/squid.confd-r1" squid
+	fi
 	if use logrotate; then
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/squid.logrotate" squid
