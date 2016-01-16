@@ -121,6 +121,7 @@ src_prepare() {
 	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
 
 	epatch "${FILESDIR}"/${PN}-6.8_p1-sshd-gssapi-multihomed.patch #378361
+	epatch "${FILESDIR}"/${PN}-6.8_p1-CVE-2016-0777.patch
 	if use X509 ; then
 		pushd .. >/dev/null
 		epatch "${WORKDIR}"/${P}-x509-${X509_VER}-glue.patch
@@ -227,6 +228,9 @@ src_install() {
 	emake install-nokeys DESTDIR="${D}"
 	fperms 600 /etc/ssh/sshd_config
 	dobin contrib/ssh-copy-id
+	exeinto /usr/sbin/
+	doexe "${FILESDIR}/sshd-checkconfig"
+	doexe "${FILESDIR}/sshd-functions.sh"
 	newinitd "${FILESDIR}"/sshd.rc6.4 sshd
 	newconfd "${FILESDIR}"/sshd.confd sshd
 	keepdir /var/empty

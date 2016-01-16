@@ -3,6 +3,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-. /sbin/sshd-functions.sh || exit 1
+. /usr/sbin/sshd-functions.sh || exit 1
 
 checkconfig
