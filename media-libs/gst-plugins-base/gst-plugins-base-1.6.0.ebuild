@@ -11,7 +11,7 @@ DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
 
 LICENSE="GPL-2+ LGPL-2+"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="alsa +introspection ivorbis +ogg +orc +pango theora +vorbis X"
 REQUIRED_USE="
 	ivorbis? ( ogg )
@@ -28,7 +28,7 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	ivorbis? ( >=media-libs/tremor-0_pre20130223[${MULTILIB_USEDEP}] )
 	ogg? ( >=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}] )
-	orc? ( >=dev-lang/orc-0.4.18[${MULTILIB_USEDEP}] )
+	orc? ( >=dev-lang/orc-0.4.23[${MULTILIB_USEDEP}] )
 	pango? ( >=x11-libs/pango-1.36.3[${MULTILIB_USEDEP}] )
 	theora? ( >=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}] )
 	vorbis? ( >=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}] )
@@ -44,13 +44,6 @@ DEPEND="${RDEPEND}
 		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
 		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )
 "
-
-src_prepare() {
-	# The AC_PATH_XTRA macro unnecessarily pulls in libSM and libICE even
-	# though they are not actually used. This needs to be fixed upstream by
-	# replacing AC_PATH_XTRA with PKG_CONFIG calls, upstream bug #731047
-	sed -i -e 's:X_PRE_LIBS -lSM -lICE:X_PRE_LIBS:' "${S}"/configure || die
-}
 
 multilib_src_configure() {
 	gstreamer_multilib_src_configure \

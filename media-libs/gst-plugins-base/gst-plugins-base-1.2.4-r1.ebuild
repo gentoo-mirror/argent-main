@@ -5,13 +5,13 @@
 EAPI="5"
 
 GST_ORG_MODULE="gst-plugins-base"
-inherit gstreamer
+inherit eutils gstreamer
 
 DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
 
 LICENSE="GPL-2+ LGPL-2+"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="alsa +introspection ivorbis +ogg +orc +pango theora +vorbis X"
 REQUIRED_USE="
 	ivorbis? ( ogg )
@@ -22,7 +22,7 @@ REQUIRED_USE="
 RDEPEND="
 	app-text/iso-codes
 	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
-	>=media-libs/gstreamer-${PV}:1.0[introspection?,${MULTILIB_USEDEP}]
+	>=media-libs/gstreamer-1.2.3:1.0[introspection?,${MULTILIB_USEDEP}]
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
@@ -50,6 +50,9 @@ src_prepare() {
 	# though they are not actually used. This needs to be fixed upstream by
 	# replacing AC_PATH_XTRA with PKG_CONFIG calls, upstream bug #731047
 	sed -i -e 's:X_PRE_LIBS -lSM -lICE:X_PRE_LIBS:' "${S}"/configure || die
+
+	# Fix compilation with gcc-4.9, bug #529962
+	epatch "${FILESDIR}"/${PN}-0.10.36-gcc-4.9.patch
 }
 
 multilib_src_configure() {
