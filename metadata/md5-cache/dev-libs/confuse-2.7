@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=sys-devel/flex sys-devel/libtool virtual/pkgconfig nls? ( sys-devel/gettext )
+DESCRIPTION=a configuration file parser library
+EAPI=3
+HOMEPAGE=http://www.nongnu.org/confuse/
+IUSE=nls static-libs
+KEYWORDS=amd64
+LICENSE=ISC
+RDEPEND=nls? ( virtual/libintl )
+SLOT=0
+SRC_URI=mirror://nongnu/confuse/confuse-2.7.tar.gz
+_eclass_exported_funcs=src_configure:- src_install:-
+_md5_=86cf0703e6423cf213b18792ca3499b3

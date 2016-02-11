@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm setup unpack
+DEPEND=>=app-arch/rpm2targz-9.0.0.3g X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=free good quality fonts gpl'd by URW++
+EAPI=0
+HOMEPAGE=http://www.urwpp.de/
+IUSE=X
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=!media-fonts/gnu-gs-fonts-std !media-fonts/gnu-gs-fonts-other
+SLOT=0
+SRC_URI=mirror://gentoo/urw-fonts-2.4-9.fc13.src.rpm
+_eclass_exported_funcs=pkg_postrm:font pkg_postinst:- pkg_setup:font src_unpack:rpm src_install:font
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	font	82836641e7d4639329d8c195234ad0e3	multilib	5c89e4e7b42e1975d318dffbad01ca83	rpm	c420c1373b9fd27e888525c47f56219b	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=110636be1187b566466bcfc15c28bdaa

@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup
+DEPEND=hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) !elibc_glibc? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) tk? ( >=dev-lang/python-2.7.5-r2:2.7[tk] >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) app-arch/xz-utils sys-devel/flex nls? ( sys-devel/gettext ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=the legendary remote-mail retrieval and forwarding utility
+EAPI=5
+HOMEPAGE=http://www.fetchmail.info/
+IUSE=ssl nls kerberos hesiod tk socks python_targets_python2_7
+KEYWORDS=amd64
+LICENSE=GPL-2 public-domain
+RDEPEND=hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) !elibc_glibc? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) tk? ( >=dev-lang/python-2.7.5-r2:2.7[tk] >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] )
+REQUIRED_USE=tk? ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://sourceforge/fetchmail/fetchmail-6.3.26.tar.xz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	a73853efd730b2fe09e0ed7ab66a3b5b	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	user	bc615318777c602f6114b73c27f9a9d1
+_md5_=c4151bd9002dfb28f046c31fd9a200d8

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=>=net-firewall/iptables-1.2.4 sys-apps/iproute2[-minimal] dev-lang/perl =net-firewall/shorewall-core-4.5.18-r1 virtual/pkgconfig
+DESCRIPTION=Shoreline Firewall is an iptables-based firewall for Linux.
+EAPI=5
+HOMEPAGE=http://www.shorewall.net/
+IUSE=doc
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=>=net-firewall/iptables-1.2.4 sys-apps/iproute2[-minimal] dev-lang/perl =net-firewall/shorewall-core-4.5.18-r1
+SLOT=0
+SRC_URI=http://www1.shorewall.net/pub/shorewall/4.5/shorewall-4.5.18/shorewall-4.5.18.tar.bz2 doc? ( http://www1.shorewall.net/pub/shorewall/4.5/shorewall-4.5.18/shorewall-docs-html-4.5.18.tar.bz2 )
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	prefix	21058c21ca48453d771df15500873ede	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=8311060ce63502ae9c5d76e23819d68a

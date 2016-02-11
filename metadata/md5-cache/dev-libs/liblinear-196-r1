@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=A Library for Large Linear Classification
+EAPI=5
+HOMEPAGE=http://www.csie.ntu.edu.tw/~cjlin/liblinear/ https://github.com/cjlin1/liblinear
+KEYWORDS=amd64
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://github.com/cjlin1/liblinear/archive/v196.tar.gz -> liblinear-196.tar.gz
+_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=83a9f022f13f01790f66bb562e57528d

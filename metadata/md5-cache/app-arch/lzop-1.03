@@ -1,0 +1,12 @@
+DEFINED_PHASES=install test
+DEPEND=>=dev-libs/lzo-2
+DESCRIPTION=Utility for fast (even real-time) compression/decompression
+EAPI=5
+HOMEPAGE=http://www.lzop.org/
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/lzo-2
+SLOT=0
+SRC_URI=http://www.lzop.org/download/lzop-1.03.tar.gz
+_eclass_exported_funcs=src_test:- src_install:-
+_md5_=a6a844bd4cb671c64e064c253367766e

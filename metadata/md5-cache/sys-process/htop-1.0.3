@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sys-libs/ncurses[unicode?] || ( >=dev-lang/python-2.7.5-r2:2.7 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=interactive process viewer
+EAPI=5
+HOMEPAGE=http://hisham.hm/htop/
+IUSE=kernel_FreeBSD kernel_linux oom openvz unicode vserver
+KEYWORDS=amd64
+LICENSE=BSD GPL-2
+RDEPEND=sys-libs/ncurses[unicode?]
+SLOT=0
+SRC_URI=http://hisham.hm/htop/releases/1.0.3/htop-1.0.3.tar.gz
+_eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_compile:autotools-utils src_test:autotools-utils src_install:autotools-utils
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-any-r1	e79e982e668b660a7b513c642e008c92	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=23fdf0a1e367e70a963399d31f825edf

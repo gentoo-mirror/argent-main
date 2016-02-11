@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=dev-libs/protobuf-c setproctitle? ( dev-libs/libbsd ) app-text/asciidoc app-text/xmlto
+DESCRIPTION=utility to checkpoint/restore a process tree
+EAPI=5
+HOMEPAGE=http://criu.org/
+IUSE=setproctitle
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=dev-libs/protobuf-c setproctitle? ( dev-libs/libbsd )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://download.openvz.org/criu/criu-1.6.tar.bz2
+_eclass_exported_funcs=pkg_setup:linux-info src_prepare:- src_compile:- src_test:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=25ebb6dfc3f6480564296208c18ea3af

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst preinst unpack
+DESCRIPTION=Eselect module for management of multiple Python versions
+EAPI=0
+HOMEPAGE=http://www.gentoo.org/proj/en/Python/
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=>=app-admin/eselect-1.2.3
+SLOT=0
+SRC_URI=mirror://gentoo/eselect-python-20111108.tar.bz2
+_eclass_exported_funcs=pkg_preinst:- pkg_postinst:- src_unpack:- src_install:-
+_md5_=5b0fd63fd6593cc19c674db3c0d94ac0

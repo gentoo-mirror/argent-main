@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-devel/m4 nls? ( sys-devel/gettext ) test? ( sys-devel/bison )
+DESCRIPTION=The Fast Lexical Analyzer
+EAPI=3
+HOMEPAGE=http://flex.sourceforge.net/
+IUSE=nls static test
+KEYWORDS=amd64
+LICENSE=FLEX
+RDEPEND=sys-devel/m4
+SLOT=0
+SRC_URI=mirror://sourceforge/flex/flex-2.5.37.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=09325a296f06f03e1022d5a0dc7542c7

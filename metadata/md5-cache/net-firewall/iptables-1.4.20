@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=netlink? ( net-libs/libnfnetlink ) virtual/os-headers virtual/pkgconfig
+DESCRIPTION=Linux kernel (2.4+) firewall, NAT and packet mangling tools
+EAPI=4
+HOMEPAGE=http://www.netfilter.org/projects/iptables/
+IUSE=ipv6 netlink static-libs
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=netlink? ( net-libs/libnfnetlink )
+SLOT=0
+SRC_URI=http://www.netfilter.org/projects/iptables/files/iptables-1.4.20.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=32f5237add17865be84ca6321177f0a6

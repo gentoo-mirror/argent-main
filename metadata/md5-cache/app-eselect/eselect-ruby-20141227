@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Manages multiple Ruby versions
+EAPI=0
+HOMEPAGE=http://www.gentoo.org
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=>=app-admin/eselect-1.0.2
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~mrueg/distfiles/ruby.eselect-20141227.bz2
+_eclass_exported_funcs=src_install:-
+_md5_=580602472fe15fea560e962c1a31b83f

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup
+DEPEND=emacs? ( virtual/emacs ) mono? ( >=dev-lang/mono-0.95 ) nls? ( >=sys-devel/gettext-0.17 ) java? ( >=virtual/jdk-1.5 doc? ( dev-java/gjdoc ) ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=Internationalized Domain Names (IDN) implementation
+EAPI=5
+HOMEPAGE=http://www.gnu.org/software/libidn/
+IUSE=doc emacs java mono nls static-libs elibc_FreeBSD java
+KEYWORDS=amd64
+LICENSE=GPL-2 GPL-3 LGPL-3 java? ( Apache-2.0 )
+RDEPEND=emacs? ( virtual/emacs ) mono? ( >=dev-lang/mono-0.95 ) nls? ( virtual/libintl ) java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0
+SRC_URI=mirror://gnu/libidn/libidn-1.28.tar.gz
+_eclass_exported_funcs=pkg_preinst:java-pkg-opt-2 pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=elisp-common	6043b4937ba58bd735ab6fd9cbbef1e9	eutils	469f038ba48effc32a634fef17232be7	java-pkg-opt-2	a056db0f9539f49b701a9f27982a950b	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	mono-env	1f24c032c78290b0d9a07d5b343051a7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=0ef70e0e74bd5ada53ae2c873dbd2074

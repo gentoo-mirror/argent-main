@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-apps/attr pam? ( virtual/pam ) sys-kernel/linux-headers
+DESCRIPTION=POSIX 1003.1e capabilities
+EAPI=2
+HOMEPAGE=http://www.friedhoff.org/posixfilecaps.html
+IUSE=pam
+KEYWORDS=amd64
+LICENSE=|| ( GPL-2 BSD )
+RDEPEND=sys-apps/attr pam? ( virtual/pam )
+SLOT=0
+SRC_URI=mirror://gentoo/libcap-2.22.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	pam	31659e58bf74abb596b5d2e1f4081772	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=4d2e9e6c7ca0beedab36557d94071eb8

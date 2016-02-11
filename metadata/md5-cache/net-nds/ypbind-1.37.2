@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=debug? ( dev-libs/dmalloc ) dbus? ( dev-libs/dbus-glib ) slp? ( net-libs/openslp ) systemd? ( net-nds/rpcbind >=net-nds/yp-tools-2.12-r1 sys-apps/systemd ) !systemd? ( net-nds/yp-tools || ( net-nds/portmap net-nds/rpcbind ) ) nls? ( sys-devel/gettext ) virtual/pkgconfig
+DESCRIPTION=Multithreaded NIS bind service (ypbind-mt)
+EAPI=5
+HOMEPAGE=http://www.linux-nis.org/nis/ypbind-mt/index.html
+IUSE=debug dbus nls slp systemd
+KEYWORDS=alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86
+LICENSE=GPL-2
+RDEPEND=debug? ( dev-libs/dmalloc ) dbus? ( dev-libs/dbus-glib ) slp? ( net-libs/openslp ) systemd? ( net-nds/rpcbind >=net-nds/yp-tools-2.12-r1 sys-apps/systemd ) !systemd? ( net-nds/yp-tools || ( net-nds/portmap net-nds/rpcbind ) )
+SLOT=0
+SRC_URI=http://www.linux-nis.org/download/ypbind-mt/ypbind-mt-1.37.2.tar.bz2
+_eclass_exported_funcs=pkg_postinst:readme.gentoo src_prepare:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	readme.gentoo	9140536eebe2de296973b59218b84893	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=fc5067b2e50d0cf047322433f07c73ea

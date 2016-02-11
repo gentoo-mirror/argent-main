@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst prepare test
+DESCRIPTION=Shared Memory Abstraction Library
+EAPI=2
+HOMEPAGE=http://www.ossp.org/pkg/lib/mm/
+KEYWORDS=amd64
+LICENSE=mm
+SLOT=1.2
+SRC_URI=ftp://ftp.ossp.org/pkg/lib/mm/mm-1.4.2.tar.gz
+_eclass_exported_funcs=pkg_postinst:- src_prepare:- src_test:- src_install:-
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=a3e784242f9e392c194f3c43051a5b94
