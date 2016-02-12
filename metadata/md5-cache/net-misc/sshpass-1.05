@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DESCRIPTION=Tool for noninteractively performing password authentication with ssh
+EAPI=4
+HOMEPAGE=http://sshpass.sourceforge.net
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=net-misc/openssh
+SLOT=0
+SRC_URI=mirror://sourceforge/sshpass/1.05/sshpass-1.05.tar.gz
+_eclass_exported_funcs=-
+_md5_=c85d4223f99bc8acf3d79633f6bc910f

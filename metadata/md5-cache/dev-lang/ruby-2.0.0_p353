@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test
+DEPEND=berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) ssl? ( dev-libs/openssl ) socks5? ( >=net-proxy/dante-1.1.13 ) tk? ( dev-lang/tk[threads] ) ncurses? ( sys-libs/ncurses ) readline? ( sys-libs/readline ) dev-libs/libyaml virtual/libffi sys-libs/zlib >=app-eselect/eselect-ruby-20100402 !<dev-ruby/rdoc-3.9.4 !<dev-ruby/rubygems-1.8.10-r1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=An object-oriented scripting language
+EAPI=5
+HOMEPAGE=http://www.ruby-lang.org/
+IUSE=berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl tk xemacs ncurses +readline
+KEYWORDS=amd64
+LICENSE=|| ( Ruby-BSD BSD-2 )
+PDEPEND=>=dev-ruby/rubygems-2.0.2[ruby_targets_ruby20] >=dev-ruby/json-1.7.7[ruby_targets_ruby20] >=dev-ruby/rake-0.9.6[ruby_targets_ruby20] rdoc? ( >=dev-ruby/rdoc-4.0.0[ruby_targets_ruby20] ) xemacs? ( app-xemacs/ruby-modes )
+RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( sys-libs/gdbm ) ssl? ( dev-libs/openssl ) socks5? ( >=net-proxy/dante-1.1.13 ) tk? ( dev-lang/tk[threads] ) ncurses? ( sys-libs/ncurses ) readline? ( sys-libs/readline ) dev-libs/libyaml virtual/libffi sys-libs/zlib >=app-eselect/eselect-ruby-20100402 !<dev-ruby/rdoc-3.9.4 !<dev-ruby/rubygems-1.8.10-r1
+SLOT=2.0
+SRC_URI=mirror://ruby/2.0/ruby-2.0.0-p353.tar.bz2 http://dev.gentoo.org/~flameeyes/ruby-team/ruby-patches-2.0.0_p353.tar.bz2
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_prepare:- src_configure:- src_compile:- src_test:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=b8181910cfa9116f675534178235612b

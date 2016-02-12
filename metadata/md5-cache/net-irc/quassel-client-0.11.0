@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=~net-irc/quassel-common-0.11.0 sys-libs/zlib qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl?] ) !qt5? ( dev-qt/qtcore:4[ssl?] ) qt5? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 dbus? ( dev-libs/libdbusmenu-qt[qt5(+)] dev-qt/qtdbus:5 ) phonon? ( media-libs/phonon[qt5] ) webkit? ( dev-qt/qtwebkit:5 ) ) !qt5? ( dev-qt/qtgui:4 ayatana? ( dev-libs/libindicate-qt ) dbus? ( dev-libs/libdbusmenu-qt[qt4(+)] dev-qt/qtdbus:4 kde? ( kde-base/kdelibs:4 ayatana? ( kde-misc/plasma-widget-message-indicator ) ) ) phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) ) webkit? ( dev-qt/qtwebkit:4 ) ) qt5? ( dev-qt/linguist-tools:5 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Qt/KDE IRC client supporting a remote daemon for 24/7 connectivity (client only)
+EAPI=5
+HOMEPAGE=http://quassel-irc.org/
+IUSE=ayatana crypt dbus debug kde phonon qt5 +ssl webkit
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=~net-irc/quassel-common-0.11.0 sys-libs/zlib qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl?] ) !qt5? ( dev-qt/qtcore:4[ssl?] ) qt5? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 dbus? ( dev-libs/libdbusmenu-qt[qt5(+)] dev-qt/qtdbus:5 ) phonon? ( media-libs/phonon[qt5] ) webkit? ( dev-qt/qtwebkit:5 ) ) !qt5? ( dev-qt/qtgui:4 ayatana? ( dev-libs/libindicate-qt ) dbus? ( dev-libs/libdbusmenu-qt[qt4(+)] dev-qt/qtdbus:4 kde? ( kde-base/kdelibs:4 ayatana? ( kde-misc/plasma-widget-message-indicator ) ) ) phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) ) webkit? ( dev-qt/qtwebkit:4 ) )
+SLOT=0
+SRC_URI=http://quassel-irc.org/pub/quassel-0.11.0.tar.bz2
+_eclass_exported_funcs=pkg_postinst:- src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
+_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=7cc1a25c00b96906875a65447b1ef8a0

@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install prepare setup test
+DEPEND=!static? ( idn? ( net-dns/libidn ) pcre? ( dev-libs/libpcre ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl:0 ) ) uuid? ( sys-apps/util-linux ) zlib? ( sys-libs/zlib ) ) app-arch/xz-utils virtual/pkgconfig static? ( idn? ( net-dns/libidn[static-libs(+)] ) pcre? ( dev-libs/libpcre[static-libs(+)] ) ssl? ( gnutls? ( net-libs/gnutls[static-libs(+)] ) !gnutls? ( dev-libs/openssl:0[static-libs(+)] ) ) uuid? ( sys-apps/util-linux[static-libs(+)] ) zlib? ( sys-libs/zlib[static-libs(+)] ) ) test? ( || ( dev-lang/python:3.4 >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/perl dev-perl/HTTP-Daemon dev-perl/HTTP-Message dev-perl/IO-Socket-SSL ) nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Network utility to retrieve files from the WWW
+EAPI=4
+HOMEPAGE=http://www.gnu.org/software/wget/
+IUSE=debug gnutls idn ipv6 nls ntlm pcre +ssl static test uuid zlib
+KEYWORDS=amd64
+LICENSE=GPL-3
+RDEPEND=!static? ( idn? ( net-dns/libidn ) pcre? ( dev-libs/libpcre ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl:0 ) ) uuid? ( sys-apps/util-linux ) zlib? ( sys-libs/zlib ) )
+REQUIRED_USE=ntlm? ( !gnutls ssl ) gnutls? ( ssl )
+SLOT=0
+SRC_URI=mirror://gnu/wget/wget-1.16.tar.xz
+_eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_test:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-any-r1	e79e982e668b660a7b513c642e008c92	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=76c27daeb71839bb90f2a4535f1ec456

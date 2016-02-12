@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=dev-qt/qtcore:4[ssl?] dev-qt/qtscript:4 crypt? ( app-crypt/qca:2 app-crypt/qca-ossl ) !postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] ) postgres? ( dev-qt/qtsql:4[postgres] ) syslog? ( virtual/logger ) !net-irc/quassel-core-bin sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DESCRIPTION=Qt4/KDE IRC client - the "core" (server) component
+EAPI=5
+HOMEPAGE=http://quassel-irc.org/
+IUSE=crypt dbus postgres +ssl syslog
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:4[ssl?] dev-qt/qtscript:4 crypt? ( app-crypt/qca:2 app-crypt/qca-ossl ) !postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] ) postgres? ( dev-qt/qtsql:4[postgres] ) syslog? ( virtual/logger )
+SLOT=0
+SRC_URI=http://quassel-irc.org/pub/quassel-0.10.0.tar.bz2
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
+_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=bc091b92c46d0a8956442c513ec0c6b3

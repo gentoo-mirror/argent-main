@@ -1,0 +1,13 @@
+DEFINED_PHASES=install setup
+DEPEND=dev-lang/php >=dev-php/pear-1.8.1
+DESCRIPTION=class interface to TCP sockets
+EAPI=4
+HOMEPAGE=http://pear.php.net/Net_Socket
+KEYWORDS=amd64
+LICENSE=PHP-2.02
+RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
+SLOT=0
+SRC_URI=http://pear.php.net/get/Net_Socket-1.0.14.tgz
+_eclass_exported_funcs=pkg_setup:php-pear-r1 src_install:php-pear-r1
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	php-pear-r1	97301eb45b88a14929f40f6a00ac6829	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=ccd227c7267a3a2f866d4c4a9119650f

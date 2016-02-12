@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=gnome-base/gnome-shell-3.12 gnome-extra/gnome-shell-extensions x11-libs/gdk-pixbuf >=dev-vcs/git-1.8.2.1
+DESCRIPTION=the Paper gtk theme by snwh
+EAPI=5
+HOMEPAGE=https://github.com/snwh/paper-gtk-theme
+LICENSE=GPL-3
+RDEPEND=>=gnome-base/gnome-shell-3.12 gnome-extra/gnome-shell-extensions x11-libs/gdk-pixbuf
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-r3 src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=450280097327a5f662c6a52f778f5c15

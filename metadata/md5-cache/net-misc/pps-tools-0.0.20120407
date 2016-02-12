@@ -1,0 +1,11 @@
+DEFINED_PHASES=prepare
+DESCRIPTION=User-space tools for LinuxPPS
+EAPI=4
+HOMEPAGE=http://wiki.enneenne.com/index.php/LinuxPPS_installation
+KEYWORDS=amd64
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://github.com/ago/pps-tools/tarball/0deb9c7e135e9380a6d09e9d2e938a146bb698c8 -> pps-tools-git-0.0.20120407.tar.gz
+_eclass_exported_funcs=src_prepare:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=bd08b9ca056318f4bfb154c48a3811b0

@@ -1,0 +1,15 @@
+DEFINED_PHASES=install prepare
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+DESCRIPTION=Enhanced df with colors
+EAPI=5
+HOMEPAGE=http://kassiopeia.juls.savba.sk/~garabik/software/pydf/
+IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
+KEYWORDS=amd64
+LICENSE=public-domain
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
+SLOT=0
+SRC_URI=http://kassiopeia.juls.savba.sk/~garabik/software/pydf/pydf_10.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-r1	cb510c7db32a6f445dbbc7a2b73a5602	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=03c575888ba6f75c73882428dbea0b7a

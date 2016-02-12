@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=ruby_targets_ruby19? ( doc? ( dev-ruby/yard[ruby_targets_ruby19] dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( doc? ( dev-ruby/yard[ruby_targets_ruby20] dev-ruby/rspec:2[ruby_targets_ruby20] ) ) test? ( ruby_targets_ruby19? ( virtual/ruby-ffi[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/ruby-ffi[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( doc? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] >=dev-ruby/rspec-core-2.14.8-r2[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby20] >=dev-ruby/rspec-core-2.14.8-r2[ruby_targets_ruby20] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) )
+DESCRIPTION=A simple and reliable solution for controlling external programs running in the background.
+EAPI=5
+HOMEPAGE=https://github.com/jarib/childprocess
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 doc test test
+KEYWORDS=amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby19? ( virtual/ruby-ffi[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/ruby-ffi[ruby_targets_ruby20] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
+SLOT=2
+SRC_URI=mirror://rubygems/childprocess-0.5.1.gem
+_eclass_exported_funcs=pkg_setup:ruby-ng src_unpack:ruby-ng src_prepare:ruby-ng src_configure:ruby-ng src_compile:ruby-ng src_test:ruby-ng src_install:ruby-ng
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	ruby-fakegem	aab32f53dfbd5677cce73bdac703b04d	ruby-ng	dd773a36977cb5f97eaa70b853a3243d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=9c1f42e67c6b76a2de266f1740c6bab5

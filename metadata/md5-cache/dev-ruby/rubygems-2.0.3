@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=ruby_targets_ruby18? ( test? ( virtual/ruby-minitest[ruby_targets_ruby18] virtual/ruby-rdoc[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( virtual/ruby-minitest[ruby_targets_ruby19] virtual/ruby-rdoc[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( virtual/ruby-minitest[ruby_targets_ruby20] virtual/ruby-rdoc[ruby_targets_ruby20] ) ) ruby_targets_jruby? ( test? ( virtual/ruby-minitest[ruby_targets_jruby] virtual/ruby-rdoc[ruby_targets_jruby] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_jruby? ( dev-java/jruby )
+DESCRIPTION=Centralized Ruby extension management system
+EAPI=5
+HOMEPAGE=http://rubyforge.org/projects/rubygems/
+IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_jruby
+KEYWORDS=amd64
+LICENSE=|| ( Ruby MIT )
+RDEPEND=ruby_targets_jruby? ( >=dev-java/jruby-1.5.6-r1 ) ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.3_rc1 ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_jruby? ( dev-java/jruby )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_jruby )
+SLOT=0
+SRC_URI=http://production.cf.rubygems.org/rubygems/rubygems-2.0.3.tgz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:ruby-ng src_unpack:ruby-ng src_prepare:ruby-ng src_configure:ruby-ng src_compile:ruby-ng src_test:ruby-ng src_install:ruby-ng
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	prefix	21058c21ca48453d771df15500873ede	ruby-ng	dd773a36977cb5f97eaa70b853a3243d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=aea71e775887596b8f1b8e180f5d5463
