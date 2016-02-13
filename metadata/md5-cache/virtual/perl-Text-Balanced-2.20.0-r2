@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Text-Balanced
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.16* =dev-lang/perl-5.14* ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~perl-core/Text-Balanced-2.20.0 )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=55576df2aa59c391c3fd8f7686d9c7f8

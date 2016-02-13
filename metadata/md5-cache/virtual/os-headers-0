@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for operating system headers
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( kernel_linux? ( sys-kernel/linux-headers:0 ) !prefix? ( sys-freebsd/freebsd-lib ) )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=d6396f5386bf95c02d941b575162cefe

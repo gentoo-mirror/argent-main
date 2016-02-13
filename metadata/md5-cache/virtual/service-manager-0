@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for various service managers
+EAPI=0
+IUSE=kernel_linux prefix
+KEYWORDS=amd64
+RDEPEND=sys-apps/systemd
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=35516f655e32006f3987722ba86e6cb6

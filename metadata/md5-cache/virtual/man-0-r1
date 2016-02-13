@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for man
+EAPI=3
+KEYWORDS=amd64
+RDEPEND=|| ( sys-apps/man-db sys-apps/man )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=6a80beb618e3b4943b19ae2f7859b93c

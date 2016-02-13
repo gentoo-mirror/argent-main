@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N >=virtual/perl-Module-Build-0.380.0 app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.1.2 test? ( app-text/docbook-sgml-dtd app-text/docbook-sgml-utils virtual/tex-base ) dev-lang/perl[-build(-)]
+DESCRIPTION=Tools for helping translation of documentation
+EAPI=5
+HOMEPAGE=http://po4a.alioth.debian.org
+IUSE=test
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N dev-lang/perl[-build(-)]
+SLOT=0
+SRC_URI=mirror://debian/pool/main/p/po4a/po4a_0.42.orig.tar.gz
+_eclass_exported_funcs=src_unpack:perl-module src_prepare:perl-module src_configure:perl-module src_compile:perl-module src_test:perl-module src_install:perl-module
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-app	dd51111c6be625114b53b93bd2304d6c	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_md5_=fa926ee3f02e0ac002dafd8f3b3d9bc2

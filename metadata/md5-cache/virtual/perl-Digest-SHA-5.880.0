@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Digest-SHA
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Digest-SHA-5.880.0 ) !<perl-core/Digest-SHA-5.880.0 !>perl-core/Digest-SHA-5.880.0-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=29e3f430769f3e6f70190dbb09b07b68

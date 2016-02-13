@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for ExtUtils-CBuilder
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.20.2* ~perl-core/ExtUtils-CBuilder-0.280.217 ) !<perl-core/ExtUtils-CBuilder-0.280.217 !>perl-core/ExtUtils-CBuilder-0.280.217-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=4716b32072302ae7dfaf32fccf7e52fb

@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=sys-libs/slang-2.1.3
+DESCRIPTION=Paging program that displays, one windowful at a time, the contents of a file
+EAPI=4
+HOMEPAGE=ftp://space.mit.edu/pub/davis/most
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/slang-2.1.3
+SLOT=0
+SRC_URI=ftp://space.mit.edu/pub/davis/most/most-5.0.0a.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_md5_=d8bfb3202eab7c86ebca11294c96b769

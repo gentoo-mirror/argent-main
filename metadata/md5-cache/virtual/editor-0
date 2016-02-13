@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for editor
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( app-editors/vim app-misc/mc[edit] sys-apps/ed )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=7cb53d3a247af27878fe20ff5c2e5585

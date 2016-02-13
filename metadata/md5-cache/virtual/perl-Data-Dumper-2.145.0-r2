@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Data-Dumper
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Data-Dumper-2.145.0 ) !<perl-core/Data-Dumper-2.145.0 !>perl-core/Data-Dumper-2.145.0-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=202dbcfc9e96aa6fb66be7a8efddccb0

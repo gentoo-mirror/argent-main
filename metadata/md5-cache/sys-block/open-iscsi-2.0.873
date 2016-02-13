@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=slp? ( net-libs/openslp )
+DESCRIPTION=Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720
+EAPI=5
+HOMEPAGE=http://www.open-iscsi.org/
+IUSE=debug slp
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=slp? ( net-libs/openslp ) sys-apps/util-linux
+SLOT=0
+SRC_URI=http://www.open-iscsi.org/bits/open-iscsi-2.0-873.tar.gz
+_eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=390c1ce6916ce22a0ca68984681f4f75

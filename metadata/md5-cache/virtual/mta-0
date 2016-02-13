@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Message Transfer Agents
+EAPI=3
+KEYWORDS=amd64
+RDEPEND=mail-mta/postfix
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=85fda8a46c3ab3536a3f57e968e32bf9

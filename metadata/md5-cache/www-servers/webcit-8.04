@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst setup
+DEPEND=>=dev-libs/libical-0.43 >=dev-libs/libcitadel-8.04 ssl? ( dev-libs/openssl ) sys-libs/zlib
+DESCRIPTION=Groupdav compliant AJAX'ed Blog/Forum/Wiki/Webserver for Citadel groupware
+EAPI=4
+HOMEPAGE=http://www.citadel.org/
+IUSE=ssl
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 MIT LGPL-3 LGPL-2.1
+RDEPEND=>=dev-libs/libical-0.43 >=dev-libs/libcitadel-8.04 ssl? ( dev-libs/openssl ) sys-libs/zlib
+SLOT=0
+SRC_URI=http://easyinstall.citadel.org/webcit-8.04.tar.gz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_configure:- src_install:-
+_eclasses_=user	bc615318777c602f6114b73c27f9a9d1
+_md5_=e067760706cf9c1eef8e91f4dfbc0f60

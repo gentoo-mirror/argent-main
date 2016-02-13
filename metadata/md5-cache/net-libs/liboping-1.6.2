@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=sys-libs/ncurses perl? ( dev-lang/perl sys-devel/libperl ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=C library and ncurses based program to generate ICMP echo requests and ping multiple hosts at once
+EAPI=4
+HOMEPAGE=http://verplant.org/liboping
+IUSE=perl
+KEYWORDS=amd64
+LICENSE=LGPL-2.1 GPL-2
+RDEPEND=sys-libs/ncurses perl? ( dev-lang/perl sys-devel/libperl )
+SLOT=0
+SRC_URI=http://verplant.org/liboping/files/liboping-1.6.2.tar.bz2
+_eclass_exported_funcs=src_unpack:base src_prepare:- src_configure:- src_compile:base src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=ff25aa34bd6ef93b73f28f48f45ff019

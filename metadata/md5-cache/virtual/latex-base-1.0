@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for basic LaTeX binaries
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=dev-texlive/texlive-latexrecommended dev-texlive/texlive-fontutils
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=2a71927eacdb18853467da53eacd506a

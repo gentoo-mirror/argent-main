@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=net-analyzer/nagios-plugins-1.4.13-r1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A nagios plugin for checking MySQL server health
+EAPI=5
+HOMEPAGE=http://labs.consol.de/lang/de/nagios/check_mysql_health/
+KEYWORDS=amd64
+LICENSE=BSD
+RDEPEND=>=net-analyzer/nagios-plugins-1.4.13-r1 virtual/mysql
+SLOT=0
+SRC_URI=http://labs.consol.de/download/shinken-nagios-plugins/check_mysql_health-2.1.8.2.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=f5f36f0f830b277fb7763ded5ffbae6d

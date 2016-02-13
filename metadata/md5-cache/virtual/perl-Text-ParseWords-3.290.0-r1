@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Text-ParseWords
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Text-ParseWords-3.290.0 ) !<perl-core/Text-ParseWords-3.290.0 !>perl-core/Text-ParseWords-3.290.0-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=50d3c11d782e21647a52942e3cf8973b

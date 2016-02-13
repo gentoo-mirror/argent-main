@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DEPEND=|| ( >=dev-util/pkgconfig-0.27.1 dev-util/pkgconf[pkg-config] dev-util/pkgconfig-openbsd[pkg-config] )
+DESCRIPTION=Virtual for the pkg-config implementation
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( >=dev-util/pkgconfig-0.27.1 dev-util/pkgconf[pkg-config] dev-util/pkgconfig-openbsd[pkg-config] )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=0ffcd4d8f0642e78a66760db8fbbc7e0

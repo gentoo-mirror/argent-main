@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=!elibc_glibc? ( virtual/libiconv ) X? ( x11-libs/libICE x11-libs/libXau x11-libs/libSM x11-libs/libX11 x11-libs/libXt )
+DESCRIPTION=utilities to access MS-DOS disks from Unix without mounting them
+EAPI=4
+HOMEPAGE=http://mtools.linux.lu/
+IUSE=X elibc_glibc
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x64-solaris
+LICENSE=GPL-3
+RDEPEND=!elibc_glibc? ( virtual/libiconv ) X? ( x11-libs/libICE x11-libs/libXau x11-libs/libSM x11-libs/libX11 x11-libs/libXt )
+SLOT=0
+SRC_URI=mirror://gnu/mtools/mtools-4.0.18.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=90e6316d3a3b5fc611957687b0cbae15

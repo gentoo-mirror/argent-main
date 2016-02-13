@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for user account management utilities
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=!prefix? ( || ( >=sys-apps/shadow-4.1 sys-apps/hardened-shadow ) )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=84edd2111c18f0128785b05e67579dee

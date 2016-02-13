@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Scalar-List-Utils
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=~perl-core/Scalar-List-Utils-1.270.0
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=b9a385a931e104dde16f988920ccb556

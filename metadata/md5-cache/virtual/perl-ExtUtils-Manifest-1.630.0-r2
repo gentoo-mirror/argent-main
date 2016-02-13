@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for ExtUtils-Manifest
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/ExtUtils-Manifest-1.630.0 ) !<perl-core/ExtUtils-Manifest-1.630.0 !>perl-core/ExtUtils-Manifest-1.630.0-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=29e3f430769f3e6f70190dbb09b07b68

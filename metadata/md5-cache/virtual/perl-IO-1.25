@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for IO
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=~perl-core/IO-1.25
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=3314999780358da54fc47af73bf025f8

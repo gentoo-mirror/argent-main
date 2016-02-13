@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DESCRIPTION=A simple utility to read the temperature of SMART capable hard drives
+EAPI=5
+HOMEPAGE=http://savannah.nongnu.org/projects/hddtemp/
+IUSE=nls selinux
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=selinux? ( sec-policy/selinux-hddtemp )
+SLOT=0
+SRC_URI=http://download.savannah.gnu.org/releases/hddtemp/hddtemp-0.3-beta15.tar.bz2 mirror://gentoo/hddtemp-20080531.db.bz2
+_eclass_exported_funcs=pkg_postinst:readme.gentoo src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	readme.gentoo	9140536eebe2de296973b59218b84893	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=3c84a914c729da49f372b7964648f4b0

@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for the C library
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=!prefix? ( elibc_glibc? ( sys-libs/glibc:2.2 ) elibc_musl? ( sys-libs/musl ) elibc_uclibc? ( sys-libs/uclibc ) elibc_FreeBSD? ( sys-freebsd/freebsd-lib ) )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=e5b87ce486d334c8bb6475f486b97071

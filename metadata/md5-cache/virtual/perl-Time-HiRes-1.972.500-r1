@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Time-HiRes
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.16* ~perl-core/Time-HiRes-1.972.500 )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=a8eb7764359d3c5b21e64a2c472bdd0d

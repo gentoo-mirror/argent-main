@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for cron
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=|| ( sys-process/vixie-cron sys-process/bcron sys-process/cronie sys-process/dcron sys-process/fcron )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=1aaa6e3e93caba91a7087148171137b2

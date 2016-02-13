@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for acl support (sys/acl.h)
+EAPI=3
+IUSE=static-libs
+KEYWORDS=amd64
+RDEPEND=kernel_linux? ( sys-apps/acl[static-libs?] ) kernel_FreeBSD? ( sys-freebsd/freebsd-lib )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=fed5127bd0f1de5069b928cea57bf076

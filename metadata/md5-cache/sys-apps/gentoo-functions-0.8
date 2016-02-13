@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=base functions required by all gentoo systems
+EAPI=5
+HOMEPAGE=http://www.gentoo.org
+KEYWORDS=amd64
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~williamh/dist/gentoo-functions-0.8.tar.bz2 prefix? ( http://dev.gentoo.org/~grobian/distfiles/consoletype-1.0.sh )
+_eclass_exported_funcs=src_prepare:- src_install:-
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=5488aec973bdff4653497113c7eef10b

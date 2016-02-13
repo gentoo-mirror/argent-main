@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Time-Local
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.22* =dev-lang/perl-5.20* ~perl-core/Time-Local-1.230.0 ) !<perl-core/Time-Local-1.230.0 !>perl-core/Time-Local-1.230.0-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=8facff3710b94282d99cdb97ff5af76e

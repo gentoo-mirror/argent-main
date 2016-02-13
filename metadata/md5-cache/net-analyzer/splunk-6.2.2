@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=!!net-analyzer/splunk:0
+DESCRIPTION=The search engine for IT data
+EAPI=5
+HOMEPAGE=http://www.splunk.com
+KEYWORDS=-* amd64
+LICENSE=splunk-eula
+RDEPEND=!net-analyzer/splunkforwarder
+SLOT=6
+SRC_URI=amd64? ( http://download.splunk.com/products/splunk/releases/6.2.2/splunk/linux/splunk-6.2.2-255606-Linux-x86_64.tgz )
+_eclass_exported_funcs=src_install:-
+_md5_=a1d1836cd1d1d76d5fee2a5027964f8a

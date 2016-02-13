@@ -1,0 +1,12 @@
+DEFINED_PHASES=-
+DEPEND=sys-libs/ncurses[unicode] virtual/pkgconfig
+DESCRIPTION=NCurses Disk Usage
+EAPI=5
+HOMEPAGE=http://dev.yorhel.nl/ncdu/
+KEYWORDS=amd64
+LICENSE=MIT
+RDEPEND=sys-libs/ncurses[unicode]
+SLOT=0
+SRC_URI=http://dev.yorhel.nl/download/ncdu-1.10.tar.gz
+_eclass_exported_funcs=-
+_md5_=3c4166d19f6a90336d6c01df1134cced

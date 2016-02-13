@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for the package manager
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( sys-apps/portage sys-apps/paludis sys-apps/pkgcore )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=f417779620032a5732801d3e5ba849c4

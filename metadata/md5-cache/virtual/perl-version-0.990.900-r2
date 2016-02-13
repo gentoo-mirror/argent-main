@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for version
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.22* =dev-lang/perl-5.20.2* ~perl-core/version-0.990.900 ) !<perl-core/version-0.990.900 !>perl-core/version-0.990.900-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=fdce4b3022a309984a963d3be657e5af

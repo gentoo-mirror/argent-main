@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare setup test
+DEPEND=net-libs/libpcap smi? ( net-libs/libsmi ) ssl? ( >=dev-libs/openssl-0.9.6m ) test? ( || ( app-arch/sharutils sys-freebsd/freebsd-ubin ) dev-lang/perl )
+DESCRIPTION=A Tool for network monitoring and data acquisition
+EAPI=4
+HOMEPAGE=http://www.tcpdump.org/
+IUSE=+chroot smi ssl ipv6 -samba suid test
+KEYWORDS=amd64
+LICENSE=BSD
+RDEPEND=net-libs/libpcap smi? ( net-libs/libsmi ) ssl? ( >=dev-libs/openssl-0.9.6m )
+SLOT=0
+SRC_URI=http://www.tcpdump.org/release/tcpdump-4.3.0.tar.gz http://www.jp.tcpdump.org/release/tcpdump-4.3.0.tar.gz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_test:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	user	bc615318777c602f6114b73c27f9a9d1
+_md5_=8688049d39c35b1c61c4883f1144a7a1

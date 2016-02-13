@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for ExtUtils-Install
+EAPI=5
+KEYWORDS=amd64
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/ExtUtils-Install-1.670.0 ) !<perl-core/ExtUtils-Install-1.670.0 !>perl-core/ExtUtils-Install-1.670.0-r999
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=2cfca7b869d75bc3ebcaae15f2320a03

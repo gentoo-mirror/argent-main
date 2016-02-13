@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Module-Build
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=~dev-perl/Module-Build-0.400.500
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=c29c1c7065c6f0cff92c9c8730817916

@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for File-Path
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=~perl-core/File-Path-2.90.0
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=e58933acbaea111181ffe893a66dfbcc

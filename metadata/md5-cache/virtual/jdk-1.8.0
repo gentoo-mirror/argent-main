@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Java Development Kit (JDK)
+EAPI=5
+KEYWORDS=amd64
+RDEPEND==dev-java/oracle-jdk-bin-1.8.0*
+SLOT=1.8
+_eclass_exported_funcs=-
+_md5_=75a922a339ee4c8e9fbd99d6a297fdb4

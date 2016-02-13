@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure prepare
+DEPEND=dev-lang/perl elibc_glibc? ( nls? ( dev-perl/Locale-gettext ) )
+DESCRIPTION=GNU utility to convert program --help output to a man page
+EAPI=4
+HOMEPAGE=http://www.gnu.org/software/help2man/
+IUSE=nls elibc_glibc
+KEYWORDS=amd64
+LICENSE=GPL-3
+RDEPEND=dev-lang/perl elibc_glibc? ( nls? ( dev-perl/Locale-gettext ) )
+SLOT=0
+SRC_URI=mirror://gnu/help2man/help2man-1.45.1.tar.xz
+_eclass_exported_funcs=src_prepare:- src_configure:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=70ce290f53b74f7d930aba4a9e008b9e

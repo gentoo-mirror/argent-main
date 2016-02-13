@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=perl? ( dev-lang/perl:0 virtual/perl-Digest-MD5:0 virtual/perl-Scalar-List-Utils:0 >=virtual/perl-Thread-Queue-2.11:0 virtual/perl-Encode:0 dev-perl/JSON-XS:0 ) perl? ( dev-perl/Module-Install:0 virtual/perl-ExtUtils-MakeMaker:0 virtual/perl-File-Path:0 virtual/perl-File-Spec:0 virtual/perl-File-Temp:0 test? ( dev-perl/File-Copy-Recursive:0 dev-perl/Test-Pod:0 dev-perl/Test-Perl-Critic:0 dev-perl/Test-Pod-Coverage:0 dev-perl/Perl-Critic:0 dev-perl/Perl-Critic-Policy-Dynamic-NoIndirect:0 dev-perl/Perl-Critic-Deprecated:0 dev-perl/Perl-Critic-Nits:0 ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Nagios/Icinga event broker module that allows quick/direct access to your status data
+EAPI=5
+HOMEPAGE=http://mathias-kettner.de/checkmk_livestatus.html
+IUSE=examples perl python test python_targets_python2_7
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=perl? ( dev-lang/perl:0 virtual/perl-Digest-MD5:0 virtual/perl-Scalar-List-Utils:0 >=virtual/perl-Thread-Queue-2.11:0 virtual/perl-Encode:0 dev-perl/JSON-XS:0 )
+SLOT=0
+SRC_URI=http://mathias-kettner.de/download/mk-livestatus-1.2.2p3.tar.gz
+_eclass_exported_funcs=src_unpack:unpacker src_prepare:- src_configure:- src_compile:- src_test:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	python-r1	cb510c7db32a6f445dbbc7a2b73a5602	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_md5_=558ad33a6d62d7e17c343c7e7fc1ac7e

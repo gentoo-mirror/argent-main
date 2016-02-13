@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm
+DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+DESCRIPTION=vim plugin: Nagios configuration files syntax
+EAPI=0
+HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=2261
+KEYWORDS=amd64
+LICENSE=vim.org
+RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
+SLOT=0
+SRC_URI=mirror://gentoo/nagios-syntax-20050105.tar.bz2 http://dev.gentoo.org/~radhermit/vim/nagios-syntax-20050105.tar.bz2
+_eclass_exported_funcs=pkg_postrm:vim-plugin pkg_postinst:vim-plugin src_install:vim-plugin
+_eclasses_=vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	e7c0a43c6cdeb88ab420705047ea16b3
+_md5_=86bb876789898fe731ec20a8254c1d6a

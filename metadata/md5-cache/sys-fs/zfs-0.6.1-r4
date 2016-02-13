@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs(+)?] virtual/awk virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=Userland utilities for ZFS Linux kernel module
+EAPI=4
+HOMEPAGE=http://zfsonlinux.org/
+IUSE=bash-completion custom-cflags kernel-builtin +rootfs selinux test-suite static-libs
+KEYWORDS=~amd64
+LICENSE=BSD-2 CDDL MIT
+RDEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs(+)?] virtual/awk !=sys-apps/grep-2.13* !kernel-builtin? ( =sys-fs/zfs-kmod-0.6.1* ) !sys-fs/zfs-fuse !prefix? ( virtual/udev ) test-suite? ( sys-apps/util-linux sys-devel/bc sys-block/parted sys-fs/lsscsi sys-fs/mdadm sys-process/procps virtual/modutils ) rootfs? ( app-arch/cpio app-misc/pax-utils !<sys-boot/grub-2.00-r2:2 )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/zfsonlinux/zfs/archive/zfs-0.6.1.tar.gz
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:autotools-utils src_test:autotools-utils src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	udev	dc6dbbee15698d448c66fc24f8165ee5	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=bb3a87062fc84d8392f8e5e76e36a082

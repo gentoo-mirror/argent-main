@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst postrm
+DEPEND=>=dev-libs/kpathsea-6.1.0_p20120701
+DESCRIPTION=DVI-to-PostScript translator
+EAPI=4
+HOMEPAGE=http://tug.org/texlive/
+IUSE=doc source
+KEYWORDS=amd64
+LICENSE=GPL-2
+RDEPEND=!<app-text/texlive-core-2010 !<dev-texlive/texlive-basic-2009 !app-text/ptex >=dev-libs/kpathsea-6.1.0_p20120701
+SLOT=0
+SRC_URI=mirror://gentoo/texlive-20120701-source.tar.xz mirror://gentoo/texlive-module-dvips-2012.tar.xz doc? ( mirror://gentoo/texlive-module-dvips.doc-2012.tar.xz )
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	texlive-common	5b782f4409f39e7feeec5bbf4206cc4a	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=488a81affaec6f0a99d0f762f08a88a0

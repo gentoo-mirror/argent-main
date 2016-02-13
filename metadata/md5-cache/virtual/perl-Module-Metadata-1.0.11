@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Module-Metadata
+EAPI=0
+KEYWORDS=amd64
+RDEPEND=~perl-core/Module-Metadata-1.0.11
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=b9a385a931e104dde16f988920ccb556
