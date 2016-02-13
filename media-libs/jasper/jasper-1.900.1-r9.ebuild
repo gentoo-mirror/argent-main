@@ -6,7 +6,6 @@ EAPI=5
 
 # outdated './configure': breaks in 'USE=opengl ABI_X86="32 64"' case:
 #  uses /usr/lib64 for 32-bit ABI.
-AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-multilib
 
@@ -30,6 +29,8 @@ RDEPEND="
 		)"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
+
+AUTOTOOLS_AUTORECONF=yes
 
 PATCHES=(
 	"${WORKDIR}"/${P}-fixes-20120611.patch
