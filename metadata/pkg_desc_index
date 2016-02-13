@@ -753,6 +753,7 @@ perl-core/Time-Local 1.230.0: Implements timelocal() and timegm()
 perl-core/libnet 1.220.0 1.270.0: A URI Perl Module
 perl-core/net-ping 2.36: check a remote host for reachability
 perl-core/version 0.990.100: Perl extension for Version Objects
+sys-apps/ack 1.96: ack is a tool like grep, aimed at programmers with large trees of heterogeneous source code
 sys-apps/acl 2.2.51 2.2.52-r1: access control list utilities, libraries and headers
 sys-apps/attr 2.4.47-r1: Extended attributes tools
 sys-apps/baselayout-java 0.1.0: Baselayout for Java
