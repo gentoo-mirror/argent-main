@@ -294,6 +294,8 @@ dev-perl/HTTP-Negotiate 6.0.1-r1: HTTP content negotiation
 dev-perl/IO-Multiplex 1.130.0: Manage IO on many file handles
 dev-perl/IO-Socket-INET6 2.710.0: Work with IO sockets in ipv6
 dev-perl/IO-Socket-SSL 1.953.0 1.967.0: Nearly transparent SSL encapsulation for IO::Socket::INET
+dev-perl/IO-Tty 1.120.0: IO::Tty and IO::Pty modules for Perl
+dev-perl/IPC-Run 0.920.0-r1: system() and background procs w/ piping, redirs, ptys
 dev-perl/JSON 2.590.0 2.590.0-r1: parse and convert to JSON (JavaScript Object Notation)
 dev-perl/LWP-MediaTypes 6.20.0 6.20.0-r1: Media types and mailcap processing
 dev-perl/LWP-Protocol-https 6.30.0 6.30.0-r1: Provide https support for LWP::UserAgent
@@ -620,7 +622,7 @@ net-irc/quassel-common 0.10.0 0.11.0: Qt/KDE IRC client supporting a remote daem
 net-irc/quassel-core 0.10.0 0.11.0: Qt/KDE IRC client - the "core" (server) component
 net-libs/c-client 2007f-r4: UW IMAP c-client library
 net-libs/gnutls 2.12.23-r6 3.3.15: A TLS 1.2 and SSL 3.0 implementation for the GNU project
-net-libs/http-parser 2.3: A parser for HTTP messages written in C. It parses both requests and responses
+net-libs/http-parser 2.3 2.6.0: Http request/response parser for C
 net-libs/liblockfile 1.09: Implements functions designed to lock the standard mailboxes
 net-libs/libmnl 1.0.3 1.0.3-r1: Minimalistic netlink library
 net-libs/libnet 1.1.6: library to provide an API for commonly used low-level network functions (mainly packet injection)
@@ -888,6 +890,7 @@ sys-libs/cracklib 2.9.1 2.9.1-r1: Password Checking Library
 sys-libs/db 4.8.30 4.8.30-r2: Oracle Berkeley DB
 sys-libs/e2fsprogs-libs 1.42.7 1.42.12: e2fsprogs libraries (common error and subsystem)
 sys-libs/efivar 0.15: Tools and library to manipulate EFI variables
+sys-libs/freeipmi 1.4.3: Provides Remote-Console and System Management Software as per IPMI v1.5/2.0
 sys-libs/gdbm 1.8.3-r4 1.11: Standard GNU database libraries
 sys-libs/glibc 2.17 2.19-r1 2.20-r2: GNU libc6 (also called glibc2) C library
 sys-libs/gpm 1.20.7-r1 1.20.7-r2: Console-based mouse driver

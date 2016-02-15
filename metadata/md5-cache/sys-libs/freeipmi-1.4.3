@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/libgcrypt:0 virtual/os-headers !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Provides Remote-Console and System Management Software as per IPMI v1.5/2.0
+EAPI=5
+HOMEPAGE=https://www.gnu.org/software/freeipmi/
+IUSE=debug nagios
+KEYWORDS=amd64
+LICENSE=GPL-3
+RDEPEND=dev-libs/libgcrypt:0 nagios? ( || ( net-analyzer/icinga net-analyzer/nagios ) dev-lang/perl )
+SLOT=0
+SRC_URI=mirror://gnu/freeipmi/freeipmi-1.4.3.tar.gz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:autotools-utils src_test:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=ce9f6d889c9e1785c067bb7b958c68a2
