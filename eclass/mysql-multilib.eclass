@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: mysql-multilib.eclass
@@ -38,7 +38,7 @@ case "${EAPI:-0}" in
 	*) die "Unsupported EAPI: ${EAPI}" ;;
 esac
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_config
+EXPORT_FUNCTIONS pkg_pretend pkg_setup src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_config
 
 #
 # VARIABLES:
@@ -50,7 +50,7 @@ S="${WORKDIR}/mysql"
 
 [[ ${MY_EXTRAS_VER} == "latest" ]] && MY_EXTRAS_VER="20090228-0714Z"
 if [[ ${MY_EXTRAS_VER} == "live" ]]; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/mysql-extras.git"
 	EGIT_CHECKOUT_DIR=${WORKDIR}/mysql-extras
 	EGIT_CLONE_TYPE=shallow
 fi
@@ -100,16 +100,6 @@ MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 # This eclass should only be used with at least mysql-5.5.35
 mysql_version_is_at_least "5.5.35" || die "This eclass should only be used with >=mysql-5.5.35"
 
-# @ECLASS-VARIABLE: XTRADB_VER
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Version of the XTRADB storage engine
-
-# @ECLASS-VARIABLE: PERCONA_VER
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Designation by PERCONA for a MySQL version to apply an XTRADB release
-
 # Work out the default SERVER_URI correctly
 if [[ -z ${SERVER_URI} ]]; then
 	[[ -z ${MY_PV} ]] && MY_PV="${PV//_/-}"
@@ -119,8 +109,13 @@ if [[ -z ${SERVER_URI} ]]; then
 			MARIA_FULL_PV=$(replace_version_separator 3 '-' ${MY_PV})
 		MARIA_FULL_P="${PN}-${MARIA_FULL_PV}"
 		SERVER_URI="
-		http://ftp.osuosl.org/pub/mariadb/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://ftp.osuosl.org/pub/mariadb/${MARIA_FULL_P}/source/${MARIA_FULL_P}.tar.gz
+		http://mirror.jmu.edu/pub/mariadb/${MARIA_FULL_P}/source/${MARIA_FULL_P}.tar.gz
+		http://mirrors.coreix.net/mariadb/${MARIA_FULL_P}/source/${MARIA_FULL_P}.tar.gz
+		http://mirrors.syringanetworks.net/mariadb/${MARIA_FULL_P}/source/${MARIA_FULL_P}.tar.gz
+		http://mirrors.fe.up.pt/pub/mariadb/${MARIA_FULL_P}/source/${MARIA_FULL_P}.tar.gz
+		http://mirror2.hs-esslingen.de/mariadb/${MARIA_FULL_P}/source/${MARIA_FULL_P}.tar.gz
+		http://ftp.osuosl.org/pub/mariadb/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://mirror.jmu.edu/pub/mariadb/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://mirrors.coreix.net/mariadb/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
 		http://mirrors.syringanetworks.net/mariadb/${MARIA_FULL_P}/kvm-tarbake-jaunty-x86/${MARIA_FULL_P}.tar.gz
@@ -205,6 +200,7 @@ IUSE="+community cluster debug embedded extraengine jemalloc latin1 minimal
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 fi
 
 ### End readline/libedit
@@ -289,7 +285,9 @@ fi
 ### End readline/libedit
 
 if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] ; then
-	mysql_version_is_at_least "5.7.5" && DEPEND="${DEPEND} >=dev-libs/boost-1.56.0:0="
+	if mysql_version_is_at_least "5.7.6" ; then DEPEND="${DEPEND} >=dev-libs/boost-1.57.0:0=" ; else
+		mysql_version_is_at_least "5.7.5" && DEPEND="${DEPEND} >=dev-libs/boost-1.56.0:0="
+	fi
 fi
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
@@ -348,6 +346,11 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		virtual/perl-Time-HiRes ) "
 fi
 
+# @ECLASS-VARIABLE: WSREP_REVISION
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Version of the sys-cluster/galera API (major version in portage) to use for galera clustering
+
 if [[ -n "${WSREP_REVISION}" ]] ; then
 	# The wsrep API version must match between the ebuild and sys-cluster/galera.
 	# This will be indicated by WSREP_REVISION in the ebuild and the first number
@@ -364,15 +367,16 @@ if [[ -n "${WSREP_REVISION}" ]] ; then
 	RDEPEND="${RDEPEND} ${GALERA_RDEPEND}
 		sst-rsync? ( sys-process/lsof )
 		sst-xtrabackup? (
-			>=dev-db/xtrabackup-bin-2.2.4
 			net-misc/socat[ssl]
 		)
 	"
+	# Causes a circular dependency if DBD-mysql is not already installed
+	PDEPEND="${PDEPEND} sst-xtrabackup? ( >=dev-db/xtrabackup-bin-2.2.4 )"
 fi
 
 if [[ ${PN} == "mysql-cluster" ]] ; then
-       mysql_version_is_at_least "7.2.9" && RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.6 )" && \
-               DEPEND="${DEPEND} java? ( >=virtual/jdk-1.6 )"
+	mysql_version_is_at_least "7.2.9" && RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.6 )" && \
+		DEPEND="${DEPEND} java? ( >=virtual/jdk-1.6 )"
 fi
 
 # compile-time-only
@@ -386,7 +390,7 @@ DEPEND="${DEPEND}
 
 # For other stuff to bring us in
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
-PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )
+PDEPEND="${PDEPEND} perl? ( >=dev-perl/DBD-mysql-2.9004 )
 	 ~virtual/mysql-${MYSQL_PV_MAJOR}"
 
 # my_config.h includes ABI specific data
@@ -416,6 +420,23 @@ mysql-multilib_disable_test() {
 # EBUILD FUNCTIONS
 #
 
+# @FUNCTION: mysql-multilib_pkg_pretend
+# @DESCRIPTION:
+# Perform some basic tests and tasks during pkg_pretend phase:
+mysql-multilib_pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]] ; then
+		if use_if_iuse tokudb && [[ $(gcc-major-version) -lt 4 || \
+			$(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ; then
+			eerror "${PN} with tokudb needs to be built with gcc-4.7 or later."
+			eerror "Please use gcc-config to switch to gcc-4.7 or later version."
+			die
+		fi
+	fi
+	if use_if_iuse cluster && [[ "${PN}" != "mysql-cluster" ]]; then
+		die "NDB Cluster support has been removed from all packages except mysql-cluster"
+	fi
+}
+
 # @FUNCTION: mysql-multilib_pkg_setup
 # @DESCRIPTION:
 # Perform some basic tests and tasks during pkg_setup phase:
@@ -436,23 +457,9 @@ mysql-multilib_pkg_setup() {
 	enewgroup mysql 60 || die "problem adding 'mysql' group"
 	enewuser mysql 60 -1 /dev/null mysql || die "problem adding 'mysql' user"
 
-	if use cluster && [[ "${PN}" != "mysql-cluster" ]]; then
-		ewarn "The NDB cluster support is no longer built."
-		ewarn "Please use dev-db/mysql-cluster for NDB."
-		ewarn "In the near future, the USE flag will be removed."
-	fi
-
 	if [[ ${PN} == "mysql-cluster" ]] ; then
 		mysql_version_is_at_least "7.2.9" && java-pkg-opt-2_pkg_setup
 	fi
-
-	if use_if_iuse tokudb && [[ "${MERGE_TYPE}" != "binary" && $(gcc-major-version) -lt 4 || \
-		$(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ; then
-		eerror "${PN} with tokudb needs to be built with gcc-4.7 or later."
-		eerror "Please use gcc-config to switch to gcc-4.7 or later version."
-		die
-	fi
-
 }
 
 # @FUNCTION: mysql-multilib_src_unpack
@@ -485,6 +492,29 @@ mysql-multilib_src_prepare() {
 # @DESCRIPTION:
 # Configure mysql to build the code for Gentoo respecting the use flags.
 mysql-multilib_src_configure() {
+	# Bug #114895, bug #110149
+	filter-flags "-O" "-O[01]"
+
+	CXXFLAGS="${CXXFLAGS} -fno-strict-aliasing"
+	CXXFLAGS="${CXXFLAGS} -felide-constructors"
+	# Causes linkage failures.  Upstream bug #59607 removes it
+	if ! mysql_version_is_at_least "5.6" ; then
+		CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
+	fi
+	# As of 5.7, exceptions are used!
+	if ! mysql_version_is_at_least "5.7" ; then
+		CXXFLAGS="${CXXFLAGS} -fno-exceptions -fno-rtti"
+	fi
+	export CXXFLAGS
+
+	# bug #283926, with GCC4.4, this is required to get correct behavior.
+	append-flags -fno-strict-aliasing
+
+	# bug 508724 mariadb cannot use ld.gold
+	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
+		tc-ld-disable-gold
+	fi
+
 	multilib-minimal_src_configure
 }
 
@@ -538,11 +568,18 @@ multilib_src_configure() {
 	fi
 
 	if in_iuse bindist ; then
-		mycmakeargs+=(
-			-DWITH_READLINE=$(usex bindist 1 0)
-			-DNOT_FOR_DISTRIBUTION=$(usex bindist 0 1)
-			$(usex bindist -DHAVE_BFD_H=0 '')
-		)
+		# bfd.h is only used starting with 10.1 and can be controlled by NOT_FOR_DISTRIBUTION
+		if multilib_is_native_abi; then
+			mycmakeargs+=(
+				-DWITH_READLINE=$(usex bindist 1 0)
+				-DNOT_FOR_DISTRIBUTION=$(usex bindist 0 1)
+			)
+		else
+			mycmakeargs+=(
+				-DWITH_READLINE=1
+				-DNOT_FOR_DISTRIBUTION=0
+			)
+		fi
 	fi
 
 	### TODO: make this system but issues with UTF-8 prevent it
@@ -554,7 +591,7 @@ multilib_src_configure() {
 		)
 
 		mysql_version_is_at_least "10.0.9" && mycmakeargs+=( -DWITH_PCRE=system )
-        fi
+	fi
 
 	configure_cmake_locale
 
@@ -568,24 +605,6 @@ multilib_src_configure() {
 	[[ ${PN} == "mysql-cluster" ]] && mycmakeargs+=(
 		-DWITH_NDBCLUSTER=1 -DWITH_PARTITION_STORAGE_ENGINE=1
 		-DWITHOUT_PARTITION_STORAGE_ENGINE=0 )
-
-	# Bug #114895, bug #110149
-	filter-flags "-O" "-O[01]"
-
-	CXXFLAGS="${CXXFLAGS} -fno-strict-aliasing"
-	CXXFLAGS="${CXXFLAGS} -felide-constructors"
-	# Causes linkage failures.  Upstream bug #59607 removes it
-	if ! mysql_version_is_at_least "5.6" ; then
-		CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
-	fi
-	# As of 5.7, exceptions are used!
-	if ! mysql_version_is_at_least "5.7" ; then
-		CXXFLAGS="${CXXFLAGS} -fno-exceptions -fno-rtti"
-	fi
-	export CXXFLAGS
-
-	# bug #283926, with GCC4.4, this is required to get correct behavior.
-	append-flags -fno-strict-aliasing
 
 	cmake-utils_src_configure
 }
@@ -863,8 +882,7 @@ mysql-multilib_pkg_config() {
 		mysql_version_is_at_least "5.6" || options="${options} --loose-skip-innodb"
 	fi
 
-	einfo "Creating the mysql database and setting proper"
-	einfo "permissions on it ..."
+	einfo "Creating the mysql database and setting proper permissions on it ..."
 
 	# Now that /var/run is a tmpfs mount point, we need to ensure it exists before using it
 	PID_DIR="${EROOT}/var/run/mysqld"
@@ -939,7 +957,7 @@ mysql-multilib_pkg_config() {
 		-e "${sql}"
 	eend $?
 
-	ebegin "Loading \"zoneinfo\", this step may require a few seconds ..."
+	ebegin "Loading \"zoneinfo\", this step may require a few seconds"
 	"${EROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \
