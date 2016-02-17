@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: mysql-v2.eclass
@@ -69,7 +69,7 @@ S="${WORKDIR}/mysql"
 
 [[ ${MY_EXTRAS_VER} == "latest" ]] && MY_EXTRAS_VER="20090228-0714Z"
 if [[ ${MY_EXTRAS_VER} == "live" ]]; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/mysql-extras.git"
 	EGIT_CHECKOUT_DIR=${WORKDIR}/mysql-extras
 	EGIT_CLONE_TYPE=shallow
 fi
@@ -221,12 +221,15 @@ IUSE="${IUSE} latin1 extraengine cluster max-idx-128 +community profiling"
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
 	mysql_version_is_at_least "5.5" ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 elif [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
 	mysql_check_version_range "5.5.37 to 5.6.11.99" ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 elif [[ ${PN} == "mysql-cluster" ]] && \
 	mysql_check_version_range "7.2 to 7.2.99.99"  ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 fi
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
@@ -813,8 +816,7 @@ mysql-v2_pkg_config() {
 		mysql_version_is_at_least "5.6" || options="${options} --loose-skip-innodb"
 	fi
 
-	einfo "Creating the mysql database and setting proper"
-	einfo "permissions on it ..."
+	einfo "Creating the mysql database and setting proper permissions on it ..."
 
 	# Now that /var/run is a tmpfs mount point, we need to ensure it exists before using it
 	PID_DIR="${EROOT}/var/run/mysqld"
@@ -889,7 +891,7 @@ mysql-v2_pkg_config() {
 		-e "${sql}"
 	eend $?
 
-	ebegin "Loading \"zoneinfo\", this step may require a few seconds ..."
+	ebegin "Loading \"zoneinfo\", this step may require a few seconds"
 	"${EROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \
