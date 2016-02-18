@@ -15,7 +15,7 @@ inherit mysql-multilib-r1
 IUSE="$IUSE"
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 # When MY_EXTRAS is bumped, the index should be revised to exclude these.
 EPATCH_EXCLUDE=''
