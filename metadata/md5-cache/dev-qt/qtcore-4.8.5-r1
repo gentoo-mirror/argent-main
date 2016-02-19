@@ -1,14 +1,15 @@
-DEFINED_PHASES=configure postinst prepare
-DEPEND=dev-libs/fcgi virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
-DESCRIPTION=Simple FastCGI wrapper for CGI scripts (CGI support for nginx)
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=sys-libs/zlib glib? ( dev-libs/glib:2 ) icu? ( >=dev-libs/icu-49:= ) ssl? ( dev-libs/openssl ) !<x11-libs/cairo-1.10.2-r2 virtual/pkgconfig
+DESCRIPTION=Cross-platform application development framework
 EAPI=5
-HOMEPAGE=http://nginx.localdomain.pl/wiki/FcgiWrap
-IUSE=systemd
+HOMEPAGE=https://www.qt.io/ https://qt-project.org/
+IUSE=+glib iconv icu qt3support ssl aqua debug pch +exceptions
 KEYWORDS=amd64
-LICENSE=BSD
-RDEPEND=dev-libs/fcgi
-SLOT=0
-SRC_URI=https://github.com/gnosek/fcgiwrap/archive/1.1.0.tar.gz -> fcgiwrap-1.1.0.tar.gz
-_eclass_exported_funcs=pkg_postinst:- src_prepare:- src_configure:-
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+LICENSE=|| ( LGPL-2.1 GPL-3 )
+PDEPEND=qt3support? ( ~dev-qt/qtgui-4.8.5[aqua=,debug=,glib=,qt3support] )
+RDEPEND=sys-libs/zlib glib? ( dev-libs/glib:2 ) icu? ( >=dev-libs/icu-49:= ) ssl? ( dev-libs/openssl ) !<x11-libs/cairo-1.10.2-r2
+SLOT=4
+SRC_URI=http://download.qt.io/archive/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz
+_eclass_exported_funcs=pkg_postrm:qt4-build pkg_postinst:qt4-build pkg_setup:- src_unpack:qt4-build src_prepare:- src_configure:- src_compile:qt4-build src_test:qt4-build src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	qt4-build	f95205d027c6d91a0e2c5ae71a49e8f2	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
 _md5_=aa24f31e70d4896a858da92e4440111d

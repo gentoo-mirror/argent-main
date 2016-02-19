@@ -1,14 +1,15 @@
-DEFINED_PHASES=install setup
-DESCRIPTION=Automated Packages Builder for Portage and Entropy
+DEFINED_PHASES=install postinst prepare setup unpack
+DEPEND=virtual/pkgconfig
+DESCRIPTION=A tool to log and decode Machine Check Exceptions
 EAPI=5
-HOMEPAGE=http://www.sabayon.org
-IUSE=+entropy python_targets_python2_7
-KEYWORDS=~amd64 ~arm ~x86
+HOMEPAGE=http://mcelog.org/
+IUSE=selinux
+KEYWORDS=amd64
 LICENSE=GPL-2
-RDEPEND=entropy? ( ~sys-apps/entropy-297[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) sys-apps/file[python] >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
-REQUIRED_USE=python_targets_python2_7
+RDEPEND=selinux? ( sec-policy/selinux-mcelog )
+RESTRICT=test
 SLOT=0
-SRC_URI=http://bpr.bluepink.ro:/~rogentos/argent/sys-apps/entropy-297.tar.bz2
-_eclass_exported_funcs=pkg_setup:python-single-r1 src_install:-
-_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	a73853efd730b2fe09e0ed7ab66a3b5b	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+SRC_URI=https://github.com/andikleen/mcelog/tarball/b842ecb44965722ecd67bed1ed9d900073e3313f -> mcelog-1.0_pre3_p20130621.tar.gz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:linux-info src_unpack:vcs-snapshot src_prepare:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	vcs-snapshot	c7ef9ccaf07280393f9af64285c5ed02	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=b19ab4da846d11615cc279dd905c16ed

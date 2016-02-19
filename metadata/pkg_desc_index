@@ -9,12 +9,12 @@ app-admin/hddtemp 0.3_beta15-r7: A simple utility to read the temperature of SMA
 app-admin/logrotate 3.8.7 3.8.8 3.8.9-r1: Rotates, compresses, and mails system logs
 app-admin/matter 290 291 292 293 294 295 296 297: Automated Packages Builder for Portage and Entropy
 app-admin/mcelog 1.0_pre3_p20130621-r1 100: A tool to log and decode Machine Check Exceptions
-app-admin/perl-cleaner 2.19: A tool to log and decode Machine Check Exceptions
+app-admin/perl-cleaner 2.19: User land tool for cleaning up old perl installs
 app-admin/pwgen 2.06-r1 2.07: Password Generator
-app-admin/pydf 10-r1: Password Generator
-app-admin/python-updater 0.11: Enhanced df with colors
+app-admin/pydf 10-r1: Enhanced df with colors
+app-admin/python-updater 0.11: Script used to reinstall Python packages after changing of active Python versions
 app-admin/rigo 290 291 292 293 294 295 296 297 298 300: Rigo, the Sabayon Application Browser
-app-admin/sudo 1.8.6_p7 1.8.12: Rigo, the Sabayon Application Browser
+app-admin/sudo 1.8.6_p7 1.8.12: Allows users or groups to run commands as other users
 app-admin/superadduser 1.0.9: Interactive adduser script from Slackware
 app-admin/syslog-ng 3.4.7: syslog replacement with advanced filtering features
 app-admin/sysstat 10.2.0 11.0.2: System performance tools for Linux
@@ -415,7 +415,7 @@ dev-python/stevedore 0.15 1.1.0 1.1.0-r1: Manage dynamic plugins for Python appl
 dev-python/virtualenv 1.10.1 1.11.6 12.0.5 12.1.1: Virtual Python Environment builder
 dev-python/virtualenv-clone 0.2.4-r1 0.2.4-r2: A script for cloning a non-relocatable virtualenv
 dev-python/virtualenvwrapper 4.2 4.3.1 4.5.1: virtualenvwrapper is a set of extensions to Ian Bicking's virtualenv tool
-dev-qt/qtcore 4.8.5-r1: Simple FastCGI wrapper for CGI scripts (CGI support for nginx)
+dev-qt/qtcore 4.8.5-r1: Cross-platform application development framework
 dev-qt/qtgui 4.8.5-r1: The GUI module for the Qt toolkit
 dev-qt/qtscript 4.8.5: The QtScript module for the Qt toolkit
 dev-ruby/abstract 1.0.0-r2: Library which enable you to define abstract method in Ruby.
@@ -474,8 +474,8 @@ dev-ruby/yard 0.8.7.3-r1: Documentation generation tool for the Ruby programming
 dev-ruby/zk 1.9.4: A High-Level wrapper for Apache's Zookeeper
 dev-ruby/zookeeper 1.4.8: A low-level multi-Ruby wrapper around the ZooKeeper API bindings
 dev-scheme/guile 1.8.8-r1: Scheme interpreter
-dev-tex/bibtexu 3.71_p20120701: System performance tools for Linux
-dev-tex/luatex 0.70.1-r2: 8-bit Implementation of BibTeX 0.99 with a Very Large Capacity
+dev-tex/bibtexu 3.71_p20120701: 8-bit Implementation of BibTeX 0.99 with a Very Large Capacity
+dev-tex/luatex 0.70.1-r2: An extended version of pdfTeX using Lua as an embedded scripting language.
 dev-texlive/texlive-basic 2012: TeXLive Essential programs and files
 dev-texlive/texlive-documentation-base 2012: TeXLive TeX Live documentation
 dev-texlive/texlive-fontutils 2012: TeXLive Graphics and font utilities
@@ -545,19 +545,19 @@ media-libs/gst-plugins-base 0.10.36-r1 0.10.36-r2 1.2.4-r1 1.4.5 1.6.0: Basepack
 media-libs/gstreamer 0.10.36-r2 1.2.4-r2 1.4.5 1.6.0: Open source multimedia framework
 media-libs/harfbuzz 0.9.23 0.9.38: An OpenType text shaping engine
 media-libs/jasper 1.900.1-r5 1.900.1-r9: software-based implementation of the codec specified in the JPEG-2000 Part-1 standard
-media-libs/jbig2dec 0.11-r1: software-based implementation of the codec specified in the JPEG-2000 Part-1 standard
+media-libs/jbig2dec 0.11-r1: A decoder implementation of the JBIG2 image compression format
 media-libs/lasi 1.1.1: C++ library for postscript stream output
 media-libs/lcms 2.5 2.6-r1: A lightweight, speed optimized color management engine
-media-libs/libart_lgpl 2.3.21-r2: A lightweight, speed optimized color management engine
+media-libs/libart_lgpl 2.3.21-r2: a LGPL version of libart
 media-libs/libfpx 1.3.0-r1: A library for manipulating FlashPIX images
 media-libs/libjpeg-turbo 1.3.0-r3 1.3.1: MMX, SSE, and SSE2 SIMD accelerated JPEG library
-media-libs/liblqr 0.4.2-r1: MMX, SSE, and SSE2 SIMD accelerated JPEG library
+media-libs/liblqr 0.4.2-r1: An easy to use C/C++ seam carving library
 media-libs/libmng 1.0.10-r1: Multiple Image Networkgraphics lib (animated png's)
 media-libs/libpng 1.6.10 1.6.16: Portable Network Graphics library
 media-libs/libsdl 1.2.15-r4 1.2.15-r8: Simple Direct Media Layer
 media-libs/libvpx 1.3.0 1.4.0: WebM VP8 Codec SDK
-media-libs/libwebp 0.4.0: WebM VP8 Codec SDK
-media-libs/mesa 10.0.4: A lossy image compression format
+media-libs/libwebp 0.4.0: A lossy image compression format
+media-libs/mesa 10.0.4: OpenGL-like graphic library for Linux
 media-libs/t1lib 5.1.2: A Type 1 Font Rasterizer Library for UNIX/X11
 media-libs/tiff 4.0.3-r6: Tag Image File Format (TIFF) library
 media-libs/urt 3.1b-r1: the Utah Raster Toolkit is a library for dealing with raster images

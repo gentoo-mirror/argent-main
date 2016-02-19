@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst prepare setup unpack
+DEFINED_PHASES=install postinst prepare setup
 DEPEND=virtual/pkgconfig
 DESCRIPTION=A tool to log and decode Machine Check Exceptions
 EAPI=5
@@ -9,7 +9,7 @@ LICENSE=GPL-2
 RDEPEND=selinux? ( sec-policy/selinux-mcelog )
 RESTRICT=test
 SLOT=0
-SRC_URI=https://github.com/andikleen/mcelog/tarball/b842ecb44965722ecd67bed1ed9d900073e3313f -> mcelog-1.0_pre3_p20130621.tar.gz
-_eclass_exported_funcs=pkg_postinst:- pkg_setup:linux-info src_unpack:vcs-snapshot src_prepare:- src_install:-
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	vcs-snapshot	c7ef9ccaf07280393f9af64285c5ed02	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+SRC_URI=https://github.com/andikleen/mcelog/archive/v100.tar.gz -> mcelog-100.tar.gz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:linux-info src_prepare:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=48ec70b72b751a320d7f1cd4bc02f4ef
