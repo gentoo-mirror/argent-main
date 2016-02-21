@@ -15,7 +15,7 @@ SRC_URI="${HOMEPAGE}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin perl selinux static-libs"
 
 # The plugin lists have to follow here since they extend IUSE

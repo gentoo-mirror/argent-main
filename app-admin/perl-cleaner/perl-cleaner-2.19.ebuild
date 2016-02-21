@@ -12,7 +12,7 @@ if [[ "${PV}" == "9999" ]] ; then
 	EGIT_REPO_URI="http://github.com/gentoo-perl/perl-cleaner.git"
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.bz2"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-2"
