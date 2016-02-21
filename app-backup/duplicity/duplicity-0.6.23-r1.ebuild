@@ -13,7 +13,7 @@ SRC_URI="http://code.launchpad.net/${PN}/0.6-series/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="s3"
 
 DEPEND="
