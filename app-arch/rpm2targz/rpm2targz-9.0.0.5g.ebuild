@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="BSD-1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/cpio"

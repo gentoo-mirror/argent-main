@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P="${PN/-utils}-${PV/_}"
 	SRC_URI="http://tukaani.org/xz/${MY_P}.tar.gz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 	S=${WORKDIR}/${MY_P}
 	EXTRA_DEPEND=
 fi

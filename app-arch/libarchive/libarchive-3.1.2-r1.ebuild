@@ -11,7 +11,7 @@ SRC_URI="http://www.libarchive.org/downloads/${P}.tar.gz"
 
 LICENSE="BSD BSD-2 BSD-4 public-domain"
 SLOT="0/13"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="acl +bzip2 +e2fsprogs expat +iconv kernel_linux +lzma lzo nettle static-libs xattr +zlib"
 
 RDEPEND="dev-libs/openssl:0
