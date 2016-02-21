@@ -14,7 +14,7 @@ SRC_URI="http://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="clang debug doc dot doxysearch qt4 latex sqlite"
 
 #missing SerbianCyrilic, JapaneseEn, KoreanEn, Chinesetraditional
