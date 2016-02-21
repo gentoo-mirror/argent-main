@@ -10,7 +10,7 @@ SRC_URI="http://www.textuality.com/bonnie/bonnie.tar.gz"
 
 LICENSE="bonnie"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND=""
 RDEPEND=""

@@ -27,7 +27,7 @@ SRC_URI="http://www.iozone.org/src/current/${PN}${PV/./_}.tar"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}${PV/./_}
