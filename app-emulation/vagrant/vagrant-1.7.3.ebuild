@@ -12,7 +12,7 @@ SRC_URI="https://dl.bintray.com/mitchellh/vagrant/vagrant_${PV}_x86_64.deb"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
