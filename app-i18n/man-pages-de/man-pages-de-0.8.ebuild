@@ -10,7 +10,7 @@ SRC_URI="http://manpages-de.alioth.debian.org/downloads/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-3+ man-pages GPL-2+ GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
