@@ -14,7 +14,7 @@ SRC_URI="https://github.com/gentoo/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="linguas_de linguas_es linguas_it linguas_pl"
 
 DOCS=( README )
