@@ -57,7 +57,7 @@ fi
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 ${PRECOMPILED} || IUSE+=" +cacert"
 

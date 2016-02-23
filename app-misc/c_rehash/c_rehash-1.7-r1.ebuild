@@ -10,7 +10,7 @@ SRC_URI="http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/openssl/openssl-c_
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="!<dev-libs/openssl-1.0.2d-r1:0"
