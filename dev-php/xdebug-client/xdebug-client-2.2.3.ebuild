@@ -4,7 +4,7 @@
 
 EAPI=5
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 MY_PV="${PV/_/}"
 MY_PV="${MY_PV/rc/RC}"

@@ -16,7 +16,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit php-ext-source-r2
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="A PHP debugging and profiling extension"
 HOMEPAGE="http://www.xdebug.org/"

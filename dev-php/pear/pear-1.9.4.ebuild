@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="PEAR - PHP Extension and Application Repository"
 HOMEPAGE="http://pear.php.net/"

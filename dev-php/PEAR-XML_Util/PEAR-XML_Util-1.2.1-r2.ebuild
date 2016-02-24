@@ -11,7 +11,7 @@ DESCRIPTION="XML utility class"
 
 LICENSE="PHP-2.02"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 
