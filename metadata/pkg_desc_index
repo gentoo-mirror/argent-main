@@ -145,7 +145,7 @@ dev-db/innotop 1.9.0-r1 1.9.1: innotop - A text-mode MySQL and InnoDB monitor li
 dev-db/libdbi 0.9.0: libdbi is a database-independent abstraction layer in C, similar to the DBI/DBD layer in Perl.
 dev-db/libdbi-drivers 0.9.0: The libdbi-drivers project maintains drivers for libdbi.
 dev-db/mongodb 2.4.6-r2: A high-performance, open source, schema-free document-oriented database
-dev-db/mysql 5.5.46 5.6.20 5.6.24 5.6.26 5.6.27 5.6.27-r1: A fast, multi-threaded, multi-user SQL database server
+dev-db/mysql 5.5.46 5.6.20 5.6.24 5.6.26 5.6.27 5.6.27-r1 5.6.28: A fast, multi-threaded, multi-user SQL database server
 dev-db/mysqltuner 1.3.0: MySQLTuner is a high-performance MySQL tuning script
 dev-db/mytop 1.6-r4: mytop - a top clone for mysql
 dev-db/percona-toolkit 2.2.7 2.2.11: essential command-line utilities for MySQL
@@ -271,7 +271,7 @@ dev-perl/Crypt-OpenSSL-Random 0.40.0: Crypt::OpenSSL::Random module for perl
 dev-perl/Crypt-PasswdMD5 1.300.0: Provides interoperable MD5-based crypt() functions
 dev-perl/DBD-Pg 2.19.3: The Perl DBD::Pg Module
 dev-perl/DBD-SQLite 1.350.0 1.350.0-r1: Self Contained RDBMS in a DBI Driver
-dev-perl/DBD-mysql 4.20.0 4.20.0-r1: The Perl DBD:mysql Module
+dev-perl/DBD-mysql 4.20.0 4.20.0-r1 4.32.0-r1: The Perl DBD:mysql Module
 dev-perl/DBI 1.623.0 1.628.0: The Perl DBI Module
 dev-perl/Devel-Size 0.790.0-r1 0.800.0: Perl extension for finding the memory usage of Perl variables
 dev-perl/Digest-HMAC 1.30.0 1.30.0-r1: Keyed Hashing for Message Authentication
@@ -575,7 +575,7 @@ net-analyzer/lft 3.73: Layer Four Traceroute: an advanced traceroute implementat
 net-analyzer/mk-livestatus 1.2.2_p3: Nagios/Icinga event broker module that allows quick/direct access to your status data
 net-analyzer/mtr 0.85_p20140126 0.86: My TraceRoute, an Excellent network diagnostic tool
 net-analyzer/nagios 3.3.1 3.5.1: The Nagios metapackage - merge this to pull install all of the nagios packages
-net-analyzer/nagios-check_mysql_health 2.1.8.2: A nagios plugin for checking MySQL server health
+net-analyzer/nagios-check_mysql_health 2.1.8.2 2.1.9.2: A nagios plugin for checking MySQL server health
 net-analyzer/nagios-check_pidfile 1: A nagios plugin for checking daemons via pidfiles
 net-analyzer/nagios-core 3.3.1 3.5.1: Nagios Core - Check daemon, CGIs, docs
 net-analyzer/nagios-plugins 1.4.16-r2 2.0.3-r2 2.1.1-r1 2.1.1-r2: Official plugins for Nagios
@@ -955,6 +955,7 @@ virtual/libc 0: Virtual for the C library
 virtual/libffi 3.0.13-r1: A virtual for the Foreign Function Interface implementation
 virtual/libiconv 0-r1 0-r2: Virtual for the GNU conversion library
 virtual/libintl 0 0-r1: Virtual for the GNU Internationalization Library
+virtual/libmysqlclient 18: Virtual for MySQL client libraries
 virtual/libstdc++ 3.3: Virtual for the GNU Standard C++ Library for <gcc-3.4
 virtual/libudev 215-r1: Virtual for libudev providers
 virtual/logger 0: Virtual for system loggers
@@ -962,7 +963,7 @@ virtual/mailx 1: Virtual for mail implementations
 virtual/man 0-r1: Virtual for man
 virtual/modutils 0: Virtual for utilities to manage Linux kernel modules
 virtual/mta 0 1: Virtual for Message Transfer Agents
-virtual/mysql 5.6 5.6-r2: Virtual for MySQL client or database
+virtual/mysql 5.6 5.6-r2 5.6-r6: Virtual for MySQL database server
 virtual/opengl 7.0-r1: Virtual for OpenGL implementation
 virtual/os-headers 0: Virtual for operating system headers
 virtual/package-manager 0: Virtual for the package manager
