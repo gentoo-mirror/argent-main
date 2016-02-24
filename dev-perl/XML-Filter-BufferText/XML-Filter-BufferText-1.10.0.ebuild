@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Filter to put all characters() in one event"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/XML-SAX-0.12"

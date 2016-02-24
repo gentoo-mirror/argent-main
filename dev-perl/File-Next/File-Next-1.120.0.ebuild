@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="File::Next is an iterator-based module for finding files"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="virtual/perl-File-Spec

@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A family of perl modules to streamline writing Nagios plugins"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-perl/Class-Accessor

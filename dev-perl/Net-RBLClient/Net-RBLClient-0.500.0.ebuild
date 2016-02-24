@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Net::RBLClient - Queries multiple Realtime Blackhole Lists in parallel"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

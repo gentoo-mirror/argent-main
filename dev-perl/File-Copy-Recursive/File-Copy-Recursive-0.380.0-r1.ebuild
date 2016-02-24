@@ -11,6 +11,6 @@ inherit perl-module
 DESCRIPTION="uses File::Copy to recursively copy dirs"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 SRC_TEST="do"

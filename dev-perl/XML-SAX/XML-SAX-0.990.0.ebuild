@@ -11,7 +11,7 @@ inherit perl-module eutils
 DESCRIPTION="Perl module for using and building Perl SAX2 XML parsers, filters, and drivers"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

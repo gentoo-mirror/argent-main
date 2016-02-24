@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Standard en/decode of ASN.1 structures"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

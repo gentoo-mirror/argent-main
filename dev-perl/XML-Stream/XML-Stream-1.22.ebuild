@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/~reatmon/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ssl"
 
 SRC_TEST="do"

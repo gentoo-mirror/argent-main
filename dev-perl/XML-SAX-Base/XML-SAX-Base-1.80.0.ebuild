@@ -11,7 +11,7 @@ inherit perl-module eutils
 DESCRIPTION="Base class SAX Drivers and Filters"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

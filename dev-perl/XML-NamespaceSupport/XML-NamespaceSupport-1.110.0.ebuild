@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A Perl module that offers a simple to process namespaced XML names"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

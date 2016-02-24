@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A Date/Time Parsing Perl Module"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST=do

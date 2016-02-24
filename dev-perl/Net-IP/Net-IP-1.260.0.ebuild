@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for manipulating IPv4/IPv6 addresses"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 PATCHES=( "${FILESDIR}/initip-0.patch" )

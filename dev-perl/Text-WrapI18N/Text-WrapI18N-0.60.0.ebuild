@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Internationalized substitute of Text::Wrap"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-perl/Text-CharWidth"

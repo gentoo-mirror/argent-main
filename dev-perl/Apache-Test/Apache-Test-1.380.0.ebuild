@@ -12,7 +12,7 @@ DESCRIPTION="Test.pm wrapper with helpers for testing Apache"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # interactive, requires interaction with the live filesystem

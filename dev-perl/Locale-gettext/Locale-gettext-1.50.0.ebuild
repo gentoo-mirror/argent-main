@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="A Perl module for accessing the GNU locale utilities"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sys-devel/gettext"

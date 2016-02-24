@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for finding the memory usage of Perl variables"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

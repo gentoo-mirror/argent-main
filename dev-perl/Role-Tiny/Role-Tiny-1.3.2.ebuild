@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Roles. Like a nouvelle cuisine portion size slice of Moose"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 DEPEND="

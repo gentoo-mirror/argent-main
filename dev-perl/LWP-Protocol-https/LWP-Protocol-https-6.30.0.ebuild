@@ -13,7 +13,7 @@ SRC_URI+=" http://dev.gentoo.org/~tove/distfiles/${CATEGORY}/${PN}/${PN}_ca-cert
 
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="
 	app-misc/ca-certificates

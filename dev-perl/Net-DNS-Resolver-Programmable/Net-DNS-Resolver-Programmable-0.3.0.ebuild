@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="programmable DNS resolver class for offline emulation of DNS"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-perl/Net-DNS

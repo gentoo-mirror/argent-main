@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A URI Perl Module"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/perl-MIME-Base64"

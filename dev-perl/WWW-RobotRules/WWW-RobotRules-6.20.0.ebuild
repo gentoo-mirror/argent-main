@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse /robots.txt file"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="
 	!<dev-perl/libwww-perl-6
