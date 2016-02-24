@@ -9,7 +9,7 @@ XORG_MULTILIB=yes
 inherit xorg-2
 
 DESCRIPTION="X.Org xproto protocol headers"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""
