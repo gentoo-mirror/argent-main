@@ -12,7 +12,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/infrastructure/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 RDEPEND="dev-libs/ppl

@@ -32,7 +32,7 @@ REQUIRED_USE="
 	test? ( ${PYTHON_REQUIRED_USE} )
 "
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="
 	!<dev-util/gdbus-codegen-${PV}

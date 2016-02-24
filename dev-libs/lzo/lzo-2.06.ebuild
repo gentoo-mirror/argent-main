@@ -10,7 +10,7 @@ SRC_URI="http://www.oberhumer.com/opensource/lzo/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="examples static-libs"
 
 src_configure() {

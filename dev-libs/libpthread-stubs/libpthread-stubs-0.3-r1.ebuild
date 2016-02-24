@@ -10,7 +10,7 @@ inherit xorg-2
 DESCRIPTION="Pthread functions stubs for platforms missing them"
 SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""

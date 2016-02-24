@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/libs/aio/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="multilib static-libs test"
 
 EMULTILIB_PKG="true"

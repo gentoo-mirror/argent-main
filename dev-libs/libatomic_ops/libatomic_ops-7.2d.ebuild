@@ -12,7 +12,7 @@ SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc-${PV/_}.tar.g
 
 LICENSE="MIT boehm-gc GPL-2+"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/gc-${PV/d}/libatomic_ops

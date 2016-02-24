@@ -14,7 +14,7 @@ SRC_URI="http://pyyaml.org/download/${PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc examples test static-libs"
 
 S="${WORKDIR}/${MY_P}"

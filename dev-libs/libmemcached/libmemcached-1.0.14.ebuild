@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/${PN}/1.0/${PV}/+download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug hsieh +libevent static-libs"
 
 DEPEND="net-misc/memcached

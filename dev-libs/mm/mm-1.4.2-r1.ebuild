@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ossp.org/pkg/lib/mm/${P}.tar.gz"
 
 LICENSE="mm"
 SLOT="1.2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 src_prepare() {

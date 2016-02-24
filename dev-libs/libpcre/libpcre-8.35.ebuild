@@ -19,7 +19,7 @@ fi
 
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="bzip2 +cxx +jit libedit pcre16 pcre32 +readline +recursion-limit static-libs unicode zlib"
 REQUIRED_USE="readline? ( !libedit )
 	libedit? ( !readline )"

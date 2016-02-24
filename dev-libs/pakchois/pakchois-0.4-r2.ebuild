@@ -12,7 +12,7 @@ SRC_URI="http://www.manyfish.co.uk/pakchois/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 DEPEND=""

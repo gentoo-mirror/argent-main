@@ -16,7 +16,7 @@ SRC_URI="http://www.geocities.jp/kosako3/oniguruma/archive/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="combination-explosion-check crnl-as-line-terminator static-libs"
 
 PATCHES=( "${FILESDIR}"/${PN}-5.9.3-makefile.patch )

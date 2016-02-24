@@ -12,7 +12,7 @@ SRC_URI="http://download.libsodium.org/${PN}/releases/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0/13"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+asm minimal static-libs +urandom"
 
 src_configure() {

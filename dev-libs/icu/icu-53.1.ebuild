@@ -14,7 +14,7 @@ LICENSE="BSD"
 
 SLOT="0/53"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug doc examples static-libs"
 
 DEPEND="
