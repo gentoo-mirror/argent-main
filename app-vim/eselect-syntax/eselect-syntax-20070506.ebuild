@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="vim"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DEPEND="!<app-vim/gentoo-syntax-20070506"
 RDEPEND="${DEPEND}"
