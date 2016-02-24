@@ -21,7 +21,7 @@ SRC_URI="http://luajit.org/download/${MY_P}.tar.gz
 LICENSE="MIT"
 # this should probably be pkgmoved to 2.0 for sake of consistency.
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="lua52compat"
 
 S="${WORKDIR}/${MY_P}"

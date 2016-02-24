@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool systemd
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 function php_get_uri ()
 {

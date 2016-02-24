@@ -27,7 +27,7 @@ HOMEPAGE="http://www.perl.org/"
 
 LICENSE="|| ( Artistic GPL-1+ )"
 SLOT="0/${SHORT_PV}"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="berkdb debug doc gdbm ithreads"
 
 RDEPEND="
