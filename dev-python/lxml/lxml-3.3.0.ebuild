@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3} )
 
 inherit distutils-r1 flag-o-matic
 
@@ -20,9 +20,7 @@ IUSE="beautifulsoup3 doc examples +threads"
 RDEPEND=">=dev-libs/libxml2-2.7.2
 	>=dev-libs/libxslt-1.1.15
 	beautifulsoup3? (
-		python_targets_python2_6? ( dev-python/beautifulsoup:python-2[python_targets_python2_6] )
 		python_targets_python2_7? ( dev-python/beautifulsoup:python-2[python_targets_python2_7] )
-		python_targets_python3_2? ( dev-python/beautifulsoup:python-3[python_targets_python3_2] )
 		python_targets_python3_3? ( dev-python/beautifulsoup:python-3[python_targets_python3_3] )
 	)"
 DEPEND="${RDEPEND}
