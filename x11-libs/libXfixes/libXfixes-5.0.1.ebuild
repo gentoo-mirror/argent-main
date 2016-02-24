@@ -9,7 +9,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org Xfixes library"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]

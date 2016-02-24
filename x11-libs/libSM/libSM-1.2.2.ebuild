@@ -10,7 +10,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org Session Management library"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc ipv6 +uuid"
 
 RDEPEND=">=x11-libs/libICE-1.0.5[${MULTILIB_USEDEP}]

@@ -9,7 +9,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org Xfont library"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="bzip2 ipv6 truetype"
 
 RDEPEND="x11-libs/xtrans

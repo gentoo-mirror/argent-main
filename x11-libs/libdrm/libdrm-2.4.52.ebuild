@@ -17,7 +17,7 @@ else
 	SRC_URI="http://dri.freedesktop.org/${PN}/${P}.tar.bz2"
 fi
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 VIDEO_CARDS="exynos freedreno intel nouveau omap radeon vmware"
 for card in ${VIDEO_CARDS}; do
 	IUSE_VIDEO_CARDS+=" video_cards_${card}"

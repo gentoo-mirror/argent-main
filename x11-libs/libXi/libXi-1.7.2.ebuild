@@ -9,7 +9,7 @@ XORG_MULTILIB=yes
 inherit xorg-2
 
 DESCRIPTION="X.Org Xi library"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/libX11-1.4.99.1[${MULTILIB_USEDEP}]

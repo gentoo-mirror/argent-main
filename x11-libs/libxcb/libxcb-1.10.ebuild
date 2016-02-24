@@ -17,7 +17,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/libxcb"
 [[ ${PV} != 9999* ]] && \
 	SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="selinux xkb"
 
 RDEPEND="dev-libs/libpthread-stubs[${MULTILIB_USEDEP}]

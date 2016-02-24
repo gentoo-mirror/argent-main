@@ -10,7 +10,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org X Display Manager Control Protocol library"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-proto/xproto"
