@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=app-shells/zsh-4.3.5"

@@ -21,7 +21,7 @@ SRC_URI="mirror://gentoo/INIT.$(ksh_release).tgz
 
 LICENSE="CPL-1.0 EPL-1.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="!app-shells/pdksh"
