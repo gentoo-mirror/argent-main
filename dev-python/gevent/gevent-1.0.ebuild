@@ -17,7 +17,7 @@ SRC_URI="https://github.com/surfly/${PN}/releases/download/${MY_PV}/${MY_P}.tar.
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 RDEPEND="dev-libs/libev

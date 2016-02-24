@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tbz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-python/docutils-0.10[${PYTHON_USEDEP}]"

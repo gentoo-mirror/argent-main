@@ -17,7 +17,7 @@ SRC_URI="https://bitbucket.org/birkenfeld/pygments-main/get/b839f47dbb3a10830db7
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
