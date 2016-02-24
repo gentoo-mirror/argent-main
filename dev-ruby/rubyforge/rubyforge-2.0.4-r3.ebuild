@@ -17,7 +17,7 @@ HOMEPAGE="http://codeforpeople.rubyforge.org/rubyforge/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/json-1.1.7'

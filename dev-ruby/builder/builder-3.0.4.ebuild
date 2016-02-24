@@ -17,7 +17,7 @@ HOMEPAGE="http://rubyforge.org/projects/builder/"
 
 LICENSE="MIT"
 SLOT="3"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )"

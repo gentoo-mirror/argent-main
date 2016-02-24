@@ -24,7 +24,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/${PV} -> ${
 
 LICENSE="APSL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test doc"
 
 ruby_add_bdepend \

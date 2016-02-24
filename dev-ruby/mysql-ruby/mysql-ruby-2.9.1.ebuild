@@ -19,7 +19,7 @@ HOMEPAGE="http://www.tmtm.org/en/mysql/ruby/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 DEPEND="virtual/mysql[-static]"

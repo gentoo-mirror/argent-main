@@ -16,7 +16,7 @@ DESCRIPTION="A ruby library for accessing memcached."
 HOMEPAGE="http://github.com/mperham/memcache-client"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/flexmock )"

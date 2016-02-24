@@ -18,7 +18,7 @@ HOMEPAGE="http://www.loveruby.net/en/racc.html"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 ruby_add_bdepend "dev-ruby/rake"

@@ -19,7 +19,7 @@ HOMEPAGE="http://rubygems.org/gems/logging"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 ruby_add_rdepend ">=dev-ruby/little-plugger-1.1.3 >=dev-ruby/multi_json-1.3.6"

@@ -21,7 +21,7 @@ IUSE=""
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 all_ruby_install() {
 	all_fakegem_install

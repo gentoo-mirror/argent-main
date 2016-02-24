@@ -17,7 +17,7 @@ HOMEPAGE="http://rails-i18n.org/"
 
 LICENSE="MIT"
 SLOT="0.6"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/activesupport

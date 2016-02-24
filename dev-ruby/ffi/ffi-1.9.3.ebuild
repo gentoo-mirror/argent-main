@@ -24,7 +24,7 @@ SRC_URI="http://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${PN}-git-${PV}.t
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND+=" virtual/libffi"
 DEPEND+=" virtual/libffi"
