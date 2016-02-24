@@ -12,7 +12,7 @@ HOMEPAGE="http://libdbi.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
 IUSE="doc static-libs"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT=0
 
 DOCS="AUTHORS ChangeLog README README.osx TODO"

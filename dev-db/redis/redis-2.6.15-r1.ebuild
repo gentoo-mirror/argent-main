@@ -11,7 +11,7 @@ HOMEPAGE="http://redis.io/"
 SRC_URI="http://download.redis.io/releases/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 

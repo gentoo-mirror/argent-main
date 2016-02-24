@@ -21,7 +21,7 @@ SRC_URI="doc? ( http://sqlite.org/2014/${PN}-doc-${DOC_PV}.zip )
 
 LICENSE="public-domain"
 SLOT="3"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug doc icu +readline secure-delete static-libs tcl test"
 
 RDEPEND="icu? ( dev-libs/icu:=[${MULTILIB_USEDEP}] )

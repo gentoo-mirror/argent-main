@@ -12,7 +12,7 @@ SRC_URI="http://www.percona.com/downloads/${PN}/${PV}/tarball/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 # Package warrants IUSE doc
 IUSE=""
 
