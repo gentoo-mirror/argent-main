@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="3.3"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

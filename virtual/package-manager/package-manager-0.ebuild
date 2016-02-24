@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Virtual for the package manager"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="|| ( sys-apps/portage
 		sys-apps/paludis

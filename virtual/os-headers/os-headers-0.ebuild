@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Virtual for operating system headers"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 # depend on SLOT 0 of linux-headers, because kernel-2.eclass
 # sets a different SLOT for cross-building

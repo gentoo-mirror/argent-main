@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${PV}"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="kerberos ldap +server threads"
 
 DEPEND="

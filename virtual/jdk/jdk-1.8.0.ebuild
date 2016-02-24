@@ -8,6 +8,6 @@ DESCRIPTION="Virtual for Java Development Kit (JDK)"
 SLOT="1.8"
 # TODO: Temporarily dropped ~sparc-solaris and ~x86-solaris as oracle-jdk-bin
 #       no longer provides them. Also temporarily dropped ~ia64.
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="=dev-java/oracle-jdk-bin-1.8.0*"

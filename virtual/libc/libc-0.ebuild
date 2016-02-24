@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Virtual for the C library"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 # explicitly depend on SLOT 2.2 of glibc, because it sets
 # a different SLOT for cross-compiling

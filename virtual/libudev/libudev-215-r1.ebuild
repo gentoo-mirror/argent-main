@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0/1"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs systemd"
 
 DEPEND=""

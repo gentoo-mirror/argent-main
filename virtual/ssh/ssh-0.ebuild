@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Virtual for SSH client and server"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="minimal"
 
 RDEPEND="minimal? (
