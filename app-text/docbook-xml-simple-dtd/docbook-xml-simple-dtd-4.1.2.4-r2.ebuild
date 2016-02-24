@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="docbook"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.41"

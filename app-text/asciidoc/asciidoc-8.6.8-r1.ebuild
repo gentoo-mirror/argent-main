@@ -14,10 +14,10 @@ HOMEPAGE="http://www.methods.co.nz/asciidoc/"
 if [ "$PV" == "9999" ]; then
 	EHG_REPO_URI="https://asciidoc.googlecode.com/hg/"
 	SRC_URI=""
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 else
 	SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-2"

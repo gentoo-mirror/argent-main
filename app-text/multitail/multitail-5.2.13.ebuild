@@ -12,7 +12,7 @@ SRC_URI="http://www.vanheusden.com/multitail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug doc examples"
 
 RDEPEND="sys-libs/ncurses"

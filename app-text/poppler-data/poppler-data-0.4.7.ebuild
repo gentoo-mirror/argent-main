@@ -9,7 +9,7 @@ HOMEPAGE="http://poppler.freedesktop.org/"
 SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="BSD GPL-2 MIT"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

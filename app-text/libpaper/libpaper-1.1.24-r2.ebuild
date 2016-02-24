@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/libp/libpaper/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND="abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20130224-r10

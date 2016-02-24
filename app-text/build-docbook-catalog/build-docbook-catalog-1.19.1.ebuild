@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="userland_BSD"
 
 RDEPEND="|| ( sys-apps/util-linux app-misc/getopt )

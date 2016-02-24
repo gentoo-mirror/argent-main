@@ -11,7 +11,7 @@ SRC_URI="https://fedorahosted.org/releases/${PN:0:1}/${PN:1:1}/${PN}/${P}.tar.bz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="latex"
 
 RDEPEND=">=app-text/docbook-xsl-stylesheets-1.62.0-r1

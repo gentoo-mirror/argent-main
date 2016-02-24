@@ -11,7 +11,7 @@ HOMEPAGE="http://poppler.freedesktop.org/"
 SRC_URI="http://poppler.freedesktop.org/${P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0/44"
 IUSE="cairo cjk curl cxx debug doc +introspection +jpeg jpeg2k +lcms png qt4 tiff +utils"
 
