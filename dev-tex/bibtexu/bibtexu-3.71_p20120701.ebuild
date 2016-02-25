@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/kpathsea-6.1.0_p20120701
