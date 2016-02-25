@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Graphics and font utilities"
 
 LICENSE="GPL-2 Artistic GPL-1 LPPL-1.3 public-domain TeX-other-free"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2012
 !dev-texlive/texlive-psutils

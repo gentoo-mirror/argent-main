@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Essential programs and files"
 
 LICENSE="GPL-2 GPL-1 LPPL-1.3 OFL TeX TeX-other-free"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-documentation-base-2012
 >=dev-tex/luatex-0.70
