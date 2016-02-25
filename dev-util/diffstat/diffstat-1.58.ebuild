@@ -10,4 +10,4 @@ SRC_URI="ftp://invisible-island.net/diffstat/${P}.tgz"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"

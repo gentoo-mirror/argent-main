@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/boost/boost_${MY_PV}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT=0
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="examples python test"
 
 REQUIRED_USE="test? ( python )"

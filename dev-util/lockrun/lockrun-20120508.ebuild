@@ -10,7 +10,7 @@ HOMEPAGE="http://www.unixwiz.net/tools/lockrun.html"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S="${WORKDIR}"

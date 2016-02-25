@@ -12,7 +12,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/pkg-config"
 	inherit autotools git-2
 else
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 	SRC_URI="http://pkgconfig.freedesktop.org/releases/${MY_P}.tar.gz"
 fi
 
