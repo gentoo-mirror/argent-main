@@ -4,7 +4,7 @@ DESCRIPTION=A high-performance, open source, schema-free document-oriented datab
 EAPI=4
 HOMEPAGE=http://www.mongodb.org
 IUSE=kerberos mms-agent sharedclient spidermonkey ssl static-libs
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=AGPL-3 Apache-2.0
 PDEPEND=mms-agent? ( dev-python/pymongo app-arch/unzip )
 RDEPEND=>=dev-libs/boost-1.50[threads(+)] dev-libs/libpcre[cxx] dev-util/google-perftools net-libs/libpcap app-arch/snappy ssl? ( >=dev-libs/openssl-1.0.1c )
@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=http://downloads.mongodb.org/src/mongodb-src-r2.4.6.tar.gz mms-agent? ( http://dev.gentoo.org/~ultrabug/20130821-10gen-mms-agent.zip )
 _eclass_exported_funcs=pkg_pretend:check-reqs pkg_preinst:- pkg_postinst:- pkg_setup:- src_prepare:- src_compile:- src_test:- src_install:-
 _eclasses_=check-reqs	b2fc1e10ec9509c6a5b53ff709ea2627	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	scons-utils	887b7f425984f365d03b2a5b5df76c9a	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=e3a913720e92d853c256be830e35614a
+_md5_=7f0a8a8de8068bbaed748de9c86fae5b

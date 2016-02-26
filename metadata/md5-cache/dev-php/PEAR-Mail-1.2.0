@@ -3,11 +3,11 @@ DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Class that provides multiple interfaces for sending emails
 EAPI=0
 HOMEPAGE=http://pear.php.net/Mail
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=PHP-2.02 BSD
 RDEPEND=>=dev-php/PEAR-Net_SMTP-1.4.1 dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Mail-1.2.0.tgz
 _eclass_exported_funcs=pkg_setup:php-pear-r1 src_install:php-pear-r1
 _eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	php-pear-r1	97301eb45b88a14929f40f6a00ac6829	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=aa6e2ca7011098ab48940840a38b1d37
+_md5_=db043caf15292bd9afaabbaef22c5dd4

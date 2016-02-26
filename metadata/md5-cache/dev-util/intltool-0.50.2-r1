@@ -3,11 +3,11 @@ DEPEND=>=dev-lang/perl-5.8.1 dev-perl/XML-Parser
 DESCRIPTION=Internationalization Tool Collection
 EAPI=5
 HOMEPAGE=https://launchpad.net/intltool/
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.1 dev-perl/XML-Parser sys-devel/gettext
 SLOT=0
 SRC_URI=https://launchpad.net/intltool/trunk/0.50.2/+download/intltool-0.50.2.tar.gz
 _eclass_exported_funcs=src_prepare:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=252faebce972c9e29fd3a74498ae85fc
+_md5_=4199f19bd1162c9b17ec6aa5f3824b03

@@ -4,11 +4,11 @@ DESCRIPTION=The Perl DBD:mysql Module
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/DBD-mysql/
 IUSE=embedded test
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/DBI dev-perl/Test-Deep virtual/mysql[embedded?] dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CA/CAPTTOFU/DBD-mysql-4.032.tar.gz
 _eclass_exported_funcs=src_unpack:perl-module src_prepare:- src_configure:- src_compile:perl-module src_test:- src_install:perl-module
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	unpacker	69f01f06e2ef674295e9fa69ddbef8af
-_md5_=2e30bf3eb676c458950c98c72029d6a2
+_md5_=416dc3063fd5e8d8b367fbc9b74a395d

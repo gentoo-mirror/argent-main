@@ -4,7 +4,7 @@ DESCRIPTION=Larry Wall's Practical Extraction and Report Language
 EAPI=5
 HOMEPAGE=http://www.perl.org/
 IUSE=berkdb debug doc gdbm ithreads
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 PDEPEND=>=app-admin/perl-cleaner-2.5 >=virtual/perl-File-Temp-0.230.400-r2 >=virtual/perl-Data-Dumper-2.154.0
 RDEPEND=berkdb? ( sys-libs/db:* ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) app-arch/bzip2 sys-libs/zlib
@@ -12,4 +12,4 @@ SLOT=0/5.20
 SRC_URI=mirror://cpan/src/5.0/perl-5.20.2.tar.bz2 mirror://cpan/authors/id/S/SH/SHAY/perl-5.20.2.tar.bz2 mirror://gentoo/perl-5.20.2-patches-1.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/perl-5.20.2-patches-1.tar.xz
 _eclass_exported_funcs=pkg_postrm:alternatives pkg_postinst:alternatives src_prepare:- src_configure:- src_test:- src_install:-
 _eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=ae770789097f16de82e3fc14760ffaeb
+_md5_=936b20a4f6f1075f04989da5926be4ed

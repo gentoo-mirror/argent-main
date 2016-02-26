@@ -4,7 +4,7 @@ DESCRIPTION=Ohai profiles your system and emits JSON
 EAPI=4
 HOMEPAGE=http://wiki.opscode.com/display/chef/Ohai
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
 RDEPEND=ruby_targets_ruby19? ( dev-ruby/ipaddress[ruby_targets_ruby19] >=dev-ruby/mime-types-1.16[ruby_targets_ruby19] dev-ruby/mixlib-cli[ruby_targets_ruby19] >=dev-ruby/mixlib-config-2.0[ruby_targets_ruby19] dev-ruby/mixlib-log[ruby_targets_ruby19] >=dev-ruby/mixlib-shellout-1.2[ruby_targets_ruby19] >=dev-ruby/systemu-2.5.2[ruby_targets_ruby19] dev-ruby/yajl-ruby[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
@@ -13,4 +13,4 @@ SLOT=0
 SRC_URI=mirror://rubygems/ohai-7.0.4.gem
 _eclass_exported_funcs=pkg_setup:ruby-ng src_unpack:ruby-ng src_prepare:ruby-ng src_configure:ruby-ng src_compile:ruby-ng src_test:ruby-ng src_install:ruby-ng
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	ruby-fakegem	aab32f53dfbd5677cce73bdac703b04d	ruby-ng	dd773a36977cb5f97eaa70b853a3243d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=53c2da6606b6c9f957d52f69e29000a5
+_md5_=938b7f5709c3554133a9af56a95af4e5

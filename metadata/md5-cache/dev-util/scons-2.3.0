@@ -4,7 +4,7 @@ DESCRIPTION=Extensible Python-based build utility
 EAPI=5
 HOMEPAGE=http://www.scons.org/
 IUSE=doc python_targets_python2_7
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=MIT
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads(+)] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=mirror://sourceforge/scons/scons-2.3.0.tar.gz doc? ( http://www.scons.org/doc/2.3.0/PDF/scons-user.pdf -> scons-2.3.0-user.pdf http://www.scons.org/doc/2.3.0/HTML/scons-user.html -> scons-2.3.0-user.html )
 _eclass_exported_funcs=src_prepare:distutils-r1 src_configure:distutils-r1 src_compile:distutils-r1 src_test:distutils-r1 src_install:-
 _eclasses_=distutils-r1	7774d1d61db76cd7274009465deb8a05	eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	python-r1	cb510c7db32a6f445dbbc7a2b73a5602	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=ee50f5c338a10c92633ba755edf2db25
+_md5_=f2a679e46f5de8c7593e7611e27c0cfa

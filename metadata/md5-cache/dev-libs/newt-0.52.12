@@ -4,11 +4,11 @@ DESCRIPTION=Redhat's Newt windowing toolkit development files
 EAPI=3
 HOMEPAGE=https://fedorahosted.org/newt/
 IUSE=gpm tcl nls
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=LGPL-2
 RDEPEND==sys-libs/slang-2* >=dev-libs/popt-1.6 elibc_uclibc? ( sys-libs/ncurses ) gpm? ( sys-libs/gpm ) tcl? ( >=dev-lang/tcl-8.5 ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/n/e/newt/newt-0.52.12.tar.gz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=a372bc8e7efd4cd23786418d2e5fe53a
+_md5_=c194a4e832f7cd04e634ba7c99344e34

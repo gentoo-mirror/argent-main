@@ -3,11 +3,11 @@ DEPEND=>=virtual/perl-Storable-1.0.7 >=dev-perl/Net-Daemon-0.34 dev-lang/perl:=[
 DESCRIPTION=The Perl RPC Module
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/PlRPC/
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=virtual/perl-Storable-1.0.7 >=dev-perl/Net-Daemon-0.34 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MN/MNOONING/PlRPC/PlRPC-0.2020.tar.gz
 _eclass_exported_funcs=src_unpack:perl-module src_prepare:perl-module src_configure:perl-module src_compile:perl-module src_test:- src_install:perl-module
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	unpacker	69f01f06e2ef674295e9fa69ddbef8af
-_md5_=3dafc1d20aed095e69036419e168240c
+_md5_=c306bcb81e2e6eb6765ffe4ca6a787c6

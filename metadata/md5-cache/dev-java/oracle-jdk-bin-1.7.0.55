@@ -4,7 +4,7 @@ DESCRIPTION=Oracle's Java SE Development Kit
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=Oracle-BCLA-JavaSE examples? ( BSD )
 RDEPEND=X? ( !aqua? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst ) ) alsa? ( media-libs/alsa-lib ) doc? ( dev-java/java-sdk-docs:1.7 ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=strip
@@ -12,4 +12,4 @@ SLOT=1.7
 SRC_URI=amd64? ( jdk-7u55-linux-x64.tar.gz examples? ( javafx_samples-2_2_55-linux.zip jdk-7u55-linux-x64-demos.tar.gz ) ) jce? ( UnlimitedJCEPolicyJDK7.zip )
 _eclass_exported_funcs=pkg_prerm:java-vm-2 pkg_postrm:java-vm-2 pkg_postinst:java-vm-2 pkg_setup:java-vm-2 src_unpack:- src_prepare:- src_compile:- src_install:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	java-vm-2	c75fad1cb8956ed559f9d4b237279d6a	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=173af836a5e4fb30424b65aac9047058
+_md5_=e51a8352a372ffeea320e098f762ac8a

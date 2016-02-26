@@ -4,10 +4,10 @@ DESCRIPTION=PKCS#11 helper library
 EAPI=5
 HOMEPAGE=http://www.opensc-project.org/opensc/wiki/pkcs11-helper
 IUSE=doc gnutls nss static-libs
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( BSD GPL-2 )
 RDEPEND=>=dev-libs/openssl-0.9.7 gnutls? ( >=net-libs/gnutls-1.4.4 ) nss? ( dev-libs/nss )
 SLOT=0
 SRC_URI=mirror://sourceforge/opensc/pkcs11-helper/pkcs11-helper-1.11.tar.bz2
 _eclass_exported_funcs=src_configure:- src_install:-
-_md5_=c1b588f16bb7fbbf9e694e5e8411a1d6
+_md5_=105dca4ad45ead6fef3c837b667b5e17

@@ -4,11 +4,11 @@ DESCRIPTION=A high-performance event loop/event model with lots of feature
 EAPI=5
 HOMEPAGE=http://software.schmorp.de/pkg/libev.html
 IUSE=elibc_glibc static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( BSD GPL-2 )
 RDEPEND=elibc_glibc? ( >=sys-libs/glibc-2.9_p20081201 )
 SLOT=0
 SRC_URI=http://dist.schmorp.de/libev/libev-4.15.tar.gz http://dist.schmorp.de/libev/Attic/libev-4.15.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:multilib-minimal src_compile:multilib-minimal src_test:multilib-minimal src_install:multilib-minimal
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=dd150b9995e37f1c5a30af0b5488aef3
+_md5_=9ff0972cb58d70cae1f885c2f7eae5de
