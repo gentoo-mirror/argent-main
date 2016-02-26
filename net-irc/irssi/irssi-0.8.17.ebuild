@@ -15,7 +15,7 @@ SRC_URI="http://irssi.org/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ipv6 +perl selinux ssl socks5 +proxy"
 
 CDEPEND="sys-libs/ncurses
