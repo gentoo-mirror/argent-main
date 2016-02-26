@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/razor/${MY_P}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 # This package warrants IUSE doc
 IUSE=""
 

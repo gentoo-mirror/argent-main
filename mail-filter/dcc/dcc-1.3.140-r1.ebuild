@@ -12,7 +12,7 @@ SRC_URI="http://www.rhyolite.com/anti-spam/dcc/source/old/${P}.tar.Z"
 
 LICENSE="DCC"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="cgi ipv6 rrdtool milter"
 
 RDEPEND="dev-lang/perl

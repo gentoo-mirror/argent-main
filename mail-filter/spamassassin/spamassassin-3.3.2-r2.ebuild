@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 # need keyword request for Mail-SPF ppc ppc64
 IUSE="berkdb qmail ssl doc ldap mysql postgres sqlite ipv6"
 
