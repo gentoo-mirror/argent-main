@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.haxx.se/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DOCS=( AUTHORS CHANGES NEWS README RELEASE-NOTES TODO )

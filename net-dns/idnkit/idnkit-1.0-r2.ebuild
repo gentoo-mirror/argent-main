@@ -12,7 +12,7 @@ SRC_URI="http://www.nic.ad.jp/ja/idn/idnkit/download/sources/${P}-src.tar.gz"
 
 LICENSE="JNIC"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DEPEND="virtual/libiconv"

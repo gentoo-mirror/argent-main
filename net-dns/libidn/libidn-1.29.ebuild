@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/libidn/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3 LGPL-3 java? ( Apache-2.0 )"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc emacs java mono nls static-libs"
 
 DOCS=( AUTHORS ChangeLog FAQ NEWS README THANKS TODO )

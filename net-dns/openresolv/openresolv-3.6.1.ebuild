@@ -12,7 +12,7 @@ SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="selinux"
 
 DEPEND="!net-dns/resolvconf-gentoo

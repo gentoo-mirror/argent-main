@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc gssapi idn ipv6 readline ssl urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
