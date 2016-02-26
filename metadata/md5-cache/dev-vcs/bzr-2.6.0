@@ -4,7 +4,7 @@ DESCRIPTION=Bazaar is a next generation distributed version control system.
 EAPI=5
 HOMEPAGE=http://bazaar-vcs.org/
 IUSE=curl doc +sftp test python_targets_python2_7
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=curl? ( dev-python/pycurl[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) sftp? ( dev-python/paramiko[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads,ssl,xml] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
@@ -13,4 +13,4 @@ SLOT=0
 SRC_URI=http://launchpad.net/bzr/2.6/2.6.0/+download/bzr-2.6.0.tar.gz
 _eclass_exported_funcs=src_prepare:distutils-r1 src_configure:distutils-r1 src_compile:distutils-r1 src_test:- src_install:distutils-r1
 _eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	distutils-r1	7774d1d61db76cd7274009465deb8a05	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	python-r1	cb510c7db32a6f445dbbc7a2b73a5602	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=b38769773d28108df88592b4e5e818ef
+_md5_=e7bef87f7bd134812a7a7df2c1930321

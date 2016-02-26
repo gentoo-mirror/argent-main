@@ -4,10 +4,10 @@ DESCRIPTION=Bandwidth Monitor NG is a small and simple console-based bandwidth m
 EAPI=5
 HOMEPAGE=http://www.gropp.org/
 IUSE=html csv
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.4-r4 >=sys-apps/net-tools-1.60-r1
 SLOT=0
 SRC_URI=http://www.gropp.org/bwm-ng/bwm-ng-0.6.tar.gz
 _eclass_exported_funcs=src_configure:-
-_md5_=6cddbf07ddf355f7b7f7ed968d330d6c
+_md5_=78f46da7ab1baa95c0f93de487393a87
