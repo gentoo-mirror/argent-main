@@ -12,7 +12,7 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 src_configure() {

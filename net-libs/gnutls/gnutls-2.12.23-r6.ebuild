@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.gnutls.org/gcrypt/gnutls/v$(get_version_component_range 1-2)/
 # LGPL-2.1 for libgnutls library and GPL-3 for libgnutls-extra library.
 LICENSE="GPL-3 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="bindist +cxx doc examples guile lzo +nettle nls pkcs11 static-libs test zlib"
 
 RDEPEND=">=dev-libs/libtasn1-0.3.4

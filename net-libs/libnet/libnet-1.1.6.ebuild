@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/project/${PN}-dev/${P}.tar.gz"
 
 LICENSE="BSD BSD-2 HPND"
 SLOT="1.1"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc static-libs"
 
 DEPEND="sys-devel/autoconf"
