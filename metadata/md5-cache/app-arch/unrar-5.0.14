@@ -2,11 +2,11 @@ DEFINED_PHASES=compile install prepare
 DESCRIPTION=Uncompress rar files
 EAPI=5
 HOMEPAGE=http://www.rarlab.com/rar_add.htm
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=unRAR
 RDEPEND=!<=app-arch/unrar-gpl-0.0.1_p20080417
 SLOT=0
 SRC_URI=http://www.rarlab.com/rar/unrarsrc-5.0.14.tar.gz
 _eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=e63afc0274e64ab7ffd276e4ec530d67
+_md5_=2345e656ed3656e5964e995e614c7f1e

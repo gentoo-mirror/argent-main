@@ -4,7 +4,7 @@ DESCRIPTION=Provides a standard configuration setup for installing PKCS#11.
 EAPI=5
 HOMEPAGE=http://p11-glue.freedesktop.org/p11-kit.html
 IUSE=+asn1 debug +trust
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=MIT
 RDEPEND=asn1? ( >=dev-libs/libtasn1-2.14 )
 REQUIRED_USE=trust? ( asn1 )
@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=http://p11-glue.freedesktop.org/releases/p11-kit-0.20.2.tar.gz
 _eclass_exported_funcs=src_configure:- src_install:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=cd779f930603438da0485dc707a3b872
+_md5_=0b6315b2dcd9d7f5c6639a1525656c76

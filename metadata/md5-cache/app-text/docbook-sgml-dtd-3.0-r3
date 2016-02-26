@@ -3,11 +3,11 @@ DEPEND=>=app-arch/unzip-5.41 >=app-text/sgml-common-0.6.3-r2
 DESCRIPTION=Docbook SGML DTD 3.0
 EAPI=0
 HOMEPAGE=http://www.docbook.org/sgml/
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=docbook
 RDEPEND=app-text/sgml-common
 SLOT=3.0
 SRC_URI=http://www.oasis-open.org/docbook/sgml/3.0/docbk30.zip
 _eclass_exported_funcs=pkg_prerm:sgml-catalog pkg_postrm:sgml-catalog pkg_postinst:sgml-catalog src_unpack:- src_compile:sgml-catalog src_install:-
 _eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	sgml-catalog	013e5c68335c5b4df8f1b72d7d7ad25d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=cdfb549cb4ba1795b4ea1728cc2c8861
+_md5_=cc0fc0259f4aed6543b94b67bd04f6b8

@@ -3,11 +3,11 @@ DEPEND=>=app-arch/unzip-5.41 >=app-text/sgml-common-0.6.3-r2
 DESCRIPTION=Docbook DTD for XML
 EAPI=0
 HOMEPAGE=http://www.docbook.org/
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=docbook
 RDEPEND=>=app-text/docbook-xsl-stylesheets-1.65 >=app-text/build-docbook-catalog-1.2
 SLOT=4.4
 SRC_URI=http://www.docbook.org/xml/4.4/docbook-xml-4.4.zip
 _eclass_exported_funcs=pkg_prerm:sgml-catalog pkg_postrm:- pkg_postinst:- src_unpack:- src_compile:sgml-catalog src_install:-
 _eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	sgml-catalog	013e5c68335c5b4df8f1b72d7d7ad25d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=ae80eab47bd0eaba0c2adfedc7a86442
+_md5_=cba3ecc0e735f10c9d01687920e25aaa
