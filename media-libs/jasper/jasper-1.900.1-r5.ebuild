@@ -13,7 +13,7 @@ SRC_URI="http://www.ece.uvic.ca/~mdadams/jasper/software/jasper-${PV}.zip
 
 LICENSE="JasPer2.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="jpeg opengl static-libs"
 
 RDEPEND="jpeg? ( virtual/jpeg:0 )

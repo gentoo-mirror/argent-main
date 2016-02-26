@@ -16,7 +16,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 LICENSE="Old-MIT ISC icu"
 SLOT="0/0.9.18" # 0.9.18 introduced the harfbuzz-icu split; bug #472416
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 # TODO: +introspection when it's closer to finished and useful (0.9.21 hopefully)
 IUSE="+cairo +glib +graphite icu introspection static-libs +truetype"
 REQUIRED_USE="introspection? ( glib )"

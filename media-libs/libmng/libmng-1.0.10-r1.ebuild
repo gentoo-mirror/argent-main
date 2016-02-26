@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libmng/${P}.tar.gz"
 
 LICENSE="libmng"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="lcms static-libs"
 
 RDEPEND="virtual/jpeg:0

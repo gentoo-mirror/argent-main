@@ -12,7 +12,7 @@ SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="5"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="X doc static-libs"
 
 RDEPEND="X? (

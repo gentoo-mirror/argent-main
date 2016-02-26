@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/lcms2-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc jpeg static-libs test tiff zlib"
 
 RDEPEND="jpeg? ( virtual/jpeg:0 )
