@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="Subversion GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring java kde nls perl python ruby sasl test vim-syntax +webdav-neon webdav-serf"
 
 COMMON_DEPEND=">=dev-db/sqlite-3.6.18[threadsafe(+)]
