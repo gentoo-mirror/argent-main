@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.deepspace6.net/pub/ds6/sources/nc6/nc6-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ipv6 nls bluetooth"
 
 # need to block netcat as we provide the "nc" file now too

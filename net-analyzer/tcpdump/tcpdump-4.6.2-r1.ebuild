@@ -12,7 +12,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+drop-root smi ssl ipv6 samba suid test"
 
 RDEPEND="

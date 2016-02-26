@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 IUSE="ipv6 +lua system-lua ncat ndiff nls nmap-update nping ssl zenmap"
 NMAP_LINGUAS=( de es fr hr hu id it ja pl pt_BR pt_PT ro ru sk zh )
