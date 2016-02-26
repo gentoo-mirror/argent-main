@@ -18,7 +18,7 @@ SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_PV_TREE}/${MY_P}/${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="selinux"
 
 DEPEND=">=net-firewall/iptables-1.2.4
