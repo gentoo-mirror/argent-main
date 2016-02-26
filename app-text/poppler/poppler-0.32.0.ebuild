@@ -9,11 +9,11 @@ inherit cmake-utils toolchain-funcs
 if [[ "${PV}" == "9999" ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="git://git.freedesktop.org/git/${PN}/${PN}"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 	SLOT="0/9999"
 else
 	SRC_URI="http://poppler.freedesktop.org/${P}.tar.xz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 	SLOT="0/51"   # CHECK THIS WHEN BUMPING!!! SUBSLOT IS libpoppler.so SOVERSION
 fi
 

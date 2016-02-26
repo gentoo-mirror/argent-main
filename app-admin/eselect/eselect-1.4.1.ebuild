@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~ulm/eselect/${P}.tar.xz"
 
 LICENSE="GPL-2+ || ( GPL-2+ CC-BY-SA-2.5 )"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc emacs vim-syntax"
 
 RDEPEND="sys-apps/sed

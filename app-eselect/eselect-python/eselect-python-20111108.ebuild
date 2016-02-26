@@ -12,7 +12,7 @@ if [[ ${PV} == "99999999" ]] ; then
 	inherit autotools subversion
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="Eselect module for management of multiple Python versions"

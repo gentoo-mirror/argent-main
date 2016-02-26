@@ -13,7 +13,7 @@ SRC_URI="http://www.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH gdbm? ( GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="caps debug doc examples gdbm maildir pcre static unicode"
 
 RDEPEND="

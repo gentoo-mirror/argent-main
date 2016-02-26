@@ -11,7 +11,7 @@ inherit python-single-r1
 DESCRIPTION="A text document format for writing short documents, articles, books and UNIX man pages"
 HOMEPAGE="http://asciidoc.org/"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~ulm/emacs/${MY_P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="!<app-eselect/eselect-emacs-1.18
 	>=app-admin/eselect-1.2.3"

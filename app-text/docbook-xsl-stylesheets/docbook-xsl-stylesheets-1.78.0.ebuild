@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/docbook/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ruby"
 
 RDEPEND=">=app-text/build-docbook-catalog-1.1

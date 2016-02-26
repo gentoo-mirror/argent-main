@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu-alpha/gzip/${P}.tar.xz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="pic static"
 
 src_prepare() {

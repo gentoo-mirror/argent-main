@@ -12,7 +12,7 @@ SRC_URI="http://www.andre-simon.de/zip/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="examples qt4"
 
 RDEPEND="dev-lang/lua

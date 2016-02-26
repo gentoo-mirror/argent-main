@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/openjade/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 RDEPEND="app-text/sgml-common

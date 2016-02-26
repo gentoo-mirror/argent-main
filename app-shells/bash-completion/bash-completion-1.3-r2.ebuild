@@ -11,7 +11,7 @@ SRC_URI="http://bash-completion.alioth.debian.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

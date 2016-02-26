@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: PAM configuration syntax highlighting"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=735"
 
 LICENSE="vim"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\

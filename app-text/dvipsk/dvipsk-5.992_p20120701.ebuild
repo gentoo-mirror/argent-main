@@ -29,7 +29,7 @@ SRC_URI="${SRC_URI} ) "
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc source"
 
 DEPEND=">=dev-libs/kpathsea-6.1.0_p20120701"

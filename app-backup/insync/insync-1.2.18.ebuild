@@ -14,7 +14,7 @@ SRC_URI="amd64? ( http://s.insynchq.com/builds/insync_${PV}.${MAGIC}-trusty_amd6
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

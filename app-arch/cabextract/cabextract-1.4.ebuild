@@ -12,7 +12,7 @@ SRC_URI="http://www.cabextract.org.uk/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="extra-tools"
 
 RDEPEND="extra-tools? ( dev-lang/perl )"

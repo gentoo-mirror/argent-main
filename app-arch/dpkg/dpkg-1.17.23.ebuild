@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+bzip2 +lzma nls selinux test unicode +update-alternatives +zlib"
 
 RDEPEND="

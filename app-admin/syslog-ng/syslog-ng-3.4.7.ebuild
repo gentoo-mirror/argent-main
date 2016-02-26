@@ -12,7 +12,7 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/${MY_PV}/sourc
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="caps dbi geoip ipv6 json mongodb +pcre smtp spoof-source ssl systemd tcpd"
 RESTRICT="test"
 

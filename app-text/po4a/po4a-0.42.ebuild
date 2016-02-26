@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/p/po4a/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="dev-perl/SGMLSpm

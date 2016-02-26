@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="AGPL-3 CPL-1.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="bindist cups dbus djvu gtk idn linguas_de static-libs X"
 
 COMMON_DEPEND="

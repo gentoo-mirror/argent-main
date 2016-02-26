@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~mgorny/dist/${P}.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=app-shells/bash-4.3_p30-r1

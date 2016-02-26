@@ -12,7 +12,7 @@ SRC_URI="https://launchpad.net/pbzip2/${PV:0:3}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="BZIP2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static symlink"
 
 LIB_DEPEND="app-arch/bzip2[static-libs(+)]"

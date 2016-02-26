@@ -7,7 +7,7 @@ inherit vim-plugin eutils
 DESCRIPTION="vim plugin: syntax highlighting for dhcpd.conf"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=744"
 LICENSE="vim"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\

@@ -15,7 +15,7 @@ if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="git://anongit.gentoo.org/proj/python-updater.git"
 else
 	SRC_URI="http://dev.gentoo.org/~floppym/dist/${P}.tar.bz2"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-2"

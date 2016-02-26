@@ -14,7 +14,7 @@ else
 	MY_PV="r${PV##0_p}"
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="https://github.com/Cyan4973/lz4/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 	S="${WORKDIR}/${MY_P}"
 fi
 

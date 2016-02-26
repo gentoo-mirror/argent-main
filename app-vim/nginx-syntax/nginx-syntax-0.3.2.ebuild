@@ -9,5 +9,5 @@ inherit vim-plugin
 DESCRIPTION="vim plugin: Nginx configuration files syntax"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=1886"
 LICENSE="vim"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""

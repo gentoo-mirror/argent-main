@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc nls static-libs test"
 
 DEPEND="nls? ( sys-devel/gettext )

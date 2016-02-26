@@ -10,7 +10,7 @@ DESCRIPTION="vim plugin: Gentoo and portage related syntax highlighting, filetyp
 HOMEPAGE="https://github.com/gentoo/gentoo-syntax"
 
 LICENSE="vim"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ignore-glep31"
 
 VIM_PLUGIN_HELPFILES="gentoo-syntax"
