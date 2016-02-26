@@ -17,7 +17,7 @@ HOMEPAGE="http://highline.rubyforge.org/"
 IUSE=""
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 all_ruby_prepare() {
 	# fix up gemspec file not to call git

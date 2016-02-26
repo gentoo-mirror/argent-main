@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="system() and background procs w/ piping, redirs, ptys"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND=">=dev-perl/IO-Tty-1.08"

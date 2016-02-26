@@ -19,7 +19,7 @@ LICENSE="MIT"
 SRC_URI="http://github.com/luislavena/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 RUBY_S="luislavena-${PN}-*"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

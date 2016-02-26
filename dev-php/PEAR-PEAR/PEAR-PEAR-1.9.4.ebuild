@@ -8,7 +8,7 @@ inherit depend.php eutils
 
 PEAR="${PV}"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="PEAR Base System"
 HOMEPAGE="http://pear.php.net/package/PEAR"

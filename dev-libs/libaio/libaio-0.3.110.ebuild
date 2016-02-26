@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/${PN:0:1}/${PN:1:1}/${PN}/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs test"
 
 src_prepare() {

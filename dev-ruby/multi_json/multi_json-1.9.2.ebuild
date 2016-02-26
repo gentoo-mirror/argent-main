@@ -20,7 +20,7 @@ DESCRIPTION="A gem to provide swappable JSON backends"
 HOMEPAGE="http://github.com/intridea/multi_json"
 LICENSE="MIT"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

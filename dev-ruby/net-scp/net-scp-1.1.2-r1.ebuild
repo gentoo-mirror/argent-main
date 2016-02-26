@@ -16,7 +16,7 @@ HOMEPAGE="http://net-ssh.rubyforge.org/scp"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_bdepend "

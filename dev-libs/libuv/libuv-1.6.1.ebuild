@@ -12,7 +12,7 @@ SRC_URI="https://github.com/libuv/libuv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD BSD-2 ISC MIT"
 SLOT="0/1"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DEPEND="sys-devel/libtool

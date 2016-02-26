@@ -18,7 +18,7 @@ LICENSE="MIT"
 SRC_URI="https://github.com/sparklemotion/nokogiri/tarball/v${PV} -> ${P}.tgz"
 RUBY_S="sparklemotion-nokogiri-*"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

@@ -13,7 +13,7 @@ SRC_URI="mirror://github/${PN}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+ssl static-libs test"
 
 DEPEND="ssl? ( dev-libs/openssl )"

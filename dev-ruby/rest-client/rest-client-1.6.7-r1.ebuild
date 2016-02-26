@@ -16,7 +16,7 @@ HOMEPAGE="http://github.com/archiloque/rest-client"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RUBY_PATCHES=( "${FILESDIR}/rest-client-1.6.7-ruby19.patch" )

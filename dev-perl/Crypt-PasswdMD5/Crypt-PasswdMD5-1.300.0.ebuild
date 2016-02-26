@@ -12,7 +12,7 @@ DESCRIPTION="Provides interoperable MD5-based crypt() functions"
 
 LICENSE="${LICENSE} BEER-WARE"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

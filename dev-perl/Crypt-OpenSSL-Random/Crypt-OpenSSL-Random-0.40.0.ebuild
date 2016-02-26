@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Crypt::OpenSSL::Random module for perl"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"

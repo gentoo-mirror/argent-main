@@ -12,5 +12,5 @@ DESCRIPTION="Digest::Nilsimsa - Perl version of Nilsimsa code"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""

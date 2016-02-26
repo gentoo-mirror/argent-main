@@ -9,9 +9,9 @@ inherit qt4-build
 DESCRIPTION="The QtScript module for the Qt toolkit"
 SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 else
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 IUSE="iconv +jit"
 

@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/libtool/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 # libltdl doesn't have a testsuite.
 RESTRICT="test"

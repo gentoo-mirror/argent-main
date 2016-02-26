@@ -15,7 +15,7 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="crypt debug python static-libs"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"

@@ -14,7 +14,7 @@ LICENSE="|| ( Ruby MIT )"
 
 SRC_URI="http://production.cf.rubygems.org/rubygems/${P}.tgz"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="test"
 

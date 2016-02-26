@@ -12,7 +12,7 @@ HOMEPAGE="http://libdbi-drivers.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
 IUSE="bindist doc firebird mysql oci8 postgres +sqlite static-libs"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT=0
 
 RDEPEND="

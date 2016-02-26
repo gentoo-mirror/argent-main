@@ -15,7 +15,7 @@ DESCRIPTION="Graph datastructure manipulation library"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 DEPEND="|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )

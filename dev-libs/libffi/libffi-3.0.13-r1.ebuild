@@ -11,7 +11,7 @@ SRC_URI="ftp://sourceware.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug pax_kernel static-libs test"
 
 RDEPEND="abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r1

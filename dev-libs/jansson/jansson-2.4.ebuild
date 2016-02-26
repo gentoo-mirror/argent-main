@@ -13,7 +13,7 @@ SRC_URI="http://www.digip.org/jansson/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc static-libs"
 
 DEPEND="doc? ( >=dev-python/sphinx-1.0.4 )"

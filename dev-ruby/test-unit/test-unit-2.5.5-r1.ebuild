@@ -27,7 +27,7 @@ HOMEPAGE="http://test-unit.rubyforge.org/"
 
 LICENSE="Ruby"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 each_ruby_prepare() {

@@ -11,7 +11,7 @@ SRC_URI="http://ftp.unixodbc.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+minimal odbcmanual static-libs"
 
 RDEPEND=">=sys-devel/libtool-2.2.6b

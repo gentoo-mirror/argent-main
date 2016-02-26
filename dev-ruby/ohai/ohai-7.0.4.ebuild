@@ -17,7 +17,7 @@ HOMEPAGE="http://wiki.opscode.com/display/chef/Ohai"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # specs have issues with multiple ruby versions

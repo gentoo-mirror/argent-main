@@ -17,7 +17,7 @@ SRC_URI="http://www.cython.org/release/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc examples test"
 
 RDEPEND=""

@@ -23,7 +23,7 @@ SRC_URI="ftp://ftp.ossp.org/pkg/lib/uuid/${MY_P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+cxx perl php static-libs"
 
 DEPEND="perl? ( dev-lang/perl:= )"

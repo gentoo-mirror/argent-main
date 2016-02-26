@@ -14,7 +14,7 @@ SRC_URI="https://alioth.debian.org/frs/download.php/${NUM}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug selinux test unwind"
 
 RDEPEND="dev-libs/elfutils

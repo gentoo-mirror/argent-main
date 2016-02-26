@@ -14,7 +14,7 @@ S=${WORKDIR}/${PN}
 DESCRIPTION="The Perl RPC Module"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/perl-Storable-1.0.7

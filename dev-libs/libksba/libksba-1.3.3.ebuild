@@ -14,7 +14,7 @@ SRC_URI="mirror://gnupg/libksba/${P}.tar.bz2"
 
 LICENSE="LGPL-3+ GPL-2+ GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/libgpg-error-1.8"

@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.freedesktop.org/releases/${P}.tar.xz"
 
 LICENSE="BSD BSD-2 BSD-4 ISC"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DOCS="ChangeLog README TODO"

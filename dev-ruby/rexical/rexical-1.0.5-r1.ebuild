@@ -16,7 +16,7 @@ DESCRIPTION="Rexical is a lexical scanner generator"
 HOMEPAGE="http://github.com/tenderlove/rexical/tree/master"
 LICENSE="LGPL-2" # plus exception
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

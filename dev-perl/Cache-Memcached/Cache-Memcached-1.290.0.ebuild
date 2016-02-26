@@ -12,7 +12,7 @@ DESCRIPTION="Perl API for memcached"
 HOMEPAGE="http://www.danga.com/memcached/ ${HOMEPAGE}"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-perl/string-crc32"

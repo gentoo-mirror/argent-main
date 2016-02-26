@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/jarib/childprocess"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/yard dev-ruby/rspec:2 )"

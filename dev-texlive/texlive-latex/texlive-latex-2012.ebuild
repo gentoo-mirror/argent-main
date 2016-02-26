@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Basic LaTeX packages"
 
 LICENSE="GPL-2 GPL-2 LPPL-1.3 "
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2012
 >=dev-tex/luatex-0.45

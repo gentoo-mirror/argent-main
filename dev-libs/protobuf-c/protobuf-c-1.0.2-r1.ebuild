@@ -15,7 +15,7 @@ SRC_URI="https://github.com/${PN}/${PN}/releases/download/v${MY_PV}/${MY_P}.tar.
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/protobuf-2.5.0-r2[${MULTILIB_USEDEP}]"

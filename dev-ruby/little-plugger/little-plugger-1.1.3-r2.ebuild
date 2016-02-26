@@ -20,7 +20,7 @@ HOMEPAGE="http://github.com/TwP/little-plugger"
 IUSE="test"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 all_ruby_prepare() {
 	# Remove default metadata because it confused jruby.

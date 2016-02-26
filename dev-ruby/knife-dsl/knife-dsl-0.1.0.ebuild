@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/chef-workflow/knife-dsl"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_rdepend "app-admin/chef"

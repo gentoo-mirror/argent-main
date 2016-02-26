@@ -16,7 +16,7 @@ SRC_URI="http://www.makotemplates.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 RDEPEND="

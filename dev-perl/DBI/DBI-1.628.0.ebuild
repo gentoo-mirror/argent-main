@@ -11,7 +11,7 @@ inherit perl-module eutils
 DESCRIPTION="The Perl DBI Module"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="

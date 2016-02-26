@@ -10,7 +10,7 @@ DESCRIPTION="Generate highlighted source code as an (x)html document"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
 SRC_URI="mirror://gnu/src-highlite/${P}.tar.gz"
 LICENSE="GPL-3"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="doc static-libs"
 

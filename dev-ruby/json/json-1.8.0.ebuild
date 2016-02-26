@@ -17,7 +17,7 @@ DESCRIPTION="A JSON implementation as a Ruby extension."
 HOMEPAGE="http://json.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Keyed Hashing for Message Authentication"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/perl-Digest-MD5

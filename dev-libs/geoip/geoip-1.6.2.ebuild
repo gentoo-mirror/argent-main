@@ -14,7 +14,7 @@ SRC_URI="
 # GPL-2 for md5.c - part of libGeoIPUpdate, MaxMind for GeoLite Country db
 LICENSE="LGPL-2.1 GPL-2 MaxMind2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 RESTRICT="test"
 

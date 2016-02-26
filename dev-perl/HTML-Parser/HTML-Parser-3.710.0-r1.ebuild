@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse <HEAD> section of HTML documents"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND=">=dev-perl/HTML-Tagset-3.03"

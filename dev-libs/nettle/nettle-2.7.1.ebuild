@@ -12,7 +12,7 @@ SRC_URI="http://www.lysator.liu.se/~nisse/archive/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-3 LGPL-2.1 )"
 SLOT="0/4" # subslot = libnettle soname version
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc +gmp neon static-libs test"
 
 DEPEND="gmp? ( dev-libs/gmp )"

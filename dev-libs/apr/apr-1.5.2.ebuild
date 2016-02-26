@@ -12,7 +12,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc elibc_FreeBSD older-kernels-compatibility selinux static-libs +urandom"
 
 CDEPEND="elibc_glibc? ( >=sys-apps/util-linux-2.16 )

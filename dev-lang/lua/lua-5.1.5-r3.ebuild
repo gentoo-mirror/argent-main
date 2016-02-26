@@ -12,7 +12,7 @@ SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+deprecated emacs readline static"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.2_p5-r1[${MULTILIB_USEDEP}] )"

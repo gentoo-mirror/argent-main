@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/boost/${MY_P}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT="0/${PV}" # ${PV} instead ${MAJOR_V} due to bug 486122
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 IUSE="context debug doc icu +nls mpi python static-libs +threads tools"
 

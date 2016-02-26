@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse::RecDescent - generate recursive-descent parsers"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="

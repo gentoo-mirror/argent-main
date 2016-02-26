@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Work with IO sockets in ipv6"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-perl/Socket6"

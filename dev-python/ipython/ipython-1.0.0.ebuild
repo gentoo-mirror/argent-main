@@ -16,7 +16,7 @@ HOMEPAGE="http://ipython.org/"
 SRC_URI="https://github.com/${PN}/${PN}/releases/download/rel-${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc emacs examples matplotlib mongodb notebook nbconvert octave
 	qt4 +smp test wxwidgets"
 

@@ -20,7 +20,7 @@ RUBY_S="net-ssh-${PN}-*"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/net-ssh-2.1.4

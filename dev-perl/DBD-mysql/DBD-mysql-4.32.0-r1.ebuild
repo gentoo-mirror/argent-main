@@ -11,7 +11,7 @@ inherit eutils perl-module
 DESCRIPTION="The Perl DBD:mysql Module"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="embedded test"
 
 RDEPEND="dev-perl/DBI

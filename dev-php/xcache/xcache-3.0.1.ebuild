@@ -16,7 +16,7 @@ SRC_URI="http://xcache.lighttpd.net/pub/Releases/${PV}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # make test would just run php's test and as such need the full php source

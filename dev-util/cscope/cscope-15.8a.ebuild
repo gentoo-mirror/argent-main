@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
 
 LICENSE="BSD GPL-2+"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.2

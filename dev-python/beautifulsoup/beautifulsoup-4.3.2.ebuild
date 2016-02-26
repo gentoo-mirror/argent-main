@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="4"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 # new html5 awaits keywording of html5lib in Bug 471002
 IUSE="doc test"
 # pending Bug 471002; html5? ( dev-python/html5lib[$(python_gen_usedep 'python{2_6,2_7}' pypy pypy2_0)] )

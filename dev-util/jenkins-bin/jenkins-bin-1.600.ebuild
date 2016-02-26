@@ -12,7 +12,7 @@ LICENSE="MIT"
 SRC_URI="http://mirrors.jenkins-ci.org/war/${PV}/${PN/-bin/}.war -> ${P}.war"
 RESTRICT="mirror"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-fonts/dejavu"

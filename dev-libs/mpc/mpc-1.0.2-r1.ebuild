@@ -12,7 +12,7 @@ SRC_URI="http://www.multiprecision.org/mpc/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DEPEND=">=dev-libs/gmp-4.3.2[${MULTILIB_USEDEP},static-libs?]

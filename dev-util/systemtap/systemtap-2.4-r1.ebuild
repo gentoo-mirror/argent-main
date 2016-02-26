@@ -14,7 +14,7 @@ SRC_URI="http://www.sourceware.org/${PN}/ftp/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="sqlite"
 
 RDEPEND=">=dev-libs/elfutils-0.142
