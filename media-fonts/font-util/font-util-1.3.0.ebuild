@@ -8,7 +8,7 @@ inherit xorg-2
 EGIT_REPO_URI="git://anongit.freedesktop.org/xorg/font/util"
 DESCRIPTION="X.Org font utilities"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""
