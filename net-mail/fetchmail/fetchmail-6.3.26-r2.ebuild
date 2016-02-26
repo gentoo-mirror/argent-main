@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ssl nls kerberos hesiod tk socks"
 REQUIRED_USE="tk? ( ${PYTHON_REQUIRED_USE} )"
 
