@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="JasPer2.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="jpeg opengl static-libs"
 
 RDEPEND="

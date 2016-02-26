@@ -11,7 +11,7 @@ SRC_URI="http://webp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/5" # subslot = libwebp soname version
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="experimental gif +jpeg opengl +png static-libs swap-16bit-csp tiff"
 
 # TODO: dev-lang/swig bindings in swig/ subdirectory

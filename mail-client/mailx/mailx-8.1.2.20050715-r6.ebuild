@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/mailx_${MY_PV}.orig.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=net-libs/liblockfile-1.03

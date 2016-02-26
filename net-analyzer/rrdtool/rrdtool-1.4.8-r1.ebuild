@@ -15,7 +15,7 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="dbi doc +graph lua perl python rrdcgi ruby static-libs tcl tcpd"
 
 CDEPEND="

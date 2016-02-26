@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
 
 LICENSE="libpng"
 SLOT="0/16"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="apng neon static-libs"
 
 RDEPEND=">=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}]

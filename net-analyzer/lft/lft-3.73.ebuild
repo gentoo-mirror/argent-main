@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.gz"
 
 LICENSE="VOSTROM"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DEPEND="net-libs/libpcap"
 RDEPEND="${DEPEND}"

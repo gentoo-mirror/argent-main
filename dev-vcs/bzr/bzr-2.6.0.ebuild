@@ -17,7 +17,7 @@ SRC_URI="http://launchpad.net/bzr/${SERIES}/${PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="curl doc +sftp test"
 
 RDEPEND="curl? ( dev-python/pycurl[${PYTHON_USEDEP}] )

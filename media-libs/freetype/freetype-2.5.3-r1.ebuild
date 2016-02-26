@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 
 LICENSE="|| ( FTL GPL-2+ )"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="X +adobe-cff auto-hinter bindist bzip2 debug doc fontforge harfbuzz
 	infinality png static-libs utils"
 REQUIRED_USE="harfbuzz? ( auto-hinter )"

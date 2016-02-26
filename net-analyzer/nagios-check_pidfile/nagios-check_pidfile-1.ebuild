@@ -12,7 +12,7 @@ SRC_URI="https://github.com/hollow/check_pidfile/archive/v${PV}.tar.gz -> ${P}.t
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=net-analyzer/nagios-plugins-1.4.13-r1"

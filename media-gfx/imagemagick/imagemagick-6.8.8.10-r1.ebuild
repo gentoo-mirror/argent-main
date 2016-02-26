@@ -13,7 +13,7 @@ SRC_URI="mirror://${PN}/${MY_P}.tar.xz"
 
 LICENSE="imagemagick"
 SLOT="0/${PV}"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp pango perl png postscript q32 q64 q8 raw static-libs svg test tiff truetype webp wmf X xml zlib"
 
 RESTRICT="perl? ( userpriv )"

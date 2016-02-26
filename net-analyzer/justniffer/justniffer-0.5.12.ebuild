@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${PN}%20${PV}/${PN}_${PV}.tar.gz -> ${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-libs/boost-1.54.0 net-libs/libpcap"
