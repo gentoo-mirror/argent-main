@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/LibRsvg"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+introspection vala tools"
 REQUIRED_USE="
 	vala? ( introspection )
