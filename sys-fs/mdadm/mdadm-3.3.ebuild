@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/raid/mdadm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static"
 
 DEPEND="virtual/pkgconfig"

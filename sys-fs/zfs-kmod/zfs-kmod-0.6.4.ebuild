@@ -17,7 +17,7 @@ else
 	inherit eutils versionator
 	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${PV}.tar.gz"
 	S="${WORKDIR}/zfs-zfs-${PV}"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="Linux ZFS kernel module for sys-fs/zfs"

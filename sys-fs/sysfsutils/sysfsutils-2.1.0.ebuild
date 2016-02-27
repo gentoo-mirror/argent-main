@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/linux-diag/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 src_prepare() {

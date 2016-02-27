@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/squashfs/squashfs${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+xz lzma lz4 lzo xattr"
 
 RDEPEND="

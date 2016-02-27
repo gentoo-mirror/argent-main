@@ -10,7 +10,7 @@ SRC_URI="http://github.com/downloads/rvoicilas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
