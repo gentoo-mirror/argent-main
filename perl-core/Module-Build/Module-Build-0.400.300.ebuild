@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Build and install Perl modules"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="

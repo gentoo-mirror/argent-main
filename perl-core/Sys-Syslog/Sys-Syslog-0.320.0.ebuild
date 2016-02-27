@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Provides same functionality as BSD syslog"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # Tests disabled - they attempt to verify on the live system

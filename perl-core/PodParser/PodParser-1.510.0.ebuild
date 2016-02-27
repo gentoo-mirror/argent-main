@@ -13,7 +13,7 @@ DESCRIPTION="Base class for creating POD filters and translators"
 SRC_URI+=" http://dev.gentoo.org/~tove/distfiles/perl-core/PodParser/Pod-Parser-1.54-patch.tar.bz2"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

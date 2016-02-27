@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Install files from here to there"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST=do

@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Gather package and POD information from perl module files"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/perl-version-0.870"

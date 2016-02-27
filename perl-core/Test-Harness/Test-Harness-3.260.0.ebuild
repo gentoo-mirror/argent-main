@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Runs perl standard test scripts with statistics"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 PREFER_BUILDPL=no

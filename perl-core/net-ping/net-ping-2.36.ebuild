@@ -13,7 +13,7 @@ inherit perl-module
 DESCRIPTION="check a remote host for reachability"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # online tests

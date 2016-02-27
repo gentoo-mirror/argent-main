@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Low-Level Interface to bzip2 compression library"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2"

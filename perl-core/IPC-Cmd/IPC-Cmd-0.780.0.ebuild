@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Finding and running system commands made easy"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/perl-Locale-Maketext-Simple

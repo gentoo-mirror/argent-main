@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A set of version requirements for a CPAN dist"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

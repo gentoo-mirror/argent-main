@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for SHA-1/224/256/384/512"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"
