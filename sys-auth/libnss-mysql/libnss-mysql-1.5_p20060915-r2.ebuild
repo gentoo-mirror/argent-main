@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils multilib autotools
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="NSS MySQL Library."
 HOMEPAGE="http://libnss-mysql.sourceforge.net/"
