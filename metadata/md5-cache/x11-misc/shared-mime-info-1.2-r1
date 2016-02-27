@@ -4,11 +4,11 @@ DESCRIPTION=The Shared MIME-info Database specification
 EAPI=5
 HOMEPAGE=http://freedesktop.org/wiki/Software/shared-mime-info
 IUSE=test
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2 dev-libs/libxml2
 SLOT=0
 SRC_URI=http://people.freedesktop.org/~hadess/shared-mime-info-1.2.tar.xz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=9fa82cc275bb64bef08e0167e49979fa
+_md5_=c666fa4d2def00af8ab6f21885bfe948

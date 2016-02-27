@@ -4,11 +4,11 @@ DESCRIPTION=An Apache2 module for running Python WSGI applications.
 EAPI=5
 HOMEPAGE=http://code.google.com/p/modwsgi/
 IUSE=python_targets_python3_3 python_targets_python3_4 python_targets_python2_7 python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
 RDEPEND==www-servers/apache-2*
 SLOT=0
 SRC_URI=http://modwsgi.googlecode.com/files/mod_wsgi-3.4.tar.gz
 _eclass_exported_funcs=pkg_postinst:apache-module pkg_setup:python-single-r1 src_configure:- src_compile:- src_install:apache-module
 _eclasses_=apache-module	bd30ba4d834196e81cf2b76c52d26b93	depend.apache	87a16d5639b45fde2614c944e846b703	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	a73853efd730b2fe09e0ed7ab66a3b5b	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=e1f69d4abf64be65c75032707e8d53cf
+_md5_=38e301a78effbcb2faf2bcc019040679

@@ -4,11 +4,11 @@ DESCRIPTION=GNU regular expression matcher
 EAPI=4
 HOMEPAGE=http://www.gnu.org/software/grep/
 IUSE=nls pcre static
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=!static? ( pcre? ( >=dev-libs/libpcre-7.8-r1 ) ) nls? ( virtual/libintl ) virtual/libiconv
 SLOT=0
 SRC_URI=mirror://gnu/grep/grep-2.21.tar.xz mirror://gentoo/grep-2.21.tar.xz http://dev.gentoo.org/~polynomial-c/grep-2.21-heap_buffer_overrun.patch
 _eclass_exported_funcs=src_prepare:- src_configure:-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=613948d4391f16349e1c36b0a99e4968
+_md5_=7abce7fc13a41d7b644f9a89aa899967

@@ -1,8 +1,8 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Serif/Sans/Monospace font packages
 EAPI=0
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 RDEPEND=|| ( media-fonts/liberation-fonts media-fonts/source-pro media-fonts/dejavu media-fonts/croscorefonts media-fonts/droid media-fonts/ttf-bitstream-vera media-fonts/freefont media-fonts/corefonts )
 SLOT=0
 _eclass_exported_funcs=-
-_md5_=8ee2f7739552cf2c1805933972c3c4bd
+_md5_=853fc725be3209c95971685d513240d7

@@ -2,9 +2,9 @@ DEFINED_PHASES=-
 DESCRIPTION=A virtual for the Python argparse module
 EAPI=5
 IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy? ( virtual/pypy:0= ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy(-)]
 SLOT=0
 _eclass_exported_funcs=-
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-r1	cb510c7db32a6f445dbbc7a2b73a5602	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=e8166abe783caa440c99fd6d1b071f6d
+_md5_=650b9a5a6d8bdf7b6254ea1fd90879df

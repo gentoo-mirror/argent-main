@@ -4,11 +4,11 @@ DESCRIPTION=Console-based mouse driver
 EAPI=4
 HOMEPAGE=http://www.nico.schottelius.org/software/gpm/
 IUSE=selinux static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.9-r3[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] selinux? ( sec-policy/selinux-gpm ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r12 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=http://www.nico.schottelius.org/software/gpm/archives/gpm-1.20.7.tar.lzma
 _eclass_exported_funcs=src_prepare:- src_configure:multilib-minimal src_compile:multilib-minimal src_test:multilib-minimal src_install:multilib-minimal
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=e8b76824bd926694950030b63cae349f
+_md5_=c85dd5d181be249f07bd399ea87b85db

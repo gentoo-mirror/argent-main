@@ -4,7 +4,7 @@ DESCRIPTION=library and tools for managing linux kernel modules
 EAPI=5
 HOMEPAGE=http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
 IUSE=debug doc lzma +openrc static-libs +tools zlib
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=LGPL-2
 RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-utils-5.0.4-r1 ) openrc? ( !<sys-apps/openrc-0.12 ) zlib? ( >=sys-libs/zlib-1.2.6 )
 RESTRICT=test
@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-16.tar.xz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=20410813bb7b45fe8c7d6e879d3a7664
+_md5_=b3591b7bfcda1cac2bf1ed4b98345967

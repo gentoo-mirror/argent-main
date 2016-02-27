@@ -1,8 +1,8 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Encode
 EAPI=0
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 RDEPEND=~perl-core/Encode-2.470.0
 SLOT=0
 _eclass_exported_funcs=-
-_md5_=b9a385a931e104dde16f988920ccb556
+_md5_=05e6333655540b2267c6d586434aa148

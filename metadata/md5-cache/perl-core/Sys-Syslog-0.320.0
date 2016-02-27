@@ -3,11 +3,11 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=Provides same functionality as BSD syslog
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Sys-Syslog/
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SA/SAPER/Sys-Syslog-0.32.tar.gz
 _eclass_exported_funcs=pkg_postrm:perl-module pkg_postinst:perl-module src_unpack:perl-module src_prepare:perl-module src_configure:perl-module src_compile:perl-module src_test:perl-module src_install:perl-module
 _eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	unpacker	69f01f06e2ef674295e9fa69ddbef8af
-_md5_=01939d621631a29573e4c362428bdf8a
+_md5_=2af26c2a05c8354f5cc98bd2a8810aea

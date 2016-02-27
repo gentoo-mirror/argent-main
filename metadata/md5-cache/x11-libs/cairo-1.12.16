@@ -4,7 +4,7 @@ DESCRIPTION=A vector graphics library with cross-device output support
 EAPI=5
 HOMEPAGE=http://cairographics.org/
 IUSE=X aqua debug directfb doc drm gallium gles2 +glib legacy-drivers opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( LGPL-2.1 MPL-1.1 )
 RDEPEND=dev-libs/lzo media-libs/fontconfig media-libs/freetype:2 media-libs/libpng:0= sys-libs/zlib >=x11-libs/pixman-0.28.0 directfb? ( dev-libs/DirectFB ) gles2? ( media-libs/mesa[gles2] ) glib? ( >=dev-libs/glib-2.28.6:2 ) opengl? ( || ( media-libs/mesa[egl] media-libs/opengl-apple ) ) openvg? ( media-libs/mesa[openvg] ) qt4? ( >=dev-qt/qtgui-4.8:4 ) X? ( >=x11-libs/libXrender-0.6 x11-libs/libXext x11-libs/libX11 drm? ( >=virtual/udev-136 gallium? ( media-libs/mesa[gallium] ) ) ) xcb? ( x11-libs/libxcb x11-libs/xcb-util )
 REQUIRED_USE=drm? ( X ) gallium? ( drm ) gles2? ( !opengl ) openvg? ( || ( gles2 opengl ) ) xlib-xcb? ( xcb )
@@ -13,4 +13,4 @@ SLOT=0
 SRC_URI=http://cairographics.org/releases/cairo-1.12.16.tar.xz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_configure:- src_install:-
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=0f25dbf7c37ba67dc93d15c480da4f47
+_md5_=1d20a912f31971c90fe3f98bedba5cb0

@@ -4,7 +4,7 @@ DESCRIPTION=Robust and highly flexible tunneling application compatible with man
 EAPI=4
 HOMEPAGE=http://openvpn.net/
 IUSE=examples down-root iproute2 pam passwordsave pkcs11 +plugins polarssl selinux +ssl +lzo static userland_BSD
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=kernel_linux? ( iproute2? ( sys-apps/iproute2[-minimal] ) !iproute2? ( sys-apps/net-tools ) ) pam? ( virtual/pam ) selinux? ( sec-policy/selinux-openvpn ) ssl? ( !polarssl? ( >=dev-libs/openssl-0.9.7 ) polarssl? ( >=net-libs/polarssl-1.1.0 ) ) lzo? ( >=dev-libs/lzo-1.07 ) pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )
 REQUIRED_USE=static? ( !plugins !pkcs11 ) polarssl? ( ssl ) !plugins? ( !pam !down-root )
@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=http://swupdate.openvpn.net/community/releases/openvpn-2.3.2.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_configure:- src_install:-
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	user	bc615318777c602f6114b73c27f9a9d1
-_md5_=c88e34cd733d4c0decfcbf871d33001c
+_md5_=02752f3c1d6181525b6a9a947c891f54

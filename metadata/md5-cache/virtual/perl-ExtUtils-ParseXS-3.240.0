@@ -1,8 +1,8 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for ExtUtils-ParseXS
 EAPI=5
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/ExtUtils-ParseXS-3.240.0 ) !<perl-core/ExtUtils-ParseXS-3.240.0 !>perl-core/ExtUtils-ParseXS-3.240.0-r999
 SLOT=0
 _eclass_exported_funcs=-
-_md5_=29e3f430769f3e6f70190dbb09b07b68
+_md5_=7c3b6dabce64149f3b166a000a9f74ec

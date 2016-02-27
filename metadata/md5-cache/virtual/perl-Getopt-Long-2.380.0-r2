@@ -1,8 +1,8 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Getopt-Long
 EAPI=0
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 RDEPEND=|| ( =dev-lang/perl-5.16* =dev-lang/perl-5.14* ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~perl-core/Getopt-Long-2.380.0 )
 SLOT=0
 _eclass_exported_funcs=-
-_md5_=b365859774d39721f98c8b20e0cf36be
+_md5_=938cee0e71c72d70097bbbd30892d8a5

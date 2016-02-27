@@ -1,8 +1,8 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for various init implementations
 EAPI=0
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 RDEPEND=!prefix? ( kernel_linux? ( || ( >=sys-apps/sysvinit-2.86-r6 sys-process/runit ) ) kernel_FreeBSD? ( sys-freebsd/freebsd-sbin ) )
 SLOT=0
 _eclass_exported_funcs=-
-_md5_=583feed2b396c5e7776ee4e5dd5a38e7
+_md5_=903297b1d30eb33cee7fefdd9565036e
