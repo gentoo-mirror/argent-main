@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/a/at/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="pam selinux"
 
 DEPEND="virtual/mta
