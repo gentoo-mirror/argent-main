@@ -25,7 +25,7 @@ DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://www.gnu.org/software/automake/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
