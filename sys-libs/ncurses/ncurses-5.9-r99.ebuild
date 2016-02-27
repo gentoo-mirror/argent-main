@@ -14,7 +14,7 @@ HOMEPAGE="https://www.gnu.org/software/ncurses/ http://dickey.his.com/ncurses/"
 
 LICENSE="metapackage"
 SLOT="5/5"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ada +cxx gpm static-libs tinfo unicode"
 
 DEPEND="sys-libs/ncurses:0/5[ada?,cxx?,gpm?,static-libs?,tinfo?,unicode?,${MULTILIB_USEDEP}]"

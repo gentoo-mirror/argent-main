@@ -28,7 +28,7 @@ done
 
 LICENSE="Sleepycat"
 SLOT="4.8"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc java cxx tcl test"
 
 REQUIRED_USE="test? ( tcl )"

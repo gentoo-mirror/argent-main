@@ -12,7 +12,7 @@ SRC_URI="https://github.com/vathpela/${PN}/releases/download/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="dev-libs/popt"
 DEPEND="${RDEPEND}"

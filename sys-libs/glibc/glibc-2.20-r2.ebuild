@@ -10,7 +10,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2.1+ BSD HPND ISC inner-net rc PCRE"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
 
