@@ -12,7 +12,7 @@ SRC_URI="https://bitbucket.org/ariya/phantomjs/downloads/${P}-source.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 RDEPEND="dev-libs/icu:=
