@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="create an index of scalable font files for X"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libfontenc

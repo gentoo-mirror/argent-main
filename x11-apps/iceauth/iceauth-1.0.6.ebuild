@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="ICE authority file utility"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libICE"

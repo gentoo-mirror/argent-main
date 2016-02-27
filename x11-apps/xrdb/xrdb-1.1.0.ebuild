@@ -7,7 +7,7 @@ EAPI=5
 inherit xorg-2
 
 DESCRIPTION="X server resource database utility"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXmu

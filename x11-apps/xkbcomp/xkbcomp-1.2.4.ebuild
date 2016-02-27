@@ -7,7 +7,7 @@ EAPI=4
 inherit xorg-2
 
 DESCRIPTION="compile XKB keyboard description"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND="x11-libs/libX11
 	x11-libs/libxkbfile"
