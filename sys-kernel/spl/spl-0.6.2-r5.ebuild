@@ -16,7 +16,7 @@ else
 	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz
 		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p4.tar.xz"
 	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs"
