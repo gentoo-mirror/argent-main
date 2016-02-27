@@ -10,7 +10,7 @@ HOMEPAGE="http://jodies.de/ipcalc"
 SRC_URI="${HOMEPAGE}-archive/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=dev-lang/perl-5.6.0"
 

@@ -12,7 +12,7 @@ if [[ ${PV} = *9999* ]]; then
 	DEPEND="app-text/asciidoc"
 else
 	SRC_URI="ftp://ftp.archlinux.org/other/packages/${PN}/${P}.tar.xz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="Profile based network connection tool from Arch Linux"

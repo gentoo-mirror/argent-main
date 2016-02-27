@@ -12,7 +12,7 @@ SRC_URI="http://www.webdav.org/cadaver/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=net-libs/neon-0.27.0"

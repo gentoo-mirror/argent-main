@@ -10,7 +10,7 @@ LICENSE="BSD"
 SLOT="3"
 HOMEPAGE="https://github.com/esnet/iperf/"
 SRC_URI="https://codeload.github.com/esnet/${PN}/tar.gz/${PV} -> ${P}.tar.gz"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 src_prepare() {

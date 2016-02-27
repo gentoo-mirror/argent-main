@@ -12,7 +12,7 @@ SRC_URI="http://rsync.samba.org/ftp/rsync/src/${P/_/}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="acl iconv ipv6 static xattr"
 
 LIB_DEPEND="acl? ( virtual/acl[static-libs(+)] )

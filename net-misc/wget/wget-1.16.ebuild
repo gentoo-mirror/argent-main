@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/wget/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug gnutls idn ipv6 nls ntlm pcre +ssl static test uuid zlib"
 
 LIB_DEPEND="idn? ( net-dns/libidn[static-libs(+)] )
