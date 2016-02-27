@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Read and write a subset of YAML for CPAN Meta files"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

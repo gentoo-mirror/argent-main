@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="allow reading and writing of compressed data"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/perl-Scalar-List-Utils

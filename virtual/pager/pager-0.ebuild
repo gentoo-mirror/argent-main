@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Virtual for command-line pagers"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="|| ( sys-apps/less
 	sys-apps/more

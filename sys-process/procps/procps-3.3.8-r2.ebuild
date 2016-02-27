@@ -17,7 +17,7 @@ SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${PN}-ng/${PN}-ng-${PV}.tar.xz/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+ncurses nls static-libs test unicode"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] )"

@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/flex/${MY_P}.tar.bz2
 
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="nls static test"
 
 # We want bison explicitly and not yacc in general #381273

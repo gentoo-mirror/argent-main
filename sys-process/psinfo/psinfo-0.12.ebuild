@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ward.nu/computer/psinfo/"
 SRC_URI="http://www.ward.nu/computer/${PN}/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 IUSE=""
 

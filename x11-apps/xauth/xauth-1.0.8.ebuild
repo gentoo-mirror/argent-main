@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="X authority file utility"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ipv6"
 
 RDEPEND="x11-libs/libX11

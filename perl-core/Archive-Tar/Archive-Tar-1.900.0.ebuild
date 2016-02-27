@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A Perl module for creation and manipulation of tar files"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-IO-Zlib-1.01

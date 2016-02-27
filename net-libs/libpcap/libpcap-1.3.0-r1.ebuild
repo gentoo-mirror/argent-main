@@ -12,7 +12,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="bluetooth ipv6 netlink static-libs canusb"
 
 RDEPEND="bluetooth? ( net-wireless/bluez )

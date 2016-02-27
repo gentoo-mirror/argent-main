@@ -6,7 +6,7 @@ EAPI="5"
 
 DESCRIPTION="Virtual for Java Development Kit (JDK)"
 SLOT="1.7"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="|| (
 		=dev-java/icedtea-bin-7*

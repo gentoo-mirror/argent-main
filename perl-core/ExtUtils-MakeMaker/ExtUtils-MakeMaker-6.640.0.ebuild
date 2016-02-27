@@ -10,7 +10,7 @@ inherit eutils perl-module
 DESCRIPTION="Create a module Makefile"
 HOMEPAGE="http://makemaker.org ${HOMEPAGE}"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="

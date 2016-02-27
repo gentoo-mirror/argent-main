@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0/18"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="embedded static static-libs"
 
 DEPEND=""

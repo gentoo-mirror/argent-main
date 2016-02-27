@@ -14,7 +14,7 @@ SRC_URI="http://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug icu +npm snapshot +ssl"
 
 RDEPEND="icu? ( >=dev-libs/icu-55:= )

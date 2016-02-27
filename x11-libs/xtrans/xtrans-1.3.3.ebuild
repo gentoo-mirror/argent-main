@@ -11,7 +11,7 @@ XORG_DOC=doc
 inherit xorg-2
 
 DESCRIPTION="X.Org xtrans library"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""

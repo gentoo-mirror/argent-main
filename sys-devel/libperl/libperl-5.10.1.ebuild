@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 SLOT="1"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 PDEPEND=">=dev-lang/perl-5.10.1"

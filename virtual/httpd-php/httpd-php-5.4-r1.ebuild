@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${PV}"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="|| ( dev-lang/php:${SLOT}[apache2]

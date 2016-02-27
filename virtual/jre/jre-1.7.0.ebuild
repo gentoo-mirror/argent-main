@@ -6,7 +6,7 @@ EAPI="5"
 
 DESCRIPTION="Virtual for Java Runtime Environment (JRE)"
 SLOT="1.7"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="|| (
 		=virtual/jdk-1.7.0*

@@ -10,7 +10,7 @@ if [[ ${PV} = 9999* ]]; then
 else
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2
 	prefix? ( http://dev.gentoo.org/~grobian/distfiles/consoletype-1.0.sh )"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 inherit toolchain-funcs

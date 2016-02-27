@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A generic input parsing/checking mechanism"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/perl-Locale-Maketext-Simple"

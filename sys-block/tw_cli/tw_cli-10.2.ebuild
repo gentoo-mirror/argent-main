@@ -8,7 +8,7 @@ HOMEPAGE="https://www.3ware.com/3warekb/article.aspx?id=14847"
 LICENSE="3ware"
 SLOT="0"
 # binary packages
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 # stripping seems to break this sometimes
 RESTRICT="strip"

@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Stringified perl data structures, suitable for both printing and eval"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

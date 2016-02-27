@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="File::Temp can be used to create and open temporary files in a safe way"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # bug 390719

@@ -11,7 +11,7 @@ inherit multilib perl-module
 DESCRIPTION="Low-Level Interface to zlib compression library"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/zlib-1.2.5"

@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Simple Common Gateway Interface Class"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 DEPEND="

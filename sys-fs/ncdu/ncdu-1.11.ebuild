@@ -10,7 +10,7 @@ SRC_URI="http://dev.yorhel.nl/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 RDEPEND="sys-libs/ncurses[unicode]"
 DEPEND="${RDEPEND}

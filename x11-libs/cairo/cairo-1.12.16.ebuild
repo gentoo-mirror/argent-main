@@ -10,10 +10,10 @@ if [[ ${PV} == *9999* ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://anongit.freedesktop.org/git/cairo"
 	SRC_URI=""
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 else
 	SRC_URI="http://cairographics.org/releases/${P}.tar.xz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="A vector graphics library with cross-device output support"

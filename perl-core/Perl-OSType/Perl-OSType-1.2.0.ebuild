@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Map Perl operating system names to generic types"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND=""

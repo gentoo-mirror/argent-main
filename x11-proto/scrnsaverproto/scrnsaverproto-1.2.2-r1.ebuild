@@ -10,7 +10,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org ScrnSaver protocol headers"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="!<x11-libs/libXScrnSaver-1.2"

@@ -7,7 +7,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org Resource protocol headers"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""

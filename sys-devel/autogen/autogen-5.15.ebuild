@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/rel${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-scheme/guile-1.8

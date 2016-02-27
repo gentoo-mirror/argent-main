@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/proto"
 [[ ${PV} != 9999* ]] && \
 	SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="${PYTHON_DEPS}"

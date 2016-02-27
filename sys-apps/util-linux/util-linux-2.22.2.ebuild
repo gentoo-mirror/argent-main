@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 	#KEYWORDS=""
 else
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 MY_PV=${PV/_/-}

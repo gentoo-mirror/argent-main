@@ -7,7 +7,7 @@ inherit xorg-2
 
 DESCRIPTION="create an index of X font files in a directory"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-apps/mkfontscale"

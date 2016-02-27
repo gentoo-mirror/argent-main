@@ -9,7 +9,7 @@ inherit xorg-2
 
 DESCRIPTION="X.Org Xcursor library"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/libXrender-0.8.2[${MULTILIB_USEDEP}]

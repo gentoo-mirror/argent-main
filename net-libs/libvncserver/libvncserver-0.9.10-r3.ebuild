@@ -12,7 +12,7 @@ SRC_URI="https://github.com/LibVNC/libvncserver/archive/LibVNCServer-${PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="+24bpp gcrypt gnutls ipv6 +jpeg +png ssl static-libs test threads +zlib"
 
 DEPEND="

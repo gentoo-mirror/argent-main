@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Virtual for editor"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 # Add a package to RDEPEND only if the editor:
 # - can edit ordinary text files,

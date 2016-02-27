@@ -8,5 +8,5 @@ inherit xorg-2
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/util/macros"
 DESCRIPTION="X.Org autotools utility macros"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""

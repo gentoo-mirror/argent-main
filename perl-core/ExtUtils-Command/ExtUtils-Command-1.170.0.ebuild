@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Utilities to replace common UNIX commands in Makefiles etc."
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST=do

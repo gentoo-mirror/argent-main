@@ -14,7 +14,7 @@ SRC_URI="http://dag.wieers.com/home-made/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="wifi"
 
 RDEPEND="wifi? ( net-wireless/python-wifi )"

@@ -9,7 +9,7 @@ XORG_STATIC=no
 inherit xorg-2
 
 DESCRIPTION="X.Org bitmaps data"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""

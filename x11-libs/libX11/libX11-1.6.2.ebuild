@@ -12,7 +12,7 @@ inherit xorg-2 toolchain-funcs flag-o-matic
 
 DESCRIPTION="X.Org X11 library"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ipv6 test"
 
 RDEPEND=">=x11-libs/libxcb-1.8.1[${MULTILIB_USEDEP}]

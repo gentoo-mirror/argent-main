@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="uncompile an rgb color-name database"
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
