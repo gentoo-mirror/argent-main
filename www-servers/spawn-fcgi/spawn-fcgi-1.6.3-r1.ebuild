@@ -10,7 +10,7 @@ SRC_URI="http://www.lighttpd.net/download/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="ipv6"
 
 DEPEND=""
