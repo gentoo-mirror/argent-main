@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/perl/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 SLOT="1"
 
