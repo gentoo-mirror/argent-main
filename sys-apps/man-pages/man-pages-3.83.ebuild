@@ -16,7 +16,7 @@ SRC_URI="mirror://kernel/linux/docs/man-pages/Archive/${P}.tar.xz
 
 LICENSE="man-pages GPL-2+ BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE_LINGUAS=" da de fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"

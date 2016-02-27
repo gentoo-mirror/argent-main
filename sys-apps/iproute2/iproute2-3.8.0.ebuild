@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/net/${PN}/${P}.tar.xz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="kernel routing and traffic control utilities"

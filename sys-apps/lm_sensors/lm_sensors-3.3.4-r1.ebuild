@@ -12,7 +12,7 @@ SRC_URI="http://dl.lm-sensors.org/lm-sensors/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="sensord static-libs"
 
 RDEPEND="

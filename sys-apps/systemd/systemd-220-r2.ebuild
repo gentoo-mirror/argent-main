@@ -19,7 +19,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gnuefi gudev http
 	idn importd introspection kdbus +kmod +lz4 lzma nat pam policykit python
 	qrcode +seccomp selinux ssl sysv-utils terminal test vanilla xkb"

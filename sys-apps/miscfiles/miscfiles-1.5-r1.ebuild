@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/miscfiles/${P}.tar.gz
 
 LICENSE="GPL-2 unicode"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="minimal"
 
 # Collides with older versions/revisions

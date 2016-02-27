@@ -13,7 +13,7 @@ EGIT_COMMIT="598bbf5685e9d15fd3ea7ab40b8026df858d70b8"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-libs/libnl"

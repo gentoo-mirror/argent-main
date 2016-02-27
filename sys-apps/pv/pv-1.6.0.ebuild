@@ -11,7 +11,7 @@ SRC_URI="http://www.ivarch.com/programs/sources/${P}.tar.bz2"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="debug nls"
 
 PV_LINGUAS=( de fr pl pt )

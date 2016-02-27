@@ -12,7 +12,7 @@ SRC_URI="http://www.codon.org.uk/~mjg59/vbetool/download/vbetool-1.1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib

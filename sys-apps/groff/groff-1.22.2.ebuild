@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/groff/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="examples X linguas_ja"
 
 RDEPEND=">=sys-apps/texinfo-4.7-r1

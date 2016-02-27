@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Irqbalance/irqbalancefiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE="caps +numa"
 
 RDEPEND="dev-libs/glib:2

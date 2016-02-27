@@ -12,7 +12,7 @@ if [[ ${PV} == "99999999" ]]; then
 	inherit git-2
 else
 	SRC_URI="${HOMEPAGE}/archive/${P}.tar.gz"
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="|| ( GPL-2 BSD ) public-domain"

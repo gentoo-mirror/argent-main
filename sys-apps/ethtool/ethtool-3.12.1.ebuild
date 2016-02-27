@@ -10,6 +10,6 @@ SRC_URI="mirror://kernel/software/network/ethtool/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 DEPEND="app-arch/xz-utils"

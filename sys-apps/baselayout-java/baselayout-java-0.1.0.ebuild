@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~sera/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="!<dev-java/java-config-2.2"
