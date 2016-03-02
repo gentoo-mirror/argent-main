@@ -13,26 +13,29 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 else
 	MY_PV="${PV/_/-}"
-	DOCKER_GITCOMMIT="0a8c2e3"
+	DOCKER_GITCOMMIT="590d510"
 	EGIT_COMMIT="v${MY_PV}"
 	SRC_URI="https://${EGO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 	inherit golang-vcs-snapshot
 fi
-inherit bash-completion-r1 eutils linux-info multilib systemd udev user
+inherit bash-completion-r1 linux-info multilib systemd udev user
 
 DESCRIPTION="Docker complements kernel namespacing with a high-level API which operates at the process level"
 HOMEPAGE="https://dockerproject.org"
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="apparmor aufs btrfs +device-mapper experimental lxc overlay"
+IUSE="apparmor aufs btrfs +device-mapper experimental overlay seccomp"
 
 # https://github.com/docker/docker/blob/master/hack/PACKAGERS.md#build-dependencies
 CDEPEND="
 	>=dev-db/sqlite-3.7.9:3
 	device-mapper? (
 		>=sys-fs/lvm2-2.02.89[thin]
+	)
+	seccomp? (
+		>=sys-libs/libseccomp-2.2.1[static-libs]
 	)
 "
 
@@ -56,10 +59,6 @@ RDEPEND="
 	sys-process/procps
 	>=dev-vcs/git-1.7
 	>=app-arch/xz-utils-4.9
-
-	lxc? (
-		>=app-emulation/lxc-1.0.7
-	)
 
 	apparmor? (
 		sys-libs/libapparmor[static-libs]
@@ -170,14 +169,13 @@ pkg_setup() {
 
 src_prepare() {
 	cd "src/${EGO_PN}" || die
-	epatch "${FILESDIR}"/15404-fix-go14_15.patch
 	# allow user patches (use sparingly - upstream won't support them)
 	epatch_user
 }
 
 src_compile() {
 	cd "src/${EGO_PN}" || die
-	export GOPATH="${WORKDIR}/${P}:${PWD}/vendor:$(get_golibdir_gopath)"
+	export GOPATH="${WORKDIR}/${P}:${PWD}/vendor"
 
 	# setup CFLAGS and LDFLAGS for separate build target
 	# see https://github.com/tianon/docker-overlay/pull/10
@@ -188,10 +186,11 @@ src_compile() {
 	[ "$DOCKER_GITCOMMIT" ] && export DOCKER_GITCOMMIT
 
 	if gcc-specs-pie; then
-		sed -i "s/EXTLDFLAGS_STATIC='/EXTLDFLAGS_STATIC='-fno-PIC /" hack/make.sh || die
+		sed -i "s/EXTLDFLAGS_STATIC='/&-fno-PIC /" hack/make.sh || die
 		grep -q -- '-fno-PIC' hack/make.sh || die 'hardened sed failed'
 
-		sed -i "s/LDFLAGS_STATIC_DOCKER='/LDFLAGS_STATIC_DOCKER='-extldflags -fno-PIC /" hack/make/dynbinary || die
+		sed  "s/LDFLAGS_STATIC_DOCKER='/&-extldflags -fno-PIC /" \
+			-i hack/make/dynbinary || die
 		grep -q -- '-fno-PIC' hack/make/dynbinary || die 'hardened sed failed'
 	fi
 
@@ -203,9 +202,11 @@ src_compile() {
 		fi
 	done
 
-	if use apparmor; then
-		DOCKER_BUILDTAGS+=' apparmor'
-	fi
+	for tag in apparmor seccomp; do
+		if use $tag; then
+			DOCKER_BUILDTAGS+=" $tag"
+		fi
+	done
 
 	# https://github.com/docker/docker/pull/13338
 	if use experimental; then
@@ -248,10 +249,9 @@ src_install() {
 	doins -r contrib/syntax/vim/ftdetect
 	doins -r contrib/syntax/vim/syntax
 
-	exeinto /usr/share/${PN}/contrib
-	doexe contrib/*.{sh,pl}
-	insinto /usr/share/${PN}/contrib
-	doins contrib/*.{conf,sample}
+	# note: intentionally not using "doins" so that we preserve +x bits
+	mkdir -p "${D}/usr/share/${PN}/contrib"
+	cp -R contrib/* "${D}/usr/share/${PN}/contrib"
 }
 
 pkg_postinst() {
