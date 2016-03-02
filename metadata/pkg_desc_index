@@ -55,7 +55,7 @@ app-doc/doxygen 1.8.3.1 1.8.5 1.8.9.1: Documentation system for most programming
 app-editors/vim 7.4.155 7.4.712: Vim, an improved vi-style text editor
 app-editors/vim-core 7.4.155 7.4.712: vim and gvim shared files
 app-editors/xemacs 21.4.22-r4 21.4.24 21.5.31 21.5.33 21.5.34-r2 21.5.34-r3 21.5.34-r4: highly customizable open source text editor and application development system
-app-emulation/docker 0.10.0 1.8.2 1.9.1: Docker complements kernel namespacing with a high-level API which operates at the process level
+app-emulation/docker 1.6.1 1.6.2 1.7.1 1.8.1 1.8.2 1.9.0 1.9.1 1.10.0 9999: Docker complements kernel namespacing with a high-level API which operates at the process level
 app-emulation/lxc 1.0.3 1.1.0-r3 1.1.2-r2: LinuX Containers userspace utilities
 app-emulation/packer-bin 0.8.6: Packer is a tool for creating machine and container images for multiple platforms from a single source configuration
 app-emulation/qemu-launcher 1.7.4: Gtk+ front-end for QEMU
