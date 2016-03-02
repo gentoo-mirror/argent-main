@@ -13,14 +13,14 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 else
 	MY_PV="${PV/_/-}"
-	DOCKER_GITCOMMIT="0a8c2e3"
+	DOCKER_GITCOMMIT="d12ea79"
 	EGIT_COMMIT="v${MY_PV}"
 	SRC_URI="https://${EGO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 	inherit golang-vcs-snapshot
 fi
-inherit bash-completion-r1 eutils linux-info multilib systemd udev user
+inherit eutils bash-completion-r1 linux-info multilib systemd udev user
 
 DESCRIPTION="Docker complements kernel namespacing with a high-level API which operates at the process level"
 HOMEPAGE="https://dockerproject.org"
@@ -248,10 +248,8 @@ src_install() {
 	doins -r contrib/syntax/vim/ftdetect
 	doins -r contrib/syntax/vim/syntax
 
-	exeinto /usr/share/${PN}/contrib
-	doexe contrib/*.{sh,pl}
-	insinto /usr/share/${PN}/contrib
-	doins contrib/*.{conf,sample}
+	insinto "/usr/share/${PN}/contrib"
+	doins -r contrib/*
 }
 
 pkg_postinst() {

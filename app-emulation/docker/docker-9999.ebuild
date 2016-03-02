@@ -13,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 else
 	MY_PV="${PV/_/-}"
-	DOCKER_GITCOMMIT="0a8c2e3"
+	DOCKER_GITCOMMIT="d12ea79"
 	EGIT_COMMIT="v${MY_PV}"
 	SRC_URI="https://${EGO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
@@ -170,7 +170,6 @@ pkg_setup() {
 
 src_prepare() {
 	cd "src/${EGO_PN}" || die
-	epatch "${FILESDIR}"/15404-fix-go14_15.patch
 	# allow user patches (use sparingly - upstream won't support them)
 	epatch_user
 }
@@ -248,10 +247,8 @@ src_install() {
 	doins -r contrib/syntax/vim/ftdetect
 	doins -r contrib/syntax/vim/syntax
 
-	exeinto /usr/share/${PN}/contrib
-	doexe contrib/*.{sh,pl}
-	insinto /usr/share/${PN}/contrib
-	doins contrib/*.{conf,sample}
+	insinto "/usr/share/${PN}/contrib"
+	doins -r contrib/*
 }
 
 pkg_postinst() {
