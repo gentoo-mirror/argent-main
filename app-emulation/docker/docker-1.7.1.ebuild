@@ -61,7 +61,7 @@ RDEPEND="
 	)
 	aufs? (
 		|| (
-			sys-kernel/linux-argent
+			>=sys-kernel/linux-argent-3.18
 		)
 	)
 
