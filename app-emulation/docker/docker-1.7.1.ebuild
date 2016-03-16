@@ -61,9 +61,7 @@ RDEPEND="
 	)
 	aufs? (
 		|| (
-			sys-fs/aufs3
-			sys-fs/aufs4
-			sys-kernel/aufs-sources
+			sys-kernel/linux-argent
 		)
 	)
 
