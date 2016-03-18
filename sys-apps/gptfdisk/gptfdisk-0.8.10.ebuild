@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="kernel_linux ncurses static"
 
-LIB_DEPEND="dev-libs/popt[static-libs(+)]
-	ncurses? ( >=sys-libs/ncurses-5.7-r7[static-libs(+)] )
+LIB_DEPEND="
+	dev-libs/popt[static-libs(+)]
+	ncurses? ( >=sys-libs/ncurses-5.7-r7:0=[static-libs(+)] )
 	kernel_linux? ( sys-apps/util-linux[static-libs(+)] )" # libuuid
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}
