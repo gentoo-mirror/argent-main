@@ -63,6 +63,7 @@ app-emulation/vagrant 1.4.3-r2 1.7.3: Tool for building and distributing virtual
 app-emulation/vagrant-bin 1.7.4: Tool for building and distributing virtual machines
 app-emulation/virtualbox 4.3.12 4.3.24 4.3.28: Family of powerful x86 virtualization products for enterprise as well as home use
 app-emulation/virtualbox-additions 4.3.12 4.3.28: CD image containing guest additions for VirtualBox
+app-emulation/virtualbox-bin 4.3.18.96516: Family of powerful x86 virtualization products for enterprise as well as home use
 app-emulation/virtualbox-extpack-oracle 4.3.12.93733 4.3.28.100309: PUEL extensions for VirtualBox
 app-emulation/virtualbox-modules 4.3.12 4.3.18 4.3.28: Kernel Modules for Virtualbox
 app-emulation/vmware-modules 304.2: VMware kernel modules
