@@ -867,12 +867,12 @@ sys-devel/ucpp 1.3 1.3.3 9999: A quick and light preprocessor, but anyway fully 
 sys-fs/btrfs-progs 3.14.2 3.16.2 3.17.3 3.18.2 3.19.1 4.0 4.0.1 4.1 4.1.2 4.2 4.2.2 4.3.1 9999: Btrfs filesystem utilities
 sys-fs/cryptsetup 1.6.2 1.6.5 1.6.6: Tool to setup encrypted devices with dm-crypt
 sys-fs/dmraid 1.0.0_rc14 1.0.0_rc15 1.0.0_rc16 1.0.0_rc16-r3 1.0.0_rc16-r4: Device-mapper RAID tool and library
-sys-fs/e2fsprogs 1.42.7 1.42.12: Standard EXT2/EXT3/EXT4 filesystem utilities
+sys-fs/e2fsprogs 1.42.7 1.42.12 1.42.13: Standard EXT2/EXT3/EXT4 filesystem utilities
 sys-fs/evms 2.5.5-r10: Utilities for the IBM Enterprise Volume Management System
-sys-fs/fuse 2.9.3: An interface for filesystems implemented in userspace
+sys-fs/fuse 2.9.3 2.9.4: An interface for filesystems implemented in userspace
 sys-fs/inotify-tools 3.13-r1 3.14: a set of command-line programs providing a simple interface to inotify
 sys-fs/lsscsi 0.25 0.26 0.27 0.28: SCSI sysfs query tool
-sys-fs/lvm2 2.02.103 2.02.109 2.02.109-r1 2.02.110: User-land utilities for LVM2 (device-mapper) software
+sys-fs/lvm2 2.02.103 2.02.109 2.02.109-r1 2.02.110 2.02.116-r4: User-land utilities for LVM2 (device-mapper) software
 sys-fs/mdadm 3.2.6-r1 3.3 3.3.1-r2 3.3.2 3.3.2-r1: A useful tool for running RAID systems - it can be used as a replacement for the raidtools
 sys-fs/mtools 4.0.15 4.0.16 4.0.17 4.0.18: utilities to access MS-DOS disks from Unix without mounting them
 sys-fs/ncdu 1.10 1.11: NCurses Disk Usage
@@ -881,9 +881,9 @@ sys-fs/squashfs-tools 3.2_p2 3.4 4.2 4.2-r1 4.2_p20140119 4.3: Tool for creating
 sys-fs/sshfs-fuse 2.4 2.5: Fuse-filesystem utilizing the sftp service
 sys-fs/sysfsutils 2.1.0: System Utilities Based on Sysfs
 sys-fs/xfsdump 3.1.3: xfs dump/restore utilities
-sys-fs/xfsprogs 3.1.10 3.1.11-r1 3.2.1 3.2.2 3.2.3: xfs filesystem utilities
+sys-fs/xfsprogs 3.1.10 3.1.11-r1 3.2.1 3.2.2 3.2.3 3.2.4: xfs filesystem utilities
 sys-fs/zfs 0.6.0_rc13-r2 0.6.0_rc14-r1 0.6.1-r4 0.6.2 0.6.2-r1 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r2 0.6.4 9999: Userland utilities for ZFS Linux kernel module
-sys-fs/zfs-kmod 0.6.0_rc13-r4 0.6.0_rc14-r5 0.6.1-r2 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r1 0.6.4 9999: Linux ZFS kernel module for sys-fs/zfs
+sys-fs/zfs-kmod 0.6.0_rc13-r4 0.6.0_rc14-r5 0.6.1-r2 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r1 0.6.4 0.6.5.4-r1 9999: Linux ZFS kernel module for sys-fs/zfs
 sys-kernel/genkernel 3.4.24-r1 3.4.32 3.4.33.1 3.4.41: Gentoo automatic kernel building scripts
 sys-kernel/genkernel-next 63: Gentoo automatic kernel building scripts, reloaded
 sys-kernel/linux-headers 3.12 3.14 3.18 4.0: Linux system headers
@@ -921,17 +921,17 @@ sys-power/yacpi 3.0.1: Yet Another Configuration and Power Interface
 sys-process/acct 6.5.5-r3: GNU system accounting utilities
 sys-process/at 3.1.13-r2: Queues jobs for later execution
 sys-process/audit 2.2.2-r2: Userspace utilities for storing and processing auditing records
-sys-process/criu 1.6: utility to checkpoint/restore a process tree
+sys-process/criu 1.6 1.8: utility to checkpoint/restore a process tree
 sys-process/cronbase 0.3.3: base for all cron ebuilds
 sys-process/dcron 4.5-r1: A cute little cron from Matt Dillon
 sys-process/htop 1.0.3: interactive process viewer
 sys-process/iotop 0.6: Top-like UI used to show which process is using the I/O
 sys-process/latencytop 0.5: tool for identifying where in the system latency is happening
-sys-process/lsof 4.85-r2 4.87-r1: Lists open files for running Unix processes
+sys-process/lsof 4.85-r2 4.87-r1 4.88-r1: Lists open files for running Unix processes
 sys-process/multiwatch 1.0.0-r1: multiwatch forks and watches multiple instances of a program
-sys-process/numactl 2.0.9: Utilities and libraries for NUMA systems
-sys-process/parallel 20140622 20141122: A shell tool for executing jobs in parallel locally or on remote machines
-sys-process/procps 3.3.8-r2 3.3.9-r2: standard informational utilities and process-handling tools
+sys-process/numactl 2.0.9 2.0.11: Utilities and libraries for NUMA systems
+sys-process/parallel 20140622 20141122 20150522: A shell tool for executing jobs in parallel locally or on remote machines
+sys-process/procps 3.3.8-r2 3.3.9-r2 3.3.10-r1: standard informational utilities and process-handling tools
 sys-process/psinfo 0.12: Process information and statistics using the kernel /proc interface
 sys-process/psmisc 22.20 22.21-r2: A set of tools that use the proc filesystem
 sys-process/schedtool 1.3.0-r1: A tool to query or alter a process' scheduling policy
