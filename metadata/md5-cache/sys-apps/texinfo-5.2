@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install
+DEPEND=!=app-text/tetex-2* >=sys-libs/ncurses-5.2-r2 dev-lang/perl dev-perl/libintl-perl dev-perl/Unicode-EastAsianWidth dev-perl/Text-Unidecode nls? ( virtual/libintl ) app-arch/xz-utils nls? ( sys-devel/gettext )
+DESCRIPTION=The GNU info program and utilities
+EAPI=4
+HOMEPAGE=https://www.gnu.org/software/texinfo/
+IUSE=nls static
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=!=app-text/tetex-2* >=sys-libs/ncurses-5.2-r2 dev-lang/perl dev-perl/libintl-perl dev-perl/Unicode-EastAsianWidth dev-perl/Text-Unidecode nls? ( virtual/libintl )
+SLOT=0
+SRC_URI=mirror://gnu/texinfo/texinfo-5.2.tar.xz
+_eclass_exported_funcs=src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=3ae6307b15a1ced40be06847cc5fcf56

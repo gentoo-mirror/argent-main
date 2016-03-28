@@ -367,7 +367,6 @@ dev-php/xcache 3.0.1: A fast and stable PHP opcode cacher
 dev-php/xdebug 2.2.3: A PHP debugging and profiling extension
 dev-php/xdebug-client 2.2.3: Xdebug client for the Common Debugger Protocol (DBGP).
 dev-python/bcdoc 0.12.2: Tools to help document botocore-based projects
-dev-python/beautifulsoup 4.2.0 4.3.2: Provides pythonic idioms for iterating, searching, and modifying an HTML/XML parse tree
 dev-python/boto 2.27.0 2.35.1: Amazon Web Services API
 dev-python/botocore 0.67.0: A low-level interface to a growing number of Amazon Web Services
 dev-python/chardet 2.2.1: Universal encoding detector
@@ -759,66 +758,69 @@ perl-core/net-ping 2.36: check a remote host for reachability
 perl-core/version 0.990.100: Perl extension for Version Objects
 sys-apps/ack 1.96: ack is a tool like grep, aimed at programmers with large trees of heterogeneous source code
 sys-apps/acl 2.2.51 2.2.52-r1: access control list utilities, libraries and headers
-sys-apps/attr 2.4.47-r1: Extended attributes tools
+sys-apps/attr 2.4.47-r1 2.4.47-r2: Extended attributes tools
+sys-apps/baselayout 2.2: Filesystem baselayout and init scripts
 sys-apps/baselayout-java 0.1.0: Baselayout for Java
-sys-apps/busybox 1.21.0 1.23.1-r1: Utilities for rescue and embedded systems
+sys-apps/busybox 1.21.0 1.23.1-r1 1.24.1: Utilities for rescue and embedded systems
 sys-apps/cciss_vol_status 1.10: Shows status of logical drives attached to HP SmartArray controllers
-sys-apps/coreutils 8.21: Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)
-sys-apps/dbus 1.6.18-r1 1.8.16: A message bus system, a simple way for applications to talk to each other
+sys-apps/coreutils 8.21 8.23: Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)
+sys-apps/dbus 1.6.18-r1 1.8.16 1.10.6: A message bus system, a simple way for applications to talk to each other
 sys-apps/debianutils 4.4: A selection of tools from Debian
 sys-apps/diffutils 3.3: Tools to make diffs and compare files
 sys-apps/dmapi 2.2.12 2.2.12-r1: XFS data management API library
 sys-apps/dmidecode 2.11 2.12-r1: DMI (Desktop Management Interface) table related utilities
 sys-apps/dstat 0.7.2-r1: Versatile replacement for vmstat, iostat and ifstat
 sys-apps/ed 1.6 1.10: Your basic line editor
+sys-apps/edac-utils 0.18: Userspace helper for Linux kernel EDAC drivers
 sys-apps/entropy 290 291 292 293 294 295 296 297: Entropy Package Manager foundation library
 sys-apps/entropy-server 290 291 292 293 294 295 296: Entropy Package Manager server-side tools
 sys-apps/ethtool 3.12.1 3.18: Utility for examining and tuning ethernet-based network interfaces
-sys-apps/file 5.17 5.22: identify a file's format by scanning binary data for patterns
-sys-apps/findutils 4.4.2-r1: GNU utilities for finding files
+sys-apps/file 5.22: identify a file's format by scanning binary data for patterns
+sys-apps/findutils 4.4.2-r1 4.6.0: GNU utilities for finding files
 sys-apps/gawk 4.0.2: GNU awk pattern-matching language
-sys-apps/gentoo-functions 0.3 0.8: base functions required by all gentoo systems
+sys-apps/gentoo-functions 0.3 0.8 0.10: base functions required by all gentoo systems
 sys-apps/gentoo-systemd-integration 2 4: systemd integration files for Gentoo
 sys-apps/gptfdisk 0.8.8 0.8.10: GPT partition table manipulator for Linux
 sys-apps/gradm 3.1.201506081912 3.1.201507041117 3.1.201507191652: Administrative interface for the grsecurity Role Based Access Control system
 sys-apps/grep 2.16 2.21-r1: GNU regular expression matcher
 sys-apps/groff 1.22.2: Text formatter used for man pages
 sys-apps/hdparm 9.39 9.45: Utility to change hard drive performance parameters
-sys-apps/help2man 1.43.3 1.45.1: GNU utility to convert program --help output to a man page
-sys-apps/hwids 20140317 20150129: Hardware (PCI, USB, OUI, IAB) IDs databases
+sys-apps/help2man 1.43.3 1.45.1 1.46.6: GNU utility to convert program --help output to a man page
+sys-apps/hwids 20140317 20150129 20150717-r1: Hardware (PCI, USB, OUI, IAB) IDs databases
 sys-apps/iostat 2.2: I/O performance monitoring utility
 sys-apps/ipmitool 1.8.14-r1: Utility for controlling IPMI enabled devices.
-sys-apps/iproute2 3.8.0 3.19.0: kernel routing and traffic control utilities
+sys-apps/iproute2 3.8.0 3.19.0 4.4.0: kernel routing and traffic control utilities
 sys-apps/irqbalance 1.0.6: Distribute hardware interrupts across processors on a multiprocessor system
 sys-apps/irqd 0.8.0 0.8.0-r1: IRQ balancing daemon
 sys-apps/kbd 1.15.5-r1: Keyboard and console utilities
-sys-apps/kmod 16 20: library and tools for managing linux kernel modules
-sys-apps/less 457 458: Excellent text file viewer
-sys-apps/lm_sensors 3.3.4-r1: Hardware Monitoring user-space utilities
+sys-apps/kmod 16 20 21: library and tools for managing linux kernel modules
+sys-apps/less 457 458 481: Excellent text file viewer
+sys-apps/lm_sensors 3.3.4-r1 3.3.5: Hardware Monitoring user-space utilities
 sys-apps/lsb-release 1.4: LSB version query program
 sys-apps/lshw 02.16b-r2: Hardware Lister
 sys-apps/magneto-core 290 291 292 293 294 295 296: Entropy Package Manager notification applet library
 sys-apps/makedev 3.23.1: program used for creating device files in /dev
 sys-apps/man 1.6g: Standard commands to read man pages
-sys-apps/man-pages 3.63 3.83: A somewhat comprehensive collection of Linux man pages
+sys-apps/man-pages 3.63 3.83 4.03: A somewhat comprehensive collection of Linux man pages
 sys-apps/man-pages-posix 2013a: POSIX man-pages (0p, 1p, 3p)
 sys-apps/memtest86+ 4.20-r1: Memory tester based on memtest86
 sys-apps/miscfiles 1.5-r1: Miscellaneous files
 sys-apps/most 5.0.0a 5.0.0a-r1: Paging program that displays, one windowful at a time, the contents of a file
-sys-apps/net-tools 1.60_p20130513023548: Standard Linux networking tools
+sys-apps/net-tools 1.60_p20130513023548 1.60_p20141019041918-r1: Standard Linux networking tools
+sys-apps/newrelic-sysmond 1.1.2.124: NewRelic System Monitor
 sys-apps/paxctl 0.7-r2: Manages various PaX related program header flags for Elf32, Elf64, binaries
-sys-apps/pciutils 3.2.0: Various utilities dealing with the PCI bus
-sys-apps/portage 2.2.8-r1 2.2.18: Portage is the package management and distribution system for Gentoo
+sys-apps/pciutils 3.2.0 3.3.1: Various utilities dealing with the PCI bus
+sys-apps/portage 2.2.8-r1 2.2.18 2.2.26: Portage is the package management and distribution system for Gentoo
 sys-apps/pv 1.5.2 1.6.0: Pipe Viewer: a tool for monitoring the progress of data through a pipe
 sys-apps/rigo-daemon 290 291 292 293 294 295 296 297 298 300: Entropy Client DBus Services, aka RigoDaemon
-sys-apps/sandbox 2.6-r1: sandbox'd LD_PRELOAD hack
+sys-apps/sandbox 2.6-r1 2.10-r1: sandbox'd LD_PRELOAD hack
 sys-apps/sed 4.2.1-r1: Super-useful stream editor
 sys-apps/shadow 4.1.5.1-r1: Utilities to deal with user accounts
-sys-apps/smartmontools 6.1 6.3: Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools
-sys-apps/systemd 212-r2 220-r2: System and service manager for Linux
+sys-apps/smartmontools 6.1 6.3 6.4: Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools
+sys-apps/systemd 212-r2 220-r2 226-r2: System and service manager for Linux
 sys-apps/sysvinit 2.88-r4: /sbin/init - parent of all processes
 sys-apps/tcp-wrappers 7.6.22-r1: TCP Wrappers
-sys-apps/texinfo 4.13-r2: The GNU info program and utilities
+sys-apps/texinfo 4.13-r2 5.2: The GNU info program and utilities
 sys-apps/the_silver_searcher 0.18 0.29.1: A code-searching tool similar to ack, but faster
 sys-apps/util-linux 2.22.2 2.26.2: Various useful Linux utilities
 sys-apps/vbetool 1.1: Run real-mode video BIOS code to alter hardware state (i.e. reinitialize video card)
@@ -882,7 +884,7 @@ sys-fs/sshfs-fuse 2.4 2.5: Fuse-filesystem utilizing the sftp service
 sys-fs/sysfsutils 2.1.0: System Utilities Based on Sysfs
 sys-fs/xfsdump 3.1.3: xfs dump/restore utilities
 sys-fs/xfsprogs 3.1.10 3.1.11-r1 3.2.1 3.2.2 3.2.3 3.2.4: xfs filesystem utilities
-sys-fs/zfs 0.6.0_rc13-r2 0.6.0_rc14-r1 0.6.1-r4 0.6.2 0.6.2-r1 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r2 0.6.4 9999: Userland utilities for ZFS Linux kernel module
+sys-fs/zfs 0.6.0_rc13-r2 0.6.0_rc14-r1 0.6.1-r4 0.6.2 0.6.2-r1 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r2 0.6.4 0.6.5.4-r2 9999: Userland utilities for ZFS Linux kernel module
 sys-fs/zfs-kmod 0.6.0_rc13-r4 0.6.0_rc14-r5 0.6.1-r2 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r1 0.6.4 0.6.5.4-r1 9999: Linux ZFS kernel module for sys-fs/zfs
 sys-kernel/genkernel 3.4.24-r1 3.4.32 3.4.33.1 3.4.41: Gentoo automatic kernel building scripts
 sys-kernel/genkernel-next 63: Gentoo automatic kernel building scripts, reloaded

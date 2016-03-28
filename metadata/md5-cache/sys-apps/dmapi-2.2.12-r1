@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=ftp://oss.sgi.com/projects/xfs/cmd_tars/dmapi-2.2.12.tar.gz ftp://oss.sgi.com/projects/xfs/previous/cmd_tars/dmapi-2.2.12.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:multilib-minimal src_compile:multilib-minimal src_test:multilib-minimal src_install:multilib-minimal
 _eclasses_=eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=9b3344fe65fe5352db91a5f4cf78fe45
+_md5_=7743a24d5efcae5ef2238d088b6d7523

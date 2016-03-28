@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=sys-fs/sysfsutils
+DESCRIPTION=Userspace helper for Linux kernel EDAC drivers
+EAPI=5
+HOMEPAGE=https://github.com/grondo/edac-utils
+IUSE=debug
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=sys-fs/sysfsutils sys-apps/dmidecode
+SLOT=0
+SRC_URI=https://github.com/grondo/edac-utils/archive/0.18.tar.gz -> edac-utils-0.18.tar.gz
+_eclass_exported_funcs=pkg_postinst:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_md5_=ce4e34b7e2cb298b8c77aea71ce72346
