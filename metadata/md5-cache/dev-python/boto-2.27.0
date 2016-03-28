@@ -1,14 +1,15 @@
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-python/setuptools[,] >=dev-lang/python-exec-2:=[,]
-DESCRIPTION=Universal encoding detector
+DESCRIPTION=Amazon Web Services API
 EAPI=5
-HOMEPAGE=https://github.com/chardet/chardet http://pypi.python.org/pypi/chardet
+HOMEPAGE=https://github.com/boto/boto http://pypi.python.org/pypi/boto
 KEYWORDS=amd64 x86
-LICENSE=LGPL-2.1
-RDEPEND=dev-python/setuptools[,] >=dev-lang/python-exec-2:=[,]
+LICENSE=MIT
+RDEPEND=>=dev-lang/python-exec-2:=[,]
 REQUIRED_USE=|| ( )
+RESTRICT=test
 SLOT=0
-SRC_URI=mirror://pypi/c/chardet/chardet-2.2.1.tar.gz
+SRC_URI=mirror://pypi/b/boto/boto-2.27.0.tar.gz
 _eclass_exported_funcs=src_prepare:distutils-r1 src_configure:distutils-r1 src_compile:distutils-r1 src_test:distutils-r1 src_install:distutils-r1
 _eclasses_=distutils-r1	7774d1d61db76cd7274009465deb8a05	eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	b2260f538a1876a2d39748673d00d5a1	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
-_md5_=468cbce623bb3c6a06ba43a89161132d
+_md5_=e1e46d454749a75d730e9bdf1e90c4d7
