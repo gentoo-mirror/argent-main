@@ -23,7 +23,7 @@ DESCRIPTION="A concurrent garbage collected and typesafe programming language"
 HOMEPAGE="http://www.golang.org"
 
 LICENSE="BSD"
-SLOT="0/${PV}"
+SLOT="1.5"
 IUSE=""
 
 DEPEND=">=dev-lang/go-bootstrap-1.4.1"
