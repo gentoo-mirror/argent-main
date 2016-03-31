@@ -160,6 +160,7 @@ pkg_setup() {
 src_prepare() {
 	# allow user patches (use sparingly - upstream won't support them)
 	epatch_user
+	epatch "${FILESDIR}"/${P}-service-patch.patch
 }
 
 src_compile() {
