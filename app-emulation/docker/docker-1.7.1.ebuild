@@ -61,7 +61,8 @@ RDEPEND="
 	)
 	aufs? (
 		|| (
-			>=sys-kernel/linux-argent-3.18
+			>=sys-kernel/linux-argent-3.18 
+			>=sys-kernel/linux-kogaion-3.14
 		)
 	)
 
