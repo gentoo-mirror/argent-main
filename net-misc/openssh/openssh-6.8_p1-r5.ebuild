@@ -121,7 +121,7 @@ src_prepare() {
 	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
 
 	epatch "${FILESDIR}"/${PN}-6.8_p1-sshd-gssapi-multihomed.patch #378361
-	epatch "${FILESDIR}"/${PN}-6.8_p1-CVE-2016-0777.patch
+	#epatch "${FILESDIR}"/${PN}-6.8_p1-CVE-2016-0777.patch
 	if use X509 ; then
 		pushd .. >/dev/null
 		epatch "${WORKDIR}"/${P}-x509-${X509_VER}-glue.patch
