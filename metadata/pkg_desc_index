@@ -670,7 +670,7 @@ net-misc/netctl 1.9: Profile based network connection tool from Arch Linux
 net-misc/netsniff-ng 0.5.4.2: high performance network sniffer for packet inspection
 net-misc/networkmanager-l2tp 0.9.8.7: NetworkManager L2TP plugin
 net-misc/ntp 4.2.6_p5-r10 4.2.8-r1: Network Time Protocol suite/programs
-net-misc/openssh 6.1_p1-r1 6.2_p1-r1 6.7_p1 6.8_p1-r5 7.1_p1-r3: Port of OpenBSD's free SSH release
+net-misc/openssh 6.1_p1-r1 6.2_p1-r1 6.7_p1 6.8_p1-r5 7.1_p1-r3 7.1_p2: Port of OpenBSD's free SSH release
 net-misc/openvpn 2.3.2 2.3.6: Robust and highly flexible tunneling application compatible with many OSes
 net-misc/pps-tools 0.0.20120407: User-space tools for LinuxPPS
 net-misc/pyload 0.4.9: A fast, lightweight and full featured download manager for many One-Click-Hosters.
