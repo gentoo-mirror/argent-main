@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/steveklabnik/request_store"
 
 LICENSE="MIT"
 SLOT="1.0.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_all_prepare() {
