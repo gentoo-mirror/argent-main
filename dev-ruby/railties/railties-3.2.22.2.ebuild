@@ -35,8 +35,8 @@ RESTRICT="test"
 RDEPEND+=">=app-eselect/eselect-rails-0.18"
 
 ruby_add_rdepend "
-	~dev-ruby/activesupport-${PV}
-	~dev-ruby/actionpack-${PV}
+	=dev-ruby/activesupport-${PV}
+	=dev-ruby/actionpack-${PV}
 	>=dev-ruby/rdoc-3.4
 	>=dev-ruby/thor-0.14.6
 	>=dev-ruby/rack-ssl-1.3.2:1.3

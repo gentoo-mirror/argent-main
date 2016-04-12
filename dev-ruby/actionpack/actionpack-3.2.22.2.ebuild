@@ -29,8 +29,8 @@ IUSE=""
 RUBY_S="rails-${PV}/${PN}"
 
 ruby_add_rdepend "
-	~dev-ruby/activemodel-${PV}
-	~dev-ruby/activesupport-${PV}
+	=dev-ruby/activemodel-${PV}
+	=dev-ruby/activesupport-${PV}
 	>=dev-ruby/rack-cache-1.2
 	>=dev-ruby/builder-3.0.0:3
 	>=dev-ruby/rack-1.4.5:1.4
