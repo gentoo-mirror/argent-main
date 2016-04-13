@@ -43,8 +43,8 @@ ruby_add_bdepend "
 	test? (
 		dev-ruby/mocha:0.13
 		dev-ruby/bundler
-		~dev-ruby/activerecord-${PV}
-		~dev-ruby/actionmailer-${PV}
+		=dev-ruby/activerecord-${PV}
+		=dev-ruby/actionmailer-${PV}
 		>=dev-ruby/tzinfo-0.3.29:0
 		>=dev-ruby/uglifier-1.0.3
 	)"
