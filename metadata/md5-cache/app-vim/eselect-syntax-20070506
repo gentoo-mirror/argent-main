@@ -9,5 +9,5 @@ RDEPEND=!<app-vim/gentoo-syntax-20070506 || ( >=app-editors/vim-7.3 >=app-editor
 SLOT=0
 SRC_URI=mirror://gentoo/eselect-syntax-20070506.tar.bz2
 _eclass_exported_funcs=pkg_postrm:vim-plugin pkg_postinst:vim-plugin src_install:vim-plugin
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	e7c0a43c6cdeb88ab420705047ea16b3
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	e7c0a43c6cdeb88ab420705047ea16b3
 _md5_=487da7c139c00abcb6dbab5a4c907f89

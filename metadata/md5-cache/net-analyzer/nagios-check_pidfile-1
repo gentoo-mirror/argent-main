@@ -9,5 +9,5 @@ RDEPEND=>=net-analyzer/nagios-plugins-1.4.13-r1
 SLOT=0
 SRC_URI=https://github.com/hollow/check_pidfile/archive/v1.tar.gz -> nagios-check_pidfile-1.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=f8cf176863753ed577af7cf997c65565

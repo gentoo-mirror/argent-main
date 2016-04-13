@@ -11,5 +11,5 @@ REQUIRED_USE=cpu_flags_x86_sse2? ( cpu_flags_x86_mmx ) cpu_flags_x86_ssse3? ( cp
 SLOT=0/2
 SRC_URI=http://storage.googleapis.com/downloads.webmproject.org/releases/webm/libvpx-1.4.0.tar.bz2 test? ( mirror://gentoo/libvpx-testdata-1.4.0.tar.bz2 )
 _eclass_exported_funcs=src_prepare:- src_configure:multilib-minimal src_compile:multilib-minimal src_test:multilib-minimal src_install:multilib-minimal
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=790ab5b15a967275413e387d63c80db5

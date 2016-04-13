@@ -11,5 +11,5 @@ REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://bpr.bluepink.ro:/~rogentos/argent/sys-apps/entropy-295.tar.bz2
 _eclass_exported_funcs=pkg_setup:python-single-r1 src_compile:- src_install:-
-_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=d48c034df50c3afd8d56c42c25e606eb

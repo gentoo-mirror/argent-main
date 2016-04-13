@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/perl-5.6.0:= dev-perl/TimeDate >=sys-libs/ncurses-5.2-r7 bzip
 SLOT=0
 SRC_URI=mirror://debian/pool/main/d/dpkg/dpkg_1.17.23.tar.xz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=0eac82e03e8682f79ddf11a907ad4f87

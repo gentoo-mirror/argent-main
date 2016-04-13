@@ -9,5 +9,5 @@ RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JP/JPEACOCK/version-0.9901.tar.gz
 _eclass_exported_funcs=pkg_postrm:perl-module pkg_postinst:perl-module src_unpack:perl-module src_prepare:perl-module src_configure:perl-module src_compile:perl-module src_test:perl-module src_install:perl-module
-_eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	unpacker	69f01f06e2ef674295e9fa69ddbef8af
 _md5_=9e3786c228930be6cf96f67125511f2a

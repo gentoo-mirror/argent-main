@@ -9,5 +9,5 @@ RDEPEND=>=dev-libs/boost-1.54.0 net-libs/libpcap
 SLOT=0
 SRC_URI=mirror://sourceforge/justniffer/justniffer/justniffer%200.5.12/justniffer_0.5.12.tar.gz -> justniffer-0.5.12.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:-
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=0303a9a9af82999c19d6db51a3697cd1

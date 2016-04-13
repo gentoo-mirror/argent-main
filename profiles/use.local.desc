@@ -269,7 +269,6 @@ dev-lang/ruby:jemalloc - Use dev-libs/jemalloc for memory allocation.
 dev-lang/ruby:rdoc - Install dev-ruby/rdoc after installing Ruby.
 dev-lang/ruby:readline - Use the sys-libs/readline library to provide the readline extension, used for instance by the irb tool. This flag is meaningful only if the libedit USE flag is disabled. If neither libedit nor readline USE flags are enabled, the readline extension will not be built (and irb will lose line editing functionality).
 dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
-dev-lang/ruby:yaml - Use the dev-libs/libyaml library to build the psych extension, available since Ruby 1.9.2_rc2, in alternative to the bundled syck-based parser.
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
 dev-libs/apr:older-kernels-compatibility - Enable binary compatibility with older kernels
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
@@ -881,6 +880,8 @@ sys-kernel/genkernel-next:gpg - Enable support for GPG (include gnupg dependency
 sys-kernel/genkernel-next:iscsi - Enable support for open-iscsi (include open-iscsi dependency)
 sys-kernel/genkernel-next:plymouth - Enable support for Plymouth (include Plymouth dependency)
 sys-kernel/spl:debug-log - Enable additional diagnostics
+sys-libs/binutils-libs:64-bit-bfd - Support 64-bit targets even on 32-bit hosts (is ignored on 64-bit hosts)
+sys-libs/binutils-libs:multitarget - Enable all possible targets in libbfd
 sys-libs/db:rpc - Enable rpc client/server
 sys-libs/freeipmi:nagios - Install a nagios plugin to check sensors' status.
 sys-libs/gdbm:berkdb - enable compatibility layer for UNIX-like dbm and ndbm interfaces

@@ -7,5 +7,5 @@ LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/cjlin1/liblinear/archive/v196.tar.gz -> liblinear-196.tar.gz
 _eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
-_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	4f47f875f316e40cca276c88423a4ffc
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=ab16be574f076b8240ebe38541f17cdd
