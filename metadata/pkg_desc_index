@@ -511,12 +511,11 @@ dev-util/source-highlight 3.1.7-r2: Generate highlighted source code as an (x)ht
 dev-util/strace 4.8: A useful diagnostic, instructional, and debugging tool
 dev-util/systemtap 2.4-r1: A linux trace/probe tool
 dev-util/valgrind 3.8.1 3.9.0: An open-source memory debugger for GNU/Linux
-dev-vcs/bzr 2.6.0: Bazaar is a next generation distributed version control system.
+dev-vcs/bzr 2.6.0 2.8.0: Bazaar is a next generation distributed version control system.
 dev-vcs/cvs 1.12.12-r6: Concurrent Versions System - source code revision control tools
 dev-vcs/cvsps 2.1-r1: Generates patchset information from a CVS repository
 dev-vcs/mercurial 2.8.2: Scalable distributed SCM
 dev-vcs/smartsvn 8.6.6: GUI to SVN with extensive merge support and commit wizard
-dev-vcs/subversion 1.7.14: Advanced version control system
 dev-vcs/tig 1.2.1: Tig: text mode interface for git
 gnome-base/librsvg 2.40.1-r1: Scalable Vector Graphics (SVG) rendering library
 mail-client/mailx 8.1.2.20050715-r6: The /bin/mail program, which is used to send mail via shell scripts

@@ -376,12 +376,6 @@ dev-vcs/cvs:server - Enable server support
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
-dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
-dev-vcs/subversion:dso - Enable runtime module search
-dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
-dev-vcs/subversion:http - Enable http support using net-libs/serf
-dev-vcs/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
-dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 gnome-base/librsvg:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/librsvg:vala - Enable bindings for dev-lang/vala
