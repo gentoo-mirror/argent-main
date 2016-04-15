@@ -5,10 +5,8 @@
 	<email>base-system@gentoo.org</email>
 	<name>Gentoo Base System</name>
 </maintainer>
-<use>
-	<flag name="minizip">include the minizip library for quick and dirty zip extraction</flag>
-</use>
-<upstream>
-	<remote-id type="cpe">cpe:/a:gnu:zlib</remote-id>
-</upstream>
+<maintainer type="project">
+	<email>x11@gentoo.org</email>
+	<name>X11</name>
+</maintainer>
 </pkgmetadata>

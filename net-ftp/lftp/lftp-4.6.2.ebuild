@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}ftp/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="amd64 x86"
 
 IUSE="convert-mozilla-cookies +gnutls idn nls openssl socks5 +ssl verify-file"
 LFTP_LINGUAS=( cs de es fr it ja ko pl pt_BR ru uk zh_CN zh_HK zh_TW )
