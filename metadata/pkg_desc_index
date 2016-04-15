@@ -901,17 +901,18 @@ sys-libs/glibc 2.17 2.19-r1 2.20-r2 2.21-r2: GNU libc6 (also called glibc2) C li
 sys-libs/gpm 1.20.7-r1 1.20.7-r2: Console-based mouse driver
 sys-libs/imx-lib 9999: IMX{31,51} System library
 sys-libs/libacpi 0.2: A general purpose library for ACPI
-sys-libs/libcap 2.22 2.22-r2: POSIX 1003.1e capabilities
-sys-libs/libcap-ng 0.7.4: POSIX 1003.1e capabilities
+sys-libs/libcap 2.22 2.22-r2 2.24-r2: POSIX 1003.1e capabilities
+sys-libs/libcap-ng 0.7.4 0.7.7: POSIX 1003.1e capabilities
 sys-libs/libstdc++-v3 3.3.6-r1: Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++
 sys-libs/libunwind 1.1: Portable and efficient API to determine the call-chain of a program
 sys-libs/libuser 0.56.16 0.60-r1: Implements a standardized interface for manipulating and administering user and group accounts
+sys-libs/libutempter 1.1.6-r1: Library that allows non-privileged apps to write utmp (login) info, which need root access
 sys-libs/ncurses 5.9-r2 5.9-r3 5.9-r5 5.9-r99: transitional package
 sys-libs/openipmi 2.0.18-r1: Library interface to IPMI
-sys-libs/pam 1.1.6-r2 1.1.8-r2: Linux-PAM (Pluggable Authentication Modules)
+sys-libs/pam 1.1.6-r2 1.1.8-r2 1.2.1: Linux-PAM (Pluggable Authentication Modules)
 sys-libs/readline 6.2_p1 6.3_p8-r2: Another cute console display library
 sys-libs/slang 2.2.4 2.2.4-r1: A multi-platform programmer's library designed to allow a developer to create robust software
-sys-libs/timezone-data 2013d 2015b: Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
+sys-libs/timezone-data 2013d 2015b 2015g: Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
 sys-libs/zlib 1.2.8-r1: Standard (de)compression library
 sys-power/acpi_call 1.0.0-r1: A kernel module that enables you to call ACPI methods
 sys-power/acpitool 0.5.1-r1: A small command line application, intended to be a replacement for the apm tool

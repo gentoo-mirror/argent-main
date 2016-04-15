@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst preinst prepare
+DESCRIPTION=Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
+EAPI=4
+HOMEPAGE=http://www.iana.org/time-zones http://www.twinsun.com/tz/tz-link.htm
+IUSE=nls leaps_timezone elibc_FreeBSD elibc_glibc
+KEYWORDS=amd64 x86
+LICENSE=BSD public-domain
+RDEPEND=!sys-libs/glibc[vanilla(+)]
+SLOT=0
+SRC_URI=http://www.iana.org/time-zones/repository/releases/tzdata2015g.tar.gz http://www.iana.org/time-zones/repository/releases/tzcode2015g.tar.gz
+_eclass_exported_funcs=pkg_preinst:- pkg_postinst:- src_prepare:- src_compile:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=58f93b6c27a0fdc2b4a871fe0e9a1a28
