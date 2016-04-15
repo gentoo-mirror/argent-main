@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -22,7 +22,7 @@ SRC_URI="https://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 x86 amd64-linux x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RUBY_S="rails-${PV}/${PN}"
@@ -44,7 +44,7 @@ ruby_add_bdepend "test? (
 
 # libxml is not strictly needed, there are tests using this code. jruby
 # uses a different xml implementation.
-USE_RUBY=${USE_RUBY/jruby/} ruby_add_bdepend "test? ( >=dev-ruby/libxml-2.0.0 )"
+ruby_add_bdepend "test? ( >=dev-ruby/libxml-2.0.0 )"
 
 all_ruby_prepare() {
 	# Set test environment to our hand.
@@ -54,22 +54,7 @@ all_ruby_prepare() {
 	# Make sure we use the test-unit gem since ruby18 does not provide
 	# all the test-unit features needed.
 	sed -i -e '1igem "test-unit"' test/abstract_unit.rb || die
-}
 
-each_ruby_prepare() {
-	case ${RUBY} in
-		*ruby18)
-			# Skip failing ruby18 tests related to JSON serialization
-			rm test/message_encryptor_test.rb test/message_verifier_test.rb || die
-			;;
-		*jruby)
-			# Ignore failing tests on jruby in the interest of a security update
-			sed -i -e '/test_not_allowed_to_expand_parameter_entities_to_files/,/^    end/ s:^:#:' \
-				-e '/test_exception_thrown_on_expansion_attack/,/^    end/ s:^:#:' \
-				test/xml_mini/jdom_engine_test.rb || die
-			sed -i \
-				-e '/test_exception_thrown_on_expansion_attack/,/^  end/ s:^:#:' \
-				test/xml_mini/nokogiri_engine_test.rb || die
-			;;
-	esac
+	# Avoid test requiring the "de" locale.
+	sed -i -e '/test_transliterate_should_work_with_custom_i18n_rules_and_uncomposed_utf8/,/^  end/ s:^:#:' test/transliterate_test.rb || die
 }
