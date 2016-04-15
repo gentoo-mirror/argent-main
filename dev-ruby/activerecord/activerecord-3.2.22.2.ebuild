@@ -26,8 +26,8 @@ IUSE="mysql postgres sqlite"
 
 RUBY_S="rails-${PV}/${PN}"
 
-ruby_add_rdepend "~dev-ruby/activesupport-${PV}
-	~dev-ruby/activemodel-${PV}
+ruby_add_rdepend "=dev-ruby/activesupport-${PV}
+	=dev-ruby/activemodel-${PV}
 	>=dev-ruby/arel-3.0.2:3.0
 	>=dev-ruby/tzinfo-0.3.29:0
 	sqlite? ( >=dev-ruby/sqlite3-1.3.5 )
@@ -37,7 +37,7 @@ ruby_add_rdepend "~dev-ruby/activesupport-${PV}
 ruby_add_bdepend "
 	test? (
 		dev-ruby/bundler
-		~dev-ruby/actionpack-${PV}
+		=dev-ruby/actionpack-${PV}
 		>=dev-ruby/sqlite3-1.3.5
 		dev-ruby/mocha:0.13
 	)"

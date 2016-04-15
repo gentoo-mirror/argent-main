@@ -25,7 +25,7 @@ IUSE=""
 
 RUBY_S="rails-${PV}/${PN}"
 
-ruby_add_rdepend "~dev-ruby/activesupport-${PV}
+ruby_add_rdepend "=dev-ruby/activesupport-${PV}
 	dev-ruby/builder:3"
 ruby_add_bdepend "
 	test? (

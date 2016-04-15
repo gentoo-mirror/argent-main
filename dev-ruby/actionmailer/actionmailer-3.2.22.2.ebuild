@@ -23,7 +23,7 @@ IUSE=""
 
 RUBY_S="rails-${PV}/${PN}"
 
-ruby_add_rdepend "~dev-ruby/actionpack-${PV}
+ruby_add_rdepend "=dev-ruby/actionpack-${PV}
 	>=dev-ruby/mail-2.5.4:2.5"
 ruby_add_bdepend "test? (
 	dev-ruby/bundler
