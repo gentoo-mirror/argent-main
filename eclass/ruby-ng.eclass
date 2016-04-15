@@ -1,5 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -19,6 +20,7 @@
 #  * ruby20 - Ruby (MRI) 2.0.x
 #  * ruby21 - Ruby (MRI) 2.1.x
 #  * ruby22 - Ruby (MRI) 2.2.x
+#  * ruby23 - Ruby (MRI) 2.3.x
 #  * ree18  - Ruby Enterprise Edition 1.8.x
 #  * jruby  - JRuby
 #  * rbx    - Rubinius
@@ -33,6 +35,7 @@
 #  * all_ruby_configure
 
 # @ECLASS-VARIABLE: USE_RUBY
+# @DEFAULT_UNSET
 # @REQUIRED
 # @DESCRIPTION:
 # This variable contains a space separated list of targets (see above) a package
@@ -71,7 +74,7 @@
 # (e.g. selenium's firefox driver extension). When set this argument is
 # passed to "grep -E" to remove reporting of these shared objects.
 
-inherit eutils java-utils-2 multilib toolchain-funcs
+inherit eutils java-utils-2 multilib toolchain-funcs ruby-utils
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_install pkg_setup
 
@@ -98,46 +101,7 @@ esac
 # Set `comparator' and `version' to include a comparator (=, >=, etc.) and a
 # version string to the returned string
 ruby_implementation_depend() {
-	local rubypn=
-	local rubyslot=
-
-	case $1 in
-		ruby18)
-			rubypn="dev-lang/ruby"
-			rubyslot=":1.8"
-			;;
-		ruby19)
-			rubypn="dev-lang/ruby"
-			rubyslot=":1.9"
-			;;
-		ruby20)
-			rubypn="dev-lang/ruby"
-			rubyslot=":2.0"
-			;;
-		ruby21)
-			rubypn="dev-lang/ruby"
-			rubyslot=":2.1"
-			;;
-		ruby22)
-			rubypn="dev-lang/ruby"
-			rubyslot=":2.2"
-			;;
-		ree18)
-			rubypn="dev-lang/ruby-enterprise"
-			rubyslot=":1.8"
-			;;
-		jruby)
-			rubypn="dev-java/jruby"
-			rubyslot=""
-			;;
-		rbx)
-			rubypn="dev-lang/rubinius"
-			rubyslot=""
-			;;
-		*) die "$1: unknown Ruby implementation"
-	esac
-
-	echo "$2${rubypn}$3${rubyslot}"
+	_ruby_implementation_depend $1
 }
 
 # @FUNCTION: ruby_samelib
@@ -339,7 +303,7 @@ _ruby_invoke_environment() {
 	old_S=${S}
 	case ${EAPI} in
 		4|5)
-			if [ -z ${RUBY_S} ]; then
+			if [ -z "${RUBY_S}" ]; then
 				sub_S=${P}
 			else
 				sub_S=${RUBY_S}
@@ -353,7 +317,7 @@ _ruby_invoke_environment() {
 	# Special case, for the always-lovely GitHub fetches. With this,
 	# we allow the star glob to just expand to whatever directory it's
 	# called.
-	if [[ ${sub_S} = *"*"* ]]; then
+	if [[ "${sub_S}" = *"*"* ]]; then
 		case ${EAPI} in
 			2|3)
 				#The old method of setting S depends on undefined package
@@ -361,9 +325,9 @@ _ruby_invoke_environment() {
 				eqawarn "Using * expansion of S is deprecated. Use EAPI and RUBY_S instead."
 				;;
 		esac
-		pushd "${WORKDIR}"/all &>/dev/null
-		sub_S=$(eval ls -d ${sub_S} 2>/dev/null)
-		popd &>/dev/null
+		pushd "${WORKDIR}"/all &>/dev/null || die
+		sub_S=$(eval ls -d "${sub_S}" 2>/dev/null)
+		popd &>/dev/null || die
 	fi
 
 	environment=$1; shift
@@ -372,16 +336,16 @@ _ruby_invoke_environment() {
 	S="${my_WORKDIR}"/"${sub_S}"
 
 	if [[ -d "${S}" ]]; then
-		pushd "$S" &>/dev/null
+		pushd "$S" &>/dev/null || die
 	elif [[ -d "${my_WORKDIR}" ]]; then
-		pushd "${my_WORKDIR}" &>/dev/null
+		pushd "${my_WORKDIR}" &>/dev/null || die
 	else
-		pushd "${WORKDIR}" &>/dev/null
+		pushd "${WORKDIR}" &>/dev/null || die
 	fi
 
 	ebegin "Running ${_PHASE:-${EBUILD_PHASE}} phase for $environment"
 	"$@"
-	popd &>/dev/null
+	popd &>/dev/null || die
 
 	S=${old_S}
 }
@@ -406,7 +370,7 @@ _ruby_each_implementation() {
 		eerror "You need to select at least one compatible Ruby installation target via RUBY_TARGETS in make.conf."
 		eerror "Compatible targets for this package are: ${USE_RUBY}"
 		eerror
-		eerror "See http://www.gentoo.org/proj/en/prog_lang/ruby/index.xml#doc_chap3 for more information."
+		eerror "See https://www.gentoo.org/proj/en/prog_lang/ruby/index.xml#doc_chap3 for more information."
 		eerror
 		die "No compatible Ruby target selected."
 	fi
@@ -429,7 +393,7 @@ ruby-ng_pkg_setup() {
 # Unpack the source archive.
 ruby-ng_src_unpack() {
 	mkdir "${WORKDIR}"/all
-	pushd "${WORKDIR}"/all &>/dev/null
+	pushd "${WORKDIR}"/all &>/dev/null || die
 
 	# We don't support an each-unpack, it's either all or nothing!
 	if type all_ruby_unpack &>/dev/null; then
@@ -438,7 +402,7 @@ ruby-ng_src_unpack() {
 		[[ -n ${A} ]] && unpack ${A}
 	fi
 
-	popd &>/dev/null
+	popd &>/dev/null || die
 }
 
 _ruby_apply_patches() {
