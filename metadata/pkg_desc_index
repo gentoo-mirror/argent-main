@@ -421,6 +421,7 @@ dev-qt/qtscript 4.8.5: The QtScript module for the Qt toolkit
 dev-ruby/abstract 1.0.0-r2: Library which enable you to define abstract method in Ruby.
 dev-ruby/actionmailer 3.2.22.1 3.2.22.2 4.0.13 4.1.15 4.2.5.2: Framework for designing email-service layers
 dev-ruby/actionpack 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Eases web-request routing, handling, and response
+dev-ruby/activemodel 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Toolkit for building modeling frameworks like Active Record and Active Resource
 dev-ruby/activerecord 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Implements the ActiveRecord pattern (Fowler, PoEAA) for ORM
 dev-ruby/activeresource 3.2.22.1 3.2.22.2 4.0.0: Think Active Record for web resources
 dev-ruby/activesupport 3.2.22.1 3.2.22.2 4.0.13-r1 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Utility Classes and Extension to the Standard Library
@@ -470,6 +471,7 @@ dev-ruby/railties 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.
 dev-ruby/rake 0.9.6: Make-like scripting in Ruby
 dev-ruby/rake-compiler 0.9.2: Provide a standard and simplified way to build and package Ruby extensions
 dev-ruby/rbpdf 1.19.0: Ruby on Rails RBPDF plugin
+dev-ruby/rbpdf-font 1.19.0: Font files for the Ruby on Rails RBPDF plugin
 dev-ruby/rdoc 4.0.1-r1: An extended version of the RDoc library from Ruby 1.8
 dev-ruby/request_store 1.0.5 1.3.0 1.3.1: Per-request global storage for Rack
 dev-ruby/rest-client 1.6.7-r1: Simple Simple HTTP and REST client for Ruby
