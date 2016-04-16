@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>ruby</herd>
   <upstream>
-    <remote-id type="github">svenfuchs/i18n</remote-id>
+    <remote-id type="github">rafaelfranca/rails-html-sanitizer</remote-id>
   </upstream>
 </pkgmetadata>

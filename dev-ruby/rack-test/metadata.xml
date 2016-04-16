@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>ruby</herd>
   <upstream>
-    <remote-id type="github">svenfuchs/i18n</remote-id>
+    <remote-id type="github">brynary/rack-test</remote-id>
   </upstream>
 </pkgmetadata>
