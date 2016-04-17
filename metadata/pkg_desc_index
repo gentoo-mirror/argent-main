@@ -433,6 +433,7 @@ dev-ruby/builder 3.0.4: A builder to facilitate programatic generation of XML ma
 dev-ruby/bundler 1.8.9 1.9.10 1.10.6 1.11.2: An easy way to vendor gem dependencies
 dev-ruby/chef-zero 2.0.2: Self-contained, easy-setup, fast-start in-memory Chef server for testing and solo setup purposes
 dev-ruby/childprocess 0.5.1: A simple and reliable solution for controlling external programs running in the background.
+dev-ruby/coderay 1.1.0-r1 1.1.0-r2 1.1.1: A Ruby library for syntax highlighting
 dev-ruby/coffee-rails 3.2.2 4.0.1 4.1.0 4.1.1 4.1.1-r1: Coffee Script adapter for the Rails asset pipeline
 dev-ruby/diff-lcs 1.2.5: Use the McIlroy-Hunt LCS algorithm to compute differences
 dev-ruby/erubis 2.7.0-r1: Erubis is an implementation of eRuby
