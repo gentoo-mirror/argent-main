@@ -895,7 +895,6 @@ sys-devel/binutils 2.21.1-r1 2.22-r1 2.23.2 2.24-r3 2.25 9999: Tools necessary t
 sys-devel/binutils-config 1.9-r4 2-r1 3-r3 4-r1 4-r2: Utility to change the binutils version being used
 sys-devel/bison 2.4.3: A yacc-compatible parser generator
 sys-devel/flex 2.5.37: The Fast Lexical Analyzer
-sys-devel/gcc 4.5.3-r2 4.6.2 4.6.3 4.7.2 4.8.3: The GNU Compiler Collection
 sys-devel/gdb 7.6.2: GNU debugger
 sys-devel/gettext 0.18.3.2: GNU locale utilities
 sys-devel/gnuconfig 20131128: Updated config.sub and config.guess file from GNU

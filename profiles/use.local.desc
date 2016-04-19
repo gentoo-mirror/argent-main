@@ -802,42 +802,8 @@ sys-cluster/drbd:pacemaker - Enable Pacemaker integration
 sys-cluster/drbd:xen - Enable Xen integration
 sys-devel/autoconf:multislot - Allow for multiple versions to be installed at once
 sys-devel/autogen:libopts - install the libopts tarball (a few packages want this for developing)
-sys-devel/base-gcc:d - Enable support for the D programming language
-sys-devel/base-gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
-sys-devel/base-gcc:go - Build the GCC Go language frontend.
-sys-devel/base-gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
-sys-devel/base-gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
-sys-devel/base-gcc:ip32r10k - Enable building a compiler capable of building an experimental kernel for SGI O2 w/ R1x000 CPUs (IP32)
-sys-devel/base-gcc:libffi - Build the portable foreign function interface library
-sys-devel/base-gcc:lto - Add support for link-time optimizations (unsupported, use at your own risk).
-sys-devel/base-gcc:mudflap - Add support for mudflap, a pointer use checking library
-sys-devel/base-gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
-sys-devel/base-gcc:n32 - Enable n32 ABI support on mips
-sys-devel/base-gcc:n64 - Enable n64 ABI support on mips
-sys-devel/base-gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
-sys-devel/base-gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
-sys-devel/base-gcc:objc - Build support for the Objective C code language
-sys-devel/base-gcc:objc++ - Build support for the Objective C++ language
-sys-devel/base-gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
-sys-devel/gcc:d - Enable support for the D programming language
-sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
-sys-devel/gcc:go - Build the GCC Go language frontend.
-sys-devel/gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
-sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
-sys-devel/gcc:ip32r10k - Enable building a compiler capable of building an experimental kernel for SGI O2 w/ R1x000 CPUs (IP32)
-sys-devel/gcc:libffi - Build the portable foreign function interface library
-sys-devel/gcc:lto - Add support for link-time optimizations (unsupported, use at your own risk).
-sys-devel/gcc:mudflap - Add support for mudflap, a pointer use checking library
-sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
-sys-devel/gcc:n32 - Enable n32 ABI support on mips
-sys-devel/gcc:n64 - Enable n64 ABI support on mips
-sys-devel/gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
-sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
-sys-devel/gcc:objc - Build support for the Objective C code language
-sys-devel/gcc:objc++ - Build support for the Objective C++ language
-sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/gdb:client - Install the main "gdb" program (most people want this)
 sys-devel/gdb:lzma - Support lzma compression in ELF debug info
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
