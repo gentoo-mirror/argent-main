@@ -118,7 +118,4 @@ src_install() {
 
 	systemd_newunit "${FILESDIR}/apache2.2.service" "apache2.service"
 	systemd_dotmpfilesd "${FILESDIR}/apache.conf"
-
-	dodir /var/run/apache2
-	fperms root:apache /var/run/apache2
 }

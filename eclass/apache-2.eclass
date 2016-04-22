@@ -589,6 +589,22 @@ apache-2_pkg_postinst() {
 	elog "In general, you should use 'cgid' with threaded MPMs and 'cgi' otherwise."
 	echo
 
+    if [ ! -d "${ROOT}"/var/run/${PN}d/ ]; then
+        mkdir -p /var/run/${PN}d || die "Could not create apache var run directory"
+        chown apache:root ${ROOT}/var/run/${PN}d/ || die "Could not chown the directory"
+    else
+        ewarn "Directory is already created, but it needs permission"
+        ewarn "Run the following: chown apache:root ${ROOT}/var/run/apache"
+    fi
+
+    if [ ! -f "${ROOT}"/var/run/${PN}d/${PN}d.err ] && [ -d "${ROOT}"/var/run/${PN}d/ ]; then
+        touch ${ROOT}/var/run/${PN}d/${PN}d.err || die "Could not create file ${PN}d.err"
+        chown apache:root /var/run/${PN}d/${PN}d.err || die "Could not assign permissions"
+    else
+        ewarn "File ${PN}.err already exists."
+        ewarn "Please consider the right permissions"
+        chown apache:root /var/run/${PN}d/${PN}d.err || die "Could not assign permissions"
+    fi
 }
 
 EXPORT_FUNCTIONS pkg_setup src_prepare src_configure src_install pkg_postinst
