@@ -51,7 +51,7 @@ src_install() {
 	emake install DESTDIR="${D}" EMACS=: ELISP=""
 
 	dosym libgpm.so.1 /usr/$(get_libdir)/libgpm.so
-	gen_usr_ldscript -a gpm
+	multilib_is_native_abi && gen_usr_ldscript -a gpm
 
 	insinto /etc/gpm
 	doins conf/gpm-*.conf
