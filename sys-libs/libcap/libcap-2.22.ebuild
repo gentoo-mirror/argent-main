@@ -41,7 +41,7 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 
-	gen_usr_ldscript -a cap
+	multilib_is_native_abi && gen_usr_ldscript -a cap
 
 	rm -rf "${D}"/usr/$(get_libdir)/security
 	dopammod pam_cap/pam_cap.so
