@@ -988,7 +988,7 @@ virtual/editor 0: Virtual for editor
 virtual/fortran 0: Virtual for Fortran Compiler
 virtual/httpd-cgi 0-r2: Virtual for CGI-enabled webservers
 virtual/httpd-fastcgi 0-r1: Virtual for FastCGI-enabled webservers
-virtual/httpd-php 5.3 5.4-r1: Virtual to provide PHP-enabled webservers
+virtual/httpd-php 5.3 5.4-r1 5.6: Virtual to provide PHP-enabled webservers
 virtual/imap-c-client 1: Virtual for IMAP c-client
 virtual/init 0: Virtual for various init implementations
 virtual/jdk 1.7.0 1.8.0: Virtual for Java Development Kit (JDK)
