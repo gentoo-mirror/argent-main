@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DEPEND=|| ( sys-devel/bison dev-util/byacc dev-util/yacc )
-DESCRIPTION=virtual for yacc (yet another compiler compiler)
-EAPI=0
-KEYWORDS=amd64 x86
-RDEPEND=|| ( sys-devel/bison dev-util/byacc dev-util/yacc )
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=e525d5e874fe23ff1471846859dbf234

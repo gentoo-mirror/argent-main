@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for system loggers
-EAPI=3
-KEYWORDS=amd64 x86
-RDEPEND=sys-apps/systemd
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=536e2c9d4582200686824cd1e4cb5bb9

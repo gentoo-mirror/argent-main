@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for IMAP c-client
-EAPI=3
-IUSE=ssl
-KEYWORDS=amd64 x86
-RDEPEND=|| ( net-libs/c-client[ssl=] net-mail/uw-imap[ssl=] )
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=f9e047a563ae5ff51574f7001ceba714

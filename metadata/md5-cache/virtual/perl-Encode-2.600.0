@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Encode
-EAPI=5
-KEYWORDS=amd64 x86
-RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Encode-2.600.0 ) !<perl-core/Encode-2.600.0 !>perl-core/Encode-2.600.0-r999
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=7c3b6dabce64149f3b166a000a9f74ec

@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for utilities to manage Linux kernel modules
-EAPI=5
-KEYWORDS=amd64 x86
-RDEPEND=|| ( sys-apps/kmod[tools] sys-apps/modutils )
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=0a63d6af3156b75cfb252da73209c639
