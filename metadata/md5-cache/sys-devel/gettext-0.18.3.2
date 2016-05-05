@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test
+DEPEND=virtual/libiconv[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] dev-libs/libxml2 dev-libs/expat acl? ( virtual/acl ) ncurses? ( sys-libs/ncurses ) java? ( >=virtual/jdk-1.4 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=GNU locale utilities
+EAPI=4
+HOMEPAGE=http://www.gnu.org/software/gettext/
+IUSE=acl -cvs doc emacs git java nls +cxx ncurses openmp static-libs elibc_glibc elibc_FreeBSD java abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
+KEYWORDS=amd64 x86
+LICENSE=GPL-3 LGPL-2
+PDEPEND=emacs? ( app-emacs/po-mode )
+RDEPEND=virtual/libiconv[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] dev-libs/libxml2 dev-libs/expat acl? ( virtual/acl ) ncurses? ( sys-libs/ncurses ) java? ( >=virtual/jdk-1.4 ) !git? ( cvs? ( dev-vcs/cvs ) ) git? ( dev-vcs/git ) java? ( >=virtual/jre-1.4 ) abi_x86_32? ( !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] !<=app-emulation/emul-linux-x86-baselibs-20131008-r11 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0
+SRC_URI=mirror://gnu/gettext/gettext-0.18.3.2.tar.gz
+_eclass_exported_funcs=pkg_preinst:- pkg_postinst:- pkg_setup:java-pkg-opt-2 src_prepare:- src_configure:multilib-minimal src_compile:multilib-minimal src_test:multilib-minimal src_install:multilib-minimal
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	java-pkg-opt-2	a056db0f9539f49b701a9f27982a950b	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	libtool	5ae04d20c1cf910b68ff3586f20cced7	mono-env	1f24c032c78290b0d9a07d5b343051a7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=41776925bceaca9bfcb225a2f7456c9e

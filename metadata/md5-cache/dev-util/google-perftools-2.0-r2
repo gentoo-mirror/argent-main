@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sys-libs/libunwind
+DESCRIPTION=Fast, multi-threaded malloc() and nifty performance analysis tools
+EAPI=5
+HOMEPAGE=http://code.google.com/p/gperftools/
+IUSE=largepages +debug minimal test static-libs
+KEYWORDS=-* amd64
+LICENSE=MIT
+RDEPEND=sys-libs/libunwind
+SLOT=0/4
+SRC_URI=http://gperftools.googlecode.com/files/gperftools-2.0.tar.gz
+_eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_compile:autotools-utils src_test:- src_install:autotools-utils
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=7e3f4f86773d95be79a44a04e37b8c83

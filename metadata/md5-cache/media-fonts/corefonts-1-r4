@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup unpack
+DEPEND=app-arch/cabextract X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=Microsoft's TrueType core fonts
+EAPI=0
+HOMEPAGE=http://corefonts.sourceforge.net/
+IUSE=X X
+KEYWORDS=amd64 x86
+LICENSE=MSttfEULA
+SLOT=0
+SRC_URI=mirror://sourceforge/corefonts/andale32.exe mirror://sourceforge/corefonts/arial32.exe mirror://sourceforge/corefonts/arialb32.exe mirror://sourceforge/corefonts/comic32.exe mirror://sourceforge/corefonts/courie32.exe mirror://sourceforge/corefonts/georgi32.exe mirror://sourceforge/corefonts/impact32.exe mirror://sourceforge/corefonts/times32.exe mirror://sourceforge/corefonts/trebuc32.exe mirror://sourceforge/corefonts/verdan32.exe mirror://sourceforge/corefonts/webdin32.exe
+_eclass_exported_funcs=pkg_postrm:font pkg_postinst:font pkg_setup:font src_unpack:- src_install:font
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	font	82836641e7d4639329d8c195234ad0e3	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=e15ae79179ed389472327c24d827924d

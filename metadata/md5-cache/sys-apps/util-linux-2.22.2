@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=!sys-process/schedutils !sys-apps/setarch !<sys-apps/sysvinit-2.88-r4 !sys-block/eject !<sys-libs/e2fsprogs-libs-1.41.8 !<sys-fs/e2fsprogs-1.41.8 cramfs? ( sys-libs/zlib ) ncurses? ( >=sys-libs/ncurses-5.2-r2 ) perl? ( dev-lang/perl ) selinux? ( sys-libs/libselinux ) slang? ( sys-libs/slang ) udev? ( virtual/udev ) nls? ( sys-devel/gettext ) test? ( sys-devel/bc ) virtual/os-headers
+DESCRIPTION=Various useful Linux utilities
+EAPI=3
+HOMEPAGE=http://www.kernel.org/pub/linux/utils/util-linux/
+IUSE=+cramfs crypt ddate ncurses nls old-linux perl selinux slang static-libs +suid test udev unicode
+KEYWORDS=amd64 x86
+LICENSE=GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain
+RDEPEND=!sys-process/schedutils !sys-apps/setarch !<sys-apps/sysvinit-2.88-r4 !sys-block/eject !<sys-libs/e2fsprogs-libs-1.41.8 !<sys-fs/e2fsprogs-1.41.8 cramfs? ( sys-libs/zlib ) ncurses? ( >=sys-libs/ncurses-5.2-r2 ) perl? ( dev-lang/perl ) selinux? ( sys-libs/libselinux ) slang? ( sys-libs/slang ) udev? ( virtual/udev )
+SLOT=0
+SRC_URI=mirror://kernel/linux/utils/util-linux/v2.22/util-linux-2.22.2.tar.xz
+_eclass_exported_funcs=pkg_postinst:- src_prepare:- src_configure:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=b96b37215019e0bafc5d415047b86db6

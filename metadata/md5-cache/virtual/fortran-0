@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DEPEND=|| ( sys-devel/gcc[fortran,openmp?] sys-devel/gcc-apple[fortran,openmp?] dev-lang/ekopath dev-lang/ifc dev-lang/path64[openmp?] )
+DESCRIPTION=Virtual for Fortran Compiler
+EAPI=4
+IUSE=openmp
+KEYWORDS=amd64 x86
+RDEPEND=|| ( sys-devel/gcc[fortran,openmp?] sys-devel/gcc-apple[fortran,openmp?] dev-lang/ekopath dev-lang/ifc dev-lang/path64[openmp?] )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=384239e741ed8892c9b7d96b5859fba2

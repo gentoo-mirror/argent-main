@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for version
+EAPI=0
+KEYWORDS=amd64 x86
+RDEPEND=~perl-core/version-0.990.100
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=05e6333655540b2267c6d586434aa148

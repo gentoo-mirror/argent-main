@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=fontconfig? ( media-libs/fontconfig ) jpeg? ( virtual/jpeg:0 ) png? ( >=media-libs/libpng-1.2:0 ) truetype? ( >=media-libs/freetype-2.1.5 ) xpm? ( x11-libs/libXpm x11-libs/libXt ) zlib? ( sys-libs/zlib ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A graphics library for fast image creation
+EAPI=2
+HOMEPAGE=http://libgd.org/ http://www.boutell.com/gd/
+IUSE=fontconfig jpeg png static-libs truetype xpm zlib
+KEYWORDS=amd64 x86
+LICENSE=gd IJG HPND BSD
+RDEPEND=fontconfig? ( media-libs/fontconfig ) jpeg? ( virtual/jpeg:0 ) png? ( >=media-libs/libpng-1.2:0 ) truetype? ( >=media-libs/freetype-2.1.5 ) xpm? ( x11-libs/libXpm x11-libs/libXt ) zlib? ( sys-libs/zlib )
+SLOT=2
+SRC_URI=http://libgd.org/releases/gd-2.0.35.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=0e9b574debc5a56e6b8e5cce1269617e

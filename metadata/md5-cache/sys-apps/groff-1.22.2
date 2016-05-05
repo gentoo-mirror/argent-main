@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=X? ( x11-libs/libX11 x11-libs/libXt x11-libs/libXmu x11-libs/libXaw x11-libs/libSM x11-libs/libICE ) linguas_ja? ( virtual/yacc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Text formatter used for man pages
+EAPI=4
+HOMEPAGE=https://www.gnu.org/software/groff/groff.html
+IUSE=examples X linguas_ja
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=X? ( x11-libs/libX11 x11-libs/libXt x11-libs/libXmu x11-libs/libXaw x11-libs/libSM x11-libs/libICE )
+SLOT=0
+SRC_URI=mirror://gnu/groff/groff-1.22.2.tar.gz linguas_ja? ( https://dev.gentoo.org/~naota/patch/groff-1.22.1-japanese.patch.bz2 )
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=828cf7ba7cf93c15e6fb2afe5631b0b2

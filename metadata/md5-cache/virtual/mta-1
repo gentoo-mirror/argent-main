@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Message Transfer Agents
+EAPI=4
+KEYWORDS=amd64 x86
+RDEPEND=|| ( mail-mta/nullmailer mail-mta/msmtp[mta] mail-mta/ssmtp[mta] mail-mta/courier mail-mta/esmtp mail-mta/exim mail-mta/mini-qmail mail-mta/netqmail mail-mta/postfix mail-mta/qmail-ldap mail-mta/sendmail mail-mta/opensmtpd mail-mta/citadel[-postfix] )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=97a0ad691368e1587a83f0610567c018

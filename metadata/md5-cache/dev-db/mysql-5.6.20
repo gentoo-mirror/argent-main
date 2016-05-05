@@ -1,0 +1,16 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) ssl? ( >=dev-libs/openssl-0.9.6d:0 ) kernel_linux? ( sys-process/procps ) >=sys-apps/sed-4 >=sys-apps/texinfo-4.7-r1 >=sys-libs/zlib-1.2.3 dev-libs/libedit !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster jemalloc? ( dev-libs/jemalloc[static-libs?] ) tcmalloc? ( dev-util/google-perftools ) >=sys-libs/zlib-1.2.3[static-libs?] ssl? ( >=dev-libs/openssl-0.9.6d[static-libs?] ) systemtap? ( >=dev-util/systemtap-1.3 ) kernel_linux? ( dev-libs/libaio ) virtual/yacc static? ( sys-libs/ncurses[static-libs] ) >=dev-util/cmake-2.4.3 >=dev-util/cmake-2.6.3
+DESCRIPTION=A fast, multi-threaded, multi-user SQL database server
+EAPI=5
+HOMEPAGE=http://www.mysql.com/
+IUSE=debug embedded minimal +perl selinux ssl static static-libs test latin1 extraengine cluster max-idx-128 +community profiling jemalloc tcmalloc systemtap
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+PDEPEND=perl? ( >=dev-perl/DBD-mysql-2.9004 ) ~virtual/mysql-5.6
+RDEPEND=ssl? ( >=dev-libs/openssl-0.9.6d:0 ) kernel_linux? ( sys-process/procps ) >=sys-apps/sed-4 >=sys-apps/texinfo-4.7-r1 >=sys-libs/zlib-1.2.3 dev-libs/libedit !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster jemalloc? ( dev-libs/jemalloc[static-libs?] ) tcmalloc? ( dev-util/google-perftools ) >=sys-libs/zlib-1.2.3[static-libs?] ssl? ( >=dev-libs/openssl-0.9.6d[static-libs?] ) systemtap? ( >=dev-util/systemtap-1.3 ) kernel_linux? ( dev-libs/libaio ) selinux? ( sec-policy/selinux-mysql )
+REQUIRED_USE=tcmalloc? ( !jemalloc ) jemalloc? ( !tcmalloc ) minimal? ( !cluster !extraengine !embedded ) static? ( !ssl )
+SLOT=0
+SRC_URI=http://downloads.mysql.com/archives/mysql-5.6/mysql-5.6.20.tar.gz https://downloads.skysql.com/files/mysql-5.6/mysql-5.6.20.tar.gz mirror://mysql/Downloads/MySQL-5.6/mysql-5.6.20.tar.gz mirror://gentoo/mysql-extras-20140801-1950Z.tar.bz2 http://g3nt8.org/patches/mysql-extras-20140801-1950Z.tar.bz2 https://dev.gentoo.org/~robbat2/distfiles/mysql-extras-20140801-1950Z.tar.bz2 https://dev.gentoo.org/~jmbsvicetto/distfiles/mysql-extras-20140801-1950Z.tar.bz2 https://dev.gentoo.org/~grknight/distfiles/mysql-extras-20140801-1950Z.tar.bz2
+_eclass_exported_funcs=pkg_preinst:mysql-v2 pkg_postrm:mysql-v2 pkg_postinst:mysql-v2 pkg_setup:mysql-v2 src_unpack:mysql-v2 src_prepare:mysql-v2 src_configure:mysql-v2 src_compile:mysql-v2 src_test:- src_install:mysql-v2
+_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	mysql-cmake	3f6ffc12a798037a17c82fe978c44b60	mysql-v2	7bcad207a9e4faeef028c8b1e640a26c	mysql_fx	198902d1634b4462a8070f8c933df0e8	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=a3ae9d54ef76fe97135ae94332903563

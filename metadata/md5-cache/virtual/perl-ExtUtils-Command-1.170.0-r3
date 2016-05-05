@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for ExtUtils-Command
+EAPI=0
+KEYWORDS=amd64 x86
+RDEPEND=|| ( =dev-lang/perl-5.16* =dev-lang/perl-5.14* ~perl-core/ExtUtils-Command-1.170.0 )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=acf4be9c625131042c816bc4017cb912

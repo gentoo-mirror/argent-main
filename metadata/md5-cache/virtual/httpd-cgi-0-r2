@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for CGI-enabled webservers
+EAPI=5
+KEYWORDS=amd64 x86
+RDEPEND=|| ( www-servers/apache www-servers/lighttpd www-servers/boa www-servers/bozohttpd www-servers/cherokee www-servers/fnord www-servers/hiawatha www-servers/monkeyd www-servers/nginx www-servers/resin www-servers/thttpd www-servers/tomcat )
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=ef92a045196d477d62fe57b078f6e947

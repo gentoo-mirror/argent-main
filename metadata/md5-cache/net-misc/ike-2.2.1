@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=dev-libs/libedit dev-libs/openssl qt4? ( dev-qt/qtgui ) ldap? ( net-nds/openldap ) dev-util/cmake >=sys-devel/bison-2.3 sys-devel/flex sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
+DESCRIPTION=Shrew soft VPN Client
+EAPI=5
+HOMEPAGE=http://www.shrew.net/
+IUSE=ldap nat qt4 systemd
+KEYWORDS=~amd64 ~x86
+LICENSE=shrew
+RDEPEND=dev-libs/libedit dev-libs/openssl qt4? ( dev-qt/qtgui ) ldap? ( net-nds/openldap )
+SLOT=0
+SRC_URI=http://www.shrew.net/download/ike/ike-2.2.1-release.tbz2
+_eclass_exported_funcs=pkg_postinst:- src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
+_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=1b2d6eba06c656fb7c07e65ba5eae950

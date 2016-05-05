@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-db/postgresql dev-vcs/git
+DESCRIPTION=WAL JSON output plugin
+EAPI=5
+HOMEPAGE=https://github.com/remerge/wal2json
+KEYWORDS=amd64 x86
+LICENSE=AGPL-3
+RDEPEND=dev-db/postgresql
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-2 src_compile:- src_install:-
+_eclasses_=git-2	7a13ebd120818b77da786c839a3af8c8
+_md5_=98e7397cdcd61f6b7bd8ebcad2385be3

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare test
+DEPEND=app-arch/xz-utils
+DESCRIPTION=GNU macro processor
+EAPI=3
+HOMEPAGE=http://www.gnu.org/software/m4/m4.html
+IUSE=examples
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=mirror://gnu/m4/m4-1.4.16.tar.xz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_test:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=51dd82c6ede4d102021b8e3d20c6abf7

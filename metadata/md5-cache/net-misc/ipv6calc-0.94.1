@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=geoip? ( >=dev-libs/geoip-1.4.7 ) test? ( dev-perl/Digest-SHA1 ) >=sys-apps/sed-4
+DESCRIPTION=IPv6 address calculator
+EAPI=4
+HOMEPAGE=http://www.deepspace6.net/projects/ipv6calc.html
+IUSE=geoip test
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=geoip? ( >=dev-libs/geoip-1.4.7 )
+SLOT=0
+SRC_URI=ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/ipv6calc-0.94.1.tar.gz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_test:- src_install:-
+_eclasses_=fixheadtails	6b7b3d896b0b285c12a94f3105c2a06c
+_md5_=037b8d90f64dd2d0905af11651d639b4

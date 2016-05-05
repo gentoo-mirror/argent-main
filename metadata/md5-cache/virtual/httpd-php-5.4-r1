@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual to provide PHP-enabled webservers
+EAPI=4
+KEYWORDS=amd64 x86
+RDEPEND=|| ( dev-lang/php:5.4[apache2] dev-lang/php:5.4[cgi] dev-lang/php:5.4[fpm] )
+SLOT=5.4
+_eclass_exported_funcs=-
+_md5_=af27cfe7e5e6668bb388231ff33367f6

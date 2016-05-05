@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=virtual/mysql !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=NSS MySQL Library.
+EAPI=5
+HOMEPAGE=http://libnss-mysql.sourceforge.net/
+IUSE=debug
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=virtual/mysql
+SLOT=0
+SRC_URI=http://libnss-mysql.sourceforge.net/snapshot/libnss-mysql-20060915.tgz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=fbd0ae89be338753faa504a4c355a947

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare setup
+DEPEND=dev-lang/perl sensord? ( net-analyzer/rrdtool virtual/logger ) sys-devel/bison sys-devel/flex virtual/pkgconfig
+DESCRIPTION=Hardware Monitoring user-space utilities
+EAPI=5
+HOMEPAGE=http://www.lm-sensors.org/
+IUSE=sensord static-libs
+KEYWORDS=amd64 x86
+LICENSE=GPL-2 LGPL-2.1
+RDEPEND=dev-lang/perl sensord? ( net-analyzer/rrdtool virtual/logger )
+SLOT=0
+SRC_URI=http://dl.lm-sensors.org/lm-sensors/releases/lm_sensors-3.3.5.tar.bz2
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:linux-info src_prepare:- src_compile:- src_install:-
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=920221fcdc4e29e1b46b087f9f87efd5

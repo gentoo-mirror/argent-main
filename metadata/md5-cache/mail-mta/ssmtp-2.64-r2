@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=ssl? ( !gnutls? ( dev-libs/openssl ) gnutls? ( net-libs/gnutls ) ) !<sys-devel/gettext-0.18.1.1-r3 sys-devel/automake >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Extremely simple MTA to get mail off the system to a Mailhub
+EAPI=4
+HOMEPAGE=ftp://ftp.debian.org/debian/pool/main/s/ssmtp/
+IUSE=ipv6 +ssl gnutls +mta
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=ssl? ( !gnutls? ( dev-libs/openssl ) gnutls? ( net-libs/gnutls ) ) net-mail/mailbase mta? ( !net-mail/mailwrapper !mail-mta/courier !mail-mta/esmtp !mail-mta/exim !mail-mta/mini-qmail !mail-mta/msmtp[mta] !mail-mta/nbsmtp !mail-mta/netqmail !mail-mta/nullmailer !mail-mta/postfix !mail-mta/qmail-ldap !mail-mta/sendmail !mail-mta/opensmtpd )
+REQUIRED_USE=gnutls? ( ssl )
+SLOT=0
+SRC_URI=mirror://debian/pool/main/s/ssmtp/ssmtp_2.64.orig.tar.bz2 http://dev.gentoo.org/~flameeyes/ssmtp/ssmtp-2.64-patches-3.tar.bz2
+_eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1
+_md5_=b7d108053ae430ab70c9b243456d94f1

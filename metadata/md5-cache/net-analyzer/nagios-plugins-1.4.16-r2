@@ -1,0 +1,16 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=ldap? ( >=net-nds/openldap-2.0.25 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.6g ) gnutls? ( net-libs/gnutls ) ) radius? ( >=net-dialup/radiusclient-0.3.2 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Nagios 1.4.16 plugins - Pack of plugins to make Nagios work properly
+EAPI=4
+HOMEPAGE=http://www.nagios.org/
+IUSE=+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping nagios-ssh nagios-game ups ipv6 radius +suid xmpp gnutls sudo smart
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=ldap? ( >=net-nds/openldap-2.0.25 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.6g ) gnutls? ( net-libs/gnutls ) ) radius? ( >=net-dialup/radiusclient-0.3.2 ) >=dev-lang/perl-5.6.1-r7 samba? ( >=net-fs/samba-2.2.5-r1 ) snmp? ( >=dev-perl/Net-SNMP-4.0.1-r1 ) mysql? ( dev-perl/DBI dev-perl/DBD-mysql ) nagios-dns? ( >=net-dns/bind-tools-9.2.2_rc1 ) nagios-ntp? ( >=net-misc/ntp-4.1.1a ) nagios-ping? ( >=net-analyzer/fping-2.4_beta2-r1 ) nagios-ssh? ( >=net-misc/openssh-3.5_p1 ) ups? ( >=sys-power/nut-1.4 ) nagios-game? ( >=games-util/qstat-2.6 ) xmpp? ( >=dev-perl/Net-Jabber-2.0 ) sudo? ( >=app-admin/sudo-1.8.5 ) smart? ( sys-apps/smartmontools )
+REQUIRED_USE=smart? ( sudo )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/nagiosplug/nagios-plugins-1.4.16.tar.gz http://dev.gentoo.org/~flameeyes/nagios-plugins/nagios-plugins-1.4.16-patches-2.tar.xz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1
+_md5_=fb48311e3234d11211d2a8f68a5054b2

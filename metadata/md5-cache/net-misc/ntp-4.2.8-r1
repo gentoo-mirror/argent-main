@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=>=sys-libs/ncurses-5.2 >=sys-libs/readline-4.1 >=dev-libs/libevent-2.0.9 kernel_linux? ( caps? ( sys-libs/libcap ) ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) !openntpd? ( !net-misc/openntpd ) snmp? ( net-analyzer/net-snmp ) ssl? ( dev-libs/openssl ) parse-clocks? ( net-misc/pps-tools ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
+DESCRIPTION=Network Time Protocol suite/programs
+EAPI=4
+HOMEPAGE=http://www.ntp.org/
+IUSE=caps debug ipv6 openntpd parse-clocks samba selinux snmp ssl vim-syntax zeroconf
+KEYWORDS=amd64 x86
+LICENSE=HPND BSD ISC
+PDEPEND=openntpd? ( net-misc/openntpd )
+RDEPEND=>=sys-libs/ncurses-5.2 >=sys-libs/readline-4.1 >=dev-libs/libevent-2.0.9 kernel_linux? ( caps? ( sys-libs/libcap ) ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) !openntpd? ( !net-misc/openntpd ) snmp? ( net-analyzer/net-snmp ) ssl? ( dev-libs/openssl ) parse-clocks? ( net-misc/pps-tools ) selinux? ( sec-policy/selinux-ntp ) vim-syntax? ( app-vim/ntp-syntax )
+SLOT=0
+SRC_URI=http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8.tar.gz mirror://gentoo/ntp-4.2.8-manpages.tar.bz2
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1
+_md5_=65d57842118821b635344043025f4e40

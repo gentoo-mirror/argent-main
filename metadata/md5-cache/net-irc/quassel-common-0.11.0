@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=kde? ( kde-base/oxygen-icons ) !<net-irc/quassel-0.11.0 !<net-irc/quassel-client-0.11.0 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Qt/KDE IRC client supporting a remote daemon for 24/7 connectivity (common files)
+EAPI=5
+HOMEPAGE=http://quassel-irc.org/
+IUSE=kde
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=kde? ( kde-base/oxygen-icons )
+SLOT=0
+SRC_URI=http://quassel-irc.org/pub/quassel-0.11.0.tar.bz2
+_eclass_exported_funcs=src_prepare:cmake-utils src_configure:- src_compile:- src_test:cmake-utils src_install:-
+_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=c4f547833c35c15187c76556d3395a60

@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=>=dev-util/cmake-2.6.0 dev-qt/qtgui:4[dbus] dev-qt/qtsvg:4 bittorrent? ( >=net-libs/rb_libtorrent-0.14.1 >=dev-cpp/asio-1.1.0 dev-qt/qtwebkit:4 ) curl? ( >=net-misc/curl-7.18.2 ) doc? ( dev-qt/qthelp:4 ) jabber? ( net-libs/gloox ) webinterface? ( dev-qt/qtscript:4 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Qt4-based download/upload manager
+EAPI=2
+HOMEPAGE=http://fatrat.dolezel.info/
+IUSE=bittorrent +curl -debug doc jabber nls webinterface
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-2
+RDEPEND=dev-qt/qtgui:4[dbus] dev-qt/qtsvg:4 bittorrent? ( >=net-libs/rb_libtorrent-0.14.1 >=dev-cpp/asio-1.1.0 dev-qt/qtwebkit:4 ) curl? ( >=net-misc/curl-7.18.2 ) doc? ( dev-qt/qthelp:4 ) jabber? ( net-libs/gloox ) webinterface? ( dev-qt/qtscript:4 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://www.dolezel.info/download/data/fatrat/fatrat-1.1.2.tar.gz
+_eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
+_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=5da9fa26a274622748342a409a05f466

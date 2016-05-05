@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup
+DEPEND=idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] ) perl? ( dev-lang/perl ) virtual/mailx web? ( media-libs/gd[jpeg,png] lighttpd? ( www-servers/lighttpd ) ) !net-analyzer/nagios-core apache2? ( =www-servers/apache-2* )
+DESCRIPTION=Nagios Fork - Check daemon, CGIs, docs, IDOutils
+EAPI=5
+HOMEPAGE=http://www.icinga.org/
+IUSE=+apache2 contrib eventhandler +idoutils lighttpd +mysql perl +plugins postgres ssl +vim-syntax +web apache2
+KEYWORDS=amd64 ~hppa x86
+LICENSE=GPL-2
+RDEPEND=idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] ) perl? ( dev-lang/perl ) virtual/mailx web? ( media-libs/gd[jpeg,png] lighttpd? ( www-servers/lighttpd ) ) !net-analyzer/nagios-core plugins? ( || ( net-analyzer/monitoring-plugins net-analyzer/nagios-plugins ) ) apache2? ( =www-servers/apache-2* )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/icinga/icinga-core/releases/download/v1.13.3/icinga-1.13.3.tar.gz https://dev.gentoo.org/~prometheanfire/dist/patches/CVEs/CVE-2015-8010_1.13.3.patch
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=depend.apache	87a16d5639b45fde2614c944e846b703	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=48510edf9581a026dc0204ff217af4b8

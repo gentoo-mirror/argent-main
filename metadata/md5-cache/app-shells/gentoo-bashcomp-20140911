@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Gentoo-specific bash command-line completions (emerge, ebuild, equery, repoman, layman, etc)
+EAPI=5
+HOMEPAGE=http://www.gentoo.org/
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~mgorny/dist/gentoo-bashcomp-20140911.tar.bz2
+_eclass_exported_funcs=src_install:-
+_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=559e3ac073f4ae9715f19b521b7c9fc0

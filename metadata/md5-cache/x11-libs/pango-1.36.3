@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=media-libs/harfbuzz-0.9.9:=[glib(+),truetype(+)] >=dev-libs/glib-2.33.12:2 >=media-libs/fontconfig-2.10.91:1.0= media-libs/freetype:2= >=x11-libs/cairo-1.12.10:=[X?] introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) X? ( x11-libs/libXrender x11-libs/libX11 >=x11-libs/libXft-2.0.0 ) >=dev-util/gtk-doc-am-1.15 virtual/pkgconfig X? ( x11-proto/xproto ) !<=sys-devel/autoconf-2.63:2.5 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Internationalized text layout and rendering library
+EAPI=5
+HOMEPAGE=http://www.pango.org/
+IUSE=X +introspection debug
+KEYWORDS=amd64 x86
+LICENSE=LGPL-2+ FTL
+RDEPEND=>=media-libs/harfbuzz-0.9.9:=[glib(+),truetype(+)] >=dev-libs/glib-2.33.12:2 >=media-libs/fontconfig-2.10.91:1.0= media-libs/freetype:2= >=x11-libs/cairo-1.12.10:=[X?] introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) X? ( x11-libs/libXrender x11-libs/libX11 >=x11-libs/libXft-2.0.0 )
+SLOT=0
+SRC_URI=mirror://gnome/sources/pango/1.36/pango-1.36.3.tar.xz
+_eclass_exported_funcs=pkg_preinst:gnome2 pkg_postrm:gnome2 pkg_postinst:- src_unpack:gnome2 src_prepare:- src_configure:- src_compile:gnome2 src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	gnome.org	01784e72df8fdad6573a39eef0e54f1e	gnome2	b294539262ddf28df3595088e54b9be2	gnome2-utils	4ebf575b6d5bbea6c32a206981c9d4bd	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=d4f6767d84fe0490cba7c3ec2cb0c3b3

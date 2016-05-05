@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/libpcre lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A code-searching tool similar to ack, but faster
+EAPI=5
+HOMEPAGE=https://github.com/ggreer/the_silver_searcher
+IUSE=lzma zlib
+KEYWORDS=amd64 x86
+LICENSE=Apache-2.0
+RDEPEND=dev-libs/libpcre lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
+SLOT=0
+SRC_URI=https://github.com/ggreer/the_silver_searcher/archive/0.29.1.tar.gz -> the_silver_searcher-0.29.1.tar.gz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	bash-completion-r1	9866121b061d311a471abe04dfaea912	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=850ecfed31cac6cd5eebfeec80eb8764

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=calculates broadcast/network/etc... from an IP address and netmask
+EAPI=5
+HOMEPAGE=http://jodies.de/ipcalc
+KEYWORDS=amd64 x86
+LICENSE=GPL-2+
+RDEPEND=>=dev-lang/perl-5.6.0
+SLOT=0
+SRC_URI=http://jodies.de/ipcalc-archive/ipcalc-0.41.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=0a90d1118cccea11c01082579a0e1f83
