@@ -11,5 +11,5 @@ RDEPEND=>=dev-libs/apr-1.5.0 >=dev-libs/openssl-0.9.8m apache2_modules_mime? ( a
 SLOT=2
 SRC_URI=mirror://apache/httpd/httpd-2.4.12.tar.bz2 http://dev.gentoo.org/~polynomial-c/dist/apache/gentoo-apache-2.4.9-r2-20140421.tar.bz2
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
-_eclasses_=apache-2	f55a881ccb14555a24ad5bf9fee77f3d	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	ssl-cert	4685fb8a57495302dbfa81cb1ad721c2	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1
+_eclasses_=apache-2	77a6c4ec73186f027ce45ec21b106940	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	ssl-cert	4685fb8a57495302dbfa81cb1ad721c2	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=66cf7b1410104c3146f5a766d75910b1
