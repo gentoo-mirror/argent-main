@@ -45,7 +45,7 @@ app-benchmarks/bonnie 2.0.6: Performance Test of Filesystem I/O using standard C
 app-benchmarks/bonnie++ 1.96: Hard drive bottleneck testing benchmark suite
 app-benchmarks/iozone 3.397: Filesystem benchmarking program
 app-benchmarks/piozone 1.0-r3: A hard-disk benchmarking tool
-app-crypt/gnupg 2.0.25 2.0.26-r3: The GNU Privacy Guard, a GPL pgp replacement
+app-crypt/gnupg 2.0.25 2.0.26-r3 2.0.28: The GNU Privacy Guard, a GPL pgp replacement
 app-crypt/p11-kit 0.20.2 0.20.7: Provides a standard configuration setup for installing PKCS#11
 app-crypt/passwordsafe 0.9_beta 0.95.1_beta 0.95.1: Password manager with wxGTK based frontend
 app-crypt/pinentry 0.8.2 0.9.0: Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol
