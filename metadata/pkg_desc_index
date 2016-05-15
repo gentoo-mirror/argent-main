@@ -23,7 +23,6 @@ app-arch/bzip2 1.0.6-r6: A high-quality data compressor used extensively by Gent
 app-arch/cabextract 1.4 1.6: Extracts files from Microsoft cabinet archive files
 app-arch/cpio 2.11-r1 2.11-r3: A file archival tool which can also read and write tar files
 app-arch/dpkg 1.17.8 1.17.23 1.17.25: Package maintenance system for Debian
-app-arch/gnupg 2.0.26-r3: The GNU Privacy Guard, a GPL pgp replacement
 app-arch/gzip 1.5 1.6: Standard GNU compressor
 app-arch/libarchive 3.1.2-r1: BSD tar command
 app-arch/lz4 0_p120: Extremely Fast Compression algorithm
@@ -935,7 +934,7 @@ sys-libs/e2fsprogs-libs 1.42.7 1.42.12 1.42.13: e2fsprogs libraries (common erro
 sys-libs/efivar 0.15 0.21: Tools and library to manipulate EFI variables
 sys-libs/freeipmi 1.4.3: Provides Remote-Console and System Management Software as per IPMI v1.5/2.0
 sys-libs/gdbm 1.8.3-r4 1.11: Standard GNU database libraries
-sys-libs/glibc 2.17 2.19-r1 2.20-r2 2.21-r2: GNU libc6 (also called glibc2) C library
+sys-libs/glibc 2.17 2.19-r1 2.20-r2 2.21-r2 2.22-r4: GNU libc6 (also called glibc2) C library
 sys-libs/gpm 1.20.7-r1 1.20.7-r2: Console-based mouse driver
 sys-libs/imx-lib 9999: IMX{31,51} System library
 sys-libs/libacpi 0.2: A general purpose library for ACPI
@@ -950,7 +949,7 @@ sys-libs/openipmi 2.0.18-r1: Library interface to IPMI
 sys-libs/pam 1.1.6-r2 1.1.8-r2 1.2.1: Linux-PAM (Pluggable Authentication Modules)
 sys-libs/readline 6.2_p1 6.3_p8-r2: Another cute console display library
 sys-libs/slang 2.2.4 2.2.4-r1: A multi-platform programmer's library designed to allow a developer to create robust software
-sys-libs/timezone-data 2013d 2015b 2015g: Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
+sys-libs/timezone-data 2013d 2015b 2015g 2016a: Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
 sys-libs/zlib 1.2.8-r1: Standard (de)compression library
 sys-power/acpi_call 1.0.0-r1: A kernel module that enables you to call ACPI methods
 sys-power/acpitool 0.5.1-r1: A small command line application, intended to be a replacement for the apm tool
