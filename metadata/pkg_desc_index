@@ -1007,7 +1007,7 @@ virtual/mailx 1: Virtual for mail implementations
 virtual/man 0-r1: Virtual for man
 virtual/modutils 0: Virtual for utilities to manage Linux kernel modules
 virtual/mta 0 1: Virtual for Message Transfer Agents
-virtual/mysql 5.6 5.6-r2 5.6-r6: Virtual for MySQL database server
+virtual/mysql 5.6 5.6-r2 5.6-r6: Virtual for MySQL client or database
 virtual/opengl 7.0-r1: Virtual for OpenGL implementation
 virtual/os-headers 0: Virtual for operating system headers
 virtual/package-manager 0: Virtual for the package manager
