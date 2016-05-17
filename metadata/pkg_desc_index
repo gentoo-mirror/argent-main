@@ -175,7 +175,7 @@ dev-lang/lua 5.1.5 5.1.5-r3: A powerful light-weight programming language design
 dev-lang/luajit 2.0.2 2.0.4: Just-In-Time Compiler for the Lua programming language
 dev-lang/nasm 2.10.07 2.11.06 2.11.08: groovy little assembler
 dev-lang/perl 5.16.3 5.20.1-r4 5.20.2: Larry Wall's Practical Extraction and Report Language
-dev-lang/php 5.3.28-r3 5.4.26: The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs.
+dev-lang/php 5.3.28-r3 5.4.26 5.5.33 5.5.34 5.5.35 5.6.19 5.6.20 5.6.21 7.0.6: The PHP language runtime engine
 dev-lang/python 2.7.5-r3 2.7.9-r1 2.7.10-r1: An interpreted, interactive, object-oriented programming language
 dev-lang/python-exec 0.3.1 2.0.1 2.0.1-r1 2.0.2: Python script wrapper
 dev-lang/ruby 1.9.3_p484 2.0.0_p353 2.2.1 2.2.2-r1 2.2.4: An object-oriented scripting language
