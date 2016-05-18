@@ -75,6 +75,7 @@ app-eselect/eselect-postgresql 1.2.1: Utility to select the default PostgreSQL s
 app-eselect/eselect-python 20111108: Eselect module for management of multiple Python versions
 app-eselect/eselect-ruby 20141227: Manages multiple Ruby versions
 app-eselect/eselect-vi 1.1.7-r1: Manages the /usr/bin/vi symlink
+app-forensics/lynis 1.6.4 2.1.0 2.1.1: Security and system auditing tool
 app-i18n/man-pages-de 0.8: A somewhat comprehensive collection of Linux german man page translations
 app-misc/c_rehash 1.7-r1: c_rehash script from OpenSSL
 app-misc/ca-certificates 20130906-r1 20140927.3.17.2: Common CA Certificates PEM files
