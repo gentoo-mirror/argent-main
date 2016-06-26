@@ -44,7 +44,7 @@ else
 	case ${PV} in
 		*9999*|*_rc*) ;;
 		*)
-			KEYWORDS="-* amd64"
+			KEYWORDS="-* amd64 x86"
 			;;
 	esac
 fi
