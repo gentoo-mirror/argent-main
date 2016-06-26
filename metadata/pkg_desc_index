@@ -171,7 +171,7 @@ dev-java/javatoolkit 0.3.0-r9: Collection of Gentoo-specific tools for Java
 dev-java/maven-bin 3.0.4-r1: Project Management and Comprehension Tool for Java
 dev-java/oracle-jdk-bin 1.7.0.55: Oracle's Java SE Development Kit
 dev-java/xalan-serializer 2.7.1 2.7.2: DOM Level 3 serializer from Apache Xalan, shared by Xalan and Xerces
-dev-lang/go 1.4.1 1.4.2 1.5 1.5.1 1.5.3: A concurrent garbage collected and typesafe programming language
+dev-lang/go 1.4.1 1.4.2 1.5 1.5.1 1.5.3 1.6.2: A concurrent garbage collected and typesafe programming language
 dev-lang/go-bootstrap 1.4.2 1.4.3: Version of go compiler used for bootstrapping
 dev-lang/lua 5.1.5 5.1.5-r3: A powerful light-weight programming language designed for extending applications
 dev-lang/luajit 2.0.2 2.0.4: Just-In-Time Compiler for the Lua programming language
@@ -180,7 +180,7 @@ dev-lang/perl 5.16.3 5.20.1-r4 5.20.2: Larry Wall's Practical Extraction and Rep
 dev-lang/php 5.3.28-r3 5.4.26 5.5.33 5.5.34 5.5.35 5.6.19 5.6.20 5.6.21 7.0.6: The PHP language runtime engine
 dev-lang/python 2.7.5-r3 2.7.9-r1 2.7.10-r1: An interpreted, interactive, object-oriented programming language
 dev-lang/python-exec 0.3.1 2.0.1 2.0.1-r1 2.0.2: Python script wrapper
-dev-lang/ruby 1.9.3_p484 2.0.0_p353 2.2.1 2.2.2-r1 2.2.4: An object-oriented scripting language
+dev-lang/ruby 1.9.3_p484 2.0.0_p353 2.2.1 2.2.2-r1 2.2.4 2.2.5: An object-oriented scripting language
 dev-lang/swig 2.0.9 3.0.5: Simplified Wrapper and Interface Generator
 dev-lang/yasm 1.2.0-r1: An assembler for x86 and x86_64 instruction sets
 dev-libs/aerospike-client 3.0.78: Aerospike C Client
