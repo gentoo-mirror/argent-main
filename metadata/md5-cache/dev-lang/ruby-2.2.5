@@ -4,7 +4,7 @@ DESCRIPTION=An object-oriented scripting language
 EAPI=5
 HOMEPAGE=http://www.ruby-lang.org/
 IUSE=berkdb debug doc examples gdbm ipv6 jemalloc libressl +rdoc rubytests socks5 ssl xemacs ncurses +readline
-KEYWORDS=amd64
+KEYWORDS=amd64 x86
 LICENSE=|| ( Ruby-BSD BSD-2 )
 PDEPEND=virtual/rubygems[ruby_targets_ruby22] >=dev-ruby/json-1.8.1[ruby_targets_ruby22] >=dev-ruby/rake-0.9.6[ruby_targets_ruby22] rdoc? ( >=dev-ruby/rdoc-4.0.1[ruby_targets_ruby22] ) xemacs? ( app-xemacs/ruby-modes )
 RDEPEND=berkdb? ( sys-libs/db:= ) gdbm? ( sys-libs/gdbm ) jemalloc? ( dev-libs/jemalloc ) ssl? ( !libressl? ( dev-libs/openssl:0 ) libressl? ( dev-libs/libressl ) ) socks5? ( >=net-proxy/dante-1.1.13 ) ncurses? ( sys-libs/ncurses:0= ) readline? ( sys-libs/readline:0 ) dev-libs/libyaml virtual/libffi sys-libs/zlib >=app-eselect/eselect-ruby-20141227 !<dev-ruby/rdoc-3.9.4 !<dev-ruby/rubygems-1.8.10-r1
@@ -12,4 +12,4 @@ SLOT=2.2
 SRC_URI=mirror://ruby/2.2/ruby-2.2.5.tar.xz https://dev.gentoo.org/~flameeyes/ruby-team/ruby-patches-2.2.5.tar.bz2
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- src_prepare:- src_configure:- src_compile:- src_test:- src_install:-
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=2744a27707890e60cc2ec42b9e559198
+_md5_=2f28b661707caeb14444f0ac67208c42
