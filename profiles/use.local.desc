@@ -297,6 +297,8 @@ dev-libs/glib:utils - Install gtester-report utility to generate test report fil
 dev-libs/gmp:pgo - after building gmp, run some tests against to produce faster libraries -- this option will double the compile time
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
+dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
+dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
 dev-libs/libevent:debug - Support runtime debug mode and malloc hooks (for programmers)
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libgpg-error:common-lisp - Install common-lisp files

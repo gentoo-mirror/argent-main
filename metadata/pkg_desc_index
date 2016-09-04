@@ -209,6 +209,7 @@ dev-libs/libaio 0.3.109-r4 0.3.110: Asynchronous input/output library that uses 
 dev-libs/libassuan 2.1.1: IPC library used by GnuPG and GPGME
 dev-libs/libatomic_ops 7.2d 7.4.2: Implementation for atomic memory update operations
 dev-libs/libbsd 0.7.0: An library to provide useful functions commonly found on BSD systems
+dev-libs/libcgroup 0.41: Tools and libraries to configure and manage kernel control groups
 dev-libs/libcroco 0.6.8 0.6.8-r1: Generic Cascading Style Sheet (CSS) parsing and manipulation toolkit
 dev-libs/libedit 20130712.3.1: BSD replacement for libreadline
 dev-libs/libev 4.15 4.15-r1: A high-performance event loop/event model with lots of feature
