@@ -9,5 +9,4 @@ LICENSE=|| ( BSD GPL-2 )
 RDEPEND=>=dev-libs/openssl-0.9.7 gnutls? ( >=net-libs/gnutls-1.4.4 ) nss? ( dev-libs/nss )
 SLOT=0
 SRC_URI=mirror://sourceforge/opensc/pkcs11-helper/pkcs11-helper-1.11.tar.bz2
-_eclass_exported_funcs=src_configure:- src_install:-
 _md5_=105dca4ad45ead6fef3c837b667b5e17

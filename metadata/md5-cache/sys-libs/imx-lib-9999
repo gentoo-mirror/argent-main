@@ -6,6 +6,5 @@ HOMEPAGE=https://github.com/genesi/imx-lib
 KEYWORDS=~arm
 LICENSE=Freescale GPL-2
 SLOT=0
-_eclass_exported_funcs=src_unpack:git-2 src_compile:- src_install:-
 _eclasses_=git-2	7a13ebd120818b77da786c839a3af8c8	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=eb2e2c69d9e65b8f860e84075c05c218

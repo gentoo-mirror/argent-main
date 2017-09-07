@@ -9,6 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 ldap? ( net-nds/openldap ) popt? ( dev-libs/popt ) sasl? ( dev-libs/cyrus-sasl ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/l/i/libuser/libuser-0.56.16.tar.xz
-_eclass_exported_funcs=src_unpack:base src_prepare:base src_configure:- src_compile:base src_install:base
 _eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=b91cfd7e150dd052c4ee351a08ad5bcc

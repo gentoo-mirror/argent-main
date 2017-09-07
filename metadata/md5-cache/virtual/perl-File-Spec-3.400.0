@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for File-Spec
-EAPI=0
-KEYWORDS=amd64 x86
-RDEPEND=~perl-core/File-Spec-3.400.0
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=05e6333655540b2267c6d586434aa148

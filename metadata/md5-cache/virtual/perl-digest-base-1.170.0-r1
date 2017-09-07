@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for digest-base
-EAPI=0
-KEYWORDS=amd64 x86
-RDEPEND=|| ( =dev-lang/perl-5.16* ~perl-core/digest-base-1.170.0 )
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=05fd591073c97470484281ec50c898e6

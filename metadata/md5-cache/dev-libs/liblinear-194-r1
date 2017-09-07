@@ -6,6 +6,5 @@ KEYWORDS=amd64 x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/cjlin1/liblinear/archive/v194.tar.gz -> liblinear-194.tar.gz
-_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
 _eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=96b3b707b92689d83d88f7f8f36c4fb0

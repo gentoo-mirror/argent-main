@@ -9,6 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/mta virtual/logger selinux? ( sec-policy/selinux-at )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/a/at/at_3.1.13.orig.tar.gz
-_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	pam	31659e58bf74abb596b5d2e1f4081772	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=526cf8dcaf91ac40212d9185a4c653ea

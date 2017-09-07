@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Storable
-EAPI=0
-KEYWORDS=amd64 x86
-RDEPEND=~perl-core/Storable-2.390.0
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=8da14a22faa8e11cfbdc9ddc23e058c8

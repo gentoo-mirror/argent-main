@@ -6,6 +6,5 @@ KEYWORDS=amd64 x86
 LICENSE=mm
 SLOT=1.2
 SRC_URI=ftp://ftp.ossp.org/pkg/lib/mm/mm-1.4.2.tar.gz
-_eclass_exported_funcs=pkg_postinst:- src_prepare:- src_test:- src_install:-
 _eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=08b6ce59353814d8e9d8ecd6e672f80f

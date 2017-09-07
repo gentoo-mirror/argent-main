@@ -10,6 +10,5 @@ RDEPEND=dev-libs/popt python? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python
 REQUIRED_USE=python? ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/natspec/libnatspec-0.2.6.tar.bz2
-_eclass_exported_funcs=pkg_setup:python-single-r1 src_prepare:- src_configure:-
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=284a61b3f257f49d18de1a124b40f045

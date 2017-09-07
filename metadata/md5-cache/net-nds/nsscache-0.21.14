@@ -10,6 +10,5 @@ RDEPEND=dev-python/python-ldap dev-python/pycurl nssdb? ( sys-libs/nss-db ) nssc
 RESTRICT=test
 SLOT=0
 SRC_URI=http://nsscache.googlecode.com/files/nsscache-0.21.14.tar.gz
-_eclass_exported_funcs=pkg_postrm:distutils pkg_postinst:distutils pkg_setup:python src_prepare:- src_compile:distutils src_install:-
 _eclasses_=distutils	6f76c08791f78c988517b9c3222a8101	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=09ab9705b50f31ae3332c4e636550eb9

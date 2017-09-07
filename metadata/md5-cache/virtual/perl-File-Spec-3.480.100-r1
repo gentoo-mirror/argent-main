@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for File-Spec
-EAPI=5
-KEYWORDS=amd64 x86
-RDEPEND=|| ( =dev-lang/perl-5.20.2* ~perl-core/File-Spec-3.480.100 ) !<perl-core/File-Spec-3.480.100 !>perl-core/File-Spec-3.480.100-r999
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=4a31a156b012394c82ed0c79e1d85e8e

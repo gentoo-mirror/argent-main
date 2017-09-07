@@ -1,9 +1,0 @@
-DEFINED_PHASES=install prepare
-DESCRIPTION=Wrapper scripts that will execute EDITOR or PAGER
-EAPI=4
-HOMEPAGE=http://www.gentoo.org/
-KEYWORDS=amd64 x86
-LICENSE=MIT
-SLOT=0
-_eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=aa0902c9ae6589233202e13c7a5f8d12

@@ -7,6 +7,5 @@ IUSE=debug selinux systemd tcpd warmstarts
 LICENSE=BSD
 RDEPEND=>=net-libs/libtirpc-0.2.3 systemd? ( sys-apps/systemd:= ) tcpd? ( sys-apps/tcp-wrappers ) selinux? ( sec-policy/selinux-rpcbind )
 SLOT=0
-_eclass_exported_funcs=src_unpack:git-r3 src_prepare:- src_configure:- src_install:-
 _eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=b820cbfaae717cbe42c0aacea8c54e8b

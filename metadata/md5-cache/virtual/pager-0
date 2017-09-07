@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for command-line pagers
-EAPI=5
-KEYWORDS=amd64 x86
-RDEPEND=|| ( sys-apps/less sys-apps/more sys-apps/most sys-apps/util-linux[ncurses] app-text/lv app-editors/vim[vim-pager] )
-SLOT=0
-_eclass_exported_funcs=-
-_md5_=bc1e8a94e60ffe62550674096c46494b
