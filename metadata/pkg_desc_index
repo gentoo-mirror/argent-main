@@ -567,6 +567,7 @@ mail-filter/spamassassin 3.3.2-r2: SpamAssassin is an extensible email filter wh
 mail-mta/postfix 2.10.1 2.11.3 3.0.1-r1: A fast and secure drop-in replacement for sendmail
 mail-mta/ssmtp 2.64-r2: Extremely simple MTA to get mail off the system to a Mailhub
 media-fonts/corefonts 1-r4: Microsoft's TrueType core fonts
+media-fonts/dejavu 2.33: DejaVu fonts, bitstream vera with ISO-8859-2 characters
 media-fonts/encodings 1.0.4: X.Org font encodings
 media-fonts/font-util 1.3.0: X.Org font utilities
 media-fonts/ttf-bitstream-vera 1.10-r3: Bitstream Vera font family
@@ -890,7 +891,7 @@ sys-devel/automake 1.11.6 1.12.6 1.13.4: Used to generate Makefile.in from Makef
 sys-devel/automake-wrapper 9: wrapper for automake to manage multiple automake versions
 sys-devel/bc 1.06.95-r1: Handy console-based calculator utility
 sys-devel/bin86 0.16.20-r2: Assembler and loader used to create kernel bootsector
-sys-devel/binutils 2.21.1-r1 2.22-r1 2.23.2 2.24-r3 9999: Tools necessary to build programs
+sys-devel/binutils 2.21.1-r1 2.22-r1 2.23.2 2.24-r3 2.25 9999: Tools necessary to build programs
 sys-devel/binutils-config 1.9-r4 2-r1 3-r3 4-r1 4-r2: Utility to change the binutils version being used
 sys-devel/bison 2.4.3: A yacc-compatible parser generator
 sys-devel/flex 2.5.37: The Fast Lexical Analyzer
