@@ -33,13 +33,12 @@ RDEPEND="dev-libs/libaio
 	dev-libs/libgpg-error
 	dev-perl/DBD-mysql"
 
-if use amd64; then
-	S="${WORKDIR}/${MY_P}-Linux-x86_64"
-elif use x86; then
-	S="${WORKDIR}/${MY_P}-Linux-i686"
-fi
-
 src_prepare() {
+if use amd64; then
+    S="${WORKDIR}/${MY_P}-Linux-x86_64"
+elif use x86; then
+    S="${WORKDIR}/${MY_P}-Linux-i686"
+fi
 	# bug 501904 - CVE-2014-2029
 	epatch "${FILESDIR}/${PN}-2.1.7-no-versioncheck.patch"
 }
