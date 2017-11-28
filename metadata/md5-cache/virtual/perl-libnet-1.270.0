@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for libnet
+EAPI=5
+KEYWORDS=amd64 x86
+RDEPEND=~perl-core/libnet-1.270.0
+SLOT=0
+_md5_=5451fa57b9036cfd71cbba6387124827

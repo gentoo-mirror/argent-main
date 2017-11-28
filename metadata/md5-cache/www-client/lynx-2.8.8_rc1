@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare setup
+DEPEND=sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( dev-libs/libgcrypt:0 >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn ) nls? ( sys-devel/gettext ) virtual/pkgconfig
+DESCRIPTION=An excellent console-based web browser with ssl support
+EAPI=5
+HOMEPAGE=http://lynx.isc.org/
+IUSE=bzip2 cjk gnutls idn ipv6 nls ssl unicode
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses[unicode?] sys-libs/zlib nls? ( virtual/libintl ) ssl? ( !gnutls? ( >=dev-libs/openssl-0.9.8 ) gnutls? ( dev-libs/libgcrypt:0 >=net-libs/gnutls-2.6.4 ) ) bzip2? ( app-arch/bzip2 ) idn? ( net-dns/libidn )
+SLOT=0
+SRC_URI=http://lynx.isc.org/current/lynx2.8.8pre.1.tar.bz2
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=6e90c78b71b288c67992dbb4407c220d

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Utility to trace the route of IP packets
+EAPI=3
+HOMEPAGE=http://traceroute.sourceforge.net/
+IUSE=static
+KEYWORDS=amd64 x86
+LICENSE=GPL-2 LGPL-2.1
+SLOT=0
+SRC_URI=mirror://sourceforge/traceroute/traceroute-2.0.18.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=24b414ec840d37a8f0bbce2eaececd7f

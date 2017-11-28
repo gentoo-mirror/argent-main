@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=sys-apps/attr-2.4 nfs? ( net-libs/libnfsidmap ) nls? ( sys-devel/gettext )
+DESCRIPTION=access control list utilities, libraries and headers
+EAPI=4
+HOMEPAGE=http://savannah.nongnu.org/projects/acl
+IUSE=nfs nls static-libs
+KEYWORDS=amd64 x86
+LICENSE=LGPL-2.1
+RDEPEND=>=sys-apps/attr-2.4 nfs? ( net-libs/libnfsidmap )
+SLOT=0
+SRC_URI=http://download.savannah.gnu.org/releases/acl/acl-2.2.51.src.tar.gz nfs? ( http://www.citi.umich.edu/projects/nfsv4/linux/acl-patches/2.2.42-2/acl-2.2.42-CITI_NFS4_ALL-2.dif )
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=1ef194b3ac60db4121a8af84a4fef4aa

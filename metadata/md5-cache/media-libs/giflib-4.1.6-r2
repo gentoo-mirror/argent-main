@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=X? ( x11-libs/libXt x11-libs/libX11 x11-libs/libICE x11-libs/libSM ) rle? ( media-libs/urt )
+DESCRIPTION=Library to handle, display and manipulate GIF images
+EAPI=4
+HOMEPAGE=http://sourceforge.net/projects/giflib/
+IUSE=rle static-libs X
+KEYWORDS=amd64 x86
+LICENSE=MIT
+RDEPEND=X? ( x11-libs/libXt x11-libs/libX11 x11-libs/libICE x11-libs/libSM ) rle? ( media-libs/urt )
+SLOT=0
+SRC_URI=mirror://sourceforge/giflib/giflib-4.1.6.tar.bz2
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=9dc9f6fa63b2091e4b41ead5ef39be63

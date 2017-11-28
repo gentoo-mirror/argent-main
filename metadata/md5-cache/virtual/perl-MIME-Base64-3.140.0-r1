@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for MIME-Base64
+EAPI=5
+KEYWORDS=amd64 x86
+RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/MIME-Base64-3.140.0 ) !<perl-core/MIME-Base64-3.140.0 !>perl-core/MIME-Base64-3.140.0-r999
+SLOT=0
+_md5_=7c3b6dabce64149f3b166a000a9f74ec

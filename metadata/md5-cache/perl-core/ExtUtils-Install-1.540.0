@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
+DEPEND=dev-lang/perl:=[-build(-)]
+DESCRIPTION=Install files from here to there
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/ExtUtils-Install/
+KEYWORDS=amd64 x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/Y/YV/YVES/ExtUtils-Install-1.54.tar.gz
+_eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_md5_=fe17d520a0e321e30c2ea5a83cdc8e66

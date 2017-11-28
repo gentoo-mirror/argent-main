@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!<sys-apps/sysvinit-2.88-r6 ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] ) selinux? ( sys-libs/libselinux ) systemd? ( >=sys-apps/systemd-209 )
 SLOT=0
 SRC_URI=http://pkgs.fedoraproject.org/repo/pkgs/procps-ng/procps-ng-3.3.9.tar.xz/0980646fa25e0be58f7afb6b98f79d74/procps-ng-3.3.9.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=b34bc0330d2459a1a4d2ba46c13149df

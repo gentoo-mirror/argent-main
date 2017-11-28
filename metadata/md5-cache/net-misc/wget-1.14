@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=!static? ( idn? ( net-dns/libidn ) pcre? ( dev-libs/libpcre ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl:0 ) ) uuid? ( sys-apps/util-linux ) zlib? ( sys-libs/zlib ) ) app-arch/xz-utils virtual/pkgconfig static? ( idn? ( net-dns/libidn[static-libs(+)] ) pcre? ( dev-libs/libpcre[static-libs(+)] ) ssl? ( gnutls? ( net-libs/gnutls[static-libs(+)] ) !gnutls? ( dev-libs/openssl:0[static-libs(+)] ) ) uuid? ( sys-apps/util-linux[static-libs(+)] ) zlib? ( sys-libs/zlib[static-libs(+)] ) ) nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Network utility to retrieve files from the WWW
+EAPI=4
+HOMEPAGE=http://www.gnu.org/software/wget/
+IUSE=debug gnutls idn ipv6 nls ntlm pcre +ssl static uuid zlib
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=!static? ( idn? ( net-dns/libidn ) pcre? ( dev-libs/libpcre ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl:0 ) ) uuid? ( sys-apps/util-linux ) zlib? ( sys-libs/zlib ) )
+REQUIRED_USE=ntlm? ( !gnutls ssl ) gnutls? ( ssl )
+SLOT=0
+SRC_URI=mirror://gnu/wget/wget-1.14.tar.xz
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=44936b73e9a0ead1cbbfb123fa4422a9

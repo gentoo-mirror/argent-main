@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare unpack
+DEPEND=virtual/httpd-php !dev-php/eaccelerator !dev-php/pecl-apc !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+DESCRIPTION=A fast and stable PHP opcode cacher
+EAPI=4
+HOMEPAGE=http://xcache.lighttpd.net/
+IUSE=php_targets_php5-3 php_targets_php5-4
+KEYWORDS=amd64 x86
+LICENSE=BSD
+RDEPEND=virtual/httpd-php !dev-php/eaccelerator !dev-php/pecl-apc php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+REQUIRED_USE=|| ( php_targets_php5-3 php_targets_php5-4 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://xcache.lighttpd.net/pub/Releases/3.0.1/xcache-3.0.1.tar.bz2
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	confutils	f6b4babd1161933d03dc9df3ece45ed3	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	php-ext-source-r2	e7ffa46691bcf28cbb6af982e36d3a89	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=24d08b9477ae6279198b7d2cc6c837ad

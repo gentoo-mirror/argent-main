@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 GPL-2 MaxMind2
 RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=https://github.com/maxmind/geoip-api-c/archive/v1.6.0.tar.gz -> geoip-1.6.0.tar.gz http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz city? ( http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz ) ipv6? ( http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz city? ( http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz ) )
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=fa575e2ab6464385d1e94e6a6a828d8e

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND==dev-libs/apr-1* =dev-libs/apr-util-1* dev-libs/libpcre ssl? ( dev-libs/openssl ) !<www-servers/apache-2.2.4 sys-devel/libtool
+DESCRIPTION=Useful Apache tools - htdigest, htpasswd, ab, htdbm
+EAPI=4
+HOMEPAGE=http://httpd.apache.org/
+IUSE=ssl
+KEYWORDS=amd64 x86
+LICENSE=Apache-2.0
+RDEPEND==dev-libs/apr-1* =dev-libs/apr-util-1* dev-libs/libpcre ssl? ( dev-libs/openssl ) !<www-servers/apache-2.2.4
+RESTRICT=test
+SLOT=0
+SRC_URI=https://archive.apache.org/dist/httpd/httpd-2.2.27.tar.bz2
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=61f5f6af9c4c09d0986408aee4643b31

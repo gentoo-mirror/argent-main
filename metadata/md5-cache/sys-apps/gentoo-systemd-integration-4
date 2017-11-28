@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=virtual/pkgconfig
+DESCRIPTION=systemd integration files for Gentoo
+EAPI=5
+HOMEPAGE=https://bitbucket.org/mgorny/gentoo-systemd-integration
+KEYWORDS=amd64 x86
+LICENSE=BSD
+RDEPEND=>=sys-apps/systemd-207 !sys-fs/eudev !sys-fs/udev
+SLOT=0
+SRC_URI=https://www.bitbucket.org/mgorny/gentoo-systemd-integration/downloads/gentoo-systemd-integration-4.tar.bz2
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=6ff861dea8108771fdbe5598399c3077

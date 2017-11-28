@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=>=app-shells/zsh-4.3.5
+DESCRIPTION=Programmable Completion for zsh (includes emerge and ebuild commands)
+EAPI=0
+HOMEPAGE=http://gentoo.org
+KEYWORDS=amd64 x86
+LICENSE=ZSH
+RDEPEND=>=app-shells/zsh-4.3.5
+SLOT=0
+SRC_URI=mirror://gentoo/zsh-completion-20080310.tar.bz2
+_md5_=001c198d3f22755b4641767f01b99b86

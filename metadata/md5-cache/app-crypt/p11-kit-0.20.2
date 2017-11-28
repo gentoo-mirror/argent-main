@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install
+DEPEND=asn1? ( >=dev-libs/libtasn1-2.14 ) virtual/pkgconfig
+DESCRIPTION=Provides a standard configuration setup for installing PKCS#11.
+EAPI=5
+HOMEPAGE=http://p11-glue.freedesktop.org/p11-kit.html
+IUSE=+asn1 debug +trust
+KEYWORDS=amd64 x86
+LICENSE=MIT
+RDEPEND=asn1? ( >=dev-libs/libtasn1-2.14 )
+REQUIRED_USE=trust? ( asn1 )
+SLOT=0
+SRC_URI=http://p11-glue.freedesktop.org/releases/p11-kit-0.20.2.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=0b6315b2dcd9d7f5c6639a1525656c76

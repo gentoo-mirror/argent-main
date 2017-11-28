@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install
+DEPEND=sys-libs/zlib !xz? ( !lzo? ( sys-libs/zlib ) ) lz4? ( app-arch/lz4 ) lzma? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) xattr? ( sys-apps/attr ) xz? ( app-arch/xz-utils )
+DESCRIPTION=Tool for creating compressed filesystem type squashfs
+EAPI=5
+HOMEPAGE=http://squashfs.sourceforge.net
+IUSE=+xz lzma lz4 lzo xattr
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/zlib !xz? ( !lzo? ( sys-libs/zlib ) ) lz4? ( app-arch/lz4 ) lzma? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) xattr? ( sys-apps/attr ) xz? ( app-arch/xz-utils )
+SLOT=0
+SRC_URI=mirror://sourceforge/squashfs/squashfs4.3.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=14097e1ef691ea61f053b265f0cf34bd

@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Official icon theme from Ozon OS.
+EAPI=5
+HOMEPAGE=https://github.com/ozonos/ozon-icon-theme
+LICENSE=GPL-3
+SLOT=0
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=1381c30c8bf6e5e3845950aa63f48eb8

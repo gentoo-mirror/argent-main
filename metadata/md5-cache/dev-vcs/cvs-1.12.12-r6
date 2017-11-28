@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install test unpack
+DEPEND=>=sys-libs/zlib-1.1.4 kerberos? ( virtual/krb5 ) pam? ( virtual/pam )
+DESCRIPTION=Concurrent Versions System - source code revision control tools
+EAPI=0
+HOMEPAGE=http://www.nongnu.org/cvs/
+IUSE=crypt doc kerberos nls pam server
+KEYWORDS=amd64 x86
+LICENSE=GPL-2 LGPL-2
+RDEPEND=>=sys-libs/zlib-1.1.4 kerberos? ( virtual/krb5 ) pam? ( virtual/pam )
+SLOT=0
+SRC_URI=mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cvs-1.12.12.tar.bz2 doc? ( mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cederqvist-1.12.12.html.tar.bz2 mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cederqvist-1.12.12.pdf mirror://gnu/non-gnu/cvs/source/feature/1.12.12/cederqvist-1.12.12.ps )
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	pam	31659e58bf74abb596b5d2e1f4081772	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=68a0316edd748957af5fe3ca1d47f428

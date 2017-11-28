@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DESCRIPTION=Programmable Completion for bash
+EAPI=3
+HOMEPAGE=http://bash-completion.alioth.debian.org/
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+PDEPEND=app-shells/gentoo-bashcomp
+RDEPEND=|| ( app-eselect/eselect-bashcomp <app-eselect/eselect-1.3.7 ) || ( >=app-shells/bash-3.2 app-shells/zsh ) sys-apps/miscfiles
+SLOT=0
+SRC_URI=http://bash-completion.alioth.debian.org/files/bash-completion-1.3.tar.bz2
+_eclasses_=prefix	21058c21ca48453d771df15500873ede
+_md5_=fdf834f1f9a4881d46213e13ae37ff21

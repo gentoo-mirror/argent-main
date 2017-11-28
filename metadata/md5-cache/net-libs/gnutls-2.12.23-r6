@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare setup test
+DEPEND=>=dev-libs/libtasn1-0.3.4 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0:0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) ) virtual/pkgconfig sys-devel/libtool doc? ( dev-util/gtk-doc ) nls? ( sys-devel/gettext ) test? ( app-misc/datefudge ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A TLS 1.2 and SSL 3.0 implementation for the GNU project
+EAPI=5
+HOMEPAGE=http://www.gnutls.org/
+IUSE=bindist +cxx doc examples guile lzo +nettle nls pkcs11 static-libs test zlib
+KEYWORDS=amd64 x86
+LICENSE=GPL-3 LGPL-2.1
+RDEPEND=>=dev-libs/libtasn1-0.3.4 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0:0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) )
+SLOT=0
+SRC_URI=ftp://ftp.gnutls.org/gcrypt/gnutls/v2.12/gnutls-2.12.23.tar.bz2
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=4fd4a0b194e8b361b12be50fb7ee4af8

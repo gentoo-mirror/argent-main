@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=http://rpm5.org/files/popt/popt-1.16.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=553718cb0d3074f47765e5ea1cdd8fb1

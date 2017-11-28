@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=ssl? ( dev-libs/openssl ) !net-mail/uw-imap kerberos? ( app-crypt/mit-krb5 ) kernel_linux? ( pam? ( >=sys-libs/pam-0.72 ) )
+DESCRIPTION=UW IMAP c-client library
+EAPI=4
+HOMEPAGE=http://www.washington.edu/imap/
+IUSE=doc +ipv6 kerberos kernel_linux kernel_FreeBSD pam ssl static-libs topal chappa
+KEYWORDS=amd64 x86
+LICENSE=Apache-2.0
+RDEPEND=ssl? ( dev-libs/openssl ) !net-mail/uw-imap kerberos? ( app-crypt/mit-krb5 )
+SLOT=0
+SRC_URI=ftp://ftp.cac.washington.edu/imap/imap-2007f.tar.Z chappa? ( mirror://gentoo/c-client-2007f-chappa-115-all.patch.gz )
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=bf3a507eac19994e6441231eaa48e240

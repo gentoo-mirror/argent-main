@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=>=dev-libs/popt-1.5 selinux? ( sys-libs/libselinux ) acl? ( virtual/acl ) >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Rotates, compresses, and mails system logs
+EAPI=5
+HOMEPAGE=https://fedorahosted.org/logrotate/
+IUSE=acl selinux
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/popt-1.5 selinux? ( sys-libs/libselinux ) acl? ( virtual/acl ) selinux? ( sec-policy/selinux-logrotate )
+SLOT=0
+SRC_URI=https://fedorahosted.org/releases/l/o/logrotate/logrotate-3.8.8.tar.gz
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=7e8185f38afbda61cd5c748b66dd6a02

@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for net-ping
+EAPI=0
+KEYWORDS=amd64 x86
+RDEPEND=|| ( ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~perl-core/net-ping-2.36 )
+SLOT=0
+_md5_=000a2c02a9146eddb8e09deafc73e0d7

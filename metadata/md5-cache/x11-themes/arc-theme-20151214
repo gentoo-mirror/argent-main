@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=x11-libs/gtk+-3.14 x11-themes/gtk-engines-murrine virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell.
+EAPI=5
+HOMEPAGE=https://github.com/horst3180/Arc-theme
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=x11-libs/gtk+-3.14 x11-themes/gtk-engines-murrine
+SLOT=0
+SRC_URI=https://github.com/horst3180/Arc-theme/archive/20151214.tar.gz -> arc-theme-20151214.tar.gz
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=e3a0e31e53f358f9ec6eb083a1eba6a9

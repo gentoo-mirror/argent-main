@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Advanced cross-platform Google Drive client
+EAPI=5
+HOMEPAGE=https://www.insynchq.com/
+KEYWORDS=amd64 x86
+LICENSE=as-is
+SLOT=0
+SRC_URI=amd64? ( http://s.insynchq.com/builds/insync_1.2.18.35198-trusty_amd64.deb )
+_eclasses_=unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_md5_=42841e640795bedd15fc06d51648a27d

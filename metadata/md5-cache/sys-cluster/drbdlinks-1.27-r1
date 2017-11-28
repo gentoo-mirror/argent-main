@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst
+DEPEND=dev-lang/python heartbeat? ( sys-cluster/heartbeat )
+DESCRIPTION=A python script to manage symlinks in a Linux-HA cluster environment using DRBD
+EAPI=0
+HOMEPAGE=http://www.tummy.com/Community/software/drbdlinks
+IUSE=heartbeat
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/python heartbeat? ( sys-cluster/heartbeat )
+SLOT=0
+SRC_URI=ftp://ftp.tummy.com/pub/tummy/drbdlinks/drbdlinks-1.27.tar.gz
+_md5_=335cb37244b8d9a8ffda2d9ad194eefd

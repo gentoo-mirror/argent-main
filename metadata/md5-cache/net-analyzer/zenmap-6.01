@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=>=x11-libs/gtk+-2.6:2 >=dev-python/pygtk-2.6 || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) =dev-lang/python-2*
+DESCRIPTION=Graphical frontend for nmap
+EAPI=4
+HOMEPAGE=http://nmap.org/
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2
+RDEPEND=>=x11-libs/gtk+-2.6:2 >=dev-python/pygtk-2.6 || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ~net-analyzer/nmap-6.01 =dev-lang/python-2*
+SLOT=0
+SRC_URI=http://nmap.org/dist/nmap-6.01.tar.bz2
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=13a55c1eecaeb672b20d2e34f29e450e

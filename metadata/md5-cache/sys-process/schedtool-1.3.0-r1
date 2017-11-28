@@ -6,5 +6,5 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://freequaos.host.sk/schedtool/schedtool-1.3.0.tar.bz2
-_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=95c1389dce6f07db8f541d298ebc8b06

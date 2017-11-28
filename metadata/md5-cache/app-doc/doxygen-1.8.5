@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=sys-apps/sed sys-devel/flex sys-devel/bison doc? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) qt4? ( dev-qt/qtgui:4 ) latex? ( app-text/texlive[extra] ) dev-lang/perl virtual/libiconv media-libs/libpng app-text/ghostscript-gpl sqlite? ( dev-db/sqlite:3 ) dot? ( media-gfx/graphviz media-libs/freetype )
+DESCRIPTION=Documentation system for most programming languages
+EAPI=4
+HOMEPAGE=http://www.doxygen.org/
+IUSE=debug doc dot qt4 latex sqlite elibc_FreeBSD userland_GNU linguas_hy linguas_ar linguas_pt_BR linguas_ca linguas_zh linguas_cs linguas_de linguas_da linguas_eo linguas_es linguas_fa linguas_fi linguas_fr linguas_el linguas_hr linguas_hu linguas_id linguas_it linguas_ja linguas_ko linguas_lt linguas_mk linguas_nl linguas_nb linguas_pl linguas_pt linguas_ro linguas_ru linguas_sl linguas_sk linguas_sr linguas_sv linguas_tr linguas_uk linguas_vi linguas_af
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=qt4? ( dev-qt/qtgui:4 ) latex? ( app-text/texlive[extra] ) dev-lang/perl virtual/libiconv media-libs/libpng app-text/ghostscript-gpl sqlite? ( dev-db/sqlite:3 ) dot? ( media-gfx/graphviz media-libs/freetype )
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=http://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.5.src.tar.gz http://dev.gentoo.org/~xarthisius/distfiles/doxywizard.png
+_eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	qmake-utils	c4a172579c4245d449a81e0c2ac263f0	qt4-r2	2a4270cb7c63f0a65d0c79add67ec7df	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=9e1b98fd3a615c3c798642d90050cb2a

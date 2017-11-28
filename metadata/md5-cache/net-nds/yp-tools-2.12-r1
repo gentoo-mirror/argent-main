@@ -8,5 +8,5 @@ KEYWORDS=alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=ftp://ftp.kernel.org/pub/linux/utils/net/NIS/yp-tools-2.12.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=f5f995ddb4cc71115914dcca1f549a0e

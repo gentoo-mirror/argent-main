@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for File-Temp
+EAPI=0
+KEYWORDS=amd64 x86
+RDEPEND=|| ( =dev-lang/perl-5.16* =dev-lang/perl-5.14* ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~perl-core/File-Temp-0.220.0 )
+SLOT=0
+_md5_=40753f188e62da51f1a7d68662cfac13

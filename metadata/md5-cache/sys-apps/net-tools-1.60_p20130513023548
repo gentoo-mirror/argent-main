@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=!<sys-apps/openrc-0.9.9.3 selinux? ( sys-libs/libselinux ) selinux? ( virtual/pkgconfig ) app-arch/xz-utils
+DESCRIPTION=Standard Linux networking tools
+EAPI=3
+HOMEPAGE=http://net-tools.sourceforge.net/
+IUSE=nls old-output selinux static
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=!<sys-apps/openrc-0.9.9.3 selinux? ( sys-libs/libselinux )
+SLOT=0
+SRC_URI=mirror://gentoo/net-tools-1.60_p20130513023548.tar.xz mirror://gentoo/net-tools-1.60_p20130513023548-patches-1.tar.xz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=3fcbced83aaec6a960c38b409cf07f7a

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=app-arch/libarchive-2.8.0:= >=dev-libs/expat-2.0.1 >=net-misc/curl-7.20.0-r1[ssl] sys-libs/zlib virtual/pkgconfig ncurses? ( sys-libs/ncurses ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) sys-devel/make userland_GNU? ( >=sys-apps/findutils-4.4.0 ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DESCRIPTION=Cross platform Make
+EAPI=5
+HOMEPAGE=http://www.cmake.org/
+IUSE=emacs ncurses qt4 qt5 test
+KEYWORDS=amd64 x86
+LICENSE=CMake
+RDEPEND=>=app-arch/libarchive-2.8.0:= >=dev-libs/expat-2.0.1 >=net-misc/curl-7.20.0-r1[ssl] sys-libs/zlib virtual/pkgconfig ncurses? ( sys-libs/ncurses ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) emacs? ( virtual/emacs )
+REQUIRED_USE=?? ( qt4 qt5 )
+SLOT=0
+SRC_URI=http://www.cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz
+_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	cmake-utils	b427f2a83adba021dc9d11c68839f736	elisp-common	6043b4937ba58bd735ab6fd9cbbef1e9	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0	virtualx	eadac04b11deeb9c6ea3d1fad7d28202
+_md5_=5c4f981fb77727037f91a98fdafe210f

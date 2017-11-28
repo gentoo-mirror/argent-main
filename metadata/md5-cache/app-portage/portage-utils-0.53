@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare
+DEPEND=app-arch/xz-utils
+DESCRIPTION=small and fast portage helper tools written in C
+EAPI=4
+HOMEPAGE=http://www.gentoo.org/doc/en/portage-utils.xml
+IUSE=nls static
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gentoo/portage-utils-0.53.tar.xz http://dev.gentoo.org/~vapier/dist/portage-utils-0.53.tar.xz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=282662bad1a1cfb630e3cbf9c17a2cc0

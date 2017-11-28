@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=caps? ( static? ( sys-libs/libcap-ng[static-libs] ) !static? ( sys-libs/libcap-ng ) ) selinux? ( sys-libs/libselinux ) virtual/pkgconfig
+DESCRIPTION=Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools
+EAPI=4
+HOMEPAGE=http://smartmontools.sourceforge.net/
+IUSE=caps minimal selinux static
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=caps? ( static? ( sys-libs/libcap-ng[static-libs] ) !static? ( sys-libs/libcap-ng ) ) selinux? ( sys-libs/libselinux ) !minimal? ( virtual/mailx ) selinux? ( sec-policy/selinux-smartmon )
+SLOT=0
+SRC_URI=mirror://sourceforge/smartmontools/smartmontools-6.3.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=0e5ba703bf2caf834960ddc7ca46054a

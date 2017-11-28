@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure prepare
+DEPEND=dev-libs/elfutils selinux? ( sys-libs/libselinux ) unwind? ( sys-libs/libunwind ) test? ( dev-util/dejagnu ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=trace library calls made at runtime
+EAPI=5
+HOMEPAGE=http://ltrace.alioth.debian.org/
+IUSE=debug selinux test unwind
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/elfutils selinux? ( sys-libs/libselinux ) unwind? ( sys-libs/libunwind )
+SLOT=0
+SRC_URI=https://alioth.debian.org/frs/download.php/3848/ltrace-0.7.2.tar.bz2
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=5b54ee83f5a86d32c6b802bed7c76455

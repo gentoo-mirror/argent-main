@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst setup
+DEPEND=>=app-misc/pax-utils-0.7 dev-db/sqlite:3[soundex(+)] net-misc/rsync sys-apps/diffutils sys-apps/sandbox >=sys-apps/portage-2.1.9[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),python_single_target_python2_7(+)] sys-devel/gettext >=dev-lang/python-2.7.5-r2:2.7[sqlite] >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),python_single_target_python2_7(+)] dev-util/intltool
+DESCRIPTION=Entropy Package Manager foundation library
+EAPI=5
+HOMEPAGE=http://www.sabayon.org
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=app-misc/pax-utils-0.7 dev-db/sqlite:3[soundex(+)] net-misc/rsync sys-apps/diffutils sys-apps/sandbox >=sys-apps/portage-2.1.9[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),python_single_target_python2_7(+)] sys-devel/gettext >=dev-lang/python-2.7.5-r2:2.7[sqlite] >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),python_single_target_python2_7(+)]
+REQUIRED_USE=python_targets_python2_7
+SLOT=0
+SRC_URI=http://bpr.bluepink.ro:/~rogentos/argent/sys-apps/entropy-297.tar.bz2
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1
+_md5_=93da0acab47d00cf1e791c54da75efce

@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure unpack
+DEPEND=|| ( app-arch/plzip app-arch/pdlzip app-arch/lzip ) sys-apps/texinfo
+DESCRIPTION=Your basic line editor
+EAPI=4
+HOMEPAGE=https://www.gnu.org/software/ed/
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gnu/ed/ed-1.10.tar.lz
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_md5_=099186131e1efd96fcc38afe3e8e7b3d

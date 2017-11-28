@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual to select between different udev daemon providers
+EAPI=5
+IUSE=systemd
+KEYWORDS=amd64 x86
+RDEPEND=>=sys-apps/systemd-208:0
+SLOT=0
+_md5_=e379cdda965a7362b462b99aaef50093

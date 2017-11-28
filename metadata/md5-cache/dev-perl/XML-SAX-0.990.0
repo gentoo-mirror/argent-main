@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=dev-perl/XML-SAX-Base >=dev-perl/XML-NamespaceSupport-1.40.0 >=dev-libs/libxml2-2.4.1 dev-lang/perl:=[-build(-)]
+DESCRIPTION=Perl module for using and building Perl SAX2 XML parsers, filters, and drivers
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/XML-SAX/
+KEYWORDS=amd64 x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-perl/XML-SAX-Base >=dev-perl/XML-NamespaceSupport-1.40.0 >=dev-libs/libxml2-2.4.1 dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/G/GR/GRANTM/XML-SAX-0.99.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_md5_=f87602d6870d14e2db4a8d6b11cf3e6a

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) app-arch/xz-utils doc? ( dev-python/docutils )
+DESCRIPTION=Gentoo's multi-purpose configuration and management tool
+EAPI=4
+HOMEPAGE=http://wiki.gentoo.org/wiki/Project:Eselect
+IUSE=doc emacs vim-syntax
+KEYWORDS=amd64 x86
+LICENSE=GPL-2+ || ( GPL-2+ CC-BY-SA-3.0 )
+PDEPEND=emacs? ( app-emacs/eselect-mode ) vim-syntax? ( app-vim/eselect-syntax )
+RDEPEND=sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) sys-apps/file sys-libs/ncurses
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~ulm/eselect/eselect-1.4.4.tar.xz
+_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=b015a082e2e50507d84ada583db2dc0d

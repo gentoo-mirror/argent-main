@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=net-libs/libnet net-libs/libpcap
+DESCRIPTION=tcptraceroute is a traceroute implementation using TCP packets
+EAPI=5
+HOMEPAGE=http://michael.toren.net/code/tcptraceroute/
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=net-libs/libnet net-libs/libpcap
+SLOT=0
+SRC_URI=http://michael.toren.net/code/tcptraceroute/tcptraceroute-1.5beta7.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=a5c0acc503d38a307ad181c19614536c

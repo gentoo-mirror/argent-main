@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=app-arch/unzip =dev-lang/python-2* =dev-lang/python-2*[sqlite] virtual/pkgconfig
+DESCRIPTION=A fast, lightweight and full featured download manager for many One-Click-Hosters.
+EAPI=3
+HOMEPAGE=http://www.pyload.org
+IUSE=captcha clicknload container qt4 rar ssl
+KEYWORDS=~amd64 ~x86
+LICENSE=freedist
+RDEPEND=app-arch/unzip dev-python/beautifulsoup dev-python/beaker dev-python/feedparser dev-python/simplejson dev-python/pycurl dev-python/jinja captcha? ( app-text/tesseract virtual/python-imaging ) clicknload? ( || ( dev-lang/spidermonkey dev-java/rhino ) ) container? ( dev-python/pycrypto ) qt4? ( dev-python/PyQt4 ) rar? ( app-arch/unrar ) ssl? ( dev-python/pycrypto dev-python/pyopenssl ) =dev-lang/python-2* =dev-lang/python-2*[sqlite]
+SLOT=0
+SRC_URI=http://get.pyload.org/static/pyload-src-v0.4.9.zip
+_eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=0f7feaea9c9500ae1027a73a5fc6c135

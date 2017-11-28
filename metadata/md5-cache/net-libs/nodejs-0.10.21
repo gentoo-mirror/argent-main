@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=dev-libs/openssl
+DESCRIPTION=Evented IO for V8 Javascript
+EAPI=5
+HOMEPAGE=http://nodejs.org/
+IUSE=+npm +snapshot
+KEYWORDS=amd64 x86
+LICENSE=Apache-1.1 Apache-2.0 BSD BSD-2 MIT
+RDEPEND=dev-libs/openssl
+RESTRICT=test
+SLOT=0
+SRC_URI=http://nodejs.org/dist/v0.10.21/node-v0.10.21.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=acb21e121d1c41e198b9aa433fe641b1

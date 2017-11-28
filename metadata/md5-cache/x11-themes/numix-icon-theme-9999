@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Official icon theme from the Numix project.
+EAPI=5
+HOMEPAGE=https://numixproject.org
+LICENSE=GPL-3+
+SLOT=0
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=08799cb9237d820bf307be1d1b0a004b

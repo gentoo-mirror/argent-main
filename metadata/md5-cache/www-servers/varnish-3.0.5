@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=|| ( dev-libs/libedit sys-libs/readline ) dev-libs/libpcre[jit?] jemalloc? ( dev-libs/jemalloc ) tools? ( sys-libs/ncurses ) virtual/pkgconfig
+DESCRIPTION=Varnish is a state-of-the-art, high-performance HTTP accelerator
+EAPI=5
+HOMEPAGE=http://www.varnish-cache.org/
+IUSE=doc jemalloc jit static-libs +tools
+KEYWORDS=amd64 ~mips x86
+LICENSE=BSD-2 GPL-2
+RDEPEND=|| ( dev-libs/libedit sys-libs/readline ) dev-libs/libpcre[jit?] jemalloc? ( dev-libs/jemalloc ) tools? ( sys-libs/ncurses ) sys-devel/gcc
+RESTRICT=test
+SLOT=0
+SRC_URI=http://repo.varnish-cache.org/source/varnish-3.0.5.tar.gz
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=4a478ae90358fa4e684fd60a57286ac9

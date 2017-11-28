@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup unpack
+DEPEND=dev-libs/openssl kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+DESCRIPTION=Open Source iSCSI target with professional features
+EAPI=0
+HOMEPAGE=http://iscsitarget.sourceforge.net/
+IUSE=kernel_linux
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/openssl kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=mirror://sourceforge/iscsitarget/iscsitarget-1.4.19.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	linux-info	5f311393d641cdc32d0a5cccd0d00e65	linux-mod	a48e41451493ce2f602f7a6484903927	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=648adf1dd1331ffd9b05308d9a99326b

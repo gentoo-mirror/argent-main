@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare
+DESCRIPTION=POSIX man-pages (0p, 1p, 3p)
+EAPI=5
+HOMEPAGE=https://www.kernel.org/doc/man-pages/
+KEYWORDS=amd64 x86
+LICENSE=man-pages-posix-2013
+RDEPEND=virtual/man !<sys-apps/man-pages-3
+RESTRICT=binchecks
+SLOT=0
+SRC_URI=mirror://kernel/linux/docs/man-pages/man-pages-posix/man-pages-posix-2013-a.tar.xz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=41bd8275f5478b866e1d59969dcc736b

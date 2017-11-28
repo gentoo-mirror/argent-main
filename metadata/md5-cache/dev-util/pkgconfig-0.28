@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=!internal-glib? ( >=dev-libs/glib-2.30 ) !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
+DESCRIPTION=Package config system that manages compile/link flags
+EAPI=5
+HOMEPAGE=http://pkgconfig.freedesktop.org/wiki/
+IUSE=elibc_FreeBSD elibc_glibc hardened internal-glib
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=!internal-glib? ( >=dev-libs/glib-2.30 ) !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
+SLOT=0
+SRC_URI=http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=37aecd3e62cdaae6f272dc41555d7ff3

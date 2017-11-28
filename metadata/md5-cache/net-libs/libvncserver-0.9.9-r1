@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=gcrypt? ( dev-libs/libgcrypt:0 ) gnutls? ( net-libs/gnutls dev-libs/libgcrypt:0 ) !gnutls? ( ssl? ( dev-libs/openssl ) ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng:0 ) zlib? ( sys-libs/zlib )
+DESCRIPTION=library for creating vnc servers
+EAPI=4
+HOMEPAGE=http://libvncserver.sourceforge.net/
+IUSE=+24bpp gcrypt gnutls ipv6 +jpeg +png ssl static-libs test threads +zlib
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=gcrypt? ( dev-libs/libgcrypt:0 ) gnutls? ( net-libs/gnutls dev-libs/libgcrypt:0 ) !gnutls? ( ssl? ( dev-libs/openssl ) ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng:0 ) zlib? ( sys-libs/zlib )
+REQUIRED_USE=png? ( zlib )
+SLOT=0
+SRC_URI=http://libvncserver.sourceforge.net/LibVNCServer-0.9.9.tar.gz mirror://sourceforge/libvncserver/LibVNCServer-0.9.9.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=17bf636d1d63446fa6b4ba4616caffb6

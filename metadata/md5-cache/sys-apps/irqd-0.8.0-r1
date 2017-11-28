@@ -1,0 +1,11 @@
+DEFINED_PHASES=prepare unpack
+DEPEND=dev-libs/libnl !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DESCRIPTION=IRQ balancing daemon
+EAPI=5
+HOMEPAGE=https://github.com/vaesoo/irqd
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libnl
+SLOT=0
+_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	git-2	7a13ebd120818b77da786c839a3af8c8	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=8110d38a92206c43acb2907797fcd5c6

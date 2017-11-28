@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=jpeg? ( virtual/jpeg:0 ) opengl? ( virtual/opengl media-libs/freeglut ) app-arch/unzip
+DESCRIPTION=software-based implementation of the codec specified in the JPEG-2000 Part-1 standard
+EAPI=3
+HOMEPAGE=http://www.ece.uvic.ca/~mdadams/jasper/
+IUSE=jpeg opengl static-libs
+KEYWORDS=amd64 x86
+LICENSE=JasPer2.0
+RDEPEND=jpeg? ( virtual/jpeg:0 ) opengl? ( virtual/opengl media-libs/freeglut )
+SLOT=0
+SRC_URI=http://www.ece.uvic.ca/~mdadams/jasper/software/jasper-1.900.1.zip mirror://gentoo/jasper-1.900.1-fixes-20120611.patch.bz2
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=f2283eff20827d366af918c0ae0e8e8e

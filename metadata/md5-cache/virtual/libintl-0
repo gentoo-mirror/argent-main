@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for the GNU Internationalization Library
+EAPI=0
+IUSE=elibc_glibc elibc_uclibc
+KEYWORDS=amd64 x86
+RDEPEND=!elibc_glibc? ( !elibc_uclibc? ( !elibc_musl? ( sys-devel/gettext ) ) )
+SLOT=0
+_md5_=321b509ce13733732077c4451f9facd0

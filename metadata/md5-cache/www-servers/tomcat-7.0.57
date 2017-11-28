@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test
+DEPEND=dev-java/eclipse-ecj:4.4 ~dev-java/tomcat-servlet-api-7.0.57 extra-webapps? ( dev-java/jakarta-jstl:0 ) websockets? ( >=virtual/jdk-1.7 ) !websockets? ( >=virtual/jdk-1.6 ) >=dev-java/ant-core-1.8.1:0 test? ( dev-java/ant-junit:0 dev-java/junit:4 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
+DESCRIPTION=Tomcat Servlet-3.0/JSP-2.2 Container
+EAPI=5
+HOMEPAGE=http://tomcat.apache.org/
+IUSE=extra-webapps websockets elibc_FreeBSD doc source test elibc_FreeBSD
+KEYWORDS=~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris
+LICENSE=Apache-2.0
+RDEPEND=dev-java/eclipse-ecj:4.4 ~dev-java/tomcat-servlet-api-7.0.57 extra-webapps? ( dev-java/jakarta-jstl:0 ) websockets? ( >=virtual/jre-1.7 ) !websockets? ( >=virtual/jre-1.6 ) !<dev-java/tomcat-native-1.1.24 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+RESTRICT=test
+SLOT=7
+SRC_URI=mirror://apache/tomcat/tomcat-7/v7.0.57/src/apache-tomcat-7.0.57-src.tar.gz
+_eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-ant-2	2effd9e1d5376a4af777dd7019ac42fb	java-pkg-2	ae6a1e3189aa7006ab6cb4289f143fbb	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=08026ccdc179db6288440f692b9ef15a

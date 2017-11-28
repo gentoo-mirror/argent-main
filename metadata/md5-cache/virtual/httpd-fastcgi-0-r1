@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for FastCGI-enabled webservers
+EAPI=5
+KEYWORDS=amd64 x86
+RDEPEND=|| ( www-apache/mod_fcgid www-apache/mod_fastcgi www-servers/lighttpd www-servers/bozohttpd www-servers/nginx www-servers/resin www-servers/cherokee )
+SLOT=0
+_md5_=80b125165f77335d42af4742978c470e
