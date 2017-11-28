@@ -155,6 +155,7 @@ dev-db/redis 2.6.15-r1: A persistent caching system, key-value and data structur
 dev-db/sqlite 3.8.2 3.8.6: A SQL Database Engine in a C Library
 dev-db/unixODBC 2.3.1: A complete ODBC driver manager
 dev-db/wal2json 20140801: WAL JSON output plugin
+dev-db/xtrabackup-bin 2.2.3 2.2.5: MySQL hot backup software that performs non-blocking backups for InnoDB and XtraDB databases
 dev-go/ace 0.0.4: HTML template engine for Go
 dev-go/blackfriday 1.2_p20150720: a markdown processor implemented in Go
 dev-go/go-md2man 1.0.3: A utility to convert markdown to man pages
