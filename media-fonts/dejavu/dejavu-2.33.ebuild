@@ -41,15 +41,6 @@ DEPEND="fontforge? ( x11-apps/mkfontscale
 		>media-libs/fontconfig-2.6.0 )"
 RDEPEND=""
 
-if use fontforge
-then
-	S=${WORKDIR}/${MY_SP}
-	FONT_S=${S}/build
-else
-	S=${WORKDIR}/${MY_BP}
-	FONT_S=${S}/ttf
-fi
-
 FONT_CONF=(
 		"${S}"/fontconfig/20-unhint-small-dejavu-sans-mono.conf
 		"${S}"/fontconfig/20-unhint-small-dejavu-sans.conf
@@ -62,6 +53,14 @@ FONT_SUFFIX="ttf"
 DOCS="AUTHORS NEWS README status.txt langcover.txt unicover.txt"
 
 src_compile() {
+	if use fontforge ; then
+		S=${WORKDIR}/${MY_SP}
+		FONT_S=${S}/build
+	else
+		S=${WORKDIR}/${MY_BP}
+		FONT_S=${S}/ttf
+	fi
+
 	if use fontforge
 	then
 		emake -j1 \
