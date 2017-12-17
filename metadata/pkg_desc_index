@@ -3,17 +3,17 @@ app-admin/aws-cli 1.5.3: Universal Command Line Interface for Amazon Web Service
 app-admin/chef 11.12.8 12.1.0 12.3.0: Chef is a systems integration framework
 app-admin/chrpath 0.13-r2: chrpath can modify the rpath and runpath of ELF executables
 app-admin/collectd 5.4.1: A a daemon which collects system statistic and provides mechanisms to store the values
-app-admin/equo 290 291 292 293 294 295 296: Entropy Package Manager text-based client
+app-admin/equo 296: Entropy Package Manager text-based client
 app-admin/eselect 1.4.1 1.4.4: Gentoo's multi-purpose configuration and management tool
 app-admin/hddtemp 0.3_beta15-r7: A simple utility to read the temperature of SMART capable hard drives
 app-admin/logrotate 3.8.7 3.8.8 3.8.9-r1: Rotates, compresses, and mails system logs
-app-admin/matter 290 291 292 293 294 295 296 297: Automated Packages Builder for Portage and Entropy
+app-admin/matter 296: Automated Packages Builder for Portage and Entropy
 app-admin/mcelog 1.0_pre3_p20130621-r1 100: A tool to log and decode Machine Check Exceptions
 app-admin/perl-cleaner 2.19: User land tool for cleaning up old perl installs
 app-admin/pwgen 2.06-r1 2.07: Password Generator
 app-admin/pydf 10-r1: Enhanced df with colors
 app-admin/python-updater 0.11: Script used to reinstall Python packages after changing of active Python versions
-app-admin/rigo 290 291 292 293 294 295 296 297 298 300: Rigo, the Sabayon Application Browser
+app-admin/rigo 296: Rigo, the Sabayon Application Browser
 app-admin/sudo 1.8.6_p7 1.8.12: Allows users or groups to run commands as other users
 app-admin/superadduser 1.0.9: Interactive adduser script from Slackware
 app-admin/syslog-ng 3.4.7: syslog replacement with advanced filtering features
@@ -47,42 +47,36 @@ app-benchmarks/iozone 3.397: Filesystem benchmarking program
 app-benchmarks/piozone 1.0-r3: A hard-disk benchmarking tool
 app-crypt/gnupg 2.0.25 2.0.26-r3 2.0.28: The GNU Privacy Guard, a GPL pgp replacement
 app-crypt/p11-kit 0.20.2 0.20.7: Provides a standard configuration setup for installing PKCS#11
-app-crypt/passwordsafe 0.9_beta 0.95.1_beta 0.95.1: Password manager with wxGTK based frontend
 app-crypt/pinentry 0.8.2 0.9.0: Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol
-app-crypt/shim-signed 0.2: A Microsoft-signed version of the UEFI Shim bootloader for SecureBoot
 app-doc/doxygen 1.8.3.1 1.8.5 1.8.9.1: Documentation system for most programming languages
 app-editors/vim 7.4.155 7.4.712: Vim, an improved vi-style text editor
 app-editors/vim-core 7.4.155 7.4.712: vim and gvim shared files
-app-editors/xemacs 21.4.22-r4 21.4.24 21.5.31 21.5.33 21.5.34-r2 21.5.34-r3 21.5.34-r4: highly customizable open source text editor and application development system
-app-emulation/docker 1.6.1 1.6.2 1.7.1 1.8.1 1.8.2 1.9.0 1.9.1 1.10.0 9999: Docker complements kernel namespacing with a high-level API which operates at the process level
+app-editors/xemacs 21.4.22-r4 21.4.24: highly customizable open source text editor and application development system
+app-emulation/docker 1.7.1: Docker complements kernel namespacing with a high-level API which operates at the process level
 app-emulation/lxc 1.0.3 1.1.0-r3 1.1.2-r2: LinuX Containers userspace utilities
-app-emulation/packer-bin 0.8.6: Packer is a tool for creating machine and container images for multiple platforms from a single source configuration
-app-emulation/qemu-launcher 1.7.4: Gtk+ front-end for QEMU
 app-emulation/vagrant 1.4.3-r2 1.7.3: Tool for building and distributing virtual machines
-app-emulation/vagrant-bin 1.7.4: Tool for building and distributing virtual machines
 app-emulation/virtualbox 4.3.12 4.3.24 4.3.28: Family of powerful x86 virtualization products for enterprise as well as home use
 app-emulation/virtualbox-additions 4.3.12 4.3.28: CD image containing guest additions for VirtualBox
 app-emulation/virtualbox-bin 4.3.18.96516: Family of powerful x86 virtualization products for enterprise as well as home use
 app-emulation/virtualbox-extpack-oracle 4.3.12.93733 4.3.28.100309: PUEL extensions for VirtualBox
 app-emulation/virtualbox-modules 4.3.12 4.3.18 4.3.28: Kernel Modules for Virtualbox
-app-emulation/vmware-modules 304.2: VMware kernel modules
 app-eselect/eselect-ctags 1.18: Manages ctags implementations
 app-eselect/eselect-fontconfig 1.1: An eselect module to manage /etc/fonts/conf.d symlinks
 app-eselect/eselect-lib-bin-symlink 0.1.1: An eselect library to manage executable symlinks
-app-eselect/eselect-php 0.7.1-r4 0.7.1-r7 0.8.2-r1 0.8.5 0.9.1: PHP eselect module
+app-eselect/eselect-php 0.7.1-r4 0.9.1: PHP eselect module
 app-eselect/eselect-pinentry 0.4: Manage /usr/bin/pinentry symlink
 app-eselect/eselect-postgresql 1.2.1: Utility to select the default PostgreSQL slot
 app-eselect/eselect-python 20111108: Eselect module for management of multiple Python versions
 app-eselect/eselect-ruby 20141227: Manages multiple Ruby versions
 app-eselect/eselect-vi 1.1.7-r1: Manages the /usr/bin/vi symlink
-app-forensics/lynis 1.6.4 2.1.0 2.1.1: Security and system auditing tool
+app-forensics/lynis 1.6.4: Security and system auditing tool
 app-i18n/man-pages-de 0.8: A somewhat comprehensive collection of Linux german man page translations
 app-misc/c_rehash 1.7-r1: c_rehash script from OpenSSL
 app-misc/ca-certificates 20130906-r1 20140927.3.17.2: Common CA Certificates PEM files
 app-misc/colordiff 1.0.13 1.0.13-r1: Colorizes output of diff
 app-misc/editor-wrapper 4: Wrapper scripts that will execute EDITOR or PAGER
 app-misc/hilite 1.5: A utility which highlights stderr text in red
-app-misc/magneto-loader 290 291 292 293 294 295 296 297 298 300: Official Sabayon Linux Entropy Notification Applet Loader
+app-misc/magneto-loader 296: Official Sabayon Linux Entropy Notification Applet Loader
 app-misc/mc 4.8.11 4.8.13: GNU Midnight Commander is a text based file manager
 app-misc/mime-types 9: Provides /etc/mime.types file
 app-misc/pax-utils 0.7 0.8.1 1.0.3: ELF related utils for ELF 32/64 binaries that can check files for security relevant properties
@@ -147,7 +141,7 @@ dev-db/innotop 1.9.0-r1 1.9.1: innotop - A text-mode MySQL and InnoDB monitor li
 dev-db/libdbi 0.9.0: libdbi is a database-independent abstraction layer in C, similar to the DBI/DBD layer in Perl.
 dev-db/libdbi-drivers 0.9.0: The libdbi-drivers project maintains drivers for libdbi.
 dev-db/mongodb 2.4.6-r2: A high-performance, open source, schema-free document-oriented database
-dev-db/mysql 5.5.46 5.6.20 5.6.24 5.6.27 5.6.27-r1 5.6.28: A fast, multi-threaded, multi-user SQL database server
+dev-db/mysql 5.6.20 5.6.24 5.6.28: A fast, multi-threaded, multi-user SQL database server
 dev-db/mysqltuner 1.3.0: MySQLTuner is a high-performance MySQL tuning script
 dev-db/mytop 1.6-r4: mytop - a top clone for mysql
 dev-db/percona-toolkit 2.2.7 2.2.11: essential command-line utilities for MySQL
@@ -156,13 +150,6 @@ dev-db/sqlite 3.8.2 3.8.6: A SQL Database Engine in a C Library
 dev-db/unixODBC 2.3.1: A complete ODBC driver manager
 dev-db/wal2json 20140801: WAL JSON output plugin
 dev-db/xtrabackup-bin 2.2.3 2.2.5: MySQL hot backup software that performs non-blocking backups for InnoDB and XtraDB databases
-dev-go/ace 0.0.4: HTML template engine for Go
-dev-go/blackfriday 1.2_p20150720: a markdown processor implemented in Go
-dev-go/go-md2man 1.0.3: A utility to convert markdown to man pages
-dev-go/purell 0.1.0: tiny Go library to normalize URLs
-dev-go/sanitized-anchor-name 0_pre20150822: A Go function to provide sanitized anchor names
-dev-go/toml 0.1.0: TOML parser for Golang with reflection.
-dev-go/yaml 2: YAML support for the Go language
 dev-java/ant-core 1.9.2: Java-based build tool similar to 'make' that uses XML configuration files.
 dev-java/gradle-bin 1.12: A project automation and build tool similar to Apache Ant and Apache Maven with a Groovy based DSL
 dev-java/java-config 2.2.0: Java environment configuration query tool
@@ -177,7 +164,7 @@ dev-lang/lua 5.1.5 5.1.5-r3: A powerful light-weight programming language design
 dev-lang/luajit 2.0.2 2.0.4: Just-In-Time Compiler for the Lua programming language
 dev-lang/nasm 2.10.07 2.11.06 2.11.08: groovy little assembler
 dev-lang/perl 5.16.3 5.20.1-r4 5.20.2: Larry Wall's Practical Extraction and Report Language
-dev-lang/php 5.3.28-r3 5.4.26 5.5.33 5.5.34 5.5.35 5.6.19 5.6.20 5.6.21 7.0.6: The PHP language runtime engine
+dev-lang/php 5.3.28-r3 5.4.26 5.5.33 5.5.34 5.5.35 5.6.19 5.6.20 5.6.21: The PHP language runtime engine
 dev-lang/python 2.7.5-r3 2.7.9-r1 2.7.10-r1: An interpreted, interactive, object-oriented programming language
 dev-lang/python-exec 0.3.1 2.0.1 2.0.1-r1 2.0.2: Python script wrapper
 dev-lang/ruby 1.9.3_p484 2.0.0_p353 2.2.1 2.2.2-r1 2.2.4 2.2.5: An object-oriented scripting language
@@ -245,13 +232,13 @@ dev-libs/newt 0.52.12 0.52.15: Redhat's Newt windowing toolkit development files
 dev-libs/nspr 4.10.6-r1 4.10.8: Netscape Portable Runtime
 dev-libs/nss 3.16 3.16.5 3.17.3 3.17.4: Mozilla's Network Security Services library that implements PKI support
 dev-libs/oniguruma 5.9.2-r1 5.9.5: a regular expression library for different character encodings
-dev-libs/openssl 1.0.1k 1.0.1m 1.0.1o 1.0.2a 1.0.2e: full-strength general purpose cryptography library (including SSL and TLS)
+dev-libs/openssl 1.0.1o 1.0.2e: full-strength general purpose cryptography library (including SSL and TLS)
 dev-libs/ossp-uuid 1.6.2-r2 1.6.2-r4: An ISO-C:1999 API and corresponding CLI for the generation of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant UUID
 dev-libs/pakchois 0.4 0.4-r2: PaKChoiS - PKCS #11 wrapper library
 dev-libs/pkcs11-helper 1.11: PKCS#11 helper library
 dev-libs/popt 1.16-r1 1.16-r2: Parse Options - Command line parser
 dev-libs/ppl 0.12.1-r1: The Parma Polyhedra Library provides numerical abstractions for analysis of complex systems
-dev-libs/protobuf 2.5.0 2.5.0-r1 2.5.0-r2 3.0.0_beta1: Google's Protocol Buffers -- an efficient method of encoding structured data
+dev-libs/protobuf 2.5.0 2.5.0-r1 2.5.0-r2: Google's Protocol Buffers -- an efficient method of encoding structured data
 dev-libs/protobuf-c 1.0.2-r1: code generator and runtime libraries to use Protocol Buffers (protobuf) from pure C
 dev-libs/pth 2.0.7-r3: GNU Portable Threads
 dev-libs/vala-common 0.22.1 0.24.0 0.26.2: Build infrastructure for packages that use Vala
@@ -399,14 +386,12 @@ dev-python/pyasn1 0.1.7: ASN.1 library for Python
 dev-python/pycrypto 2.6.1: Python Cryptography Toolkit
 dev-python/pyelftools 0.21-r4 0.22: pure-Python library for parsing and analyzing ELF files and DWARF debugging information
 dev-python/pygments 1.6 2.0.1 2.0.1-r1: Pygments is a syntax highlighting package written in Python
-dev-python/pylons 1.0.1-r3: Pylons Web Framework
 dev-python/pymongo 2.6.3 2.7.2: Python driver for MongoDB
 dev-python/pyparsing 2.0.1 2.0.3: pyparsing is an easy-to-use Python module for text parsing
 dev-python/python-dateutil 2.1-r1 2.2: Extensions to the standard Python datetime module
 dev-python/python-exec 10000.1 10000.2: Compatibility package for dev-lang/python-exec
 dev-python/python-magic 0.4.6-r1: Access the libmagic file type identification library
 dev-python/requests 2.3.0 2.6.0: HTTP library for human beings
-dev-python/rhpl 0.219: Library of python code used by Red Hat Linux programs
 dev-python/rsa 3.1.4-r1: Pure-Python RSA implementation
 dev-python/setproctitle 1.1.8: Allow customization of the process title
 dev-python/setuptools 0.8-r1 12.0.1: a collection of extensions to Distutils
@@ -414,48 +399,47 @@ dev-python/simplegeneric 0.8.1-r1: Simple generic functions for Python
 dev-python/six 1.3.0 1.8.0 1.10.0: Python 2 and 3 compatibility library
 dev-python/sphinx 1.2.2: Python documentation generator
 dev-python/stevedore 0.15 1.1.0 1.1.0-r1: Manage dynamic plugins for Python applications
-dev-python/virtualenv 1.10.1 1.11.6 12.0.5 12.1.1: Virtual Python Environment builder
+dev-python/virtualenv 1.10.1 1.11.6 12.0.5: Virtual Python Environment builder
 dev-python/virtualenv-clone 0.2.4-r1 0.2.4-r2: A script for cloning a non-relocatable virtualenv
 dev-python/virtualenvwrapper 4.2 4.3.1 4.5.1: virtualenvwrapper is a set of extensions to Ian Bicking's virtualenv tool
 dev-qt/qtcore 4.8.5-r1: Cross-platform application development framework
 dev-qt/qtgui 4.8.5-r1: The GUI module for the Qt toolkit
 dev-qt/qtscript 4.8.5: The QtScript module for the Qt toolkit
 dev-ruby/abstract 1.0.0-r2: Library which enable you to define abstract method in Ruby.
-dev-ruby/actionmailer 3.2.22.1 3.2.22.2 4.0.13 4.1.15 4.2.5.2: Framework for designing email-service layers
-dev-ruby/actionpack 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Eases web-request routing, handling, and response
-dev-ruby/activemodel 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Toolkit for building modeling frameworks like Active Record and Active Resource
-dev-ruby/activerecord 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Implements the ActiveRecord pattern (Fowler, PoEAA) for ORM
-dev-ruby/activeresource 3.2.22.1 3.2.22.2 4.0.0: Think Active Record for web resources
-dev-ruby/activesupport 3.2.22.1 3.2.22.2 4.0.13-r1 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Utility Classes and Extension to the Standard Library
-dev-ruby/arel 3.0.3 4.0.2 5.0.1.20140414130214 6.0.2 6.0.3: Arel is a Relational Algebra for Ruby
-dev-ruby/arel-helpers 2.0.1 2.1.0 2.1.1: Tools to help construct database queries
-dev-ruby/bcrypt-ruby 3.1.9 3.1.10: An easy way to keep your users' passwords secure
+dev-ruby/actionmailer 3.2.22.2: Framework for designing email-service layers
+dev-ruby/actionpack 3.2.22.2: Eases web-request routing, handling, and response
+dev-ruby/activemodel 3.2.22.2: Toolkit for building modeling frameworks like Active Record and Active Resource
+dev-ruby/activerecord 3.2.22.2: Implements the ActiveRecord pattern (Fowler, PoEAA) for ORM
+dev-ruby/activeresource 3.2.22.2: Think Active Record for web resources
+dev-ruby/activesupport 3.2.22.2: Utility Classes and Extension to the Standard Library
+dev-ruby/arel 3.0.3: Arel is a Relational Algebra for Ruby
+dev-ruby/bcrypt-ruby 3.1.10: An easy way to keep your users' passwords secure
 dev-ruby/bson 1.6.2-r1: A Ruby BSON implementation for MongoDB. (Includes binary C-based extension.)
 dev-ruby/builder 3.0.4: A builder to facilitate programatic generation of XML markup
-dev-ruby/bundler 1.8.9 1.9.10 1.10.6 1.11.2: An easy way to vendor gem dependencies
+dev-ruby/bundler 1.8.9 1.10.6: An easy way to vendor gem dependencies
 dev-ruby/chef-zero 2.0.2: Self-contained, easy-setup, fast-start in-memory Chef server for testing and solo setup purposes
 dev-ruby/childprocess 0.5.1: A simple and reliable solution for controlling external programs running in the background.
-dev-ruby/coderay 1.1.0-r1 1.1.0-r2 1.1.1: A Ruby library for syntax highlighting
-dev-ruby/coffee-rails 3.2.2 4.0.1 4.1.0 4.1.1 4.1.1-r1: Coffee Script adapter for the Rails asset pipeline
+dev-ruby/coderay 1.1.0-r1 1.1.0-r2: A Ruby library for syntax highlighting
+dev-ruby/coffee-rails 3.2.2: Coffee Script adapter for the Rails asset pipeline
 dev-ruby/diff-lcs 1.2.5: Use the McIlroy-Hunt LCS algorithm to compute differences
 dev-ruby/erubis 2.7.0-r1: Erubis is an implementation of eRuby
 dev-ruby/ethon 0.6.1: Very simple libcurl wrapper.
 dev-ruby/ffi 1.9.3: Ruby extension for programmatically loading dynamic libraries
 dev-ruby/hashie 2.0.5-r1: Hashie is a small collection of tools that make hashes more powerful.
 dev-ruby/highline 1.6.19: Highline is a high-level command-line IO library for ruby
-dev-ruby/hike 1.2.3 1.2.3-r1 2.1.2: Hike is a Ruby library for finding files in a set of paths
+dev-ruby/hike 1.2.3: Hike is a Ruby library for finding files in a set of paths
 dev-ruby/hoe 2.13.0-r1: Hoe extends rake to provide full project automation.
-dev-ruby/i18n 0.6.9-r1 0.6.11 0.7.0: Add Internationalization support to your Ruby application
+dev-ruby/i18n 0.6.11 0.7.0: Add Internationalization support to your Ruby application
 dev-ruby/ipaddress 0.8.0: A library designed to make manipulation of IPv4 and IPv6 addresses both powerful and simple
 dev-ruby/journey 1.0.4-r1: Journey is a router. It routes requests
-dev-ruby/jquery-rails 3.1.4 4.0.5 4.1.0 4.1.1: jQuery! For Rails! So great
+dev-ruby/jquery-rails 3.1.4: jQuery! For Rails! So great
 dev-ruby/json 1.8.0: A JSON implementation as a Ruby extension.
 dev-ruby/knife-dsl 0.1.0: Drive any knife plugin programmatically
 dev-ruby/little-plugger 1.1.3-r2: Module that provides Gem based plugin management
 dev-ruby/log4r 1.1.10-r1: Log4r is a comprehensive and flexible logging library written in Ruby for use in Ruby programs.
 dev-ruby/logging 1.8.2: Flexible logging library for use in Ruby programs based on the design of Java's log4j library
-dev-ruby/loofah 2.0.1 2.0.2 2.0.3: A general library for manipulating and transforming HTML/XML documents and fragments.
-dev-ruby/mail 2.5.4 2.6.2 2.6.3: An email handling library
+dev-ruby/loofah 2.0.2: A general library for manipulating and transforming HTML/XML documents and fragments.
+dev-ruby/mail 2.5.4: An email handling library
 dev-ruby/memcache-client 1.8.5: A ruby library for accessing memcached.
 dev-ruby/mime-types 1.23: Provides a mailcap-like MIME Content-Type lookup for Ruby.
 dev-ruby/mixlib-authentication 1.3.0: Mixes in simple per-request authentication
@@ -472,43 +456,42 @@ dev-ruby/net-ssh-gateway 1.1.0-r1: A simple library to assist in enabling tunnel
 dev-ruby/net-ssh-multi 1.1: Net::SSH::Multi is a library for controlling multiple Net::SSH connections via a single interface.
 dev-ruby/nokogiri 1.5.5: Nokogiri is an HTML, XML, SAX, and Reader parser.
 dev-ruby/ohai 7.0.4: Ohai profiles your system and emits JSON
-dev-ruby/pg 0.14.1 0.17.1 0.17.1-r1 0.18.2 0.18.3 0.18.4: Ruby extension library providing an API to PostgreSQL
+dev-ruby/pg 0.14.1 0.17.1: Ruby extension library providing an API to PostgreSQL
 dev-ruby/polyglot 0.3.5: Polyglot provides support for fully-custom DSLs
 dev-ruby/racc 1.4.9: A LALR(1) parser generator for Ruby
-dev-ruby/rack 1.4.7 1.5.2-r1 1.5.5 1.6.4 1.6.4-r1: A modular Ruby webserver interface
-dev-ruby/rack-cache 1.2-r1 1.3.0: A drop-in component to enable HTTP caching for Rack-based applications that produce freshness info
-dev-ruby/rack-openid 1.3.1 1.4.2: Provides a more HTTPish API around the ruby-openid library
-dev-ruby/rack-ssl 1.3.4 1.4.1: Force SSL/TLS in your app
+dev-ruby/rack 1.4.7 1.5.2-r1 1.5.5 1.6.4: A modular Ruby webserver interface
+dev-ruby/rack-cache 1.2-r1: A drop-in component to enable HTTP caching for Rack-based applications that produce freshness info
+dev-ruby/rack-openid 1.4.2: Provides a more HTTPish API around the ruby-openid library
+dev-ruby/rack-ssl 1.3.4: Force SSL/TLS in your app
 dev-ruby/rack-test 0.6.2-r1 0.6.3: Rack::Test is a small, simple testing API for Rack apps
-dev-ruby/rails 3.2.22.1 3.2.22.2 4.1.15: ruby on rails is a web-application and persistance framework
+dev-ruby/rails 3.2.22.2: ruby on rails is a web-application and persistance framework
 dev-ruby/rails-deprecated_sanitizer 1.0.3: Deprecated sanitizer API extracted from Action View
-dev-ruby/rails-dom-testing 1.0.5 1.0.6 1.0.7: Compare doms and assert certain elements exists in doms using Nokogiri
-dev-ruby/rails-html-sanitizer 1.0.1 1.0.2: Sanitize HTML fragments in Rails applications
-dev-ruby/railties 3.2.22.1 3.2.22.2 4.0.13 4.1.14.1 4.1.14.2 4.1.15 4.2.5.1 4.2.5.2 4.2.6: Tools for creating, working with, and running Rails applications
+dev-ruby/rails-dom-testing 1.0.6: Compare doms and assert certain elements exists in doms using Nokogiri
+dev-ruby/rails-html-sanitizer 1.0.2: Sanitize HTML fragments in Rails applications
+dev-ruby/railties 3.2.22.2: Tools for creating, working with, and running Rails applications
 dev-ruby/rake 0.9.6: Make-like scripting in Ruby
 dev-ruby/rake-compiler 0.9.2: Provide a standard and simplified way to build and package Ruby extensions
-dev-ruby/rbpdf 1.18.2 1.18.5 1.18.6 1.19.0: Ruby on Rails RBPDF plugin
+dev-ruby/rbpdf 1.18.6: Ruby on Rails TCPDF plugin
 dev-ruby/rbpdf-font 1.19.0: Font files for the Ruby on Rails RBPDF plugin
 dev-ruby/rdoc 4.0.1-r1: An extended version of the RDoc library from Ruby 1.8
-dev-ruby/request_store 1.0.5 1.3.0 1.3.1: Per-request global storage for Rack
+dev-ruby/request_store 1.0.5: Per-request global storage for Rack
 dev-ruby/rest-client 1.6.7-r1: Simple Simple HTTP and REST client for Ruby
 dev-ruby/rexical 1.0.5-r1: Rexical is a lexical scanner generator
-dev-ruby/rmagick 2.13.2-r1 2.13.4 2.15.4: An interface between Ruby and the ImageMagick(TM) image processing library
-dev-ruby/ruby-net-ldap 0.11 0.12.0: Pure ruby LDAP client implementation
+dev-ruby/rmagick 2.13.2-r1 2.13.4: An interface between Ruby and the ImageMagick(TM) image processing library
+dev-ruby/ruby-net-ldap 0.11: Pure ruby LDAP client implementation
 dev-ruby/ruby-shadow 2.1.4: ruby shadow bindings
 dev-ruby/rubyforge 2.0.4-r3: Simplistic script which automates a limited set of rubyforge operations
-dev-ruby/rubygems 2.2.5-r1 2.5.1 2.5.2 2.6.1 2.6.2 2.6.3: Centralized Ruby extension management system
+dev-ruby/rubygems 2.2.5-r1: Centralized Ruby extension management system
 dev-ruby/rvm 1.11.3.8: RVM Ruby Gem Library
-dev-ruby/sass-rails 3.2.6 4.0.5 5.0.3 5.0.4 5.0.4-r1: Official Ruby-on-Rails Integration with Sass
-dev-ruby/sprockets 2.2.3 2.11.3 2.12.3-r1 3.3.5 3.4.0: Ruby library for compiling and serving web assets
-dev-ruby/sprockets-rails 2.0.0 2.1.3 2.2.4 2.3.0 2.3.1-r1 2.3.2 2.3.3: Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline
+dev-ruby/sass-rails 3.2.6: Official Ruby-on-Rails Integration with Sass
+dev-ruby/sprockets 2.2.3: Ruby library for compiling and serving web assets
 dev-ruby/systemu 2.5.2: Universal capture of STDOUT and STDERR and handling of child process PID
 dev-ruby/test-unit 2.5.5-r1: An improved version of the Test::Unit framework from Ruby 1.8
 dev-ruby/thor 0.19.1: A scripting framework that replaces rake and sake
-dev-ruby/thread_safe 0.3.4 0.3.5: A collection of thread-safe versions of common core Ruby classes
-dev-ruby/treetop 1.4.15-r1 1.5.3 1.6.3: Treetop is a language for describing languages
+dev-ruby/thread_safe 0.3.5: A collection of thread-safe versions of common core Ruby classes
+dev-ruby/treetop 1.5.3: Treetop is a language for describing languages
 dev-ruby/typhoeus 0.6.5: Typhoeus runs HTTP requests in parallel
-dev-ruby/tzinfo 0.3.43 0.3.43-r1 0.3.44 1.2.2: Daylight-savings aware timezone library
+dev-ruby/tzinfo 0.3.43 1.2.2: Daylight-savings aware timezone library
 dev-ruby/uglifier 2.7.2: Ruby wrapper for UglifyJS JavaScript compressor
 dev-ruby/yajl-ruby 1.1.0: Ruby C bindings to the Yajl JSON stream-based parser library
 dev-ruby/yard 0.8.7.3-r1: Documentation generation tool for the Ruby programming language
@@ -537,9 +520,6 @@ dev-util/kbuild 0.1.9998_pre20131130: A makefile framework for writing simple ma
 dev-util/lafilefixer 0.5: Utility to fix your .la files
 dev-util/lockrun 20120508: Lockrun - runs cronjobs with overrun protection
 dev-util/ltrace 0.7.2: trace library calls made at runtime
-dev-util/molecule 0.9.24.6 0.9.24.8 2: Meta package for dev-util/molecule-core and dev-util/molecule-plugins
-dev-util/molecule-core 1.0.2: Sabayon distro-agnostic images build tool
-dev-util/molecule-plugins 1.0.2: A set fo base plugins for Molecule
 dev-util/oprofile 0.9.8 0.9.9-r1: A transparent low-overhead system-wide profiler
 dev-util/packer 0.5.2: A tool for creating machine images
 dev-util/patchutils 0.3.2: A collection of tools that operate on patch files
@@ -556,7 +536,6 @@ dev-vcs/bzr 2.6.0 2.8.0: Bazaar is a next generation distributed version control
 dev-vcs/cvs 1.12.12-r6: Concurrent Versions System - source code revision control tools
 dev-vcs/cvsps 2.1-r1: Generates patchset information from a CVS repository
 dev-vcs/mercurial 2.8.2: Scalable distributed SCM
-dev-vcs/smartsvn 8.6.6: GUI to SVN with extensive merge support and commit wizard
 dev-vcs/tig 1.2.1: Tig: text mode interface for git
 gnome-base/librsvg 2.40.1-r1: Scalable Vector Graphics (SVG) rendering library
 mail-client/mailx 8.1.2.20050715-r6: The /bin/mail program, which is used to send mail via shell scripts
@@ -581,8 +560,8 @@ media-libs/fontconfig 2.10.92 2.11.1-r2: A library for configuring and customizi
 media-libs/freetype 2.5.3-r1 2.5.5: A high-quality and portable font engine
 media-libs/gd 2.0.35-r3 2.0.35-r4: A graphics library for fast image creation
 media-libs/giflib 4.1.6-r2 4.1.6-r3: Library to handle, display and manipulate GIF images
-media-libs/gst-plugins-base 0.10.36-r1 0.10.36-r2 1.2.4-r1 1.4.5 1.6.0: Basepack of plugins for gstreamer
-media-libs/gstreamer 0.10.36-r2 1.2.4-r2 1.4.5 1.6.0: Open source multimedia framework
+media-libs/gst-plugins-base 0.10.36-r1 0.10.36-r2 1.2.4-r1 1.4.5: Basepack of plugins for gstreamer
+media-libs/gstreamer 0.10.36-r2 1.2.4-r2 1.4.5: Open source multimedia framework
 media-libs/harfbuzz 0.9.23 0.9.38: An OpenType text shaping engine
 media-libs/jasper 1.900.1-r5 1.900.1-r9: software-based implementation of the codec specified in the JPEG-2000 Part-1 standard
 media-libs/jbig2dec 0.11-r1: A decoder implementation of the JBIG2 image compression format
@@ -601,14 +580,10 @@ media-libs/mesa 10.0.4: OpenGL-like graphic library for Linux
 media-libs/t1lib 5.1.2: A Type 1 Font Rasterizer Library for UNIX/X11
 media-libs/tiff 4.0.3-r6: Tag Image File Format (TIFF) library
 media-libs/urt 3.1b-r1: the Utah Raster Toolkit is a library for dealing with raster images
-net-analyzer/bettercap 1.1.7: A complete, modular, portable and easily extensible MITM framework
 net-analyzer/bmon 3.8: interface bandwidth monitor
 net-analyzer/bwm-ng 0.6-r1: Bandwidth Monitor NG is a small and simple console-based bandwidth monitor
-net-analyzer/g-wan 2012: G-Wan Analyzer
 net-analyzer/hping 3_pre20051105-r3: A ping-like TCP/IP packet assembler/analyzer
 net-analyzer/icinga 1.13.3-r1: Nagios Fork - Check daemon, CGIs, docs, IDOutils
-net-analyzer/icinga-web 1.9.1-r1 1.10.0 1.10.0-r1 1.10.1 1.11.2: Icinga Web - new Web Interface
-net-analyzer/ipscan 3.0_beta4_p20110409 3.0_beta6_p20110628: Angry IP - The fast and friendly network scanner
 net-analyzer/iptraf-ng 1.1.4-r1: A console-based network monitoring utility
 net-analyzer/justniffer 0.5.12: A network protocol analyzer that produces logs in a customized way
 net-analyzer/lft 3.73: Layer Four Traceroute: an advanced traceroute implementation
@@ -618,8 +593,7 @@ net-analyzer/nagios 3.3.1 3.5.1: The Nagios metapackage - merge this to pull ins
 net-analyzer/nagios-check_mysql_health 2.1.8.2 2.1.9.2: A nagios plugin for checking MySQL server health
 net-analyzer/nagios-check_pidfile 1: A nagios plugin for checking daemons via pidfiles
 net-analyzer/nagios-core 3.3.1 3.5.1: Nagios Core - Check daemon, CGIs, docs
-net-analyzer/nagios-plugins 1.4.16-r2 2.0.3-r2 2.1.1-r1 2.1.1-r2: Official plugins for Nagios
-net-analyzer/namebench 1.3.1: DNS Benchmark Utility
+net-analyzer/nagios-plugins 1.4.16-r2 2.0.3-r2: Official set of plugins for Nagios
 net-analyzer/net-snmp 5.7.3_pre3 5.7.3_pre5-r1: Software for generating and retrieving SNMP data
 net-analyzer/netcat6 1.0-r2: netcat clone with better IPv6 support, improved code, etc...
 net-analyzer/nethogs 0.8.0-r4: A small 'net top' tool, grouping bandwidth by process
@@ -634,7 +608,6 @@ net-analyzer/splunk 6.2.0 6.2.2: The search engine for IT data
 net-analyzer/tcpdump 4.3.0 4.6.2-r1: A Tool for network monitoring and data acquisition
 net-analyzer/tcptraceroute 1.5_beta7-r1 1.5_beta7-r2: tcptraceroute is a traceroute implementation using TCP packets
 net-analyzer/traceroute 2.0.18 2.0.20: Utility to trace the route of IP packets
-net-analyzer/zenmap 6.01 6.25: Graphical frontend for nmap
 net-dialup/mingetty 1.08: A compact getty program for virtual consoles only
 net-dns/bind-tools 9.9.4 9.10.1_p1: bind tools: dig, nslookup, host, nsupdate, dnssec-keygen
 net-dns/c-ares 1.9.1 1.10.0-r1: C library that resolves names asynchronously
@@ -647,7 +620,7 @@ net-firewall/arptables 0.0.3.4-r2: set up, maintain, and inspect the tables of A
 net-firewall/conntrack-tools 1.4.2: Connection tracking userspace tools
 net-firewall/iptables 1.4.20 1.4.21-r1 1.4.21-r2: Linux kernel (2.4+) firewall, NAT and packet mangling tools
 net-firewall/shorewall 4.5.18-r1 4.5.21.9 4.6.6.1 4.6.6.2: The Shoreline Firewall, commonly known as Shorewall, is a high-level tool for configuring Netfilter
-net-firewall/shorewall-core 4.5.18-r1 4.5.21.9 4.5.21.10-r1: Core libraries of shorewall / shorewall(6)-lite
+net-firewall/shorewall-core 4.5.18-r1 4.5.21.9: Core libraries of shorewall / shorewall(6)-lite
 net-firewall/shorewall6 4.5.18-r1 4.5.21.9: The Shoreline Firewall, commonly known as Shorewall, IPv6 component
 net-fs/nfs-utils 1.2.9 1.3.1-r5: NFS client and server daemons
 net-ftp/ftpbase 0.01-r2: FTP layout package
@@ -656,10 +629,6 @@ net-ftp/ncftp 3.2.5-r3: An extremely configurable ftp client
 net-ftp/proftpd 1.3.5a: An advanced and very configurable FTP server
 net-ftp/pure-ftpd 1.0.37 1.0.40: Fast, production-quality, standard-conformant FTP server
 net-irc/irssi 0.8.17: A modular textUI IRC client with IPv6 support
-net-irc/quassel 0.10.0 0.11.0: Qt/KDE IRC client - monolithic client only (no remote daemon)
-net-irc/quassel-client 0.10.0 0.11.0: Qt/KDE IRC client supporting a remote daemon for 24/7 connectivity (client only)
-net-irc/quassel-common 0.10.0 0.11.0: Qt/KDE IRC client supporting a remote daemon for 24/7 connectivity (common files)
-net-irc/quassel-core 0.10.0 0.11.0: Qt/KDE IRC client - the "core" (server) component
 net-libs/c-client 2007f-r4: UW IMAP c-client library
 net-libs/gnutls 2.12.23-r6 3.3.15: A TLS 1.2 and SSL 3.0 implementation for the GNU project
 net-libs/http-parser 2.3 2.6.0: Http request/response parser for C
@@ -691,64 +660,41 @@ net-misc/curl 7.36.0 7.39.0 7.42.1: A Client that groks URLs
 net-misc/dhcp 4.2.5_p1-r2: ISC Dynamic Host Configuration Protocol (DHCP) client/server
 net-misc/dhcpcd 6.2.0-r1 6.6.7: A fully featured, yet light weight RFC2131 compliant DHCP client
 net-misc/econnman 1: Enlightenment ConnMan user interface
-net-misc/fatrat 1.1.2: Qt4-based download/upload manager
-net-misc/fcoe-utils 1.0.25: Fibre Channel over Ethernet utilities
 net-misc/freerapid 0.85: FreeRapid is a simple Java downloader that supports downloading from Rapidshare and other file-sharing services.
-net-misc/gmrender-resurrect 9999: Resource efficient UPnP/DLNA renderer
-net-misc/ike 2.2.1: Shrew soft VPN Client
 net-misc/ipcalc 0.41: calculates broadcast/network/etc... from an IP address and netmask
 net-misc/iperf 3.0.7: A TCP, UDP, and SCTP network bandwidth measurement tool
-net-misc/iplist 0.29: Blocks connections from/to hosts listed in files using iptables
 net-misc/iputils 20121221 20121221-r1: Network monitoring tools including ping and ping6
 net-misc/ipv6calc 0.94.1: IPv6 address calculator
 net-misc/jumpgate 0.7: An advanced TCP connection forwarder
 net-misc/keychain 2.7.1-r1 2.8.1: manage ssh and GPG keys in a convenient and secure manner
-net-misc/lldpad 0.9.45: Link Layer Discovery Protocol Implementation
 net-misc/memcached 1.4.17: High-performance, distributed memory object caching system
-net-misc/minus-desktop-tool 1.8: Allows to drag-n-drop documents into the taskbar and upload onto Minus
 net-misc/netctl 1.9: Profile based network connection tool from Arch Linux
-net-misc/netsniff-ng 0.5.4.2: high performance network sniffer for packet inspection
-net-misc/networkmanager-l2tp 0.9.8.7: NetworkManager L2TP plugin
 net-misc/ntp 4.2.6_p5-r10 4.2.8-r1: Network Time Protocol suite/programs
-net-misc/openssh 6.7_p1 6.8_p1-r5 7.1_p1-r3 7.1_p2: Port of OpenBSD's free SSH release
+net-misc/openssh 6.7_p1 6.8_p1-r5 7.1_p2: Port of OpenBSD's free SSH release
 net-misc/openvpn 2.3.2 2.3.6: Robust and highly flexible tunneling application compatible with many OSes
 net-misc/pps-tools 0.0.20120407: User-space tools for LinuxPPS
-net-misc/pyload 0.4.9: A fast, lightweight and full featured download manager for many One-Click-Hosters.
 net-misc/rsync 3.0.9-r3 3.1.1: File transfer program to keep remote files into sync
 net-misc/s3cmd 1.5.2-r1: Command line client for Amazon S3
 net-misc/socat 1.7.3.0: Multipurpose relay (SOcket CAT)
 net-misc/sshpass 1.05: Tool for noninteractively performing password authentication with ssh
-net-misc/streamtuner2 2.0.8: Internet radio browser
-net-misc/strongswan 5.1.3 5.2.2 5.3.0: IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE
+net-misc/strongswan 5.1.3 5.2.2: IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE
 net-misc/telnet-bsd 1.2-r1: Telnet and telnetd ported from OpenBSD with IPv6 support
-net-misc/tigervnc 1.3.1-r1 1.3.1-r2 1.3.1-r3 1.3.1-r4 1.4.2-r1 1.4.2-r2: Remote desktop viewer display system
+net-misc/tigervnc 1.3.1-r1 1.3.1-r4: Remote desktop viewer display system
 net-misc/wget 1.14 1.16: Network utility to retrieve files from the WWW
 net-misc/whois 5.0.25 5.1.5: improved Whois Client
-net-nds/389-admin 1.1.31: 389 Directory Server (admin)
-net-nds/389-ds-base 1.3.0.2-r1: 389 Directory Server (core librares and daemons )
-net-nds/adtool 1.3.3: Utility for Active Directory administration
-net-nds/gosa-core 2.6.10 2.6.11 2.6.12: LDAP administration frontend for user administration
-net-nds/gosa-plugin-mail 2.6.10 2.6.11 2.6.12 2.6.12-r1: GOsa plugin for Mail integration
-net-nds/gosa-plugin-samba 2.6.10 2.6.11 2.6.12 2.6.12-r1: GOsa plugin for Samba integration
-net-nds/gosa-plugin-systems 2.6.10 2.6.11 2.6.12 2.6.12-r1: GOsa plugin for common systems integration
-net-nds/jxplorer 3.2 3.2-r2 3.3.1: A fully functional ldap browser written in java
+net-nds/jxplorer 3.2 3.2-r2: A fully functional ldap browser written in java
 net-nds/lat 1.2.3: LDAP Administration Tool, allows you to browse LDAP-based directories and add/edit/delete entries
-net-nds/ldapvi 1.7-r1 1.7_p20101214: Manage LDAP entries with a text editor
-net-nds/led 1.79.4 1.111: led is a general purpose LDAP editor
-net-nds/nsscache 0.8.8 0.21.14 0.23: commandline tool to sync directory services to local cache
-net-nds/openldap 2.3.43-r3 2.3.43-r4 2.4.38-r2 2.4.39 2.4.40 2.4.40-r2 2.4.40-r4 2.4.42 2.4.42-r1 2.4.43: LDAP suite of application and development tools
-net-nds/phpldapadmin 1.2.3 1.2.3-r1: phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server
-net-nds/portmap 6.0 9999: Netkit - portmapper
-net-nds/rpcbind 0.2.0-r1 0.2.1-r1 0.2.2-r1 9999: portmap replacement which supports RPC over various protocols
-net-nds/shelldap 0.7_p20130220 1.0.2: A handy shell-like interface for browsing LDAP servers and editing their content
-net-nds/smbldap-tools 0.9.8 0.9.9 0.9.10: Samba LDAP management tools
+net-nds/ldapvi 1.7-r1: Manage LDAP entries with a text editor
+net-nds/openldap 2.3.43-r3 2.3.43-r4 2.4.38-r2: LDAP suite of application and development tools
+net-nds/portmap 6.0: daemon for implementing remote procedure calls between computer programs
+net-nds/rpcbind 0.2.0-r1: portmap replacement which supports RPC over various protocols
+net-nds/smbldap-tools 0.9.8: Samba LDAP management tools
 net-nds/tac_plus 4.0.4.19-r3 4.0.4.19-r4: An updated version of Cisco's TACACS+ server
 net-nds/yp-tools 2.12-r1: Network Information Service tools
 net-nds/ypbind 1.37.2: Multithreaded NIS bind service (ypbind-mt)
 net-nds/ypserv 2.26: Network Information Service server
-net-proxy/squid 3.5.6 3.5.7 3.5.8 3.5.9 3.5.10 3.5.11 3.5.12: A full-featured web proxy cache
-net-proxy/torsocks 2.0.0_rc3 2.0.0_rc7: Use most socks-friendly applications with Tor.
-net-wireless/broadcom-sta 6.30.223.30-r2 6.30.223.141-r2 6.30.223.248-r3 6.30.223.248-r4 6.30.223.248-r5 6.30.223.271-r2 6.30.223.271-r3: Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver
+net-proxy/squid 3.5.6: A full-featured web proxy cache
+net-wireless/broadcom-sta 6.30.223.248-r3: Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver
 perl-core/Archive-Tar 1.900.0: A Perl module for creation and manipulation of tar files
 perl-core/Attribute-Handlers 0.930.0: Simpler definition of attribute handlers
 perl-core/CGI 3.630.0: Simple Common Gateway Interface Class
@@ -812,8 +758,8 @@ sys-apps/dmidecode 2.11 2.12-r1: DMI (Desktop Management Interface) table relate
 sys-apps/dstat 0.7.2-r1: Versatile replacement for vmstat, iostat and ifstat
 sys-apps/ed 1.6 1.10: Your basic line editor
 sys-apps/edac-utils 0.18: Userspace helper for Linux kernel EDAC drivers
-sys-apps/entropy 290 291 292 293 294 295 296 297: Entropy Package Manager foundation library
-sys-apps/entropy-server 290 291 292 293 294 295 296: Entropy Package Manager server-side tools
+sys-apps/entropy 296: Entropy Package Manager foundation library
+sys-apps/entropy-server 296: Entropy Package Manager server-side tools
 sys-apps/ethtool 3.12.1 3.18: Utility for examining and tuning ethernet-based network interfaces
 sys-apps/file 5.17 5.22: identify a file's format by scanning binary data for patterns
 sys-apps/findutils 4.4.2-r1 4.6.0: GNU utilities for finding files
@@ -821,13 +767,12 @@ sys-apps/gawk 4.0.2: GNU awk pattern-matching language
 sys-apps/gentoo-functions 0.3 0.8 0.10: base functions required by all gentoo systems
 sys-apps/gentoo-systemd-integration 2 4: systemd integration files for Gentoo
 sys-apps/gptfdisk 0.8.8 0.8.10: GPT partition table manipulator for Linux
-sys-apps/gradm 3.1.201506081912 3.1.201507041117 3.1.201507191652: Administrative interface for the grsecurity Role Based Access Control system
+sys-apps/gradm 3.1.201506081912 3.1.201507041117: Administrative interface for the grsecurity Role Based Access Control system
 sys-apps/grep 2.16 2.21-r1: GNU regular expression matcher
 sys-apps/groff 1.22.2: Text formatter used for man pages
 sys-apps/hdparm 9.39 9.45: Utility to change hard drive performance parameters
 sys-apps/help2man 1.43.3 1.45.1 1.46.6: GNU utility to convert program --help output to a man page
 sys-apps/hwids 20140317 20150129 20150717-r1: Hardware (PCI, USB, OUI, IAB) IDs databases
-sys-apps/iostat 2.2: I/O performance monitoring utility
 sys-apps/ipmitool 1.8.14-r1: Utility for controlling IPMI enabled devices.
 sys-apps/iproute2 3.8.0 3.19.0 4.4.0: kernel routing and traffic control utilities
 sys-apps/irqbalance 1.0.6: Distribute hardware interrupts across processors on a multiprocessor system
@@ -838,7 +783,6 @@ sys-apps/less 457 458 481: Excellent text file viewer
 sys-apps/lm_sensors 3.3.4-r1 3.3.5: Hardware Monitoring user-space utilities
 sys-apps/lsb-release 1.4: LSB version query program
 sys-apps/lshw 02.16b-r2: Hardware Lister
-sys-apps/magneto-core 290 291 292 293 294 295 296: Entropy Package Manager notification applet library
 sys-apps/makedev 3.23.1: program used for creating device files in /dev
 sys-apps/man 1.6g: Standard commands to read man pages
 sys-apps/man-pages 3.63 3.83 4.03: A somewhat comprehensive collection of Linux man pages
@@ -852,13 +796,13 @@ sys-apps/paxctl 0.7-r2: Manages various PaX related program header flags for Elf
 sys-apps/pciutils 3.2.0 3.3.1: Various utilities dealing with the PCI bus
 sys-apps/portage 2.2.8-r1 2.2.18 2.2.26: Portage is the package management and distribution system for Gentoo
 sys-apps/pv 1.5.2 1.6.0: Pipe Viewer: a tool for monitoring the progress of data through a pipe
-sys-apps/rigo-daemon 290 291 292 293 294 295 296 297 298 300: Entropy Client DBus Services, aka RigoDaemon
+sys-apps/rigo-daemon 296: Entropy Client DBus Services, aka RigoDaemon
 sys-apps/sandbox 2.6-r1 2.10-r1: sandbox'd LD_PRELOAD hack
 sys-apps/sed 4.2.1-r1: Super-useful stream editor
 sys-apps/shadow 4.1.5.1-r1: Utilities to deal with user accounts
 sys-apps/smartmontools 6.1 6.3 6.4: Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools
 sys-apps/systemd 212-r2 220-r2 226-r2: System and service manager for Linux
-sys-apps/systemd-sysv-utils 208 212 215 216 217: sysvinit compatibility symlinks and manpages
+sys-apps/systemd-sysv-utils 215: sysvinit compatibility symlinks and manpages
 sys-apps/sysvinit 2.88-r4: /sbin/init - parent of all processes
 sys-apps/tcp-wrappers 7.6.22-r1: TCP Wrappers
 sys-apps/texinfo 4.13-r2 5.2: The GNU info program and utilities
@@ -873,18 +817,16 @@ sys-block/asm 7.00.18781: Adaptec Storage Manager (ASM)
 sys-block/btrace 1.0.3: btrace can show detailed info about what is happening on a block device io queue
 sys-block/hpacucli 9.30.15.0 9.40.12.0: HP Array Configuration Utility Command Line Interface (HPACUCLI, formerly CPQACUXE)
 sys-block/hpssacli 2.0.23.0: HP Smart Storage Administrator (HP SSA) CLI (HPSSACLI)
-sys-block/iscsitarget 0.4.17 1.4.19 1.4.20.2 1.4.20.2_p20130103 1.4.20.2_p20130821 9999: Open Source iSCSI target with professional features
+sys-block/iscsitarget 0.4.17 1.4.19 1.4.20.2 1.4.20.2_p20130103 1.4.20.2_p20130821: Open Source iSCSI target with professional features
 sys-block/megacli 8.02.21: LSI Logic MegaRAID Command Line Interface management tool
-sys-block/open-iscsi 2.0.872-r2 2.0.873: Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720
+sys-block/open-iscsi 2.0.872-r2: Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720
 sys-block/parted 3.1-r1 3.2: Create, destroy, resize, check, copy partitions and file systems
 sys-block/thin-provisioning-tools 0.2.8-r1 0.3.2-r1: A suite of tools for thin provisioning on Linux
 sys-block/tw_cli 10.2: 3ware SATA+PATA RAID controller Command Line Interface tool
 sys-boot/efibootmgr 0.5.4-r1: Interact with the EFI Boot Manager
 sys-boot/syslinux 4.07: SYSLINUX, PXELINUX, ISOLINUX, EXTLINUX and MEMDISK bootloaders
-sys-cluster/drbd 8.0.16 8.3.7 8.3.8.1 8.3.8.1-r1 8.3.10 8.3.11-r1 8.3.12 8.3.13 8.3.15 8.4.0 8.4.2 8.4.3 8.4.5 8.4.6: mirror/replicate block-devices across a network-connection
-sys-cluster/drbd-kernel 8.0.16 8.3.6 8.3.8.1 8.4.6: mirror/replicate block-devices across a network-connection
-sys-cluster/drbd-utils 8.9.3: mirror/replicate block-devices across a network-connection
-sys-cluster/drbdlinks 1.27 1.27-r1: A python script to manage symlinks in a Linux-HA cluster environment using DRBD
+sys-cluster/drbd 8.0.16 8.3.8.1 8.3.10 8.3.11-r1 8.3.13 8.4.2: mirror/replicate block-devices across a network-connection
+sys-cluster/drbd-kernel 8.0.16 8.3.8.1 8.4.6: mirror/replicate block-devices across a network-connection
 sys-cluster/zookeeper 3.4.5-r1: ZooKeeper is a high-performance coordination service for distributed applications.
 sys-devel/autoconf-wrapper 13: wrapper for autoconf to manage multiple autoconf versions
 sys-devel/autogen 5.15: Program and text file generation
@@ -892,8 +834,8 @@ sys-devel/automake 1.11.6 1.12.6 1.13.4: Used to generate Makefile.in from Makef
 sys-devel/automake-wrapper 9: wrapper for automake to manage multiple automake versions
 sys-devel/bc 1.06.95-r1: Handy console-based calculator utility
 sys-devel/bin86 0.16.20-r2: Assembler and loader used to create kernel bootsector
-sys-devel/binutils 2.21.1-r1 2.22-r1 2.23.2 2.24-r3 2.25 9999: Tools necessary to build programs
-sys-devel/binutils-config 1.9-r4 2-r1 3-r3 4-r1 4-r2: Utility to change the binutils version being used
+sys-devel/binutils 2.21.1-r1 2.22-r1 2.23.2 2.24-r3: Tools necessary to build programs
+sys-devel/binutils-config 1.9-r4 2-r1 3-r3: Utility to change the binutils version being used
 sys-devel/bison 2.4.3: A yacc-compatible parser generator
 sys-devel/flex 2.5.37: The Fast Lexical Analyzer
 sys-devel/gdb 7.6.2: GNU debugger
@@ -904,30 +846,27 @@ sys-devel/libtool 2.4.2: A shared library tool for developers
 sys-devel/m4 1.4.16: GNU macro processor
 sys-devel/make 3.82-r4: Standard tool to compile source trees
 sys-devel/patch 2.6.1: Utility to apply diffs to files
-sys-devel/ucpp 1.3 1.3.3 9999: A quick and light preprocessor, but anyway fully compliant to C99
-sys-fs/btrfs-progs 3.14.2 3.16.2 3.17.3 3.18.2 3.19.1 4.0 4.0.1 4.1 4.1.2 4.2 4.2.2 4.3.1 9999: Btrfs filesystem utilities
-sys-fs/cryptsetup 1.6.2 1.6.5 1.6.6: Tool to setup encrypted devices with dm-crypt
-sys-fs/dmraid 1.0.0_rc14 1.0.0_rc15 1.0.0_rc16 1.0.0_rc16-r3 1.0.0_rc16-r4: Device-mapper RAID tool and library
+sys-fs/btrfs-progs 3.14.2 4.0.1: Btrfs filesystem utilities
+sys-fs/cryptsetup 1.6.2 1.6.5: Tool to setup encrypted devices with dm-crypt
+sys-fs/dmraid 1.0.0_rc14 1.0.0_rc16 1.0.0_rc16-r3 1.0.0_rc16-r4: Device-mapper RAID tool and library
 sys-fs/e2fsprogs 1.42.7 1.42.12 1.42.13: Standard EXT2/EXT3/EXT4 filesystem utilities
-sys-fs/evms 2.5.5-r10: Utilities for the IBM Enterprise Volume Management System
 sys-fs/fuse 2.9.3 2.9.4: An interface for filesystems implemented in userspace
 sys-fs/inotify-tools 3.13-r1 3.14: a set of command-line programs providing a simple interface to inotify
 sys-fs/lsscsi 0.25 0.26 0.27 0.28: SCSI sysfs query tool
-sys-fs/lvm2 2.02.103 2.02.109 2.02.109-r1 2.02.110 2.02.116-r4: User-land utilities for LVM2 (device-mapper) software
-sys-fs/mdadm 3.2.6-r1 3.3 3.3.1-r2 3.3.2 3.3.2-r1: A useful tool for running RAID systems - it can be used as a replacement for the raidtools
-sys-fs/mtools 4.0.15 4.0.16 4.0.17 4.0.18: utilities to access MS-DOS disks from Unix without mounting them
+sys-fs/lvm2 2.02.103 2.02.109 2.02.110 2.02.116-r4: User-land utilities for LVM2 (device-mapper) software
+sys-fs/mdadm 3.2.6-r1 3.3 3.3.1-r2: A useful tool for running RAID systems - it can be used as a replacement for the raidtools
+sys-fs/mtools 4.0.15 4.0.16: utilities to access MS-DOS disks from Unix without mounting them
 sys-fs/ncdu 1.10 1.11: NCurses Disk Usage
-sys-fs/quota 3.17-r1 4.01 4.02: Linux quota tools
-sys-fs/squashfs-tools 3.2_p2 3.4 4.2 4.2-r1 4.2_p20140119 4.3: Tool for creating compressed filesystem type squashfs
+sys-fs/quota 3.17-r1 4.02: Linux quota tools
+sys-fs/squashfs-tools 3.2_p2 3.4 4.2 4.3: Tool for creating compressed filesystem type squashfs
 sys-fs/sshfs-fuse 2.4 2.5: Fuse-filesystem utilizing the sftp service
 sys-fs/sysfsutils 2.1.0: System Utilities Based on Sysfs
 sys-fs/xfsdump 3.1.3: xfs dump/restore utilities
-sys-fs/xfsprogs 3.1.10 3.1.11-r1 3.2.1 3.2.2 3.2.3 3.2.4: xfs filesystem utilities
-sys-fs/zfs 0.6.0_rc13-r2 0.6.0_rc14-r1 0.6.1-r4 0.6.2 0.6.2-r1 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r2 0.6.4 0.6.5.4-r2 9999: Userland utilities for ZFS Linux kernel module
-sys-fs/zfs-kmod 0.6.0_rc13-r4 0.6.0_rc14-r5 0.6.1-r2 0.6.2-r2 0.6.2-r3 0.6.2-r4 0.6.2-r5 0.6.3 0.6.3-r1 0.6.4 0.6.5.4-r1 9999: Linux ZFS kernel module for sys-fs/zfs
-sys-kernel/genkernel 3.4.24-r1 3.4.32 3.4.33.1 3.4.41: Gentoo automatic kernel building scripts
+sys-fs/xfsprogs 3.1.10 3.2.1 3.2.4: xfs filesystem utilities
+sys-fs/zfs 0.6.4 0.6.5.4-r2: Userland utilities for ZFS Linux kernel module
+sys-fs/zfs-kmod 0.6.4 0.6.5.4-r1: Linux ZFS kernel module for sys-fs/zfs
 sys-kernel/genkernel-next 63: Gentoo automatic kernel building scripts, reloaded
-sys-kernel/linux-headers 3.12 3.14 3.18 4.0: Linux system headers
+sys-kernel/linux-headers 3.12 3.14 3.18: Linux system headers
 sys-kernel/spl 0.6.2-r5: The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs
 sys-libs/binutils-libs 2.25.1-r2: Core binutils libraries (libbfd, libopcodes, libiberty) for external packages
 sys-libs/cracklib 2.9.1 2.9.1-r1: Password Checking Library
@@ -938,13 +877,11 @@ sys-libs/freeipmi 1.4.3: Provides Remote-Console and System Management Software 
 sys-libs/gdbm 1.8.3-r4 1.11: Standard GNU database libraries
 sys-libs/glibc 2.12.2 2.17 2.19-r1 2.20-r2 2.21-r2 2.22-r4: GNU libc6 (also called glibc2) C library
 sys-libs/gpm 1.20.7-r1 1.20.7-r2: Console-based mouse driver
-sys-libs/imx-lib 9999: IMX{31,51} System library
 sys-libs/libacpi 0.2: A general purpose library for ACPI
 sys-libs/libcap 2.22 2.22-r2 2.24-r2: POSIX 1003.1e capabilities
 sys-libs/libcap-ng 0.7.4 0.7.7: POSIX 1003.1e capabilities
 sys-libs/libstdc++-v3 3.3.6-r1: Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++
 sys-libs/libunwind 1.1: Portable and efficient API to determine the call-chain of a program
-sys-libs/libuser 0.56.16 0.60-r1: Implements a standardized interface for manipulating and administering user and group accounts
 sys-libs/libutempter 1.1.6-r1: Library that allows non-privileged apps to write utmp (login) info, which need root access
 sys-libs/ncurses 5.9-r2 5.9-r3 5.9-r5 5.9-r99: transitional package
 sys-libs/openipmi 2.0.18-r1: Library interface to IPMI
@@ -953,10 +890,7 @@ sys-libs/readline 6.2_p1 6.3_p8-r2: Another cute console display library
 sys-libs/slang 2.2.4 2.2.4-r1: A multi-platform programmer's library designed to allow a developer to create robust software
 sys-libs/timezone-data 2013d 2015b 2015g 2016a: Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
 sys-libs/zlib 1.2.8-r1: Standard (de)compression library
-sys-power/acpi_call 1.0.0-r1: A kernel module that enables you to call ACPI methods
 sys-power/acpitool 0.5.1-r1: A small command line application, intended to be a replacement for the apm tool
-sys-power/cpupower 3.18-r1: Shows and sets processor power related values
-sys-power/cpupw 0.1.1 0.2.0: Small userspace utility that let manage the voltage of AMD Athlon64/Opteron and Centrino CPUs
 sys-power/iasl 20090123 20130117-r1: Intel ACPI Source Language (ASL) compiler
 sys-power/pm-quirks 20100619: Video Quirks database for pm-utils
 sys-power/pm-utils 1.4.1-r2: Suspend and hibernation utilities
@@ -998,7 +932,7 @@ virtual/jre 1.7.0 1.8.0: Virtual for Java Runtime Environment (JRE)
 virtual/latex-base 1.0: Virtual for basic LaTeX binaries
 virtual/libc 0: Virtual for the C library
 virtual/libffi 3.0.13-r1: A virtual for the Foreign Function Interface implementation
-virtual/libgudev 215-r1 215-r2 215-r3 230: Virtual for libgudev providers
+virtual/libgudev 215-r1 215-r2 215-r3: Virtual for libgudev providers
 virtual/libiconv 0-r1 0-r2: Virtual for the GNU conversion library
 virtual/libintl 0 0-r1: Virtual for the GNU Internationalization Library
 virtual/libmysqlclient 18: Virtual for MySQL client libraries
@@ -1077,7 +1011,7 @@ virtual/python-argparse 1: A virtual for the Python argparse module
 virtual/ruby-ffi 2: Virtual ebuild for the Ruby ffi library
 virtual/ruby-ssl 1 3 6: Virtual ebuild for the Ruby OpenSSL bindings
 virtual/ruby-threads 1 4: Virtual ebuild for a ruby interpreter with threading enabled.
-virtual/rubygems 4 6 9 10 11: Virtual ebuild for rubygems
+virtual/rubygems 4 6 9 10: Virtual ebuild for rubygems
 virtual/service-manager 0: Virtual for various service managers
 virtual/shadow 0: Virtual for user account management utilities
 virtual/ssh 0: Virtual for SSH client and server
@@ -1085,31 +1019,25 @@ virtual/ttf-fonts 1: Virtual for Serif/Sans/Monospace font packages
 virtual/udev 208-r1 215: Virtual to select between different udev daemon providers
 virtual/yacc 0: virtual for yacc (yet another compiler compiler)
 www-apache/mod_common_redirect 0.1.1: mod_common_redirect implements common redirects without mod_rewrite overhead
-www-apache/mod_dav_svn 1.8.10 1.8.11: Subversion WebDAV support
 www-apache/mod_extract_forwarded 2.0.2: Apache module that rewrites X-Forwarded-For to REMOTE_ADDR for reverse proxy configurations.
 www-apache/mod_fastcgi_handler 0.6: A simple FastCGI handler module
 www-apache/mod_log_rotate 1.00: mod_log_rotate adds log rotation support to mod_log_config based on strftime(3)
 www-apache/mod_macro 1.1.10: An Apache2 module providing macros for the Apache config file.
-www-apache/mod_musicindex 1.3.7: mod_musicindex allows nice displaying of directories containing music files
 www-apache/mod_perl 2.0.7: An embedded Perl interpreter for Apache2
 www-apache/mod_wsgi 3.4-r1: An Apache2 module for running Python WSGI applications.
 www-apache/mod_xsendfile 0.12: Apache2 module that processes X-SENDFILE headers registered by the original output handler
-www-apps/gitweb 2.1.3 2.2.1: A web interface to git
 www-client/lynx 2.8.8_rc1: An excellent console-based web browser with ssl support
 www-client/phantomjs 1.9.7 2.0.0 2.0.0-r1: A headless WebKit scriptable with a JavaScript API
 www-misc/fcgiwrap 1.1.0-r1: Simple FastCGI wrapper for CGI scripts (CGI support for nginx)
-www-plugins/lightspark 0.7.2_p1: High performance flash player
-www-servers/apache 2.2.27 2.2.27-r4 2.2.29 2.2.31 2.4.9-r2 2.4.12-r1 2.4.16: The Apache Web Server.
-www-servers/jboss-bin 4.2.3 5.0.1 5.1.0: JBoss Application Server
+www-servers/apache 2.2.27 2.2.29 2.2.31: The Apache Web Server
 www-servers/lighttpd 1.4.35 1.4.35-r1: Lightweight high-performance web server
-www-servers/monkeyd 1.5.3 1.5.5: A small, fast, and scalable web server
+www-servers/monkeyd 1.5.3: A small, fast, and scalable web server
 www-servers/nginx 1.4.7 1.7.12 1.8.1: Robust, small and high performance http and reverse proxy server
 www-servers/spawn-fcgi 1.6.3-r1: A FCGI spawner for lighttpd and cherokee and other webservers
-www-servers/thttpd 2.26.4-r3 2.27.0 9999: Fork of thttpd, a small, fast, multiplexing webserver
-www-servers/tomcat 6.0.41 7.0.56 7.0.57: Tomcat Servlet-3.0/JSP-2.2 Container
+www-servers/thttpd 2.26.4-r3: Fork of thttpd, a small, fast, multiplexing webserver
+www-servers/tomcat 6.0.41 7.0.56: Tomcat Servlet-3.0/JSP-2.2 Container
 www-servers/uwsgi 2.0.3: uWSGI server for Python web applications
-www-servers/varnish 3.0.5 3.0.5-r3 3.0.5-r4 3.0.6 4.0.0-r1 4.0.1-r1 4.0.2: Varnish is a state-of-the-art, high-performance HTTP accelerator
-www-servers/webcit 8.04: Groupdav compliant AJAX'ed Blog/Forum/Wiki/Webserver for Citadel groupware
+www-servers/varnish 3.0.5 3.0.5-r3: Varnish is a state-of-the-art, high-performance HTTP accelerator
 www-servers/webfs 1.21-r3: Lightweight HTTP server for static content
 x11-apps/iceauth 1.0.6: ICE authority file utility
 x11-apps/mkfontdir 1.0.7: create an index of X font files in a directory
@@ -1119,9 +1047,9 @@ x11-apps/xauth 1.0.8: X authority file utility
 x11-apps/xinit 1.3.3: X Window System initializer
 x11-apps/xkbcomp 1.2.4: compile XKB keyboard description
 x11-apps/xrdb 1.1.0: X server resource database utility
-x11-base/xorg-server 1.12.4-r4 1.15.0 1.15.2-r2 1.16.4 1.16.4-r1 1.16.4-r2 1.17.1 1.17.1-r1: X.Org X servers
-x11-drivers/xf86-input-wacom 0.24.0 0.29.0 0.30.0 0.31.0 0.32.0: Driver for Wacom tablets and drawing devices
-x11-drivers/xf86-video-intel 2.9.1 2.19.0 2.20.13 2.21.15 2.99.903 2.99.905-r1 2.99.906 2.99.907-r1 2.99.909 2.99.910 2.99.914 2.99.916 2.99.917 2.99.917-r1 2.99.917-r2: X.Org driver for Intel cards
+x11-base/xorg-server 1.12.4-r4 1.15.0 1.15.2-r2 1.16.4: X.Org X servers
+x11-drivers/xf86-input-wacom 0.24.0 0.31.0: Driver for Wacom tablets and drawing devices
+x11-drivers/xf86-video-intel 2.19.0 2.20.13 2.21.15 2.99.917 2.99.917-r2: X.Org driver for Intel cards
 x11-libs/cairo 1.12.16 1.12.18-r1 1.14.2: A vector graphics library with cross-device output support
 x11-libs/gdk-pixbuf 2.30.7 2.30.8 2.32.3: Image loading library for GTK+
 x11-libs/libICE 1.0.8-r1: X.Org Inter-Client Exchange library
@@ -1152,8 +1080,8 @@ x11-libs/libxshmfence 1.1: Shared memory fences using futexes
 x11-libs/pango 1.36.3 1.36.8 1.38.1: Internationalized text layout and rendering library
 x11-libs/pixman 0.32.4 0.32.6: Low-level pixel manipulation routines
 x11-libs/xtrans 1.3.3: X.Org xtrans library
-x11-misc/magneto-gtk 290 291 292 293 294 295 296 297: Entropy Package Manager notification applet GTK2 frontend
-x11-misc/magneto-gtk3 290 291 292 293 294 295 296 297: Entropy Package Manager notification applet GTK3 frontend
+x11-misc/magneto-gtk 296: Entropy Package Manager notification applet GTK2 frontend
+x11-misc/magneto-gtk3 296: Entropy Package Manager notification applet GTK3 frontend
 x11-misc/shared-mime-info 1.2-r1: The Shared MIME-info Database specification
 x11-misc/util-macros 1.18.0: X.Org autotools utility macros
 x11-misc/x11vnc 0.9.13: A VNC server for real X displays
@@ -1187,18 +1115,3 @@ x11-proto/xf86rushproto 1.1.2-r1: X.Org XF86Rush protocol headers
 x11-proto/xf86vidmodeproto 2.3.1-r1: X.Org XF86VidMode protocol headers
 x11-proto/xineramaproto 1.2.1-r1: X.Org Xinerama protocol headers
 x11-proto/xproto 7.0.25: X.Org xproto protocol headers
-x11-themes/arc-theme 9999 20151214: a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell.
-x11-themes/cairo-dock-themes 1.6.3.1: Official themes for Cairo-dock
-x11-themes/elementary-icon-theme 2.7.1 2.7.1-r1: Elementary gnome icon theme
-x11-themes/equinox-themes 1.50: Themes for the Equinox GTK engine
-x11-themes/gtk-engines-equinox 1.50: Sleek GTK Theme engine
-x11-themes/iottinka-artwork 1.0-r1: Iottinka Artwork at DeviantArt
-x11-themes/korora-shell-theme 9999 20150716: a Korora tweaked Gnome shell theme
-x11-themes/numix-gtk-theme 2.5.1 9999: the Numix flat theme for gtk.
-x11-themes/numix-icon-theme 9999 20151213: Official icon theme from the Numix project.
-x11-themes/numix-icon-theme-circle 9999 20151218: Official icon theme circle from the Numix project.
-x11-themes/ozon-icon-theme 0.3 9999: Official icon theme from Ozon OS.
-x11-themes/ozon-shell-theme 0.3 9999: Ozon Gnome shell theme
-x11-themes/paper-gtk-theme 9999 20151217: the Paper gtk theme by snwh
-x11-themes/paper-icon-theme 9999 20151211: the Paper theme official icons.
-x11-themes/produkt 0.2.3: A textured plasma theme

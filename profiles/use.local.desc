@@ -161,9 +161,6 @@ app-emulation/virtualbox:sdk - Enable building of SDK
 app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox-modules:pax_kernel - Apply patch needed for pax enabled kernels
-app-emulation/vmware-modules:pax_kernel - Apply patch needed for pax enabled kernels
-app-emulation/vmware-modules:vmci - Build the Virtual Machine Communication Interface module; disable this if you want to use the module from the mainline kernel
-app-emulation/vmware-modules:vsock - Build the VMware VMCI transport for Virtual Sockets; disable this if you want to use the module from the mainline kernel
 app-eselect/eselect-php:fpm - Enable the FastCGI Process Manager SAPI
 app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 app-misc/mc:edit - Compile and install the mcedit application
@@ -337,8 +334,6 @@ dev-python/ipython:notebook - Install requirements for the web notebook based on
 dev-python/ipython:octave - Enable octave bridge via dev-python/oct2py
 dev-python/lxml:beautifulsoup3 - Enable support for Beautiful Soup 3
 dev-python/pillow:webp - Enable support for webp image format.
-dev-python/pylons:genshi - Add optional genshi support
-dev-python/pylons:jinja - Add optional jinja support
 dev-python/pymongo:mod_wsgi - Disable the C extension to work with mod_wsgi.
 dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
@@ -363,7 +358,6 @@ dev-util/google-perftools:debug - Build a set of libraries with debug support (s
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
-dev-util/molecule:plugins - Add plugins provided by dev-util/molecule-plugins
 dev-util/perf:audit - Enable support for sys-process/audit.
 dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils.
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
@@ -462,7 +456,6 @@ net-analyzer/icinga:idoutils - Adds DB support
 net-analyzer/icinga:lighttpd - Adds Lighttpd support
 net-analyzer/icinga:plugins - Adds support for nagios plugins
 net-analyzer/icinga:web - Adds generic web interface support
-net-analyzer/icinga-web:pnp - Enables pnp4nagios integration
 net-analyzer/nagios-core:classicui - use the classic web theme
 net-analyzer/nagios-core:lighttpd - install www-servers/lighttpd config
 net-analyzer/nagios-core:web - enable web interface
@@ -574,16 +567,6 @@ net-ftp/pure-ftpd:resolveids - Resolve UIDs/GIDs
 net-ftp/pure-ftpd:sysquota - Enables system quota support (needs sys-fs/quota)
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risk)
 net-irc/irssi:proxy - Adds support for a loadable IRC proxy module
-net-irc/quassel:X - Build the Qt 4 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client.
-net-irc/quassel:crypt - Support core->network per-channel and per-query blowfish encryption via app-crypt/qca:2.
-net-irc/quassel:monolithic - Build Standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use quassels client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
-net-irc/quassel:phonon - Build client with phonon backend support. This enables sound playback in client.
-net-irc/quassel:server - Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client.
-net-irc/quassel:webkit - Use qt-webkit rendering engine for showing URL thumbnails and for other things that need web browser integration.
-net-irc/quassel-client:X - Build the Qt 4 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client.
-net-irc/quassel-client:crypt - Support core->network per-channel and per-query blowfish encryption via app-crypt/qca:2.
-net-irc/quassel-client:phonon - Build client with phonon backend support. This enables sound playback in client.
-net-irc/quassel-client:webkit - Use qt-webkit rendering engine for showing URL thumbnails and for other things that need web browser integration.
 net-libs/c-client:chappa - Enable Eduardo Chappa's patches for use with mail-client/alpine (mainly adds support for maildir)
 net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/c-client:topal - Enable support for net-mail/topal for use with mail-client/alpine
@@ -676,18 +659,7 @@ net-misc/tigervnc:server - Build TigerVNC server
 net-misc/tigervnc:xorgmodule - Build the Xorg module
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
 net-misc/wget:uuid - Generate UUIDs for the WARC (Web ARChive file format) using libuuid; otherwise use a simple RNG (random number generator)
-net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
-net-nds/389-ds-base:autobind - Enable auto bind over unix domain socket (LDAPI) support
-net-nds/389-ds-base:bitwise - Enable bitwise plugin - supported data in raw/bitwise format
-net-nds/389-ds-base:dna - Enable dna (distributed numeric assignment ) plugin - to automatically assign unique uid numbers to new user entries as they are created.
-net-nds/389-ds-base:ldapi - Enable LDAP over unix domain socket (LDAPI) support
-net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and fast system services used in ldap
-net-nds/389-ds-base:presence - Enable presence plugin - non-stabdart syntax validation
-net-nds/gosa-core:mail - Manage mail accounts and servers with gosa.
-net-nds/gosa-core:samba - Manage samba accounts with gosa.
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
-net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
-net-nds/nsscache:nssdb - Depend on sys-libs/libnss_db to handle dbm files.
 net-nds/openldap:experimental - Enable experimental backend options
 net-nds/openldap:minimal - Build libraries & userspace tools only. Does not install any server code.
 net-nds/openldap:odbc - Enable ODBC and SQL backend options
@@ -824,8 +796,6 @@ sys-fs/dmraid:intel_led - Enable Intel LED support
 sys-fs/dmraid:klibc - Compile against dev-libs/klibc
 sys-fs/dmraid:led - Enable LED support
 sys-fs/dmraid:mini - Create a minimal binary suitable for early boot environments
-sys-fs/evms:hb - Enable support for heartbeat-1
-sys-fs/evms:hb2 - Enable support for heartbeat-2
 sys-fs/lvm2:clvm - Allow users to build clustered lvm2
 sys-fs/lvm2:cman - Cman support for clustered lvm
 sys-fs/lvm2:device-mapper-only - Build only device-mapper and not the rest of LVM2 (UNSUPPORTED)
@@ -868,7 +838,6 @@ sys-libs/pam:cracklib - Build the pam_cracklib module, that allows to verify the
 sys-libs/readline:utils - Install rlfe (ReadLine Front-End) helper tool -- a wrapper program for making any stdin use readline
 sys-libs/timezone-data:leaps_timezone - Install the set of "right" timezones; these timezones include leap seconds when counting seconds since the epoch (while POSIX does not) as they are based on the TAI (International Atomic Time) clock
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
-sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
 sys-power/pm-utils:ntp - Install support for net-misc/ntp
 sys-process/criu:setproctitle - Make process titles of service workers to be more verbose
 sys-process/htop:oom - Add column to track the OOM-killer score of processes
@@ -880,11 +849,8 @@ sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watc
 virtual/mysql:embedded - Build embedded server (libmysqld)
 virtual/postgresql:server - Disable to install PostgreSQL libraries and clients only
 www-apache/mod_extract_forwarded:mod_proxy - Enable support for Apache's internal proxy
-www-apps/gitweb:highlight - GitWeb support for app-text/highlight.
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
-www-plugins/lightspark:gles - Replace default OpenGL renderer with GLESv2
-www-plugins/lightspark:rtmp - Enable Real Time Messaging Protocol using librtmp
 www-servers/apache:apache2_modules_access_compat - Group authorizations based on host (name or IP address). Available as a compatibility module with previous versions.
 www-servers/apache:apache2_modules_authn_core - Provides core authentication capabilities common to all authentication providers (functionality provided by authn_alias in previous versions).
 www-servers/apache:apache2_modules_authz_core - Provides core authorization capabilities to various authorization/authorization modules, such as authn_file and authz_user.
