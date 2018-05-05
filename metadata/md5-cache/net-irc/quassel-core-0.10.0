@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst prepare setup test
+DEFINED_PHASES=compile config configure install postinst prepare setup test
 DEPEND=dev-qt/qtcore:4[ssl?] dev-qt/qtscript:4 crypt? ( app-crypt/qca:2 app-crypt/qca-ossl ) !postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] ) postgres? ( dev-qt/qtsql:4[postgres] ) syslog? ( virtual/logger ) !net-irc/quassel-core-bin sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/pkgconfig
 DESCRIPTION=Qt4/KDE IRC client - the "core" (server) component
 EAPI=5

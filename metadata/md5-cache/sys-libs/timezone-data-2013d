@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst unpack
+DEFINED_PHASES=compile config install postinst unpack
 DESCRIPTION=Timezone data (/usr/share/zoneinfo) and utilities (tzselect/zic/zdump)
 EAPI=0
 HOMEPAGE=http://www.iana.org/time-zones http://www.twinsun.com/tz/tz-link.htm

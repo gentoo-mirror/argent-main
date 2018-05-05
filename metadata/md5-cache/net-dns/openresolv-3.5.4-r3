@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install prepare
+DEFINED_PHASES=config configure install prepare
 DEPEND=!net-dns/resolvconf-gentoo !<net-dns/dnsmasq-2.40-r1
 DESCRIPTION=A framework for managing DNS information
 EAPI=5
