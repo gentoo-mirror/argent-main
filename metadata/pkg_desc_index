@@ -326,7 +326,7 @@ dev-perl/TermReadKey 2.300.200 2.300.200-r1: Change terminal modes, and perform 
 dev-perl/Text-CharWidth 0.40.0: Get number of occupied columns of a string on terminal
 dev-perl/Text-WrapI18N 0.60.0: Internationalized substitute of Text::Wrap
 dev-perl/TimeDate 2.300.0: A Date/Time Parsing Perl Module
-dev-perl/Try-Tiny 0.180.0: Minimal try/catch with proper localization of source /home/mgorny/repos/argent-main/dev-perl/Try-Tiny/Try-Tiny-0.180.0.ebuild
+dev-perl/Try-Tiny 0.180.0: Minimal try/catch with proper localization of source /var/lib/repo-mirror-ci/repos/argent-main/dev-perl/Try-Tiny/Try-Tiny-0.180.0.ebuild
 dev-perl/URI 1.600.0 1.600.0-r1: A URI Perl Module
 dev-perl/WWW-RobotRules 6.20.0: Parse /robots.txt file
 dev-perl/XML-Filter-BufferText 1.10.0: Filter to put all characters() in one event
@@ -875,7 +875,6 @@ sys-libs/e2fsprogs-libs 1.42.7 1.42.12 1.42.13: e2fsprogs libraries (common erro
 sys-libs/efivar 0.15 0.21: Tools and library to manipulate EFI variables
 sys-libs/freeipmi 1.4.3: Provides Remote-Console and System Management Software as per IPMI v1.5/2.0
 sys-libs/gdbm 1.8.3-r4 1.11: Standard GNU database libraries
-sys-libs/glibc 2.12.2 2.17 2.19-r1 2.20-r2 2.21-r2 2.22-r4: GNU libc6 (also called glibc2) C library
 sys-libs/gpm 1.20.7-r1 1.20.7-r2: Console-based mouse driver
 sys-libs/libacpi 0.2: A general purpose library for ACPI
 sys-libs/libcap 2.22 2.22-r2 2.24-r2: POSIX 1003.1e capabilities
