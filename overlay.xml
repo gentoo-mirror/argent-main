@@ -6,7 +6,7 @@
     <description>Argent Linux</description>
     <homepage>https://gitlab.com/argent/argent-main</homepage>
     <owner type="project">
-      <email>stefan.cristian t rogentos.ro</email>
+      <email>stefan.cristian+gentoo at rogentos.ro</email>
       <name>Brindusa Stefan Cristian</name>
     </owner>
     <source type="git">https://gitlab.com/argent/argent-main.git</source>
