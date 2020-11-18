@@ -1159,34 +1159,6 @@ x11-misc/util-macros 1.18.0: X.Org autotools utility macros
 x11-misc/x11vnc 0.9.13: A VNC server for real X displays
 x11-misc/xbitmaps 1.1.1: X.Org bitmaps data
 x11-misc/xkeyboard-config 2.11: X keyboard configuration database
-x11-proto/bigreqsproto 1.1.2: X.Org BigReqs protocol headers
-x11-proto/compositeproto 0.4.2-r1: X.Org Composite protocol headers
-x11-proto/damageproto 1.2.1-r1: X.Org Damage protocol headers
-x11-proto/dri2proto 2.8-r1: X.Org DRI2 protocol headers
-x11-proto/dri3proto 1.0: X.Org DRI3 protocol specification and Xlib/Xserver headers
-x11-proto/fixesproto 5.0-r1: X.Org Fixes protocol headers
-x11-proto/fontsproto 2.1.2: X.Org Fonts protocol headers
-x11-proto/glproto 1.4.17: X.Org GL protocol headers
-x11-proto/inputproto 2.3: X.Org Input protocol headers
-x11-proto/kbproto 1.0.6-r1: X.Org KB protocol headers
-x11-proto/presentproto 1.0: X.Org Present protocol specification and Xlib/Xserver headers
-x11-proto/randrproto 1.4.0-r1: X.Org Randr protocol headers
-x11-proto/recordproto 1.14.2-r1: X.Org Record protocol headers
-x11-proto/renderproto 0.11.1-r1: X.Org Render protocol headers
-x11-proto/resourceproto 1.2.0: X.Org Resource protocol headers
-x11-proto/scrnsaverproto 1.2.2-r1: X.Org ScrnSaver protocol headers
-x11-proto/trapproto 3.4.3: X.Org Trap protocol headers
-x11-proto/videoproto 2.3.2: X.Org Video protocol headers
-x11-proto/xcb-proto 1.10: X C-language Bindings protocol headers
-x11-proto/xcmiscproto 1.2.2: X.Org XCMisc protocol headers
-x11-proto/xextproto 7.3.0: X.Org XExt protocol headers
-x11-proto/xf86bigfontproto 1.2.0-r1: X.Org XF86BigFont protocol headers
-x11-proto/xf86dgaproto 2.1-r2: X.Org XF86DGA protocol headers
-x11-proto/xf86driproto 2.1.1-r1: X.Org XF86DRI protocol headers
-x11-proto/xf86rushproto 1.1.2-r1: X.Org XF86Rush protocol headers
-x11-proto/xf86vidmodeproto 2.3.1-r1: X.Org XF86VidMode protocol headers
-x11-proto/xineramaproto 1.2.1-r1: X.Org Xinerama protocol headers
-x11-proto/xproto 7.0.25: X.Org xproto protocol headers
 x11-themes/arc-theme 9999 20151214: a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell.
 x11-themes/cairo-dock-themes 1.6.3.1: Official themes for Cairo-dock
 x11-themes/elementary-icon-theme 2.7.1 2.7.1-r1: Elementary gnome icon theme
