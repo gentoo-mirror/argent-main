@@ -3,6 +3,7 @@ DEPEND=ssl? ( dev-libs/openssl:0 ) gost? ( >=dev-libs/openssl-1.0.0:0[-bindist] 
 DESCRIPTION=bind tools: dig, nslookup, host, nsupdate, dnssec-keygen
 EAPI=5
 HOMEPAGE=http://www.isc.org/software/bind
+INHERIT=eutils autotools flag-o-matic toolchain-funcs
 IUSE=doc gost gssapi idn ipv6 readline ssl urandom xml
 KEYWORDS=amd64 x86
 LICENSE=ISC BSD BSD-2 HPND JNIC RSA openssl
@@ -11,5 +12,5 @@ REQUIRED_USE=gost? ( ssl )
 RESTRICT=test
 SLOT=0
 SRC_URI=ftp://ftp.isc.org/isc/bind9/9.10.1-P1/bind-9.10.1-P1.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=5574a97bae4ad2ea5891e267dfb65873

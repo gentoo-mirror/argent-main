@@ -3,11 +3,12 @@ DEPEND=selinux? ( >=sys-libs/libselinux-1.28 ) !>=sys-apps/util-linux-2.23 virtu
 DESCRIPTION=/sbin/init - parent of all processes
 EAPI=4
 HOMEPAGE=http://savannah.nongnu.org/projects/sysvinit
+INHERIT=eutils toolchain-funcs flag-o-matic
 IUSE=selinux ibm static kernel_FreeBSD
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=selinux? ( >=sys-libs/libselinux-1.28 ) !>=sys-apps/util-linux-2.23
 SLOT=0
 SRC_URI=mirror://nongnu/sysvinit/sysvinit-2.88dsf.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=093edb246eda6aea367cbdc1e94ee6fe

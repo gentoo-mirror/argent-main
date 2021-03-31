@@ -3,11 +3,12 @@ DEPEND=virtual/os-headers !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/autom
 DESCRIPTION=Tools for configuring the Linux kernel 802.1d Ethernet Bridge
 EAPI=5
 HOMEPAGE=http://bridge.sourceforge.net/
+INHERIT=autotools eutils linux-info toolchain-funcs
 IUSE=selinux
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=selinux? ( sec-policy/selinux-brctl )
 SLOT=0
 SRC_URI=mirror://sourceforge/bridge/bridge-utils-1.5.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65
 _md5_=433eca7b62ba093585e80f19a1294384

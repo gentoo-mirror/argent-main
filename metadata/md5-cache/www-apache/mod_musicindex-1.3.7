@@ -3,11 +3,12 @@ DEPEND=mp3? ( media-libs/libmad ) mp4? ( media-libs/libmp4v2 ) flac? ( media-lib
 DESCRIPTION=mod_musicindex allows nice displaying of directories containing music files
 EAPI=2
 HOMEPAGE=http://www.parisc-linux.org/~varenet/musicindex/
+INHERIT=apache-module
 IUSE=+mp3 +mp4 +flac +vorbis
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
 RDEPEND=mp3? ( media-libs/libmad ) mp4? ( media-libs/libmp4v2 ) flac? ( media-libs/flac ) vorbis? ( media-libs/liboggz ) sys-devel/libtool =www-servers/apache-2*
 SLOT=0
 SRC_URI=http://www.parisc-linux.org/~varenet/musicindex/mod_musicindex-1.3.7.tar.gz
-_eclasses_=apache-module	bd30ba4d834196e81cf2b76c52d26b93	depend.apache	87a16d5639b45fde2614c944e846b703	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	depend.apache	87a16d5639b45fde2614c944e846b703	apache-module	bd30ba4d834196e81cf2b76c52d26b93
 _md5_=a2ba93546e132cf829d1eeec8a6faf1b

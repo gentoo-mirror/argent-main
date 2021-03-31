@@ -3,6 +3,7 @@ DEPEND=x11-libs/libXext x11-libs/libXfixes >=x11-libs/pixman-0.27.1 >=x11-libs/l
 DESCRIPTION=X.Org driver for Intel cards
 EAPI=5
 HOMEPAGE=http://xorg.freedesktop.org/
+INHERIT=linux-info xorg-2
 IUSE=glamor +sna +udev uxa xvmc dri
 KEYWORDS=amd64 x86 ~amd64-fbsd -x86-fbsd
 LICENSE=MIT
@@ -10,5 +11,5 @@ RDEPEND=x11-libs/libXext x11-libs/libXfixes >=x11-libs/pixman-0.27.1 >=x11-libs/
 REQUIRED_USE=|| ( glamor sna uxa )
 SLOT=0
 SRC_URI=http://xorg.freedesktop.org/releases/individual/driver/xf86-video-intel-2.21.15.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0	xorg-2	c19469af986bb65237570362504da3c8
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	xorg-2	c19469af986bb65237570362504da3c8
 _md5_=12b8021ae60c03bf702b126372f2a5ac

@@ -3,6 +3,7 @@ DEPEND=dev-db/postgresql dev-vcs/git
 DESCRIPTION=WAL JSON output plugin
 EAPI=5
 HOMEPAGE=https://github.com/remerge/wal2json
+INHERIT=git-2
 KEYWORDS=amd64 x86
 LICENSE=AGPL-3
 RDEPEND=dev-db/postgresql

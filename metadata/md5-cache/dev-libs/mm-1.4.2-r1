@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst prepare test
 DESCRIPTION=Shared Memory Abstraction Library
 EAPI=2
 HOMEPAGE=http://www.ossp.org/pkg/lib/mm/
+INHERIT=multilib
 KEYWORDS=amd64 x86
 LICENSE=mm
 SLOT=1.2

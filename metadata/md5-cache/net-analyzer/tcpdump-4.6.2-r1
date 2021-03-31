@@ -3,11 +3,12 @@ DEPEND=drop-root? ( sys-libs/libcap-ng ) net-libs/libpcap smi? ( net-libs/libsmi
 DESCRIPTION=A Tool for network monitoring and data acquisition
 EAPI=5
 HOMEPAGE=http://www.tcpdump.org/
+INHERIT=eutils flag-o-matic toolchain-funcs user
 IUSE=+drop-root smi ssl ipv6 samba suid test
 KEYWORDS=amd64 x86
 LICENSE=BSD
 RDEPEND=drop-root? ( sys-libs/libcap-ng ) net-libs/libpcap smi? ( net-libs/libsmi ) ssl? ( >=dev-libs/openssl-0.9.6m )
 SLOT=0
 SRC_URI=http://www.tcpdump.org/release/tcpdump-4.6.2.tar.gz http://www.jp.tcpdump.org/release/tcpdump-4.6.2.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=6c21f0a6935d3829434061bcbea08d09

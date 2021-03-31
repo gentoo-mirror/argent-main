@@ -3,6 +3,7 @@ DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-libs/openssl
 DESCRIPTION=Evented IO for V8 Javascript
 EAPI=5
 HOMEPAGE=http://nodejs.org/
+INHERIT=python-any-r1 pax-utils toolchain-funcs
 IUSE=+npm +snapshot
 KEYWORDS=amd64 x86
 LICENSE=Apache-1.1 Apache-2.0 BSD BSD-2 MIT
@@ -10,5 +11,5 @@ RDEPEND=dev-libs/openssl
 RESTRICT=test
 SLOT=0
 SRC_URI=http://nodejs.org/dist/v0.10.30/node-v0.10.30.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	pax-utils	feb89d699fd71a03750d68d1dd2d52e5
 _md5_=fe8ae31f27f77a4f78b994985d63a5b9

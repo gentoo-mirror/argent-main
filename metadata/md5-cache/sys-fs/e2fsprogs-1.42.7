@@ -3,11 +3,12 @@ DEPEND=~sys-libs/e2fsprogs-libs-1.42.7 >=sys-apps/util-linux-2.16 nls? ( virtual
 DESCRIPTION=Standard EXT2/EXT3/EXT4 filesystem utilities
 EAPI=3
 HOMEPAGE=http://e2fsprogs.sourceforge.net/
+INHERIT=eutils flag-o-matic multilib toolchain-funcs
 IUSE=nls static-libs elibc_FreeBSD
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 BSD
 RDEPEND=~sys-libs/e2fsprogs-libs-1.42.7 >=sys-apps/util-linux-2.16 nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://sourceforge/e2fsprogs/e2fsprogs-1.42.7.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=1c58a16a6d81508b1a214187054fbbf3

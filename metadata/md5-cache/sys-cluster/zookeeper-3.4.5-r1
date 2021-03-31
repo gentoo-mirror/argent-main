@@ -2,6 +2,7 @@ DEFINED_PHASES=compile configure install setup
 DESCRIPTION=ZooKeeper is a high-performance coordination service for distributed applications.
 EAPI=2
 HOMEPAGE=http://zookeeper.apache.org/
+INHERIT=eutils java-utils-2 user
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
@@ -9,5 +10,5 @@ RDEPEND=>=virtual/jre-1.6
 RESTRICT=mirror binchecks
 SLOT=0
 SRC_URI=mirror://apache/zookeeper/zookeeper-3.4.5/zookeeper-3.4.5.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=230dada55eae64228016eae6bcf6b93a

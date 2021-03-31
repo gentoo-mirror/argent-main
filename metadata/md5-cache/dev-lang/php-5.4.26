@@ -3,6 +3,7 @@ DEPEND=>=app-eselect/eselect-php-0.7.1-r3[apache2?,fpm?] >=dev-libs/libpcre-8.32
 DESCRIPTION=The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs.
 EAPI=5
 HOMEPAGE=http://php.net/
+INHERIT=eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool systemd
 IUSE=embed +cli cgi fpm apache2 threads bcmath berkdb bzip2 calendar cdb cjk crypt +ctype curl curlwrappers debug enchant exif +fileinfo +filter firebird flatfile ftp gd gdbm gmp +hash +iconv imap inifile intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit mhash mssql mysql mysqlnd mysqli nls oci8-instant-client odbc pcntl pdo +phar +posix postgres qdbm readline recode selinux +session sharedmem +simplexml snmp soap sockets spell sqlite ssl sybase-ct sysvipc systemd tidy +tokenizer truetype unicode wddx +xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib apache2
 KEYWORDS=amd64 x86
 LICENSE=PHP-3
@@ -10,5 +11,5 @@ RDEPEND=>=app-eselect/eselect-php-0.7.1-r3[apache2?,fpm?] >=dev-libs/libpcre-8.3
 REQUIRED_USE=truetype? ( gd ) cjk? ( gd ) exif? ( gd ) xpm? ( gd ) gd? ( zlib ) simplexml? ( xml ) soap? ( xml ) wddx? ( xml ) xmlrpc? ( || ( xml iconv ) ) xmlreader? ( xml ) xslt? ( xml ) ldap-sasl? ( ldap ) mhash? ( hash ) phar? ( hash ) mysqlnd? ( || ( mysql mysqli pdo ) ) qdbm? ( !gdbm ) readline? ( !libedit ) recode? ( !imap !mysql !mysqli ) sharedmem? ( !threads ) !cli? ( !cgi? ( !fpm? ( !apache2? ( !embed? ( cli ) ) ) ) )
 SLOT=5.4
 SRC_URI=http://www.php.net/distributions/php-5.4.26.tar.bz2 http://dev.gentoo.org/~olemarkus/php/php-patchset-5.4-r2.tar.bz2
-_eclasses_=apache-module	bd30ba4d834196e81cf2b76c52d26b93	autotools	38e73fcf676fa9087716f033ce1572a5	db-use	582140d1a711279e50ce284fc7b609f5	depend.apache	87a16d5639b45fde2614c944e846b703	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	versionator	c80ccf29e90adea7c5cae94b42eb76d0	depend.apache	87a16d5639b45fde2614c944e846b703	apache-module	bd30ba4d834196e81cf2b76c52d26b93	db-use	582140d1a711279e50ce284fc7b609f5	systemd	049410fe816a8d836271f4780a7fd73c
 _md5_=184ea0de9fade1b7dded1aef78da8436

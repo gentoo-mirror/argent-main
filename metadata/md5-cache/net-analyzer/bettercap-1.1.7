@@ -3,6 +3,7 @@ DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/colorize-0.7.5[ruby_targets_rub
 DESCRIPTION=A complete, modular, portable and easily extensible MITM framework
 EAPI=5
 HOMEPAGE=http://www.bettercap.org/
+INHERIT=ruby-fakegem
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 doc test test
 KEYWORDS=~amd64 ~arm
 RDEPEND=net-libs/libpcap ruby_targets_ruby19? ( >=dev-ruby/colorize-0.7.5[ruby_targets_ruby19] >=dev-ruby/packetfu-1.1.0[ruby_targets_ruby19] >=dev-ruby/pcaprub-0.12.0[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/colorize-0.7.5[ruby_targets_ruby20] >=dev-ruby/packetfu-1.1.0[ruby_targets_ruby20] >=dev-ruby/pcaprub-0.12.0[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/colorize-0.7.5[ruby_targets_ruby21] >=dev-ruby/packetfu-1.1.0[ruby_targets_ruby21] >=dev-ruby/pcaprub-0.12.0[ruby_targets_ruby21] ) ruby_targets_ruby22? ( >=dev-ruby/colorize-0.7.5[ruby_targets_ruby22] >=dev-ruby/packetfu-1.1.0[ruby_targets_ruby22] >=dev-ruby/pcaprub-0.12.0[ruby_targets_ruby22] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby22? ( dev-lang/ruby:2.2 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] )
@@ -10,5 +11,5 @@ REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 ru
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/evilsocket/bettercap/archive/v1.1.7.tar.gz -> bettercap-1.1.7.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	ruby-fakegem	836f858624840907bbb6ae6f2c881cb7	ruby-ng	3b6431b487e69b5070a45ea20d1c4c6c	ruby-utils	2f896785ed65442d7e84ab5f5eef3bd3	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	ruby-utils	2f896785ed65442d7e84ab5f5eef3bd3	ruby-ng	3b6431b487e69b5070a45ea20d1c4c6c	ruby-fakegem	836f858624840907bbb6ae6f2c881cb7
 _md5_=118658430622b0afdf0b2ea12c6af2ce

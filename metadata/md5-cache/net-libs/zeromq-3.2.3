@@ -3,10 +3,11 @@ DEPEND=|| ( sys-devel/gcc sys-devel/gcc-apple ) pgm? ( virtual/pkgconfig =net-li
 DESCRIPTION=ZeroMQ is a brokerless kernel
 EAPI=5
 HOMEPAGE=http://www.zeromq.org/
+INHERIT=autotools eutils
 IUSE=pgm test static-libs elibc_glibc
 KEYWORDS=amd64 x86
 LICENSE=LGPL-3
 SLOT=0
 SRC_URI=http://download.zeromq.org/zeromq-3.2.3.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7
 _md5_=e618a5e6fcf2c4f7fec4be6289acf5b7

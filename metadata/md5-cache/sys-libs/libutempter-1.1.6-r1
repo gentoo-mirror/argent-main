@@ -2,11 +2,12 @@ DEFINED_PHASES=compile configure install postinst prepare setup
 DESCRIPTION=Library that allows non-privileged apps to write utmp (login) info, which need root access
 EAPI=4
 HOMEPAGE=http://altlinux.org/index.php?module=sisyphus&package=libutempter
+INHERIT=user multilib flag-o-matic
 IUSE=static-libs elibc_FreeBSD
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1
 RDEPEND=!sys-apps/utempter
 SLOT=0
 SRC_URI=ftp://ftp.altlinux.org/pub/people/ldv/libutempter/libutempter-1.1.6.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1
+_eclasses_=user	bc615318777c602f6114b73c27f9a9d1	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=2c33624e41509200246134e3b4a12dc5

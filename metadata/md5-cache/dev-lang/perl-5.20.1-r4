@@ -3,6 +3,7 @@ DEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) app-arch/bzip2 sy
 DESCRIPTION=Larry Wall's Practical Extraction and Report Language
 EAPI=5
 HOMEPAGE=http://www.perl.org/
+INHERIT=eutils alternatives flag-o-matic toolchain-funcs multilib multiprocessing
 IUSE=berkdb debug doc gdbm ithreads
 KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
@@ -10,5 +11,5 @@ PDEPEND=>=app-admin/perl-cleaner-2.5 >=virtual/perl-File-Temp-0.230.400-r2 >=vir
 RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) app-arch/bzip2 sys-libs/zlib
 SLOT=0/5.20
 SRC_URI=mirror://cpan/src/5.0/perl-5.20.1.tar.bz2 mirror://cpan/authors/id/R/RJ/RJBS/perl-5.20.1.tar.bz2 mirror://gentoo/perl-5.20.1-patches-2.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/perl-5.20.1-patches-2.tar.xz
-_eclasses_=alternatives	6c575717515f030736d1b718d507d2f9	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	alternatives	6c575717515f030736d1b718d507d2f9	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a
 _md5_=40d3ca3a000e4aa6d3f29a15cba57b26

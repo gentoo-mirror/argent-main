@@ -3,6 +3,7 @@ DEPEND=dev-python/setuptools test? ( dev-python/tox ) || ( =dev-lang/python-3.3*
 DESCRIPTION=virtualenvwrapper is a set of extensions to Ian Bicking's virtualenv tool
 EAPI=4
 HOMEPAGE=http://www.doughellmann.com/projects/virtualenvwrapper http://pypi.python.org/pypi/virtualenvwrapper
+INHERIT=distutils python
 IUSE=test
 KEYWORDS=amd64 x86
 LICENSE=BSD
@@ -10,5 +11,5 @@ RDEPEND=dev-python/virtualenv dev-python/stevedore dev-python/virtualenv-clone |
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://pypi/v/virtualenvwrapper/virtualenvwrapper-4.2.tar.gz
-_eclasses_=distutils	6f76c08791f78c988517b9c3222a8101	multilib	5c89e4e7b42e1975d318dffbad01ca83	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	distutils	6f76c08791f78c988517b9c3222a8101
 _md5_=8fffa7b55a8298d355c1a2bfca2c8963

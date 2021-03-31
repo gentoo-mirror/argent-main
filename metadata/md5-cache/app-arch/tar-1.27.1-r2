@@ -3,11 +3,12 @@ DEPEND=acl? ( virtual/acl ) selinux? ( sys-libs/libselinux ) nls? ( >=sys-devel/
 DESCRIPTION=Use this to make tarballs :)
 EAPI=4
 HOMEPAGE=http://www.gnu.org/software/tar/
+INHERIT=flag-o-matic eutils
 IUSE=acl minimal nls selinux static userland_GNU xattr
 KEYWORDS=amd64 x86
 LICENSE=GPL-3+
 RDEPEND=acl? ( virtual/acl ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=mirror://gnu/tar/tar-1.27.1.tar.bz2 mirror://gnu-alpha/tar/tar-1.27.1.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=fe45d099ed3e91a54115fedc1321e34c

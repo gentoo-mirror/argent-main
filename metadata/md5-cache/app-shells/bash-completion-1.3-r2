@@ -2,6 +2,7 @@ DEFINED_PHASES=compile configure install postinst prepare
 DESCRIPTION=Programmable Completion for bash
 EAPI=3
 HOMEPAGE=http://bash-completion.alioth.debian.org/
+INHERIT=prefix
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 PDEPEND=app-shells/gentoo-bashcomp

@@ -3,6 +3,7 @@ DEPEND=expat? ( dev-libs/expat:0= ) !expat? ( dev-libs/libxml2:2= ) gnutls? ( ap
 DESCRIPTION=HTTP and WebDAV client library
 EAPI=5
 HOMEPAGE=http://www.webdav.org/neon/
+INHERIT=autotools libtool
 IUSE=doc expat gnutls kerberos libproxy nls pkcs11 ssl static-libs zlib linguas_cs linguas_de linguas_fr linguas_ja linguas_nn linguas_pl linguas_ru linguas_tr linguas_zh_CN
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=expat? ( dev-libs/expat:0= ) !expat? ( dev-libs/libxml2:2= ) gnutls? ( a
 RESTRICT=test
 SLOT=0/27
 SRC_URI=http://www.webdav.org/neon/neon-0.30.0.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5
 _md5_=f7f640a97c41eb9e80e19c720b87aa62

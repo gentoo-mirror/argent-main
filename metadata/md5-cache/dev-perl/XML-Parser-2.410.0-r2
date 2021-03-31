@@ -3,10 +3,11 @@ DEPEND=>=dev-libs/expat-1.95.1-r1 dev-lang/perl:=[-build(-)]
 DESCRIPTION=A Perl extension interface to James Clark's XML parser, expat
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/XML-Parser/
+INHERIT=perl-module multilib
 KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-libs/expat-1.95.1-r1 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TO/TODDR/XML-Parser-2.41.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628
 _md5_=68c4539be0a69dc0ff00b39125c4937a

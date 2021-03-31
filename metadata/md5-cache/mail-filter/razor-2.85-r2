@@ -3,10 +3,11 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=Vipul's Razor is a distributed, collaborative spam detection and filtering network
 EAPI=5
 HOMEPAGE=http://razor.sourceforge.net/
+INHERIT=perl-module
 KEYWORDS=amd64 x86
 LICENSE=Artistic
 RDEPEND=dev-perl/Net-DNS virtual/perl-net-ping virtual/perl-Time-HiRes || ( virtual/perl-Digest-SHA dev-perl/Digest-SHA1 ) dev-perl/URI dev-perl/Digest-Nilsimsa dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://sourceforge/razor/razor-agents-2.85.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628
 _md5_=038741124ca52737a71ba6e83803f7a9

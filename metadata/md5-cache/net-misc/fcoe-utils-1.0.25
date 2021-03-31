@@ -3,11 +3,12 @@ DEPEND=>=net-misc/lldpad-0.9.43 >=sys-apps/hbaapi-2.2 >=sys-apps/libhbalinux-1.0
 DESCRIPTION=Fibre Channel over Ethernet utilities
 EAPI=4
 HOMEPAGE=http://www.open-fcoe.org
+INHERIT=base autotools linux-info
 IUSE=kernel_linux
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=net-misc/lldpad-0.9.43 >=sys-apps/hbaapi-2.2 >=sys-apps/libhbalinux-1.0.14
 SLOT=0
 SRC_URI=mirror://sabayon/net-misc/fcoe-utils-1.0.25.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	base	61f9655cdc69fbb04c8b86fd32d0dfa7	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65
 _md5_=71afed321312f121cde3ee90ebaf55e7

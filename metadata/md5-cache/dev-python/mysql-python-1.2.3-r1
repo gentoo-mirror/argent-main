@@ -3,6 +3,7 @@ DEPEND=virtual/mysql dev-python/setuptools[python_targets_python2_7(-)?,-python_
 DESCRIPTION=Python interface to MySQL
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/mysql-python/ http://pypi.python.org/pypi/MySQL-python
+INHERIT=distutils-r1 flag-o-matic
 IUSE=python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=virtual/mysql python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/mysql-python/MySQL-python-1.2.3.tar.gz
-_eclasses_=distutils-r1	7774d1d61db76cd7274009465deb8a05	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-r1	0f6937650a475d673baa5d0c8c0b37b3	distutils-r1	7774d1d61db76cd7274009465deb8a05	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=d975c9d9ea781b782a7f6be39e77192c

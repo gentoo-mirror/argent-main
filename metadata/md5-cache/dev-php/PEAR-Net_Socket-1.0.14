@@ -3,10 +3,11 @@ DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=class interface to TCP sockets
 EAPI=4
 HOMEPAGE=http://pear.php.net/Net_Socket
+INHERIT=php-pear-r1
 KEYWORDS=amd64 x86
 LICENSE=PHP-2.02
 RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Net_Socket-1.0.14.tgz
-_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	php-pear-r1	97301eb45b88a14929f40f6a00ac6829	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	php-pear-r1	97301eb45b88a14929f40f6a00ac6829
 _md5_=1a9dbf187c3af9905aa323118d68c9c7

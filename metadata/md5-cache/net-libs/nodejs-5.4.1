@@ -3,6 +3,7 @@ DEPEND=icu? ( >=dev-libs/icu-55:= ) >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/py
 DESCRIPTION=Evented IO for V8 Javascript
 EAPI=5
 HOMEPAGE=http://nodejs.org/
+INHERIT=flag-o-matic pax-utils python-single-r1 toolchain-funcs
 IUSE=debug icu +npm snapshot +ssl python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=Apache-1.1 Apache-2.0 BSD BSD-2 MIT
@@ -10,5 +11,5 @@ RDEPEND=icu? ( >=dev-libs/icu-55:= ) >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/p
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://nodejs.org/dist/v5.4.1/node-v5.4.1.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-single-r1	2ebea8fbab356d63110245129a67a6dd
 _md5_=aa6e45784fd6d918a7d8d0b8c810cd2d

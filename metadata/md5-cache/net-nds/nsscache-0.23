@@ -3,6 +3,7 @@ DEPEND=dev-python/python-ldap dev-python/pycurl =dev-lang/python-2* =dev-lang/py
 DESCRIPTION=commandline tool to sync directory services to local cache
 EAPI=5
 HOMEPAGE=http://code.google.com/p/nsscache/
+INHERIT=eutils python distutils
 IUSE=nssdb nsscache
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=dev-python/python-ldap dev-python/pycurl nssdb? ( sys-libs/nss-db ) nssc
 RESTRICT=test
 SLOT=0
 SRC_URI=http://nsscache.googlecode.com/files/nsscache-0.23.tar.gz
-_eclasses_=distutils	6f76c08791f78c988517b9c3222a8101	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	python	e5f6269a14b9ebbd7e20bf8b3ae05ba5	distutils	6f76c08791f78c988517b9c3222a8101
 _md5_=f347b9f1744a62f1fb1904630a4b70a9

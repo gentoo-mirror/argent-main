@@ -3,6 +3,7 @@ DEPEND=!sys-apps/module-init-tools !sys-apps/modutils !<sys-apps/openrc-0.13.8 !
 DESCRIPTION=library and tools for managing linux kernel modules
 EAPI=5
 HOMEPAGE=https://git.kernel.org/?p=utils/kernel/kmod/kmod.git
+INHERIT=bash-completion-r1 eutils multilib python-r1 libtool
 IUSE=debug doc lzma python static-libs +tools zlib python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2
@@ -11,5 +12,5 @@ REQUIRED_USE=python? ( || ( python_targets_python2_7 python_targets_python3_3 py
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-21.tar.xz
-_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-r1	0f6937650a475d673baa5d0c8c0b37b3	libtool	5ae04d20c1cf910b68ff3586f20cced7
 _md5_=485ee30a4dd2d790593a0c9158b79694

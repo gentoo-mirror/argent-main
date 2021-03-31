@@ -3,10 +3,11 @@ DEPEND=>=sys-apps/sed-4
 DESCRIPTION=GNU Portable Threads
 EAPI=4
 HOMEPAGE=http://www.gnu.org/software/pth/
+INHERIT=eutils fixheadtails libtool flag-o-matic
 IUSE=debug static-libs
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://gnu/pth/pth-2.0.7.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	fixheadtails	6b7b3d896b0b285c12a94f3105c2a06c	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	fixheadtails	6b7b3d896b0b285c12a94f3105c2a06c	libtool	5ae04d20c1cf910b68ff3586f20cced7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=43826942bdcc141b026bb582f6ac6bba

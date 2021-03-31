@@ -3,6 +3,7 @@ DEPEND=>=dev-libs/libpcre-3.4 dev-lang/perl berkdb? ( >=sys-libs/db-3.2 ) cdb? (
 DESCRIPTION=A fast and secure drop-in replacement for sendmail.
 EAPI=5
 HOMEPAGE=http://www.postfix.org/
+INHERIT=eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator systemd
 IUSE=+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda ssl
 KEYWORDS=amd64 x86
 LICENSE=IBM
@@ -10,5 +11,5 @@ RDEPEND=>=dev-libs/libpcre-3.4 dev-lang/perl berkdb? ( >=sys-libs/db-3.2 ) cdb? 
 REQUIRED_USE=ldap-bind? ( ldap sasl )
 SLOT=0
 SRC_URI=ftp://ftp.porcupine.org/mirrors/postfix-release/official/postfix-2.10.1.tar.gz vda? ( http://vda.sourceforge.net/VDA/postfix-vda-v13-2.10.0.patch )
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	pam	31659e58bf74abb596b5d2e1f4081772	ssl-cert	4685fb8a57495302dbfa81cb1ad721c2	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	ssl-cert	4685fb8a57495302dbfa81cb1ad721c2	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	pam	31659e58bf74abb596b5d2e1f4081772	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0	systemd	049410fe816a8d836271f4780a7fd73c
 _md5_=db7cd25a88abb179b5dae291f04ec04f

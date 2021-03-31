@@ -3,11 +3,12 @@ DEPEND=udev? ( dev-lang/perl >=virtual/udev-206 ) virtual/pkgconfig
 DESCRIPTION=Hardware (PCI, USB, OUI, IAB) IDs databases
 EAPI=5
 HOMEPAGE=https://github.com/gentoo/hwids
+INHERIT=udev eutils
 IUSE=+udev
 KEYWORDS=amd64 x86
 LICENSE=|| ( GPL-2 BSD ) public-domain
 RDEPEND=!<sys-apps/pciutils-3.1.9-r2 !<sys-apps/usbutils-005-r1
 SLOT=0
 SRC_URI=https://github.com/gentoo/hwids/archive/hwids-20140317.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	udev	dc6dbbee15698d448c66fc24f8165ee5
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	udev	dc6dbbee15698d448c66fc24f8165ee5	eutils	469f038ba48effc32a634fef17232be7
 _md5_=c14dcb914a4e4168f6861ccd1f2468c3

@@ -3,6 +3,7 @@ DEPEND=>=dev-util/cmake-2.6.0 dev-qt/qtgui:4[dbus] dev-qt/qtsvg:4 bittorrent? ( 
 DESCRIPTION=Qt4-based download/upload manager
 EAPI=2
 HOMEPAGE=http://fatrat.dolezel.info/
+INHERIT=cmake-utils
 IUSE=bittorrent +curl -debug doc jabber nls webinterface
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=dev-qt/qtgui:4[dbus] dev-qt/qtsvg:4 bittorrent? ( >=net-libs/rb_libtorre
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www.dolezel.info/download/data/fatrat/fatrat-1.1.2.tar.gz
-_eclasses_=cmake-utils	b427f2a83adba021dc9d11c68839f736	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	cmake-utils	b427f2a83adba021dc9d11c68839f736
 _md5_=5da9fa26a274622748342a409a05f466

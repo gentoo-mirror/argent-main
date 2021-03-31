@@ -3,9 +3,10 @@ DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys
 DESCRIPTION=GNU system accounting utilities
 EAPI=3
 HOMEPAGE=https://savannah.gnu.org/projects/acct/
+INHERIT=eutils autotools systemd
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://gnu/acct/acct-6.5.5.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	systemd	049410fe816a8d836271f4780a7fd73c
 _md5_=922c30e4ad61f7e66d29617f7af9332b

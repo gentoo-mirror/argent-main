@@ -3,6 +3,7 @@ DEPEND=dev-libs/popt
 DESCRIPTION=Tools and library to manipulate EFI variables
 EAPI=5
 HOMEPAGE=https://github.com/vathpela/efivar
+INHERIT=multilib toolchain-funcs
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/popt

@@ -3,11 +3,12 @@ DEPEND=sys-libs/ncurses >=dev-libs/glib-2.6.0 ssl? ( dev-libs/openssl ) perl? ( 
 DESCRIPTION=A modular textUI IRC client with IPv6 support
 EAPI=5
 HOMEPAGE=http://irssi.org/
+INHERIT=autotools-utils eutils flag-o-matic perl-module toolchain-funcs
 IUSE=ipv6 +perl selinux ssl socks5 +proxy
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses >=dev-libs/glib-2.6.0 ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) selinux? ( sec-policy/selinux-irc ) perl? ( !net-im/silc-client ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://irssi.org/files/irssi-0.8.17.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	autotools-utils	983f5933088519d6dbcf8468c20ed820	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628
 _md5_=33309e2f7ab2fd1eccd247d99cc1ab1a

@@ -3,10 +3,11 @@ DEPEND=>=app-arch/unzip-5.41 dev-libs/libxml2 >=app-text/sgml-common-0.6.3-r2
 DESCRIPTION=Simplified Docbook DTD for XML
 EAPI=0
 HOMEPAGE=http://www.oasis-open.org/docbook/
+INHERIT=sgml-catalog
 KEYWORDS=amd64 x86
 LICENSE=docbook
 RDEPEND=dev-libs/libxml2
 SLOT=1.0
 SRC_URI=http://www.oasis-open.org/docbook/xml/simple/1.0/docbook-simple-1.0.zip
-_eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	sgml-catalog	013e5c68335c5b4df8f1b72d7d7ad25d	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	base	61f9655cdc69fbb04c8b86fd32d0dfa7	sgml-catalog	013e5c68335c5b4df8f1b72d7d7ad25d
 _md5_=aca609c06ab090aa749108ebde209936

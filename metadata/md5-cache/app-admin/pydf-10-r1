@@ -3,6 +3,7 @@ DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targe
 DESCRIPTION=Enhanced df with colors
 EAPI=5
 HOMEPAGE=http://kassiopeia.juls.savba.sk/~garabik/software/pydf/
+INHERIT=python-r1
 IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
 KEYWORDS=amd64 x86
 LICENSE=public-domain
@@ -10,5 +11,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targ
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=http://kassiopeia.juls.savba.sk/~garabik/software/pydf/pydf_10.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-r1	0f6937650a475d673baa5d0c8c0b37b3
 _md5_=67ee240ae164169528626d5cf1d6efef

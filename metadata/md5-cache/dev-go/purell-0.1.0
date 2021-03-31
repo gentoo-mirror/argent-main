@@ -3,9 +3,10 @@ DEPEND=>=dev-lang/go-1.4.2:=
 DESCRIPTION=tiny Go library to normalize URLs
 EAPI=5
 HOMEPAGE=https://github.com/PuerkitoBio/purell
+INHERIT=golang-vcs-snapshot golang-build
 KEYWORDS=~amd64 ~arm
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/PuerkitoBio/purell/archive/v0.1.0.tar.gz -> purell-0.1.0.tar.gz
-_eclasses_=golang-base	59e300a2d8836a6e8d508276da0d570f	golang-build	1b49258a68ba3972a575490adf3b7b4c	golang-vcs-snapshot	b10a39b036bc9a2dbefc6e168689b5fd
+_eclasses_=golang-base	59e300a2d8836a6e8d508276da0d570f	golang-vcs-snapshot	b10a39b036bc9a2dbefc6e168689b5fd	golang-build	1b49258a68ba3972a575490adf3b7b4c
 _md5_=77d5725d9e9be3fab72de2a6c27fdf3b

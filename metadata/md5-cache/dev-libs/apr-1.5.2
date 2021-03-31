@@ -3,11 +3,12 @@ DEPEND=elibc_glibc? ( >=sys-apps/util-linux-2.16 ) elibc_mintlib? ( >=sys-apps/u
 DESCRIPTION=Apache Portable Runtime Library
 EAPI=5
 HOMEPAGE=http://apr.apache.org/
+INHERIT=autotools eutils libtool multilib toolchain-funcs
 IUSE=doc elibc_FreeBSD older-kernels-compatibility selinux static-libs +urandom
 KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
 RDEPEND=elibc_glibc? ( >=sys-apps/util-linux-2.16 ) elibc_mintlib? ( >=sys-apps/util-linux-2.18 ) selinux? ( sec-policy/selinux-apache )
 SLOT=1
 SRC_URI=mirror://apache/apr/apr-1.5.2.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7
 _md5_=acb6f3ff507dd552840fe8b1f9e1204d

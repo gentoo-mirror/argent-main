@@ -3,11 +3,12 @@ DEPEND=dev-libs/popt !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1
 DESCRIPTION=Flexible remote checksum-based differencing
 EAPI=5
 HOMEPAGE=http://librsync.sourceforge.net/
+INHERIT=autotools-utils
 IUSE=static-libs
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/popt
 SLOT=0
 SRC_URI=mirror://sourceforge/librsync/librsync-0.9.7.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	autotools-utils	983f5933088519d6dbcf8468c20ed820	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	autotools-utils	983f5933088519d6dbcf8468c20ed820
 _md5_=a7a825e3387ae4028055385ba39f9ada

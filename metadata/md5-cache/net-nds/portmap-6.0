@@ -3,11 +3,12 @@ DEPEND=tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )
 DESCRIPTION=daemon for implementing remote procedure calls between computer programs
 EAPI=0
 HOMEPAGE=http://neil.brown.name/portmap/
+INHERIT=eutils toolchain-funcs user
 IUSE=selinux tcpd
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86
 LICENSE=BSD GPL-2
 RDEPEND=selinux? ( sec-policy/selinux-portmap )
 SLOT=0
 SRC_URI=http://neil.brown.name/portmap/portmap-6.0.tgz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=726560500ec62669393e425736d4e8af

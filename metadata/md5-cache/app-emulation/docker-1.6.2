@@ -3,6 +3,7 @@ DEPEND=>=dev-db/sqlite-3.7.9:3 device-mapper? ( >=sys-fs/lvm2-2.02.89[thin] ) >=
 DESCRIPTION=Docker complements kernel namespacing with a high-level API which operates at the process level
 EAPI=5
 HOMEPAGE=https://www.docker.com
+INHERIT=bash-completion-r1 eutils linux-info multilib systemd udev user
 IUSE=aufs btrfs +contrib +device-mapper doc lxc overlay vim-syntax
 KEYWORDS=~amd64
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=>=dev-db/sqlite-3.7.9:3 device-mapper? ( >=sys-fs/lvm2-2.02.89[thin] ) !
 RESTRICT=installsources strip
 SLOT=0
 SRC_URI=https://github.com/docker/docker/archive/v1.6.2.tar.gz -> docker-1.6.2.tar.gz
-_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	udev	dc6dbbee15698d448c66fc24f8165ee5	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65	systemd	049410fe816a8d836271f4780a7fd73c	udev	dc6dbbee15698d448c66fc24f8165ee5	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=8bc6b7745616098d796439cd8c1c0f9f

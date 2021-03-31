@@ -3,11 +3,12 @@ DEPEND=~dev-vcs/git-2.1.3 sys-libs/zlib dev-lang/perl:=[-build(-)] dev-libs/libp
 DESCRIPTION=A web interface to git
 EAPI=5
 HOMEPAGE=http://www.git-scm.com/
+INHERIT=toolchain-funcs eutils
 IUSE=highlight
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=~dev-vcs/git-2.1.3 sys-libs/zlib dev-lang/perl:=[-build(-)] dev-libs/libpcre dev-lang/tk dev-vcs/git[-cgi] dev-perl/Error dev-perl/Net-SMTP-SSL dev-perl/Authen-SASL virtual/perl-CGI highlight? ( app-text/highlight )
 SLOT=0
 SRC_URI=http://git-core.googlecode.com/files/git-2.1.3.tar.xz mirror://kernel/software/scm/git/git-2.1.3.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	eutils	469f038ba48effc32a634fef17232be7
 _md5_=7a89d92e96ea57d9052d1c9bf62ae3b2

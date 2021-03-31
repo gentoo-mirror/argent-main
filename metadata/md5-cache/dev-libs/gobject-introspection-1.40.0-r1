@@ -3,6 +3,7 @@ DEPEND=>=dev-libs/gobject-introspection-common-1.40.0 >=dev-libs/glib-2.40:2 doc
 DESCRIPTION=Introspection infrastructure for generating gobject library bindings for various languages
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Projects/GObjectIntrospection
+INHERIT=gnome2 python-single-r1 toolchain-funcs versionator
 IUSE=cairo doctool test python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2+ GPL-2+
@@ -11,5 +12,5 @@ RDEPEND=>=dev-libs/gobject-introspection-common-1.40.0 >=dev-libs/glib-2.40:2 do
 REQUIRED_USE=python_targets_python2_7 test? ( cairo )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gobject-introspection/1.40/gobject-introspection-1.40.0.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	gnome.org	01784e72df8fdad6573a39eef0e54f1e	gnome2	b294539262ddf28df3595088e54b9be2	gnome2-utils	4ebf575b6d5bbea6c32a206981c9d4bd	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	libtool	5ae04d20c1cf910b68ff3586f20cced7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	gnome.org	01784e72df8fdad6573a39eef0e54f1e	gnome2-utils	4ebf575b6d5bbea6c32a206981c9d4bd	gnome2	b294539262ddf28df3595088e54b9be2	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-single-r1	2ebea8fbab356d63110245129a67a6dd
 _md5_=68aa55127443776f3913a58ab4f1310c

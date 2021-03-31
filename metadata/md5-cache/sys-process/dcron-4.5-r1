@@ -3,10 +3,11 @@ DEPEND=>=sys-apps/sed-4.0.5 virtual/pkgconfig
 DESCRIPTION=A cute little cron from Matt Dillon
 EAPI=4
 HOMEPAGE=http://www.jimpryor.net/linux/dcron.html http://apollo.backplane.com/FreeSrc/
+INHERIT=cron toolchain-funcs eutils systemd
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=sys-process/cronbase-0.3.2 !sys-process/vixie-cron !sys-process/bcron !sys-process/cronie !sys-process/fcron
 SLOT=0
 SRC_URI=http://www.jimpryor.net/linux/releases/dcron-4.5.tar.gz
-_eclasses_=cron	8aeff14943deae6481719115146ed5f7	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	cron	8aeff14943deae6481719115146ed5f7	systemd	049410fe816a8d836271f4780a7fd73c
 _md5_=ca8c328bca6f2e81144802f5b84b7035

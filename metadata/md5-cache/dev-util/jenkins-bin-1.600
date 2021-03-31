@@ -3,6 +3,7 @@ DEPEND=media-fonts/dejavu
 DESCRIPTION=Extensible continuous integration server
 EAPI=5
 HOMEPAGE=http://jenkins-ci.org/
+INHERIT=user
 KEYWORDS=amd64 x86
 LICENSE=MIT
 RDEPEND=media-fonts/dejavu !dev-util/jenkins-bin:lts virtual/jre

@@ -2,6 +2,7 @@ DEFINED_PHASES=compile install prepare
 DESCRIPTION=Colorizes output of diff
 EAPI=5
 HOMEPAGE=http://www.colordiff.org/
+INHERIT=prefix
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl sys-apps/diffutils

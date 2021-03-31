@@ -3,6 +3,7 @@ DEPEND=dev-libs/glib:2 sys-libs/gdbm crypt? ( dev-libs/openssl:0= ) snmp? ( net-
 DESCRIPTION=Library interface to IPMI
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/openipmi/
+INHERIT=eutils autotools python-single-r1
 IUSE=crypt snmp perl tcl python python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1 GPL-2
@@ -11,5 +12,5 @@ REQUIRED_USE=python? ( python_targets_python2_7 )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/openipmi/OpenIPMI-2.0.18.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	python-single-r1	2ebea8fbab356d63110245129a67a6dd	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-single-r1	2ebea8fbab356d63110245129a67a6dd
 _md5_=efefc0fca507b1105333f9a3f33912ce

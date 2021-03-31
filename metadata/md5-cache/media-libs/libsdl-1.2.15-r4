@@ -3,11 +3,12 @@ DEPEND=audio? ( >=media-libs/audiofile-0.1.9 ) alsa? ( media-libs/alsa-lib ) nas
 DESCRIPTION=Simple Direct Media Layer
 EAPI=5
 HOMEPAGE=http://www.libsdl.org/
+INHERIT=autotools flag-o-matic multilib toolchain-funcs eutils
 IUSE=oss alsa nas X dga xv xinerama fbcon directfb ggi svga tslib aalib opengl libcaca +audio +video +joystick custom-cflags pulseaudio ps3 static-libs
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1
 RDEPEND=audio? ( >=media-libs/audiofile-0.1.9 ) alsa? ( media-libs/alsa-lib ) nas? ( media-libs/nas x11-libs/libXt x11-libs/libXext x11-libs/libX11 ) X? ( x11-libs/libXt x11-libs/libXext x11-libs/libX11 x11-libs/libXrandr ) directfb? ( >=dev-libs/DirectFB-0.9.19 ) ggi? ( >=media-libs/libggi-2.0_beta3 ) svga? ( >=media-libs/svgalib-1.4.2 ) aalib? ( media-libs/aalib ) libcaca? ( >=media-libs/libcaca-0.9-r1 ) opengl? ( virtual/opengl virtual/glu ) ppc64? ( ps3? ( sys-libs/libspe2 ) ) tslib? ( x11-libs/tslib ) pulseaudio? ( media-sound/pulseaudio )
 SLOT=0
 SRC_URI=http://www.libsdl.org/release/SDL-1.2.15.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=47273090959a288a8df5d3ce63e6da45

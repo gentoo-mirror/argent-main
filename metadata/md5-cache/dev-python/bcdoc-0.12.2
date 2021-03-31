@@ -3,6 +3,7 @@ DEPEND=test? ( dev-python/nose[python_targets_python2_7(-)?,python_targets_pytho
 DESCRIPTION=Tools to help document botocore-based projects
 EAPI=5
 HOMEPAGE=https://github.com/boto/bcdoc
+INHERIT=distutils-r1
 IUSE=test python_targets_python2_7 python_targets_python3_3
 KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targ
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 )
 SLOT=0
 SRC_URI=https://github.com/boto/bcdoc/archive/0.12.2.tar.gz -> bcdoc-0.12.2.tar.gz
-_eclasses_=distutils-r1	7774d1d61db76cd7274009465deb8a05	eutils	469f038ba48effc32a634fef17232be7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-r1	0f6937650a475d673baa5d0c8c0b37b3	distutils-r1	7774d1d61db76cd7274009465deb8a05
 _md5_=789ce18cf7982a4b47799cb62e171f42

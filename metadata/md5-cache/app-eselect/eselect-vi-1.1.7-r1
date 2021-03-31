@@ -2,10 +2,11 @@ DEFINED_PHASES=install prepare
 DESCRIPTION=Manages the /usr/bin/vi symlink
 EAPI=3
 HOMEPAGE=http://www.gentoo.org/
+INHERIT=eutils
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.0.6
 SLOT=0
 SRC_URI=mirror://gentoo/vi.eselect-1.1.7.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
 _md5_=d98a27e001435351c9489a09b8eeb64a

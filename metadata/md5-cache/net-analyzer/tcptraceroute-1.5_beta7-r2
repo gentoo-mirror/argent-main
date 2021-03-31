@@ -3,11 +3,12 @@ DEPEND=net-libs/libnet net-libs/libpcap !<sys-devel/gettext-0.18.1.1-r3 || ( >=s
 DESCRIPTION=tcptraceroute is a traceroute implementation using TCP packets
 EAPI=5
 HOMEPAGE=https://github.com/mct/tcptraceroute
+INHERIT=autotools eutils
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=net-libs/libnet net-libs/libpcap
 RESTRICT=test
 SLOT=0
 SRC_URI=https://codeload.github.com/mct/tcptraceroute/tar.gz/tcptraceroute-1.5beta7 -> tcptraceroute-1.5_beta7.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7
 _md5_=2127a3cd97ab3a6dda371f5e62932c51

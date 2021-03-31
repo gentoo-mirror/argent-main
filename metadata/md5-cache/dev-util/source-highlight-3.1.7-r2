@@ -3,11 +3,12 @@ DEPEND=>=dev-libs/boost-1.52.0-r1[threads] dev-util/ctags
 DESCRIPTION=Generate highlighted source code as an (x)html document
 EAPI=4
 HOMEPAGE=http://www.gnu.org/software/src-highlite/source-highlight.html
+INHERIT=bash-completion-r1 versionator
 IUSE=doc static-libs
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=>=dev-libs/boost-1.52.0-r1[threads] dev-util/ctags
 SLOT=0
 SRC_URI=mirror://gnu/src-highlite/source-highlight-3.1.7.tar.gz
-_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=e31be92a1a7e7fd957f744c8c1379a35

@@ -3,6 +3,7 @@ DEPEND=net-misc/wget !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1
 DESCRIPTION=easily lookup countries by IP addresses, even when Reverse DNS entries don't exist
 EAPI=5
 HOMEPAGE=https://github.com/maxmind/geoip-api-c
+INHERIT=autotools eutils
 IUSE=static-libs
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1 GPL-2 MaxMind2
@@ -10,5 +11,5 @@ RDEPEND=net-misc/wget
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/maxmind/geoip-api-c/archive/v1.6.5.tar.gz -> geoip-1.6.5.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7
 _md5_=c517409314e111020c3f39a141e6e7a8

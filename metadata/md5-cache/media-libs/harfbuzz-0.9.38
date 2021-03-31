@@ -3,6 +3,7 @@ DEPEND=cairo? ( x11-libs/cairo:= ) glib? ( >=dev-libs/glib-2.34.3:2[abi_x86_32(-
 DESCRIPTION=An OpenType text shaping engine
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/HarfBuzz
+INHERIT=eutils libtool multilib-minimal python-any-r1
 IUSE=+cairo +glib +graphite icu +introspection static-libs test +truetype abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
 KEYWORDS=amd64 x86
 LICENSE=Old-MIT ISC icu
@@ -10,5 +11,5 @@ RDEPEND=cairo? ( x11-libs/cairo:= ) glib? ( >=dev-libs/glib-2.34.3:2[abi_x86_32(
 REQUIRED_USE=introspection? ( glib )
 SLOT=0/0.9.18
 SRC_URI=http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.38.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-any-r1	8eb13cdf35f6e43c48107b911900b2cc
 _md5_=99cb13a3308c1a15baff691cd0dc20a9

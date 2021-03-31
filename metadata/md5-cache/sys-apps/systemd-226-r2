@@ -3,6 +3,7 @@ DEPEND=>=sys-apps/util-linux-2.26:0=[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-
 DESCRIPTION=System and service manager for Linux
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/systemd
+INHERIT=autotools bash-completion-r1 linux-info multilib multilib-minimal pam systemd toolchain-funcs udev user
 IUSE=acl apparmor audit cryptsetup curl elfutils gcrypt gnuefi http idn importd +kdbus +kmod +lz4 lzma nat pam policykit qrcode +seccomp selinux ssl sysv-utils test vanilla xkb abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 LGPL-2.1 MIT public-domain
@@ -11,5 +12,5 @@ RDEPEND=>=sys-apps/util-linux-2.26:0=[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(
 REQUIRED_USE=importd? ( curl gcrypt lzma )
 SLOT=0/2
 SRC_URI=https://github.com/systemd/systemd/archive/v226.tar.gz -> systemd-226.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	pam	31659e58bf74abb596b5d2e1f4081772	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	udev	dc6dbbee15698d448c66fc24f8165ee5	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	pam	31659e58bf74abb596b5d2e1f4081772	systemd	049410fe816a8d836271f4780a7fd73c	udev	dc6dbbee15698d448c66fc24f8165ee5	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=ee874626eb69d004f481b8aa2fc3f545

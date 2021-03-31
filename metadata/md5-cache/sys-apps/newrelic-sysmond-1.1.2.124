@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst setup
 DESCRIPTION=NewRelic System Monitor
 EAPI=4
 HOMEPAGE=http://www.newrelic.com/
+INHERIT=user
 KEYWORDS=amd64 x86
 LICENSE=newrelic Apache-2.0 MIT ISC openssl GPL-2
 RESTRICT=strip

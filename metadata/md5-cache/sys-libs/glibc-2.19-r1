@@ -3,6 +3,7 @@ DEPEND=>=app-misc/pax-utils-0.1.10 !<sys-apps/sandbox-1.6 !<sys-apps/portage-2.1
 DESCRIPTION=GNU libc6 (also called glibc2) C library
 EAPI=0
 HOMEPAGE=http://www.gnu.org/software/libc/libc.html
+INHERIT=eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 IUSE=debug gd hardened multilib nscd selinux systemtap profile suid vanilla crosscompile_opts_headers-only
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
 LICENSE=LGPL-2.1+ BSD HPND ISC inner-net rc PCRE
@@ -10,5 +11,5 @@ RDEPEND=!sys-kernel/ps3-sources selinux? ( sys-libs/libselinux ) !sys-libs/nss-d
 RESTRICT=strip
 SLOT=2.2
 SRC_URI=mirror://gnu/glibc/glibc-2.19.tar.xz ftp://sourceware.org/pub/glibc/releases/glibc-2.19.tar.xz ftp://sourceware.org/pub/glibc/snapshots/glibc-2.19.tar.xz mirror://gentoo/glibc-2.19.tar.xz mirror://gentoo/glibc-2.19-patches-3.tar.bz2 http://dev.gentoo.org/~vapier/dist/glibc-2.19-patches-3.tar.bz2 http://dev.gentoo.org/~azarah/glibc/glibc-2.19-patches-3.tar.bz2 multilib? ( mirror://gentoo/gcc-4.7.3-r1-multilib-bootstrap.tar.bz2 http://dev.gentoo.org/~vapier/dist/gcc-4.7.3-r1-multilib-bootstrap.tar.bz2 http://dev.gentoo.org/~azarah/glibc/gcc-4.7.3-r1-multilib-bootstrap.tar.bz2 )
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	systemd	049410fe816a8d836271f4780a7fd73c	unpacker	69f01f06e2ef674295e9fa69ddbef8af	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a
 _md5_=6057f42ee409563b78b27a02e96d9d25

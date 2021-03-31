@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/perl-5.6 !<dev-util/gtk-doc-1.21 app-arch/xz-utils
 DESCRIPTION=Automake files from gtk-doc
 EAPI=5
 HOMEPAGE=http://www.gtk.org/gtk-doc/
+INHERIT=gnome.org
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 FDL-1.1
 PDEPEND=virtual/pkgconfig
@@ -10,5 +11,5 @@ RDEPEND=>=dev-lang/perl-5.6
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnome/sources/gtk-doc/1.21/gtk-doc-1.21.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	gnome.org	01784e72df8fdad6573a39eef0e54f1e	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	gnome.org	01784e72df8fdad6573a39eef0e54f1e
 _md5_=cca23b33d7cc0d171b9d8d2484036ec2

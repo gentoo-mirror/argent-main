@@ -3,11 +3,12 @@ DEPEND=>=dev-libs/popt-1.5 selinux? ( sys-libs/libselinux sec-policy/selinux-log
 DESCRIPTION=Rotates, compresses, and mails system logs
 EAPI=5
 HOMEPAGE=https://fedorahosted.org/logrotate/
+INHERIT=eutils toolchain-funcs flag-o-matic
 IUSE=acl selinux
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/popt-1.5 selinux? ( sys-libs/libselinux sec-policy/selinux-logrotate ) acl? ( virtual/acl )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/l/o/logrotate/logrotate-3.8.7.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=502394b09d14c0bd1e74cac1d824d425

@@ -3,8 +3,9 @@ DEPEND=>=x11-libs/gtk+-3.6 x11-themes/gtk-engines-murrine >=dev-vcs/git-1.8.2.1
 DESCRIPTION=the Numix flat theme for gtk.
 EAPI=5
 HOMEPAGE=https://github.com/shimmerproject/Numix
+INHERIT=git-r3
 LICENSE=GPL-3.0+
 RDEPEND=>=x11-libs/gtk+-3.6 x11-themes/gtk-engines-murrine
 SLOT=0
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce
 _md5_=5f35627aec9291302f6aa3d56ebf4487

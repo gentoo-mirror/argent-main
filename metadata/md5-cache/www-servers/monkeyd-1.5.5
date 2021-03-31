@@ -3,6 +3,7 @@ DEPEND=jemalloc? ( >=dev-libs/jemalloc-3.3.1 )
 DESCRIPTION=A small, fast, and scalable web server
 EAPI=5
 HOMEPAGE=http://www.monkey-project.com/
+INHERIT=toolchain-funcs depend.php multilib
 IUSE=-debug jemalloc php minimal elibc_musl elibc_uclibc monkeyd_plugins_auth monkeyd_plugins_cheetah cgi monkeyd_plugins_dirlisting fastcgi +monkeyd_plugins_liana monkeyd_plugins_logger monkeyd_plugins_mandril
 KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=php? ( dev-lang/php )
 REQUIRED_USE=elibc_uclibc? ( !debug )
 SLOT=0
 SRC_URI=http://monkey-project.com/releases/1.5/monkey-1.5.5.tar.gz
-_eclasses_=depend.php	cceee05ad45eb439a788eeef81d98db5	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	phpconfutils	e52000aa5051c29ead22ccc114823938	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	eutils	469f038ba48effc32a634fef17232be7	phpconfutils	e52000aa5051c29ead22ccc114823938	depend.php	cceee05ad45eb439a788eeef81d98db5
 _md5_=47b414eedccab775fbb50b040dbc55ff

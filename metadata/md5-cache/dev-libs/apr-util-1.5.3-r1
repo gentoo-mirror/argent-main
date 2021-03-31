@@ -3,6 +3,7 @@ DEPEND=dev-libs/expat >=dev-libs/apr-1.4.6:1 berkdb? ( >=sys-libs/db-4 ) freetds
 DESCRIPTION=Apache Portable Runtime Utility Library
 EAPI=4
 HOMEPAGE=http://apr.apache.org/
+INHERIT=autotools db-use eutils libtool multilib toolchain-funcs
 IUSE=berkdb doc freetds gdbm ldap mysql nss odbc openssl postgres sqlite static-libs
 KEYWORDS=amd64 x86
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=dev-libs/expat >=dev-libs/apr-1.4.6:1 berkdb? ( >=sys-libs/db-4 ) freetd
 RESTRICT=test
 SLOT=1
 SRC_URI=mirror://apache/apr/apr-util-1.5.3.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	db-use	582140d1a711279e50ce284fc7b609f5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	db-use	582140d1a711279e50ce284fc7b609f5
 _md5_=f472e3a6d03ac639fd4bd7626894c0cc

@@ -2,6 +2,7 @@ DEFINED_PHASES=compile install prepare
 DESCRIPTION=A Library for Large Linear Classification
 EAPI=5
 HOMEPAGE=http://www.csie.ntu.edu.tw/~cjlin/liblinear/ https://github.com/cjlin1/liblinear
+INHERIT=multilib toolchain-funcs
 KEYWORDS=amd64 x86
 LICENSE=BSD
 SLOT=0

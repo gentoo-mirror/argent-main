@@ -3,11 +3,12 @@ DEPEND=ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] ) ncurses? ( virtual/pkgco
 DESCRIPTION=standard informational utilities and process-handling tools
 EAPI=4
 HOMEPAGE=http://procps.sourceforge.net/ http://gitorious.org/procps
+INHERIT=eutils toolchain-funcs
 IUSE=+ncurses nls static-libs test unicode
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] )
 SLOT=0
 SRC_URI=http://pkgs.fedoraproject.org/repo/pkgs/procps-ng/procps-ng-3.3.8.tar.xz/aecbeeda2ab308f8d09dddcb4cb9a572/procps-ng-3.3.8.tar.xz https://gitorious.org/procps/procps/commit/ce5e995921e770bfcda25e42fe090aeccdbf1291.patch -> procps-3.3.8-respect_epipe_in_fileutils.patch https://gitorious.org/procps/procps/commit/e6a78f2745ca6c7ceed4406d3ce5397e77518b11.patch -> procps-3.3.8-top_user_filter.patch
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
 _md5_=9cd71678a519b2a428dedeb047e0c4b6

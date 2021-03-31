@@ -3,6 +3,7 @@ DEPEND=>=sys-devel/libtool-2.2.6b autotrace? ( >=media-gfx/autotrace-0.31.1 ) bz
 DESCRIPTION=A collection of tools and libraries for many image formats
 EAPI=5
 HOMEPAGE=http://www.imagemagick.org/
+INHERIT=eutils flag-o-matic libtool multilib toolchain-funcs versionator
 IUSE=autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig jpeg jpeg2k lcms lqr lzma opencl openexr openmp pango perl png postscript q32 q64 q8 raw static-libs svg test tiff truetype webp wmf X xml zlib
 KEYWORDS=amd64 x86
 LICENSE=imagemagick
@@ -11,5 +12,5 @@ REQUIRED_USE=corefonts? ( truetype ) test? ( corefonts )
 RESTRICT=perl? ( userpriv )
 SLOT=0/6.8.8.10
 SRC_URI=mirror://imagemagick/ImageMagick-6.8.8-10.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	versionator	c80ccf29e90adea7c5cae94b42eb76d0
 _md5_=5c7511693bf5cff1d991b0b64908f6fd

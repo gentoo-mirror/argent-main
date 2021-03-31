@@ -3,11 +3,12 @@ DEPEND=!static? ( dev-libs/popt ncurses? ( >=sys-libs/ncurses-5.7-r7 ) icu? ( de
 DESCRIPTION=GPT partition table manipulator for Linux
 EAPI=5
 HOMEPAGE=http://www.rodsbooks.com/gdisk/
+INHERIT=flag-o-matic toolchain-funcs
 IUSE=+icu kernel_linux ncurses static
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=!static? ( dev-libs/popt ncurses? ( >=sys-libs/ncurses-5.7-r7 ) icu? ( dev-libs/icu:= ) kernel_linux? ( sys-apps/util-linux ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/gptfdisk/gptfdisk-0.8.8.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=77a259b3401a0adac9168ea742c3c52b

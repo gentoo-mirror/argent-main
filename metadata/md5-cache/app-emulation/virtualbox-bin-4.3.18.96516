@@ -3,6 +3,7 @@ DEPEND=app-arch/unzip app-arch/xz-utils >=sys-apps/sed-4 virtual/pkgconfig
 DESCRIPTION=Family of powerful x86 virtualization products for enterprise as well as home use
 EAPI=5
 HOMEPAGE=http://www.virtualbox.org/
+INHERIT=eutils fdo-mime gnome2 pax-utils udev unpacker versionator
 IUSE=+additions +chm headless python vboxwebsrv rdesktop-vrdp sdk debug
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 PUEL
@@ -10,5 +11,5 @@ RDEPEND=!!app-emulation/virtualbox !app-emulation/virtualbox-additions ~app-emul
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( http://download.virtualbox.org/virtualbox/4.3.18/VirtualBox-4.3.18-96516-Linux_amd64.run ) x86? ( http://download.virtualbox.org/virtualbox/4.3.18/VirtualBox-4.3.18-96516-Linux_x86.run ) http://download.virtualbox.org/virtualbox/4.3.18/Oracle_VM_VirtualBox_Extension_Pack-4.3.18-96516.vbox-extpack -> Oracle_VM_VirtualBox_Extension_Pack-4.3.18-96516.tar.gz sdk? ( http://download.virtualbox.org/virtualbox/4.3.18/VirtualBoxSDK-4.3.18-96516.zip )
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	gnome.org	01784e72df8fdad6573a39eef0e54f1e	gnome2	b294539262ddf28df3595088e54b9be2	gnome2-utils	4ebf575b6d5bbea6c32a206981c9d4bd	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	toolchain-funcs	185a06792159ca143528e7010368e8af	udev	dc6dbbee15698d448c66fc24f8165ee5	unpacker	69f01f06e2ef674295e9fa69ddbef8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	fdo-mime	21ef5adf81836863efa968f2a25cff64	libtool	5ae04d20c1cf910b68ff3586f20cced7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	gnome.org	01784e72df8fdad6573a39eef0e54f1e	gnome2-utils	4ebf575b6d5bbea6c32a206981c9d4bd	gnome2	b294539262ddf28df3595088e54b9be2	pax-utils	feb89d699fd71a03750d68d1dd2d52e5	udev	dc6dbbee15698d448c66fc24f8165ee5	unpacker	69f01f06e2ef674295e9fa69ddbef8af
 _md5_=af32cc8cf69cb9e092da720afce8ca8a

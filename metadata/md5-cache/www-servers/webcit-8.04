@@ -3,6 +3,7 @@ DEPEND=>=dev-libs/libical-0.43 >=dev-libs/libcitadel-8.04 ssl? ( dev-libs/openss
 DESCRIPTION=Groupdav compliant AJAX'ed Blog/Forum/Wiki/Webserver for Citadel groupware
 EAPI=4
 HOMEPAGE=http://www.citadel.org/
+INHERIT=user
 IUSE=ssl
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 MIT LGPL-3 LGPL-2.1

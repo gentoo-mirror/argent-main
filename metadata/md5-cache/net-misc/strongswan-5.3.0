@@ -3,11 +3,12 @@ DEPEND=!net-misc/openswan gmp? ( >=dev-libs/gmp-4.1.5 ) gcrypt? ( dev-libs/libgc
 DESCRIPTION=IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE
 EAPI=5
 HOMEPAGE=http://www.strongswan.org/
+INHERIT=eutils linux-info systemd user
 IUSE=+caps curl +constraints debug dhcp eap farp gcrypt +gmp ldap mysql networkmanager +non-root +openssl sqlite pam pkcs11 +strongswan_plugins_led +strongswan_plugins_lookip +strongswan_plugins_systime-fix +strongswan_plugins_unity +strongswan_plugins_vici strongswan_plugins_blowfish strongswan_plugins_ccm strongswan_plugins_ctr strongswan_plugins_gcm strongswan_plugins_ha strongswan_plugins_ipseckey strongswan_plugins_ntru strongswan_plugins_padlock strongswan_plugins_rdrand strongswan_plugins_unbound strongswan_plugins_whitelist
 KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
 LICENSE=GPL-2 RSA DES
 RDEPEND=!net-misc/openswan gmp? ( >=dev-libs/gmp-4.1.5 ) gcrypt? ( dev-libs/libgcrypt:0 ) caps? ( sys-libs/libcap ) curl? ( net-misc/curl ) ldap? ( net-nds/openldap ) openssl? ( >=dev-libs/openssl-0.9.8[-bindist] ) mysql? ( virtual/mysql ) sqlite? ( >=dev-db/sqlite-3.3.1 ) networkmanager? ( net-misc/networkmanager ) pam? ( sys-libs/pam ) strongswan_plugins_unbound? ( net-dns/unbound ) virtual/logger sys-apps/iproute2 !net-misc/libreswan
 SLOT=0
 SRC_URI=http://download.strongswan.org/strongswan-5.3.0.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65	systemd	049410fe816a8d836271f4780a7fd73c	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=d647c758b805cbdbc3ed9e6b162306bc

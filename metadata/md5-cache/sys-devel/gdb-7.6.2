@@ -3,11 +3,12 @@ DEPEND=!dev-util/gdbserver >=sys-libs/ncurses-5.2-r2 sys-libs/readline expat? ( 
 DESCRIPTION=GNU debugger
 EAPI=3
 HOMEPAGE=http://sourceware.org/gdb/
+INHERIT=flag-o-matic eutils
 IUSE=+client expat lzma multitarget nls +python +server test vanilla zlib
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 LGPL-2
 RDEPEND=!dev-util/gdbserver >=sys-libs/ncurses-5.2-r2 sys-libs/readline expat? ( dev-libs/expat ) lzma? ( app-arch/xz-utils ) python? ( =dev-lang/python-2* ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=mirror://gnu/gdb/gdb-7.6.2.tar.bz2 ftp://sourceware.org/pub/gdb/releases/gdb-7.6.2.tar.bz2 mirror://gentoo/gdb-7.6.2-patches-1.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=b978f373f59bdbffa3d6f399a6276b18

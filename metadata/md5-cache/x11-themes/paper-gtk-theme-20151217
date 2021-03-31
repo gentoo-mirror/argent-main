@@ -3,9 +3,10 @@ DEPEND=>=gnome-base/gnome-shell-3.12 gnome-extra/gnome-shell-extensions x11-libs
 DESCRIPTION=the Paper gtk theme by snwh
 EAPI=5
 HOMEPAGE=https://github.com/snwh/paper-gtk-theme
+INHERIT=git-r3
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=>=gnome-base/gnome-shell-3.12 gnome-extra/gnome-shell-extensions x11-libs/gdk-pixbuf
 SLOT=0
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce
 _md5_=344a587124cfa3e6f2c551c606f2153a

@@ -3,11 +3,12 @@ DEPEND=>=virtual/jdk-1.6
 DESCRIPTION=FreeRapid is a simple Java downloader that supports downloading from Rapidshare and other file-sharing services.
 EAPI=2
 HOMEPAGE=http://wordrider.net/freerapid
+INHERIT=eutils
 KEYWORDS=x86 amd64
 LICENSE=GPL
 RDEPEND=>=virtual/jre-1.6 || ( >=sys-apps/coreutils-8.15 app-misc/realpath )
 RESTRICT=nomirror
 SLOT=0
 SRC_URI=mirror://sabayon/net-misc/FreeRapid-0.85u1-b566.zip
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
 _md5_=5c41aafc7a86d14c356666d020558300

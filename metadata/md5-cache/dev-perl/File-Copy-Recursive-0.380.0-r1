@@ -3,10 +3,11 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=uses File::Copy to recursively copy dirs
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/File-Copy-Recursive/
+INHERIT=perl-module
 KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.38.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628
 _md5_=d09d28141377e066a65f3362ca67e9f3

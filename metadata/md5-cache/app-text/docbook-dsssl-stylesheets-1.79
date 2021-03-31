@@ -3,10 +3,11 @@ DEPEND=>=app-text/sgml-common-0.6.3-r2
 DESCRIPTION=DSSSL Stylesheets for DocBook.
 EAPI=3
 HOMEPAGE=http://wiki.docbook.org/topic/DocBookDssslStylesheets
+INHERIT=sgml-catalog
 KEYWORDS=amd64 x86
 LICENSE=MIT
 RDEPEND=app-text/sgml-common
 SLOT=0
 SRC_URI=mirror://sourceforge/docbook/docbook-dsssl-1.79.tar.bz2
-_eclasses_=base	61f9655cdc69fbb04c8b86fd32d0dfa7	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	sgml-catalog	013e5c68335c5b4df8f1b72d7d7ad25d	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	base	61f9655cdc69fbb04c8b86fd32d0dfa7	sgml-catalog	013e5c68335c5b4df8f1b72d7d7ad25d
 _md5_=4545d71be36573318d6a32a75cfeed02

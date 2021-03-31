@@ -3,11 +3,12 @@ DEPEND=!net-misc/arpd !minimal? ( net-libs/libmnl ) iptables? ( >=net-firewall/i
 DESCRIPTION=kernel routing and traffic control utilities
 EAPI=5
 HOMEPAGE=http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
+INHERIT=eutils toolchain-funcs flag-o-matic multilib
 IUSE=atm berkdb +iptables ipv6 minimal selinux
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=!net-misc/arpd !minimal? ( net-libs/libmnl ) iptables? ( >=net-firewall/iptables-1.4.20:= ) berkdb? ( sys-libs/db:= ) atm? ( net-dialup/linux-atm ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/net/iproute2/iproute2-4.4.0.tar.xz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=f052be607cfabfc94fd95f3d8c2c5143

@@ -3,11 +3,12 @@ DEPEND=dev-libs/dbus-glib dev-libs/glib:2 net-dialup/ppp >=net-misc/networkmanag
 DESCRIPTION=NetworkManager L2TP plugin
 EAPI=5
 HOMEPAGE=https://github.com/seriyps/NetworkManager-l2tp
+INHERIT=autotools
 IUSE=gtk nls static-libs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=dev-libs/dbus-glib dev-libs/glib:2 net-dialup/ppp >=net-misc/networkmanager-0.9.6.4 sys-apps/dbus gtk? ( gnome-base/libgnome-keyring x11-libs/gtk+:3 )
 SLOT=0
 SRC_URI=https://github.com/seriyps/NetworkManager-l2tp/archive/0.9.8.7.tar.gz -> networkmanager-l2tp-0.9.8.7.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5
 _md5_=ce8dd81387b40dd1e1a93f6737be5e1d

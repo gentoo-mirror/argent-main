@@ -3,8 +3,9 @@ DEPEND=>=gnome-base/gnome-shell-3.12 gnome-extra/gnome-shell-extensions >=dev-vc
 DESCRIPTION=Ozon Gnome shell theme
 EAPI=5
 HOMEPAGE=https://github.com/ozonos/ozon-shell-theme
+INHERIT=git-r3
 LICENSE=GPL-3+
 RDEPEND=>=gnome-base/gnome-shell-3.12 gnome-extra/gnome-shell-extensions
 SLOT=0
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce
 _md5_=1a72c2b5bd58fbaa8f9e8584713d296e

@@ -3,6 +3,7 @@ DEPEND=clvm? ( cman? ( =sys-cluster/cman-3* ) =sys-cluster/libdlm-3* ) readline?
 DESCRIPTION=User-land utilities for LVM2 (device-mapper) software
 EAPI=5
 HOMEPAGE=http://sources.redhat.com/lvm2/
+INHERIT=autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
 IUSE=readline static static-libs systemd clvm cman lvm1 lvm2create_initrd selinux +udev +thin device-mapper-only
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=clvm? ( cman? ( =sys-cluster/cman-3* ) =sys-cluster/libdlm-3* ) readline
 REQUIRED_USE=device-mapper-only? ( !clvm !cman !lvm1 !lvm2create_initrd !thin ) systemd? ( udev ) static? ( !udev )
 SLOT=0
 SRC_URI=ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.110.tgz ftp://sources.redhat.com/pub/lvm2/old/LVM2.2.02.110.tgz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af	udev	dc6dbbee15698d448c66fc24f8165ee5	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65	systemd	049410fe816a8d836271f4780a7fd73c	udev	dc6dbbee15698d448c66fc24f8165ee5	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=a1ed8f2609a3e513e0ad76876ce64d83

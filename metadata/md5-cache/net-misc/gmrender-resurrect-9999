@@ -3,8 +3,9 @@ DEPEND=net-libs/libupnp dev-libs/glib:2 media-libs/gstreamer:1.0 >=dev-vcs/git-1
 DESCRIPTION=Resource efficient UPnP/DLNA renderer
 EAPI=5
 HOMEPAGE=https://github.com/hzeller/gmrender-resurrect
+INHERIT=git-r3 autotools
 LICENSE=GPL
 RDEPEND=net-libs/libupnp dev-libs/glib:2 media-libs/gstreamer:1.0
 SLOT=0
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	git-r3	cf9e884c51b957d093d8fddf42296dce	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5
 _md5_=7880c9c919011cc9133f37b5d07c7b1a

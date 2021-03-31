@@ -3,11 +3,12 @@ DEPEND=>=dev-libs/popt-1.7-r1 >=sys-devel/binutils-2.14.90.0.6-r3:* >=sys-libs/g
 DESCRIPTION=A transparent low-overhead system-wide profiler
 EAPI=5
 HOMEPAGE=http://oprofile.sourceforge.net
+INHERIT=autotools eutils linux-info multilib user java-pkg-opt-2
 IUSE=java pch qt4 elibc_FreeBSD java
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/popt-1.7-r1 >=sys-devel/binutils-2.14.90.0.6-r3:* >=sys-libs/glibc-2.3.2-r1 qt4? ( dev-qt/qtgui:4[qt3support] ) java? ( >=virtual/jdk-1.5:= ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=mirror://sourceforge/oprofile/oprofile-0.9.9.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	java-pkg-opt-2	a056db0f9539f49b701a9f27982a950b	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	libtool	5ae04d20c1cf910b68ff3586f20cced7	linux-info	5f311393d641cdc32d0a5cccd0d00e65	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	linux-info	5f311393d641cdc32d0a5cccd0d00e65	user	bc615318777c602f6114b73c27f9a9d1	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	java-pkg-opt-2	a056db0f9539f49b701a9f27982a950b
 _md5_=658de6655c628150c19b108ab66a3f15

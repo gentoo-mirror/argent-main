@@ -3,6 +3,7 @@ DEPEND=ldap? ( >=net-nds/openldap-2.4.38-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x8
 DESCRIPTION=A Client that groks URLs
 EAPI=5
 HOMEPAGE=http://curl.haxx.se/
+INHERIT=autotools eutils prefix multilib-minimal
 IUSE=adns idn ipv6 kerberos ldap metalink rtmp ssh ssl static-libs test threads curl_ssl_axtls curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl curl_ssl_winssl elibc_Winnt abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
 KEYWORDS=amd64 x86
 LICENSE=MIT
@@ -11,5 +12,5 @@ REQUIRED_USE=curl_ssl_winssl? ( elibc_Winnt ) threads? ( !adns ) ssl? ( ^^ ( cur
 RESTRICT=test
 SLOT=0
 SRC_URI=http://curl.haxx.se/download/curl-7.39.0.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	prefix	21058c21ca48453d771df15500873ede	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib-build	b0d8165e89041c9a9e9eaf5f32c4b45a	multilib-minimal	bf18a089f342f42fc662eef885a0246d
 _md5_=695bdb5307e077b837d0c47b19a72ceb

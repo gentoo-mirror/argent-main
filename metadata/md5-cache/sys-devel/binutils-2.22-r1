@@ -3,11 +3,12 @@ DEPEND=sys-devel/gnuconfig >=sys-devel/binutils-config-3 zlib? ( sys-libs/zlib )
 DESCRIPTION=Tools necessary to build programs
 EAPI=4
 HOMEPAGE=https://sourceware.org/binutils/
+INHERIT=toolchain-binutils
 IUSE=cxx multitarget nls static-libs test vanilla zlib
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd -sparc-fbsd ~x86-fbsd
 LICENSE=|| ( GPL-3 LGPL-3 )
 RDEPEND=>=sys-devel/binutils-config-3 zlib? ( sys-libs/zlib )
 SLOT=2.22
 SRC_URI=mirror://gnu/binutils/binutils-2.22.tar.bz2 mirror://gentoo/binutils-2.22-patches-1.5.tar.bz2 https://dev.gentoo.org/~vapier/dist/binutils-2.22-patches-1.5.tar.bz2 https://dev.gentoo.org/~tamiko/distfiles/binutils-2.22-patches-1.5.tar.bz2 https://dev.gentoo.org/~dilfridge/distfiles/binutils-2.22-patches-1.5.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-binutils	836af54604b9fef015d2bfd165d4ca32	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	versionator	c80ccf29e90adea7c5cae94b42eb76d0	unpacker	69f01f06e2ef674295e9fa69ddbef8af	toolchain-binutils	836af54604b9fef015d2bfd165d4ca32
 _md5_=76fbf7594fae7d538d1d7e8b11fc0867

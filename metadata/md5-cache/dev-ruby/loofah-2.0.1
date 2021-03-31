@@ -3,6 +3,7 @@ DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/nokogiri-1.5.9[ruby_targets_rub
 DESCRIPTION=A general library for manipulating and transforming HTML/XML documents and fragments.
 EAPI=5
 HOMEPAGE=https://github.com/flavorjones/loofah
+INHERIT=ruby-fakegem
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 doc test test
 KEYWORDS=~amd64 ~arm ~ppc ~ppc64
 LICENSE=MIT
@@ -10,5 +11,5 @@ RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/nokogiri-1.5.9[ruby_targets_ruby19] ) 
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 )
 SLOT=0
 SRC_URI=mirror://rubygems/loofah-2.0.1.gem
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	multilib	5c89e4e7b42e1975d318dffbad01ca83	ruby-fakegem	836f858624840907bbb6ae6f2c881cb7	ruby-ng	3b6431b487e69b5070a45ea20d1c4c6c	ruby-utils	2f896785ed65442d7e84ab5f5eef3bd3	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	java-utils-2	19a70ac1732e335ce2ebd0d91d6a08d8	ruby-utils	2f896785ed65442d7e84ab5f5eef3bd3	ruby-ng	3b6431b487e69b5070a45ea20d1c4c6c	ruby-fakegem	836f858624840907bbb6ae6f2c881cb7
 _md5_=7a45fa6c6b1764add8609aa0d4264337

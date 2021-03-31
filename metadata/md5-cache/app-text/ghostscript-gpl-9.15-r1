@@ -3,6 +3,7 @@ DEPEND=app-text/libpaper media-libs/fontconfig >=media-libs/freetype-2.4.9:2= me
 DESCRIPTION=Ghostscript is an interpreter for the PostScript language and for PDF
 EAPI=5
 HOMEPAGE=http://ghostscript.com/
+INHERIT=autotools eutils multilib versionator flag-o-matic
 IUSE=cups dbus djvu gtk idn linguas_de static-libs X linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW
 KEYWORDS=amd64 x86
 LICENSE=AGPL-3 CPL-1.0
@@ -10,5 +11,5 @@ RDEPEND=app-text/libpaper media-libs/fontconfig >=media-libs/freetype-2.4.9:2= m
 RESTRICT=djvu? ( bindist )
 SLOT=0
 SRC_URI=http://downloads.ghostscript.com/public/ghostscript-9.15.tar.bz2 mirror://gentoo/ghostscript-gpl-9.12-patchset-1.tar.bz2 djvu? ( mirror://sourceforge/djvu/gsdjvu-1.6.tar.gz )
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	versionator	c80ccf29e90adea7c5cae94b42eb76d0	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=56967b22e3f240681b49fbb78148853b

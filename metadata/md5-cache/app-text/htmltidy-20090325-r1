@@ -3,10 +3,11 @@ DEPEND=doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel
 DESCRIPTION=Tidy the layout and correct errors in HTML and XML documents
 EAPI=4
 HOMEPAGE=http://tidy.sourceforge.net/
+INHERIT=eutils autotools
 IUSE=debug doc static-libs
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/tidy-20090325.tar.bz2 mirror://gentoo/tidy-20090325-doc.tar.bz2
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5
 _md5_=5c42306fe1941612bfc9b6b042ee3d00

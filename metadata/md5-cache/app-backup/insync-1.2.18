@@ -2,6 +2,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Advanced cross-platform Google Drive client
 EAPI=5
 HOMEPAGE=https://www.insynchq.com/
+INHERIT=unpacker
 KEYWORDS=amd64 x86
 LICENSE=as-is
 SLOT=0

@@ -3,6 +3,7 @@ DEPEND=virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=A useful tool for running RAID systems - it can be used as a replacement for the raidtools
 EAPI=4
 HOMEPAGE=http://neil.brown.name/blog/mdadm
+INHERIT=multilib eutils flag-o-matic systemd toolchain-funcs
 IUSE=static
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -10,5 +11,5 @@ RDEPEND=!<sys-apps/baselayout-2.1-r1 !<sys-apps/openrc-0.10 >=sys-apps/util-linu
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/raid/mdadm/mdadm-3.3.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	systemd	049410fe816a8d836271f4780a7fd73c	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	systemd	049410fe816a8d836271f4780a7fd73c
 _md5_=146997589ec3fe4ae15a1cc8143b5dbe

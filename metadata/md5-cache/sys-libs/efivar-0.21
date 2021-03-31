@@ -3,10 +3,11 @@ DEPEND=dev-libs/popt >=sys-kernel/linux-headers-3.18
 DESCRIPTION=Tools and library to manipulate EFI variables
 EAPI=5
 HOMEPAGE=https://github.com/rhinstaller/efivar
+INHERIT=eutils multilib toolchain-funcs
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/popt
 SLOT=0
 SRC_URI=https://github.com/rhinstaller/efivar/releases/download/0.21/efivar-0.21.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
 _md5_=4899078761da70acd355742c210ca688

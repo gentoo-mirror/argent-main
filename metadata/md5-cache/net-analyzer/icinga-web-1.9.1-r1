@@ -3,11 +3,12 @@ DEPEND=dev-php/phing dev-lang/php[apache2?,cli,json,mysql?,pdo,postgres?,sockets
 DESCRIPTION=Icinga Web - new Web Interface
 EAPI=5
 HOMEPAGE=http://www.icinga.org/
+INHERIT=depend.apache eutils user multilib
 IUSE=apache2 mysql pnp postgres apache2
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-2
 RDEPEND=dev-php/phing dev-lang/php[apache2?,cli,json,mysql?,pdo,postgres?,sockets,xslt,xml] pnp? ( net-analyzer/pnp4nagios ) apache2? ( =www-servers/apache-2* )
 SLOT=0
 SRC_URI=mirror://sourceforge/icinga/icinga-web-1.9.1.tar.gz
-_eclasses_=depend.apache	87a16d5639b45fde2614c944e846b703	eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	depend.apache	87a16d5639b45fde2614c944e846b703	eutils	469f038ba48effc32a634fef17232be7	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=b0ac41b94d2bac94a24d9bdd5af852b9

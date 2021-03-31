@@ -3,11 +3,12 @@ DEPEND=>=dev-libs/glib-2.28.7[static-libs(+)?] >=dev-libs/libxml2-2.7.8[static-l
 DESCRIPTION=A system to store and display time-series data
 EAPI=5
 HOMEPAGE=http://oss.oetiker.ch/rrdtool/
+INHERIT=eutils distutils-r1 flag-o-matic multilib perl-module autotools
 IUSE=dbi doc +graph lua perl python ruby rrdcgi static-libs tcl tcpd python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.28.7[static-libs(+)?] >=dev-libs/libxml2-2.7.8[static-libs(+)?] dbi? ( dev-db/libdbi[static-libs(+)?] ) graph? ( >=media-libs/libpng-1.5.10[static-libs(+)?] >=x11-libs/cairo-1.10.2[svg,static-libs(+)?] >=x11-libs/pango-1.28 ) lua? ( dev-lang/lua[deprecated] ) perl? ( dev-lang/perl ) python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) ruby? ( >=dev-lang/ruby-1.8.6_p287-r13 ) tcl? ( dev-lang/tcl ) tcpd? ( sys-apps/tcp-wrappers )
 SLOT=0
 SRC_URI=http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.4.8.tar.gz
-_eclasses_=autotools	38e73fcf676fa9087716f033ce1572a5	distutils-r1	7774d1d61db76cd7274009465deb8a05	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	libtool	5ae04d20c1cf910b68ff3586f20cced7	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	multilib	5c89e4e7b42e1975d318dffbad01ca83	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	perl-module	3443dbf4a231efb067b911e18413b628	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	toolchain-funcs	185a06792159ca143528e7010368e8af	unpacker	69f01f06e2ef674295e9fa69ddbef8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	multibuild	1eb32a62ac6a03d7000e1dd83e883b3b	python-utils-r1	2e6826f6a93ad2acf904eecf5b5fb6d2	python-r1	0f6937650a475d673baa5d0c8c0b37b3	distutils-r1	7774d1d61db76cd7274009465deb8a05	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628	libtool	5ae04d20c1cf910b68ff3586f20cced7	autotools	38e73fcf676fa9087716f033ce1572a5
 _md5_=5dfe2574e696d011b6af236541346fde

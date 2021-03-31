@@ -3,11 +3,12 @@ DEPEND=ssl? ( dev-libs/openssl )
 DESCRIPTION=A library to execute a function when a specific event occurs on a file descriptor
 EAPI=5
 HOMEPAGE=http://libevent.org/
+INHERIT=eutils libtool
 IUSE=+ssl static-libs test
 KEYWORDS=amd64 x86
 LICENSE=BSD
 RDEPEND=ssl? ( dev-libs/openssl ) !<=dev-libs/9libs-1.0
 SLOT=0
 SRC_URI=mirror://github/libevent/libevent/libevent-2.0.21-stable.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7
 _md5_=b3fb77b9f5ada6bd018d19a8846c4aaa

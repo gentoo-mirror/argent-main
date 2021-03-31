@@ -3,6 +3,7 @@ DEPEND=>=dev-libs/libassuan-2 >=dev-libs/libgcrypt-1.4:0= >=dev-libs/libgpg-erro
 DESCRIPTION=The GNU Privacy Guard, a GPL pgp replacement
 EAPI=5
 HOMEPAGE=http://www.gnupg.org/
+INHERIT=eutils flag-o-matic toolchain-funcs
 IUSE=adns bzip2 doc ldap nls mta readline static selinux smartcard usb
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
@@ -10,5 +11,5 @@ RDEPEND=!static? ( >=dev-libs/libassuan-2 >=dev-libs/libgcrypt-1.4:0= >=dev-libs
 REQUIRED_USE=smartcard? ( !static )
 SLOT=0
 SRC_URI=mirror://gnupg/gnupg/gnupg-2.0.25.tar.bz2
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	flag-o-matic	02f1c8710c6fa33b468085e92f8fdbbb
 _md5_=b359b2137518dda4655ad65da9dba8ff

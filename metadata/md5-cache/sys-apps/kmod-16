@@ -3,6 +3,7 @@ DEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-util
 DESCRIPTION=library and tools for managing linux kernel modules
 EAPI=5
 HOMEPAGE=http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
+INHERIT=bash-completion-r1 eutils multilib libtool
 IUSE=debug doc lzma +openrc static-libs +tools zlib
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2
@@ -10,5 +11,5 @@ RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-uti
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-16.tar.xz
-_eclasses_=bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	bash-completion-r1	9866121b061d311a471abe04dfaea912	eutils	469f038ba48effc32a634fef17232be7	libtool	5ae04d20c1cf910b68ff3586f20cced7
 _md5_=b3591b7bfcda1cac2bf1ed4b98345967

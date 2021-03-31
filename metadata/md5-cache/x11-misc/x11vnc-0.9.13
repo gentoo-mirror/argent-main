@@ -3,11 +3,12 @@ DEPEND=system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=
 DESCRIPTION=A VNC server for real X displays
 EAPI=4
 HOMEPAGE=http://www.karlrunge.com/x11vnc/
+INHERIT=eutils
 IUSE=avahi crypt fbcon +jpeg ssl system-libvncserver threads tk xinerama +zlib
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] ) !system-libvncserver? ( zlib? ( sys-libs/zlib ) jpeg? ( virtual/jpeg:0 ) ) ssl? ( dev-libs/openssl ) tk? ( dev-lang/tk ) avahi? ( >=net-dns/avahi-0.6.4 ) xinerama? ( x11-libs/libXinerama ) x11-libs/libXfixes x11-libs/libXrandr x11-libs/libX11 >=x11-libs/libXtst-1.1.0 x11-libs/libXdamage x11-libs/libXext
 SLOT=0
 SRC_URI=mirror://sourceforge/libvncserver/x11vnc-0.9.13.tar.gz
-_eclasses_=eutils	469f038ba48effc32a634fef17232be7	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
 _md5_=987db60c63039338556e5cd5449d5d7b
