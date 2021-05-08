@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RG/RGARCIA/Linux-Pid-0.04.tar.gz
-_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	multiprocessing	3fbfefe98277e0fa3e1a52d6d9471f6a	unpacker	69f01f06e2ef674295e9fa69ddbef8af	perl-module	3443dbf4a231efb067b911e18413b628
 _md5_=f7451d3634cabb9411a7fd1bdffdf50f
