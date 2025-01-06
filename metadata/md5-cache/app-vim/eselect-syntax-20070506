@@ -9,5 +9,5 @@ LICENSE=vim
 RDEPEND=!<app-vim/gentoo-syntax-20070506 || ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=mirror://gentoo/eselect-syntax-20070506.tar.bz2
-_eclasses_=vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	e7c0a43c6cdeb88ab420705047ea16b3	multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	e7c0a43c6cdeb88ab420705047ea16b3
 _md5_=487da7c139c00abcb6dbab5a4c907f89

@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=crypt? ( >=dev-libs/libmcrypt-2.5.1-r4 ) !minimal? ( tcpd? ( sys-apps/tcp-wrappers ) ) !minimal? ( || ( net-analyzer/icinga net-analyzer/nagios ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/nagios/nsca-2.7.2.tar.gz
-_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	user	bc615318777c602f6114b73c27f9a9d1	eutils	469f038ba48effc32a634fef17232be7
+_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7	user	bc615318777c602f6114b73c27f9a9d1
 _md5_=a2571cc403bcf4f2f1548bb6663400f3
