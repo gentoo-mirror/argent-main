@@ -8,5 +8,5 @@ KEYWORDS=amd64 x86
 LICENSE=BSD BSD-2 BSD-4 ISC
 SLOT=0
 SRC_URI=http://libbsd.freedesktop.org/releases/libbsd-0.7.0.tar.xz
-_eclasses_=multilib	5c89e4e7b42e1975d318dffbad01ca83	toolchain-funcs	185a06792159ca143528e7010368e8af	eutils	469f038ba48effc32a634fef17232be7
+_eclasses_=toolchain-funcs	185a06792159ca143528e7010368e8af	multilib	5c89e4e7b42e1975d318dffbad01ca83	eutils	469f038ba48effc32a634fef17232be7
 _md5_=88b831d254345b21fc4d89d670c1ace6
